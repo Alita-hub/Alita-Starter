@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.alita</groupId>
+    <artifactId>Alita-Starter</artifactId>
+    <version>1.0</version>
+
+    <packaging>pom</packaging>
+    <description>阿丽塔基础脚手架</description>
+
+    <properties>
+        <alita.version>1.0.0</alita.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <!--spring boot 版本-->
+        <spring.boot.starter.version>2.7.18</spring.boot.starter.version>
+        <!--mybatis 版本-->
+        <mybatis.version>3.0.0</mybatis.version>
+    </properties>
+
+    <!--            Spring Boot 版本差异           -->
+    <!-- | spring boot | 2.7.x | 3.0.x | 3.1.x  | -->
+    <!-- |     JDK     |  1.8+ |  17+  |  17+   | -->
+    <!-- |    Maven    |  3.5+ |  3.5+ | 3.6.3+ | -->
+
+    <!--统一管理项目依赖版本-->
+    <dependencyManagement>
+        <dependencies>
+            <!--spring-boot-dependencies依赖是Spring Boot框架提供的一个版本控制机制,
+            它提供了一组预定义的版本控制，用于管理Spring Boot及其相关库的版本,确保版本的兼容性和一致性-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.starter.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--Web服务-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring.boot.starter.version}</version>
+            </dependency>
+
+            <!--Spring Security-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-security</artifactId>
+                <version>${spring.boot.starter.version}</version>
+            </dependency>
+
+            <!--mybatis-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>alita-admin</module>
+        <module>alita-framework</module>
+        <module>alita-business</module>
+        <module>alita-common</module>
+        <module>alita-application</module>
+    </modules>
+
+</project>
