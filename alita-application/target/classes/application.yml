@@ -1,0 +1,24 @@
+# 自定义配置
+alita:
+
+# web配置
+server:
+  port: 8080                                 # web服务端口
+  servlet:
+    context-path: /                          # web上下文路径
+  tomcat:
+    accept-count: 1000                       # 当所有可能的请求处理线程都在使用时，连接请求的最大队列长度
+    max-connections: 5000                    # 服务器在任何给定时间内接受和处理的最大连接数。达到上限后，操作系统仍可根据 "acceptCount"属性接受连接
+    threads:
+      max: 500                               # 工作线程的最大数量
+      min-spare: 50                          # 最少工作线程数
+
+# spring配置
+spring:
+  profiles:
+    active: dev                              # 使用指定的配置文件：application-dev.yml
+  servlet:
+    multipart:
+      max-file-size: 10MB                    # 单个文件大小
+      max-request-size: 20MB                 # 总上传大小
+
