@@ -1,4 +1,4 @@
-package com.alita.security.config;
+package com.alita.framework.security.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
