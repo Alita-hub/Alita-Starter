@@ -5,13 +5,14 @@
     <parent>
         <artifactId>Alita-Starter</artifactId>
         <groupId>com.alita</groupId>
-        <version>1.0.0</version>
+        <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>alita-application</artifactId>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -23,10 +24,10 @@
             <artifactId>alita-admin</artifactId>
         </dependency>
 
-        <!--第三方组件-->
+        <!--通用模块-->
         <dependency>
             <groupId>com.alita</groupId>
-            <artifactId>alita-framework</artifactId>
+            <artifactId>alita-common</artifactId>
         </dependency>
 
     </dependencies>

@@ -6,13 +6,13 @@
 
     <groupId>com.alita</groupId>
     <artifactId>Alita-Starter</artifactId>
-    <version>1.0.0</version>
+    <version>${revision}</version>
 
     <packaging>pom</packaging>
     <description>阿丽塔基础脚手架</description>
 
     <properties>
-        <alita.version>1.0.0</alita.version>
+        <revision>1.0.0</revision>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <!--spring boot 版本-->
@@ -64,14 +64,21 @@
             <dependency>
                 <groupId>com.alita</groupId>
                 <artifactId>alita-admin</artifactId>
-                <version>${alita.version}</version>
+                <version>${project.version}</version>
             </dependency>
 
-            <!-- 第三方框架 -->
+            <!-- 通用模块 -->
             <dependency>
                 <groupId>com.alita</groupId>
-                <artifactId>alita-framework</artifactId>
-                <version>${alita.version}</version>
+                <artifactId>alita-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- Spring Security模块 -->
+            <dependency>
+                <groupId>com.alita</groupId>
+                <artifactId>alita-framework-spring-security</artifactId>
+                <version>${project.version}</version>
             </dependency>
 
         </dependencies>
@@ -84,5 +91,37 @@
         <module>alita-common</module>
         <module>alita-application</module>
     </modules>
+
+    <build>
+
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>1.2.7</version>
+                <configuration>
+                    <updatePomFile>true</updatePomFile>
+                    <flattenMode>resolveCiFriendliesOnly</flattenMode>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
+    </build>
 
 </project>
