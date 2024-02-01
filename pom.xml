@@ -78,11 +78,23 @@
                 <version>${mysql.connector.version}</version>
             </dependency>
 
-            <!--Log4j2日志框架-->
+            <!--Log4j2日志框架,spring boot 默认使用的logback版本有漏洞，切换到log4j2-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-log4j2</artifactId>
                 <version>${spring.boot.starter.version}</version>
+            </dependency>
+
+            <!--全局排除logback-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-logging</artifactId>
+                <exclusions>
+                    <exclusion>
+                        <groupId>*</groupId>
+                        <artifactId>*</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <!-- 系统管理 -->
