@@ -24,6 +24,8 @@
         <spring.boot.starter.version>2.7.18</spring.boot.starter.version>
         <!--mybatis-boot-starter版本, 2.3.x 支持jdk1.8+, 3.0.x 支持jdk17+-->
         <mybatis.boot.starter.version>2.3.2</mybatis.boot.starter.version>
+        <!--mybatis-plus-boot-starter版本-->
+        <mybatis-plus.boot.starter.version>3.5.5</mybatis-plus.boot.starter.version>
         <!--druid-boot-starter 版本-->
         <druid.boot.starter.version>1.2.21</druid.boot.starter.version>
         <!--Mysql 驱动版本-->
@@ -57,11 +59,11 @@
                 <version>${spring.boot.starter.version}</version>
             </dependency>
 
-            <!--mybatis-->
+            <!--mybatis-plus-->
             <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${mybatis.boot.starter.version}</version>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.boot.starter.version}</version>
             </dependency>
 
             <!--druid数据库连接池-->
@@ -132,6 +134,8 @@
     <build>
 
         <plugins>
+
+            <!--统一版本号-->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>flatten-maven-plugin</artifactId>
@@ -157,6 +161,7 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
 
     </build>

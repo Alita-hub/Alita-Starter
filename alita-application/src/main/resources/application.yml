@@ -22,3 +22,9 @@ spring:
       max-file-size: 10MB                    # 单个文件大小
       max-request-size: 20MB                 # 总上传大小
 
+# mybatis-plus配置
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: com.alita.*.domain
+
+

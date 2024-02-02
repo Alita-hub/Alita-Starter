@@ -79,7 +79,8 @@
     </appenders>
 
     <loggers>
-        <root level="DEBUG">
+        <!--没有单独指定Logger,就会默认使用该Root输出-->
+        <root level="INFO">
             <appender-ref ref="Console"/>
             <appender-ref ref="RollingFileInfo"/>
             <appender-ref ref="RollingFileWarn"/>
@@ -109,6 +110,6 @@
         <!--spring日志-->
         <Logger name="org.springframework" level="warn"/>
 
-        <logger name="org.thymeleaf" level="warn"/>
+        <Logger name="org.thymeleaf" level="warn"/>
     </loggers>
 </configuration>
