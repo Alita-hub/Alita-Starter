@@ -19,7 +19,7 @@ import static org.springframework.security.config.Customizer.withDefaults;
 
 /**
  * 在 Spring Security 5.7.0-M2 中，我们弃用了 WebSecurityConfigurerAdapter，因为我们鼓励用户转向基于组件的安全配置。
- * https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter
+ * <a href="https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter">...</a>
  */
 @Configuration
 @EnableWebSecurity
@@ -38,25 +38,16 @@ public class WebSecurityConfig {
     }
 
     /**
-     * 自定义认证
-     */
-    @Bean
-    public UserDetailsService userDetailsService() {
-        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-        manager.createUser(User.withDefaultPasswordEncoder().username("user").password("password").roles("USER").build());
-        return manager;
-    }
-
-    /**
      * 认证拦截
      */
     @Bean
     public SecurityFilterChain loginFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(
-                        authorize -> authorize.anyRequest().authenticated()
-                )
-                .formLogin(withDefaults());
+                        authorize -> authorize.
+                                mvcMatchers("/login").permitAll()
+                );
+
         return http.build();
     }
 
@@ -66,12 +57,11 @@ public class WebSecurityConfig {
     @Bean
     @Order(1)
     public SecurityFilterChain apiFilterChain(HttpSecurity http) throws Exception {
-        http
-                .antMatcher("/api/**")
-                .authorizeHttpRequests(
-                        authorize -> authorize.anyRequest().hasRole("ADMIN")
-                )
-                .httpBasic(withDefaults());
+//        http
+//                .antMatcher("/api/**")
+//                .authorizeHttpRequests(
+//                        authorize -> authorize.anyRequest().hasRole("ADMIN")
+//                );
         return http.build();
     }
 

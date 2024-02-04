@@ -21,8 +21,12 @@ public enum HttpCode {
     FAIL(500, "请求失败！"),
     SELECT_FAIL(500, "查询失败！"),
     UPDATE_FAIL(500, "更新失败！"),
-    DELETE_FAIL(500, "删除失败！")
+    DELETE_FAIL(500, "删除失败！"),
 
+    /**
+    * 用户认证
+    */
+    USER_NOT_FOUND(5001, "账号不存在！")
 
     ;
 

@@ -2,6 +2,7 @@ package com.alita.admin.authentication;
 
 import com.alita.admin.mapper.SysUserAccountMapper;
 import com.alita.common.domain.entity.SysUserAccount;
+import com.alita.common.exception.authentication.UserNotFoundException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -26,10 +27,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         if (!Optional.ofNullable(sysUserAuth).isPresent())
         {
-
+            throw new UserNotFoundException();
         }
 
-        return null;
+        return sysUserAuth;
     }
 
 }

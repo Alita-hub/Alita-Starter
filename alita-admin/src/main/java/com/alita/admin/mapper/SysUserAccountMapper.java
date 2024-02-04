@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 /**
- * (UserAuth)表数据库访问层
+ * (SysUserAccount)表数据库访问层
  *
  * @author alita
  */

@@ -1,7 +1,9 @@
 package com.alita.common.exception.authentication;
 
+
 /**
- * @author: whz
+ * 账号不存在异常
+ * @author alita
  */
 public class UserNotFoundException extends RuntimeException {
 

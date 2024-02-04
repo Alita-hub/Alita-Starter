@@ -2,6 +2,7 @@ package com.alita.common.domain;
 
 
 import com.alita.common.enums.HttpCode;
+import org.apache.ibatis.jdbc.Null;
 
 /**
  * Http请求响应实体
@@ -25,8 +26,8 @@ public class HttpResult<T> {
      */
     private T data;
 
-    public static HttpResult response(HttpCode httpCode) {
-        HttpResult result = new HttpResult();
+    public static HttpResult<?> response(HttpCode httpCode) {
+        HttpResult<?> result = new HttpResult<>();
         result.setCode(httpCode.getCode());
         result.setMessage(httpCode.getMsg());
 
@@ -34,7 +35,7 @@ public class HttpResult<T> {
     }
 
     public static <T> HttpResult<T> response(HttpCode httpCode, T data) {
-        HttpResult result = new HttpResult();
+        HttpResult<T> result = new HttpResult<T>();
         result.setCode(httpCode.getCode());
         result.setMessage(httpCode.getMsg());
         result.setData(data);
