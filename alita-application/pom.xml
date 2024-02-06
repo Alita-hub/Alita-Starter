@@ -13,11 +13,6 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
         <!--管理模块-->
         <dependency>
             <groupId>com.alita</groupId>

@@ -23,7 +23,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        SysUserAccount sysUserAuth = userAuthMapper.queryUserAuthByUsername(username);
+        SysUserAccount sysUserAuth = userAuthMapper.queryUserByUsername(username);
 
         if (!Optional.ofNullable(sysUserAuth).isPresent())
         {

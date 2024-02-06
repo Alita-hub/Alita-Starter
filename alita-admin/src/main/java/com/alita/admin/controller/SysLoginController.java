@@ -8,7 +8,11 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
-@RequestMapping
+/**
+ * 用户认证接口
+ * @author alita
+ */
+@RequestMapping("/authentication")
 @RestController
 public class SysLoginController {
 
@@ -24,4 +28,9 @@ public class SysLoginController {
         return HttpResult.response(HttpCode.SUCCESS);
     }
 
+    @GetMapping("/test")
+    public HttpResult test()
+    {
+        return HttpResult.response(HttpCode.SUCCESS);
+    }
 }

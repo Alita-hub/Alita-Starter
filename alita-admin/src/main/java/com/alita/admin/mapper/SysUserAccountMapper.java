@@ -17,7 +17,7 @@ public interface SysUserAccountMapper extends BaseMapper<SysUserAccount> {
      * @param username
      * @return {@link SysUserAccount}
      */
-    @Select("select * from sys_user_auth")
-    SysUserAccount queryUserAuthByUsername(@Param("username") String username);
+    @Select("select * from sys_user_account")
+    SysUserAccount queryUserByUsername(@Param("username") String username);
 
 }

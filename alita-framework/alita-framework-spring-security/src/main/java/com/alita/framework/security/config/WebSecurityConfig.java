@@ -8,12 +8,14 @@ import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 
@@ -37,6 +39,14 @@ public class WebSecurityConfig {
         return new ProviderManager(authenticationProvider);
     }
 
+//    @Bean
+//    WebSecurityCustomizer webSecurityCustomizer() {
+//        return web -> web.ignoring().requestMatchers(
+//                new AntPathRequestMatcher("/authentication/**")
+//        );
+//    }
+
+
     /**
      * 认证拦截
      */
@@ -44,26 +54,30 @@ public class WebSecurityConfig {
     public SecurityFilterChain loginFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(
-                        authorize -> authorize.
-                                mvcMatchers("/login").permitAll()
+                        (authorize) -> authorize.antMatchers("/authentication/**").permitAll()
+                )
+                .authorizeHttpRequests(
+                        (authorize) -> authorize.anyRequest().authenticated()
                 );
 
         return http.build();
     }
 
+
+
     /**
      * 鉴权拦截
      */
-    @Bean
-    @Order(1)
-    public SecurityFilterChain apiFilterChain(HttpSecurity http) throws Exception {
+//    @Bean
+//    @Order(1)
+//    public SecurityFilterChain apiFilterChain(HttpSecurity http) throws Exception {
 //        http
 //                .antMatcher("/api/**")
 //                .authorizeHttpRequests(
 //                        authorize -> authorize.anyRequest().hasRole("ADMIN")
 //                );
-        return http.build();
-    }
+//        return http.build();
+//    }
 
 
     @Bean
