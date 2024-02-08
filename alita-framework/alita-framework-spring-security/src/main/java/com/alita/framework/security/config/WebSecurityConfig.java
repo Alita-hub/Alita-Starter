@@ -1,9 +1,13 @@
 package com.alita.framework.security.config;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
+import org.springframework.security.authentication.AuthenticationEventPublisher;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.DefaultAuthenticationEventPublisher;
 import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -11,11 +15,15 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+
+import javax.annotation.Resource;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 
@@ -28,16 +36,38 @@ import static org.springframework.security.config.Customizer.withDefaults;
 public class WebSecurityConfig {
 
     /**
-     * Spring Security默认使用ProviderManager和DaoAuthenticationProvider
+     * 未认证并且访问需要认证的资源时，自定义处理
+     */
+    @Resource
+    @Qualifier("delegatedAuthenticationEntryPoint")
+    AuthenticationEntryPoint authEntryPoint;
+
+    /**
+     * 1. Spring Security默认使用ProviderManager和DaoAuthenticationProvider。
+     * 2. ProviderManager的认证事件监听器默认为NullEventPublisher，未进行任何处理。
+     *    自定义处理认证事件，必须设置AuthenticationEventPublisher到ProviderManager
+     * 3. 在认证失败后UsernameNotFoundException异常会被默认转换成BadCredentialsException异常，导致不能捕获到UsernameNotFoundException,
+     *    setHideUserNotFoundExceptions(false) 可以解决这个问题
+     *
+     * @param userDetailsService
+     * @param passwordEncoder
+     * @param authenticationEventPublisher
+     * @return {@link AuthenticationManager}
      */
     @Bean
-    public AuthenticationManager authenticationManager(UserDetailsService userDetailsService, PasswordEncoder passwordEncoder) {
-        DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
-        authenticationProvider.setUserDetailsService(userDetailsService);
-        authenticationProvider.setPasswordEncoder(passwordEncoder);
+    public AuthenticationManager authenticationManager(UserDetailsService userDetailsService, PasswordEncoder passwordEncoder, AuthenticationEventPublisher authenticationEventPublisher)
+    {
+        DaoAuthenticationProvider daoAuthenticationProvider= new DaoAuthenticationProvider();
+        daoAuthenticationProvider.setUserDetailsService(userDetailsService);
+        daoAuthenticationProvider.setPasswordEncoder(passwordEncoder);
+        daoAuthenticationProvider.setHideUserNotFoundExceptions(false);
 
-        return new ProviderManager(authenticationProvider);
+        ProviderManager providerManager = new ProviderManager(daoAuthenticationProvider);
+        providerManager.setAuthenticationEventPublisher(authenticationEventPublisher);
+
+        return providerManager;
     }
+
 
 //    @Bean
 //    WebSecurityCustomizer webSecurityCustomizer() {
@@ -49,39 +79,50 @@ public class WebSecurityConfig {
 
     /**
      * 认证拦截
+     *
+     * @param http
+     * @return {@link SecurityFilterChain}
+     * @throws Exception
      */
     @Bean
-    public SecurityFilterChain loginFilterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain loginFilterChain(HttpSecurity http) throws Exception
+    {
         http
                 .authorizeHttpRequests(
                         (authorize) -> authorize.antMatchers("/authentication/**").permitAll()
                 )
                 .authorizeHttpRequests(
                         (authorize) -> authorize.anyRequest().authenticated()
-                );
+                )
+                .exceptionHandling()
+                .authenticationEntryPoint(authEntryPoint)
+                ;
 
         return http.build();
     }
 
 
+    /**
+     * 认证事件-发布异常与事件的映射
+     * 每次身份验证成功或失败，都会分别触发一个 AuthenticationSuccessEvent 或 AbstractAuthenticationFailureEvent 事件。
+     * 要监听这些事件，必须先发布一个 AuthenticationEventPublisher。Spring Security 的 DefaultAuthenticationEventPublisher 或许可以满足要求：
+     * @param applicationEventPublisher
+     * @return {@link AuthenticationEventPublisher}
+     */
+    @Bean
+    public AuthenticationEventPublisher authenticationEventPublisher(ApplicationEventPublisher applicationEventPublisher)
+    {
+        return new DefaultAuthenticationEventPublisher(applicationEventPublisher);
+    }
+
 
     /**
-     * 鉴权拦截
+     * 加密方式: bcrypt
+     * @return {@link PasswordEncoder}
      */
-//    @Bean
-//    @Order(1)
-//    public SecurityFilterChain apiFilterChain(HttpSecurity http) throws Exception {
-//        http
-//                .antMatcher("/api/**")
-//                .authorizeHttpRequests(
-//                        authorize -> authorize.anyRequest().hasRole("ADMIN")
-//                );
-//        return http.build();
-//    }
-
-
     @Bean
-    public PasswordEncoder passwordEncoder() {
-        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
+    public PasswordEncoder passwordEncoder()
+    {
+        return new BCryptPasswordEncoder();
     }
 }

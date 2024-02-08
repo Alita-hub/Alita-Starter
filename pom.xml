@@ -132,9 +132,7 @@
     </modules>
 
     <build>
-
         <plugins>
-
             <!--统一版本号-->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -161,9 +159,7 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
-
     </build>
 
 </project>
