@@ -1,8 +1,7 @@
 package com.alita.common.exception;
 
-import com.alita.common.domain.HttpResult;
+import com.alita.common.domain.model.HttpResult;
 import com.alita.common.enums.HttpCode;
-import com.alita.common.exception.authentication.UserNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

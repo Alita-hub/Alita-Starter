@@ -26,7 +26,10 @@ public enum HttpCode {
     /**
     * 用户认证
     */
-    USER_NOT_FOUND(5001, "账号不存在！")
+    USER_NOT_FOUND(5001, "账号不存在！"),
+    USER_DISABLE(5002, "账号被停用！"),
+    USER_LOCKED(5003, "账号被锁定！"),
+    USER_INVALID(5004, "账号不合法！")
 
     ;
 

@@ -1,5 +1,6 @@
 package com.alita.admin.service;
 
+import com.alita.framework.security.context.AuthenticationContextHolder;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -28,6 +29,9 @@ public class SysUserAccountService {
     public void login(UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken)
     {
         Authentication authenticate = authenticationManager.authenticate(usernamePasswordAuthenticationToken);
+        AuthenticationContextHolder.setContext(authenticate);
+
+        System.out.println(authenticate.toString());
     }
 
 }

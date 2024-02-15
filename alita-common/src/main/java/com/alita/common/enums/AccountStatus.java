@@ -11,7 +11,9 @@ import com.baomidou.mybatisplus.annotation.IEnum;
 public enum AccountStatus implements IEnum<String> {
 
     NORMAL("0","正常"),
-    LOCKED("1","停用");
+    DISABLE("1","停用"),
+    LOCKED("2","锁定")
+    ;
 
     private String value;
     private String desc;

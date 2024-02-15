@@ -1,6 +1,6 @@
 package com.alita.admin.controller;
 
-import com.alita.common.domain.HttpResult;
+import com.alita.common.domain.model.HttpResult;
 import com.alita.common.enums.HttpCode;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

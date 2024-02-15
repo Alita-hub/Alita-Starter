@@ -1,14 +1,14 @@
-package com.alita.common.domain;
+package com.alita.common.domain.model;
 
 
 import com.alita.common.enums.HttpCode;
-import org.apache.ibatis.jdbc.Null;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
- * Http请求响应实体
- *
- * @author: alita
+ * 前端统一响应实体
+ * @author alita
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class HttpResult<T> {
 
     /**

@@ -25,6 +25,12 @@ public class SysUserAccount implements UserDetails {
     @TableId(type = IdType.AUTO)
     private Integer id;
 
+
+    /**
+     * 用户唯一id
+     */
+    private Integer userId;
+
     /**
      * 认证类型
      *（username=用户名认证，phone=手机验证码，qq=第三方，wechat=第三方）
@@ -35,7 +41,7 @@ public class SysUserAccount implements UserDetails {
      * 身份标识
      * (手机号/邮箱/用户名或第三方应用的唯一标识)
      */
-    private String identity;
+    private String principal;
 
     /**
      * 密码凭证
@@ -44,7 +50,7 @@ public class SysUserAccount implements UserDetails {
     private String credential;
 
     /**
-     * 账号状态（0=正常，1=停用）
+     * 账号状态（0=正常，1=停用，2=锁定）
      */
     private AccountStatus status;
 
@@ -71,7 +77,7 @@ public class SysUserAccount implements UserDetails {
 
     @Override
     public String getUsername() {
-        return this.identity;
+        return this.principal;
     }
 
     @Override
@@ -107,6 +113,14 @@ public class SysUserAccount implements UserDetails {
         this.id = id;
     }
 
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
     public IdentityType getIdentityType() {
         return identityType;
     }
@@ -115,12 +129,13 @@ public class SysUserAccount implements UserDetails {
         this.identityType = identityType;
     }
 
-    public String getIdentity() {
-        return identity;
+
+    public String getPrincipal() {
+        return principal;
     }
 
-    public void setIdentity(String identity) {
-        this.identity = identity;
+    public void setPrincipal(String principal) {
+        this.principal = principal;
     }
 
     public String getCredential() {
