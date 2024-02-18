@@ -26,6 +26,39 @@ public class HttpResult<T> {
      */
     private T data;
 
+    public static HttpResult<?> success(String msg) {
+        HttpResult<?> result = new HttpResult<>();
+        result.setCode(HttpCode.SUCCESS.getCode());
+        result.setMessage(msg);
+
+        return result;
+    }
+
+    public static <T> HttpResult<T> success(String msg, T data) {
+        HttpResult<T> result = new HttpResult<>();
+        result.setCode(HttpCode.SUCCESS.getCode());
+        result.setMessage(msg);
+        result.setData(data);
+
+        return result;
+    }
+
+    public static HttpResult<?> badRequest(String msg) {
+        HttpResult<?> result = new HttpResult<>();
+        result.setCode(HttpCode.BAD_REQUEST.getCode());
+        result.setMessage(msg);
+
+        return result;
+    }
+
+    public static HttpResult<?> error(String msg) {
+        HttpResult<?> result = new HttpResult<>();
+        result.setCode(HttpCode.ERROR.getCode());
+        result.setMessage(msg);
+
+        return result;
+    }
+
     public static HttpResult<?> response(HttpCode httpCode) {
         HttpResult<?> result = new HttpResult<>();
         result.setCode(httpCode.getCode());

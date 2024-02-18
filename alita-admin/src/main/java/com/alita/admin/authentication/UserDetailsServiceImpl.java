@@ -3,6 +3,8 @@ package com.alita.admin.authentication;
 import com.alita.admin.mapper.SysUserAccountMapper;
 import com.alita.common.domain.entity.SysUserAccount;
 import com.alita.common.enums.AccountStatus;
+import com.alita.framework.security.context.AuthenticationContextHolder;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.LockedException;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -34,23 +36,26 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         //未找到用户
         if (!Optional.ofNullable(userAccount).isPresent())
         {
-            throw new UsernameNotFoundException("usernotfound");
+            throw new UsernameNotFoundException("账号: " + username + " 不存在");
         }
 
         //账号被停用
         if (userAccount.getStatus().equals(AccountStatus.DISABLE))
         {
-            throw new DisabledException("disable");
+            throw new DisabledException("账号: " + username + " 被停用");
         }
 
         //账号被锁定（密码输错超过限制）
         if (userAccount.getStatus().equals(AccountStatus.LOCKED))
         {
-            throw new LockedException("locked");
+            throw new LockedException("账号: " + username + " 被锁定");
         }
 
-        //if (passwordEncoder.matches(userAccount.getPassword(), ))
-
+        //校验密码
+        if (!passwordEncoder.matches(AuthenticationContextHolder.getContext().getCredentials().toString(), userAccount.getPassword()))
+        {
+            throw new BadCredentialsException("用户：" + username + " 密码输入错误");
+        }
 
         return userAccount;
     }

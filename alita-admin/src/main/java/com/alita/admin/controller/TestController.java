@@ -16,7 +16,7 @@ public class TestController {
     @GetMapping("/1")
     public HttpResult test()
     {
-        return HttpResult.response(HttpCode.FAIL);
+        return HttpResult.response(HttpCode.ERROR);
     }
 
 }

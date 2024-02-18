@@ -4,6 +4,7 @@ import com.alita.common.domain.model.HttpResult;
 import com.alita.common.enums.HttpCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.LockedException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -23,20 +24,26 @@ public class AuthenticationExceptionHandler {
 
     @ExceptionHandler
     public HttpResult handleUsernameNotFoundException(UsernameNotFoundException ex) {
-        log.error("账号不存在");
+        log.error(ex.getMessage());
         return HttpResult.response(HttpCode.USER_NOT_FOUND);
     }
 
     @ExceptionHandler
     public HttpResult handleUserDisableException(DisabledException ex) {
-        log.error("账号被停用");
+        log.error(ex.getMessage());
         return HttpResult.response(HttpCode.USER_DISABLE);
     }
 
     @ExceptionHandler
     public HttpResult handleUserLockedException(LockedException ex) {
-        log.error("账号被锁定");
+        log.error(ex.getMessage());
         return HttpResult.response(HttpCode.USER_LOCKED);
+    }
+
+    @ExceptionHandler
+    public HttpResult handleBadCredentialException(BadCredentialsException ex) {
+        log.error(ex.getMessage());
+        return HttpResult.response(HttpCode.AUTHENTICATION_FAIL);
     }
 
 }

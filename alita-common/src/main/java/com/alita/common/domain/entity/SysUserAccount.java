@@ -82,27 +82,32 @@ public class SysUserAccount implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
         if (status == AccountStatus.LOCKED)
         {
-            return true;
+            return false;
         }
 
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        return false;
+        if (status == AccountStatus.DISABLE)
+        {
+            return false;
+        }
+
+        return true;
     }
 
     public Integer getId() {

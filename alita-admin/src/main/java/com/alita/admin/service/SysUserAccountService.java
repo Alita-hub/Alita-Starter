@@ -4,8 +4,6 @@ import com.alita.framework.security.context.AuthenticationContextHolder;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContext;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -28,10 +26,9 @@ public class SysUserAccountService {
      */
     public void login(UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken)
     {
+        AuthenticationContextHolder.setContext(usernamePasswordAuthenticationToken);
         Authentication authenticate = authenticationManager.authenticate(usernamePasswordAuthenticationToken);
-        AuthenticationContextHolder.setContext(authenticate);
 
-        System.out.println(authenticate.toString());
     }
 
 }
