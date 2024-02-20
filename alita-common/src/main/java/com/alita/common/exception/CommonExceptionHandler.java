@@ -1,7 +1,6 @@
 package com.alita.common.exception;
 
 import com.alita.common.domain.model.HttpResult;
-import com.alita.common.enums.HttpCode;
 import com.alita.common.exception.core.BadRequestException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +25,7 @@ public class CommonExceptionHandler {
      */
     @ExceptionHandler
     public HttpResult handleBadRequest(BadRequestException e) {
+        log.error(e.getMessage());
         return HttpResult.badRequest(e.getMessage());
     }
 

@@ -27,6 +27,7 @@ public class SysUserAccountService {
     public void login(UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken)
     {
         AuthenticationContextHolder.setContext(usernamePasswordAuthenticationToken);
+        //底层调用UserDetailsServiceImpl的loadUserByUsername
         Authentication authenticate = authenticationManager.authenticate(usernamePasswordAuthenticationToken);
 
     }

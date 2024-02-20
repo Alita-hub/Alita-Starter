@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * 认证异常响应
+ * 认证异常全局处理
  * @author: alita
  */
 @ControllerAdvice
@@ -22,24 +22,44 @@ public class AuthenticationExceptionHandler {
 
     private static final Logger log = LoggerFactory.getLogger(AuthenticationExceptionHandler.class);
 
+    /**
+     * 处理账号不存在异常
+     * @param ex
+     * @return {@link HttpResult}
+     */
     @ExceptionHandler
     public HttpResult handleUsernameNotFoundException(UsernameNotFoundException ex) {
         log.error(ex.getMessage());
         return HttpResult.response(HttpCode.USER_NOT_FOUND);
     }
 
+    /**
+     * 处理账号被停用异常
+     * @param ex
+     * @return {@link HttpResult}
+     */
     @ExceptionHandler
     public HttpResult handleUserDisableException(DisabledException ex) {
         log.error(ex.getMessage());
         return HttpResult.response(HttpCode.USER_DISABLE);
     }
 
+    /**
+     * 处理账号被锁定异常
+     * @param ex
+     * @return {@link HttpResult}
+     */
     @ExceptionHandler
     public HttpResult handleUserLockedException(LockedException ex) {
         log.error(ex.getMessage());
         return HttpResult.response(HttpCode.USER_LOCKED);
     }
 
+    /**
+     * 处理用户密码输入错误异常
+     * @param ex
+     * @return {@link HttpResult}
+     */
     @ExceptionHandler
     public HttpResult handleBadCredentialException(BadCredentialsException ex) {
         log.error(ex.getMessage());

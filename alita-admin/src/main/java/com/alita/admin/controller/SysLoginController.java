@@ -23,6 +23,10 @@ public class SysLoginController {
     @Resource
     private SysUserAccountService sysUserAccountService;
 
+    /**
+     * @param login
+     * @return {@link HttpResult}
+     */
     @PostMapping("/login")
     public HttpResult usernameLogin(@RequestBody Login login)
     {

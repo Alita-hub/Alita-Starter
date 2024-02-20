@@ -6,6 +6,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
  * 前端统一响应实体
+ * JsonInclude: 为Null的字段不进行序列化
+ *
  * @author alita
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -26,6 +28,11 @@ public class HttpResult<T> {
      */
     private T data;
 
+    /**
+     * 自定义成功消息
+     * @param msg
+     * @return {@link HttpResult}<{@link ?}>
+     */
     public static HttpResult<?> success(String msg) {
         HttpResult<?> result = new HttpResult<>();
         result.setCode(HttpCode.SUCCESS.getCode());
@@ -34,6 +41,12 @@ public class HttpResult<T> {
         return result;
     }
 
+    /**
+     * 自定义成功消息和数据
+     * @param msg
+     * @param data
+     * @return {@link HttpResult}<{@link T}>
+     */
     public static <T> HttpResult<T> success(String msg, T data) {
         HttpResult<T> result = new HttpResult<>();
         result.setCode(HttpCode.SUCCESS.getCode());
@@ -43,6 +56,11 @@ public class HttpResult<T> {
         return result;
     }
 
+    /**
+     * 自定义请求参数异常类的消息
+     * @param msg
+     * @return {@link HttpResult}<{@link ?}>
+     */
     public static HttpResult<?> badRequest(String msg) {
         HttpResult<?> result = new HttpResult<>();
         result.setCode(HttpCode.BAD_REQUEST.getCode());
@@ -51,6 +69,11 @@ public class HttpResult<T> {
         return result;
     }
 
+    /**
+     * 自定义服务端报错信息
+     * @param msg
+     * @return {@link HttpResult}<{@link ?}>
+     */
     public static HttpResult<?> error(String msg) {
         HttpResult<?> result = new HttpResult<>();
         result.setCode(HttpCode.ERROR.getCode());
@@ -59,6 +82,11 @@ public class HttpResult<T> {
         return result;
     }
 
+    /**
+     * 使用封装的Http响应枚举
+     * @param httpCode
+     * @return {@link HttpResult}<{@link ?}>
+     */
     public static HttpResult<?> response(HttpCode httpCode) {
         HttpResult<?> result = new HttpResult<>();
         result.setCode(httpCode.getCode());
@@ -67,6 +95,12 @@ public class HttpResult<T> {
         return result;
     }
 
+    /**
+     * 使用封装的Http响应枚举和数据
+     * @param httpCode
+     * @param data
+     * @return {@link HttpResult}<{@link T}>
+     */
     public static <T> HttpResult<T> response(HttpCode httpCode, T data) {
         HttpResult<T> result = new HttpResult<T>();
         result.setCode(httpCode.getCode());

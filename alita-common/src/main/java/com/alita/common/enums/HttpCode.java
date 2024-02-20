@@ -33,12 +33,10 @@ public enum HttpCode {
     UPDATE_SUCCESS(SUCCESS.code, "更新成功！"),
     DELETE_SUCCESS(SUCCESS.code, "删除成功！"),
 
-
     SELECT_FAIL(ERROR.code, "查询失败！"),
     ADD_FAIL(ERROR.code, "添加失败！"),
     UPDATE_FAIL(ERROR.code, "更新失败！"),
     DELETE_FAIL(ERROR.code, "删除失败！"),
-
 
     /**
     * 用户认证

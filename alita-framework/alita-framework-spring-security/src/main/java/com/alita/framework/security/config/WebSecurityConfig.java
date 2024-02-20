@@ -83,10 +83,10 @@ public class WebSecurityConfig {
         http
                 .csrf().disable()
                 .authorizeHttpRequests(
-                        (authorize) -> authorize.antMatchers("/authentication/**").permitAll()
+                        authorize -> authorize.antMatchers("/authentication/**").permitAll()
                 )
                 .authorizeHttpRequests(
-                        (authorize) -> authorize.anyRequest().authenticated()
+                        authorize -> authorize.anyRequest().authenticated()
                 )
                 .exceptionHandling()
                 .authenticationEntryPoint(authEntryPoint)
