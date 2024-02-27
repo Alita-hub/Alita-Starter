@@ -2,6 +2,7 @@ package com.alita.admin.authentication;
 
 import com.alita.common.enums.LoginType;
 import com.alita.common.exception.core.AppInternalExcepion;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -27,13 +28,13 @@ public class LoginStrategyFactory {
      * @param loginType
      * @return {@link LoginStrategy}
      */
-    public LoginStrategy getLoginStrategy(LoginType loginType)
+    public LoginStrategy getLoginStrategy(String loginType)
     {
-        if (!loginStrategyMap.containsKey(loginType.getValue())) {
-            throw new AppInternalExcepion("该登录方式还未实现： " + loginType.getValue());
+        if (!loginStrategyMap.containsKey(loginType)) {
+            throw new AppInternalExcepion("该登录方式还未实现： " + loginType);
         }
 
-        return loginStrategyMap.get(loginType.getValue());
+        return loginStrategyMap.get(loginType);
     }
 
 }

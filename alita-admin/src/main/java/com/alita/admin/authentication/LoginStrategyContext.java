@@ -1,6 +1,7 @@
 package com.alita.admin.authentication;
 
 import com.alita.common.domain.model.Login;
+import com.alita.common.enums.LoginType;
 import com.alita.common.exception.core.BadRequestException;
 import org.springframework.stereotype.Component;
 
@@ -25,7 +26,7 @@ public class LoginStrategyContext {
      */
     public boolean loginHandle(Login login)
     {
-        if (!Optional.ofNullable(login.getLoginType()).isPresent())
+        if (!Optional.ofNullable(login.getLoginType()).isPresent() && !LoginType.isContain(login.getLoginType()))
         {
             throw new BadRequestException("暂不支持该登录方式!");
         }

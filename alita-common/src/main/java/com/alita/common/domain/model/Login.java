@@ -10,7 +10,7 @@ import com.alita.common.enums.LoginType;
  */
 public class Login {
 
-    private LoginType loginType;
+    private String loginType;
 
     private String username;
 
@@ -22,11 +22,11 @@ public class Login {
 
     private String code;
 
-    public LoginType getLoginType() {
+    public String getLoginType() {
         return loginType;
     }
 
-    public void setLoginType(LoginType loginType) {
+    public void setLoginType(String loginType) {
         this.loginType = loginType;
     }
 

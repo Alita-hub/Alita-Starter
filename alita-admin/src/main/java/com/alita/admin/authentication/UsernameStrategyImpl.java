@@ -15,8 +15,7 @@ import javax.annotation.Resource;
  *
  * @author: alita
  */
-@Service
-@Qualifier("username")
+@Service("username")
 public class UsernameStrategyImpl implements LoginStrategy {
 
     @Resource
