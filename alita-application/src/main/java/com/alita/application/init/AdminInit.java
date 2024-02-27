@@ -44,7 +44,7 @@ public class AdminInit implements CommandLineRunner {
             sysUserAccount.setPrincipal("admin");
             sysUserAccount.setCredential(passwordEncoder.encode("admin@123456"));
             sysUserAccount.setStatus(AccountStatus.NORMAL);
-            sysUserAccount.setIdentityType(LoginType.USERNAME);
+            sysUserAccount.setLoginType(LoginType.USERNAME);
 
             sysUserAccountMapper.insert(sysUserAccount);
         }
