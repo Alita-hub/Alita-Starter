@@ -1,12 +1,16 @@
 package com.alita.common.domain.model;
 
 
+import com.alita.common.enums.LoginType;
+
 /**
  * 用户登录实体
  *
  * @author alita
  */
 public class Login {
+
+    private LoginType loginType;
 
     private String username;
 
@@ -17,6 +21,14 @@ public class Login {
     private String openId;
 
     private String code;
+
+    public LoginType getLoginType() {
+        return loginType;
+    }
+
+    public void setLoginType(LoginType loginType) {
+        this.loginType = loginType;
+    }
 
     public String getUsername() {
         return username;

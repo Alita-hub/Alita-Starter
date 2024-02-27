@@ -1,7 +1,7 @@
 package com.alita.common.domain.entity;
 
 import com.alita.common.enums.AccountStatus;
-import com.alita.common.enums.IdentityType;
+import com.alita.common.enums.LoginType;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -35,7 +35,7 @@ public class SysUserAccount implements UserDetails {
      * 认证类型
      *（username=用户名认证，phone=手机验证码，qq=第三方，wechat=第三方）
      */
-    private IdentityType identityType;
+    private LoginType loginType;
 
     /**
      * 身份标识
@@ -126,14 +126,13 @@ public class SysUserAccount implements UserDetails {
         this.userId = userId;
     }
 
-    public IdentityType getIdentityType() {
-        return identityType;
+    public LoginType getLoginType() {
+        return loginType;
     }
 
-    public void setIdentityType(IdentityType identityType) {
-        this.identityType = identityType;
+    public void setLoginType(LoginType loginType) {
+        this.loginType = loginType;
     }
-
 
     public String getPrincipal() {
         return principal;

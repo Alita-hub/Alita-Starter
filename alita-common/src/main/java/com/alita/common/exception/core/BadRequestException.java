@@ -1,7 +1,7 @@
 package com.alita.common.exception.core;
 
 /**
- * 请求格式异常
+ * 请求参数异常
  *
  * @author alita
  */

@@ -19,11 +19,5 @@
             <artifactId>alita-admin</artifactId>
         </dependency>
 
-        <!--通用模块-->
-        <dependency>
-            <groupId>com.alita</groupId>
-            <artifactId>alita-common</artifactId>
-        </dependency>
-
     </dependencies>
 </project>

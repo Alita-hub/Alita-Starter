@@ -5,7 +5,7 @@ import com.alita.admin.mapper.SysUserProfileMapper;
 import com.alita.common.domain.entity.SysUserAccount;
 import com.alita.common.domain.entity.SysUserProfile;
 import com.alita.common.enums.AccountStatus;
-import com.alita.common.enums.IdentityType;
+import com.alita.common.enums.LoginType;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
@@ -44,7 +44,7 @@ public class AdminInit implements CommandLineRunner {
             sysUserAccount.setPrincipal("admin");
             sysUserAccount.setCredential(passwordEncoder.encode("admin@123456"));
             sysUserAccount.setStatus(AccountStatus.NORMAL);
-            sysUserAccount.setIdentityType(IdentityType.USERNAME);
+            sysUserAccount.setIdentityType(LoginType.USERNAME);
 
             sysUserAccountMapper.insert(sysUserAccount);
         }

@@ -1,11 +1,10 @@
 package com.alita.admin.controller;
 
-import com.alita.admin.service.SysUserAccountService;
+import com.alita.admin.authentication.LoginStrategyContext;
 import com.alita.common.domain.model.HttpResult;
 import com.alita.common.domain.model.Login;
 import com.alita.common.enums.HttpCode;
 import com.alita.common.exception.core.BadRequestException;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -13,6 +12,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
+ * 开发规范：Controller层主要是对访问控制进行转发，各类基本参数校验，或者不复用的业务简单处理。
+ * 所以，该层尽量轻薄，避免编写涉及业务处理的代码
+ *
+ * 登录接口运用了策略模式，避免多次使用if，方面后续维护管理
+ *
  * 用户认证接口
  * @author alita
  */
@@ -21,9 +25,10 @@ import java.util.regex.Pattern;
 public class SysLoginController {
 
     @Resource
-    private SysUserAccountService sysUserAccountService;
+    private LoginStrategyContext loginStrategyContext;
 
     /**
+     * 登录
      * @param login
      * @return {@link HttpResult}
      */
@@ -32,17 +37,10 @@ public class SysLoginController {
     {
         //用户名校验
         usernameCheckout(login.getUsername());
-
-        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(login.getUsername(), login.getPassword());
-        sysUserAccountService.login(authentication);
+        //用户登录处理
+        loginStrategyContext.loginHandle(login);
 
         return HttpResult.response(HttpCode.AUTHENTICATION_SUCCESS);
-    }
-
-    @GetMapping("/test")
-    public HttpResult test()
-    {
-        return HttpResult.response(HttpCode.SUCCESS);
     }
 
 

@@ -21,6 +21,11 @@ spring:
     multipart:
       max-file-size: 10MB                    # 单个文件大小
       max-request-size: 20MB                 # 总上传大小
+  thymeleaf:                                 # ThymeLeaf配置
+    cache: false                             # 是否开启页面缓存功能
+    prefix: classpath:/templates/            # 模板前缀
+    suffix: .html                            # 模板后缀
+
 
 # mybatis-plus配置
 mybatis-plus:

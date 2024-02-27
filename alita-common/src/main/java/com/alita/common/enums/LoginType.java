@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.annotation.IEnum;
  * 用户认证枚举类型
  * @author alita
  */
-public enum IdentityType implements IEnum<String> {
+public enum LoginType implements IEnum<String> {
 
     USERNAME("username", "用户名"),
     PHONE("phone", "手机验证码"),
@@ -16,7 +16,7 @@ public enum IdentityType implements IEnum<String> {
     private String value;
     private String desc;
 
-    IdentityType(String value, String desc) {
+    LoginType(String value, String desc) {
         this.value = value;
         this.desc = desc;
     }
