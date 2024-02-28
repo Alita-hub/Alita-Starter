@@ -1,7 +1,6 @@
 package com.alita.admin.authentication;
 
 import com.alita.common.domain.model.Login;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 /**

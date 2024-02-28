@@ -1,8 +1,8 @@
 package com.alita.admin.authentication;
 
+import com.alita.common.domain.entity.SysUserAccount;
 import com.alita.common.domain.model.Login;
 import com.alita.framework.security.context.AuthenticationContextHolder;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -33,6 +33,8 @@ public class UsernameStrategyImpl implements LoginStrategy {
         AuthenticationContextHolder.setContext(authenticationToken);
         //底层调用UserDetailsServiceImpl的loadUserByUsername
         Authentication authenticate = authenticationManager.authenticate(authenticationToken);
+
+        SysUserAccount principal = (SysUserAccount) authenticate.getPrincipal();
 
         return true;
     }

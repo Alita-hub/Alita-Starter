@@ -1,8 +1,6 @@
 package com.alita.admin.authentication;
 
-import com.alita.common.enums.LoginType;
 import com.alita.common.exception.core.AppInternalExcepion;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
