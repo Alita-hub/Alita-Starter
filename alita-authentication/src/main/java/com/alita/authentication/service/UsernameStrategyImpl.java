@@ -1,5 +1,6 @@
-package com.alita.admin.authentication;
+package com.alita.authentication.service;
 
+import com.alita.authentication.core.ILoginStrategy;
 import com.alita.common.domain.entity.SysUserAccount;
 import com.alita.common.domain.model.Login;
 import com.alita.framework.security.context.AuthenticationContextHolder;
@@ -16,7 +17,7 @@ import javax.annotation.Resource;
  * @author: alita
  */
 @Service("username")
-public class UsernameStrategyImpl implements LoginStrategy {
+public class UsernameStrategyImpl implements ILoginStrategy {
 
     @Resource
     private AuthenticationManager authenticationManager;

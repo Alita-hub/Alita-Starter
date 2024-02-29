@@ -1,4 +1,4 @@
-package com.alita.admin.authentication;
+package com.alita.authentication.core;
 
 
 import com.alita.common.domain.model.Login;
@@ -7,7 +7,7 @@ import com.alita.common.domain.model.Login;
  * 登录策略
  * @author alita
  */
-public interface LoginStrategy {
+public interface ILoginStrategy {
 
     /**
      * 登录接口

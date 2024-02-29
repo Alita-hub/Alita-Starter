@@ -1,4 +1,4 @@
-package com.alita.admin.authentication;
+package com.alita.authentication.core;
 
 import com.alita.common.domain.model.Login;
 import com.alita.common.enums.LoginType;
@@ -32,7 +32,7 @@ public class LoginStrategyContext {
         }
 
         //获取对应登录策略实现类
-        LoginStrategy loginStrategy = loginStrategyFactory.getLoginStrategy(login.getLoginType());
+        ILoginStrategy loginStrategy = loginStrategyFactory.getLoginStrategy(login.getLoginType());
 
         //登录验证
         boolean isLogin = loginStrategy.login(login);

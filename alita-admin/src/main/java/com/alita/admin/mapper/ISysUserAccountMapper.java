@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Select;
  *
  * @author alita
  */
-public interface SysUserAccountMapper extends BaseMapper<SysUserAccount> {
+public interface ISysUserAccountMapper extends BaseMapper<SysUserAccount> {
 
     /**
      * 根据用户名查询账户信息

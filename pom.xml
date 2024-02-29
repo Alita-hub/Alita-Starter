@@ -120,6 +120,13 @@
                 <version>${project.version}</version>
             </dependency>
 
+            <!-- 认证模块 -->
+            <dependency>
+                <groupId>com.alita</groupId>
+                <artifactId>alita-authentication</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <!-- Spring Security模块 -->
             <dependency>
                 <groupId>com.alita</groupId>
@@ -136,6 +143,7 @@
         <module>alita-business</module>
         <module>alita-common</module>
         <module>alita-application</module>
+        <module>alita-authentication</module>
     </modules>
 
     <build>

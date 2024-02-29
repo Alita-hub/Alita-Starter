@@ -1,5 +1,6 @@
-package com.alita.admin.authentication;
+package com.alita.authentication.service;
 
+import com.alita.authentication.core.ILoginStrategy;
 import com.alita.common.domain.model.Login;
 import org.springframework.stereotype.Service;
 
@@ -8,7 +9,7 @@ import org.springframework.stereotype.Service;
  * @author alita
  */
 @Service("phone")
-public class PhoneStrategyImpl implements LoginStrategy{
+public class PhoneStrategyImpl implements ILoginStrategy {
 
     @Override
     public boolean login(Login login) {

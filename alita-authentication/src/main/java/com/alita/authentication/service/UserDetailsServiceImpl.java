@@ -1,6 +1,6 @@
-package com.alita.admin.authentication;
+package com.alita.authentication.service;
 
-import com.alita.admin.mapper.SysUserAccountMapper;
+import com.alita.admin.mapper.ISysUserAccountMapper;
 import com.alita.common.domain.entity.SysUserAccount;
 import com.alita.common.enums.AccountStatus;
 import com.alita.framework.security.context.AuthenticationContextHolder;
@@ -24,7 +24,7 @@ import java.util.Optional;
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Resource
-    private SysUserAccountMapper userAuthMapper;
+    private ISysUserAccountMapper userAuthMapper;
 
     @Resource
     private PasswordEncoder passwordEncoder;

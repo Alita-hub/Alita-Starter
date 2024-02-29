@@ -1,7 +1,7 @@
 package com.alita.application.init;
 
-import com.alita.admin.mapper.SysUserAccountMapper;
-import com.alita.admin.mapper.SysUserProfileMapper;
+import com.alita.admin.mapper.ISysUserAccountMapper;
+import com.alita.admin.mapper.ISysUserProfileMapper;
 import com.alita.common.domain.entity.SysUserAccount;
 import com.alita.common.domain.entity.SysUserProfile;
 import com.alita.common.enums.AccountStatus;
@@ -21,10 +21,10 @@ import java.util.Optional;
 public class AdminInit implements CommandLineRunner {
 
     @Resource
-    private SysUserProfileMapper sysUserProfileMapper;
+    private ISysUserProfileMapper sysUserProfileMapper;
 
     @Resource
-    private SysUserAccountMapper sysUserAccountMapper;
+    private ISysUserAccountMapper sysUserAccountMapper;
 
     @Resource
     private PasswordEncoder passwordEncoder;
