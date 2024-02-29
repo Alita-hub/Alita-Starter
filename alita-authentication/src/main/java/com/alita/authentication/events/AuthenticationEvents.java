@@ -1,4 +1,4 @@
-package com.alita.framework.security.events;
+package com.alita.authentication.events;
 
 import org.springframework.context.event.EventListener;
 import org.springframework.security.authentication.event.*;

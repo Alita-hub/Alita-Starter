@@ -25,6 +25,7 @@ replay_pid*
 
 # IntelliJ Idea
 *.iml
+.flattened-pom.xml
 .idea
 target
 logs

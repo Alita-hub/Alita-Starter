@@ -17,7 +17,7 @@ import javax.annotation.Resource;
  * @author: alita
  */
 @Service("username")
-public class UsernameStrategyImpl implements ILoginStrategy {
+public class UsernameLoginStrategyImpl implements ILoginStrategy {
 
     @Resource
     private AuthenticationManager authenticationManager;

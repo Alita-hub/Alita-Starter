@@ -30,6 +30,8 @@
         <druid.boot.starter.version>1.2.21</druid.boot.starter.version>
         <!--Mysql 驱动版本-->
         <mysql.connector.version>8.0.33</mysql.connector.version>
+        <!--jwt工具版本-->
+        <jwt.version>0.9.1</jwt.version>
     </properties>
 
     <!--统一管理项目依赖版本-->
@@ -104,6 +106,13 @@
                         <artifactId>*</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+
+            <!--jwt工具-->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jwt.version}</version>
             </dependency>
 
             <!-- 系统管理 -->

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
  * @author alita
  */
 @Service("phone")
-public class PhoneStrategyImpl implements ILoginStrategy {
+public class PhoneLoginStrategyImpl implements ILoginStrategy {
 
     @Override
     public boolean login(Login login) {
