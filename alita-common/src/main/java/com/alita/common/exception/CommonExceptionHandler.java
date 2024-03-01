@@ -1,6 +1,6 @@
 package com.alita.common.exception;
 
-import com.alita.common.domain.model.HttpResult;
+import com.alita.common.domain.model.HttpResponse;
 import com.alita.common.exception.core.BadRequestException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,12 +21,12 @@ public class CommonExceptionHandler {
     /**
      * 捕捉请求参数错误异常
      * @param e
-     * @return {@link HttpResult}
+     * @return {@link HttpResponse}
      */
     @ExceptionHandler
-    public HttpResult handleBadRequest(BadRequestException e) {
+    public HttpResponse handleBadRequest(BadRequestException e) {
         log.error(e.getMessage());
-        return HttpResult.badRequest(e.getMessage());
+        return HttpResponse.badRequest(e.getMessage());
     }
 
 }

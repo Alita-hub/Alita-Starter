@@ -33,3 +33,5 @@ mybatis-plus:
   type-aliases-package: com.alita.*.domain
 
 
+
+

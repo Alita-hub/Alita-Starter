@@ -1,6 +1,6 @@
 package com.alita.common.exception;
 
-import com.alita.common.domain.model.HttpResult;
+import com.alita.common.domain.model.HttpResponse;
 import com.alita.common.enums.HttpCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,45 +25,45 @@ public class AuthenticationExceptionHandler {
     /**
      * 处理账号不存在异常
      * @param ex
-     * @return {@link HttpResult}
+     * @return {@link HttpResponse}
      */
     @ExceptionHandler
-    public HttpResult handleUsernameNotFoundException(UsernameNotFoundException ex) {
+    public HttpResponse handleUsernameNotFoundException(UsernameNotFoundException ex) {
         log.error(ex.getMessage());
-        return HttpResult.response(HttpCode.USER_NOT_FOUND);
+        return HttpResponse.response(HttpCode.USER_NOT_FOUND);
     }
 
     /**
      * 处理账号被停用异常
      * @param ex
-     * @return {@link HttpResult}
+     * @return {@link HttpResponse}
      */
     @ExceptionHandler
-    public HttpResult handleUserDisableException(DisabledException ex) {
+    public HttpResponse handleUserDisableException(DisabledException ex) {
         log.error(ex.getMessage());
-        return HttpResult.response(HttpCode.USER_DISABLE);
+        return HttpResponse.response(HttpCode.USER_DISABLE);
     }
 
     /**
      * 处理账号被锁定异常
      * @param ex
-     * @return {@link HttpResult}
+     * @return {@link HttpResponse}
      */
     @ExceptionHandler
-    public HttpResult handleUserLockedException(LockedException ex) {
+    public HttpResponse handleUserLockedException(LockedException ex) {
         log.error(ex.getMessage());
-        return HttpResult.response(HttpCode.USER_LOCKED);
+        return HttpResponse.response(HttpCode.USER_LOCKED);
     }
 
     /**
      * 处理用户密码输入错误异常
      * @param ex
-     * @return {@link HttpResult}
+     * @return {@link HttpResponse}
      */
     @ExceptionHandler
-    public HttpResult handleBadCredentialException(BadCredentialsException ex) {
+    public HttpResponse handleBadCredentialException(BadCredentialsException ex) {
         log.error(ex.getMessage());
-        return HttpResult.response(HttpCode.AUTHENTICATION_FAIL);
+        return HttpResponse.response(HttpCode.AUTHENTICATION_FAIL);
     }
 
 }

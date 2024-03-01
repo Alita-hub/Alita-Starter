@@ -1,7 +1,7 @@
 package com.alita.authentication.controller;
 
 import com.alita.authentication.core.LoginStrategyContext;
-import com.alita.common.domain.model.HttpResult;
+import com.alita.common.domain.model.HttpResponse;
 import com.alita.common.domain.model.Login;
 import com.alita.common.enums.HttpCode;
 import com.alita.common.exception.core.BadRequestException;
@@ -33,17 +33,17 @@ public class SysLoginController {
     /**
      * 登录
      * @param login
-     * @return {@link HttpResult}
+     * @return {@link HttpResponse}
      */
     @PostMapping("/login")
-    public HttpResult usernameLogin(@RequestBody Login login)
+    public HttpResponse usernameLogin(@RequestBody Login login)
     {
         //用户名校验
         usernameCheckout(login.getUsername());
         //用户登录处理
         loginStrategyContext.loginHandle(login);
 
-        return HttpResult.response(HttpCode.AUTHENTICATION_SUCCESS);
+        return HttpResponse.response(HttpCode.AUTHENTICATION_SUCCESS);
     }
 
 

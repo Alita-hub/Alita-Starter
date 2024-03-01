@@ -5,13 +5,13 @@ import com.alita.common.enums.HttpCode;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
- * 前端统一响应实体
+ * 前端统一响应模型
  * JsonInclude: 为Null的字段不进行序列化
  *
  * @author alita
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class HttpResult<T> {
+public class HttpResponse<T> {
 
     /**
      * 响应码
@@ -31,10 +31,10 @@ public class HttpResult<T> {
     /**
      * 自定义成功消息
      * @param msg
-     * @return {@link HttpResult}<{@link ?}>
+     * @return {@link HttpResponse}<{@link ?}>
      */
-    public static HttpResult<?> success(String msg) {
-        HttpResult<?> result = new HttpResult<>();
+    public static HttpResponse<?> success(String msg) {
+        HttpResponse<?> result = new HttpResponse<>();
         result.setCode(HttpCode.SUCCESS.getCode());
         result.setMessage(msg);
 
@@ -45,10 +45,10 @@ public class HttpResult<T> {
      * 自定义成功消息和数据
      * @param msg
      * @param data
-     * @return {@link HttpResult}<{@link T}>
+     * @return {@link HttpResponse}<{@link T}>
      */
-    public static <T> HttpResult<T> success(String msg, T data) {
-        HttpResult<T> result = new HttpResult<>();
+    public static <T> HttpResponse<T> success(String msg, T data) {
+        HttpResponse<T> result = new HttpResponse<>();
         result.setCode(HttpCode.SUCCESS.getCode());
         result.setMessage(msg);
         result.setData(data);
@@ -59,10 +59,10 @@ public class HttpResult<T> {
     /**
      * 自定义请求参数异常类的消息
      * @param msg
-     * @return {@link HttpResult}<{@link ?}>
+     * @return {@link HttpResponse}<{@link ?}>
      */
-    public static HttpResult<?> badRequest(String msg) {
-        HttpResult<?> result = new HttpResult<>();
+    public static HttpResponse<?> badRequest(String msg) {
+        HttpResponse<?> result = new HttpResponse<>();
         result.setCode(HttpCode.BAD_REQUEST.getCode());
         result.setMessage(msg);
 
@@ -72,10 +72,10 @@ public class HttpResult<T> {
     /**
      * 自定义服务端报错信息
      * @param msg
-     * @return {@link HttpResult}<{@link ?}>
+     * @return {@link HttpResponse}<{@link ?}>
      */
-    public static HttpResult<?> error(String msg) {
-        HttpResult<?> result = new HttpResult<>();
+    public static HttpResponse<?> error(String msg) {
+        HttpResponse<?> result = new HttpResponse<>();
         result.setCode(HttpCode.ERROR.getCode());
         result.setMessage(msg);
 
@@ -85,10 +85,10 @@ public class HttpResult<T> {
     /**
      * 使用封装的Http响应枚举
      * @param httpCode
-     * @return {@link HttpResult}<{@link ?}>
+     * @return {@link HttpResponse}<{@link ?}>
      */
-    public static HttpResult<?> response(HttpCode httpCode) {
-        HttpResult<?> result = new HttpResult<>();
+    public static HttpResponse<?> response(HttpCode httpCode) {
+        HttpResponse<?> result = new HttpResponse<>();
         result.setCode(httpCode.getCode());
         result.setMessage(httpCode.getMsg());
 
@@ -99,10 +99,10 @@ public class HttpResult<T> {
      * 使用封装的Http响应枚举和数据
      * @param httpCode
      * @param data
-     * @return {@link HttpResult}<{@link T}>
+     * @return {@link HttpResponse}<{@link T}>
      */
-    public static <T> HttpResult<T> response(HttpCode httpCode, T data) {
-        HttpResult<T> result = new HttpResult<T>();
+    public static <T> HttpResponse<T> response(HttpCode httpCode, T data) {
+        HttpResponse<T> result = new HttpResponse<T>();
         result.setCode(httpCode.getCode());
         result.setMessage(httpCode.getMsg());
         result.setData(data);

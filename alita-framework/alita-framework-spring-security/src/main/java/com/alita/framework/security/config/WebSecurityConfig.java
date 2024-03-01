@@ -11,11 +11,13 @@ import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import javax.annotation.Resource;
 
@@ -62,12 +64,12 @@ public class WebSecurityConfig {
     }
 
 
-//    @Bean
-//    WebSecurityCustomizer webSecurityCustomizer() {
-//        return web -> web.ignoring().requestMatchers(
-//                new AntPathRequestMatcher("/authentication/**")
-//        );
-//    }
+    @Bean
+    WebSecurityCustomizer webSecurityCustomizer() {
+        return web -> web.ignoring()
+                .antMatchers("/authentication/**")
+                .antMatchers("/config/**");
+    }
 
 
     /**
@@ -82,9 +84,6 @@ public class WebSecurityConfig {
     {
         http
                 .csrf().disable()
-                .authorizeHttpRequests(
-                        authorize -> authorize.antMatchers("/authentication/**").permitAll()
-                )
                 .authorizeHttpRequests(
                         authorize -> authorize.anyRequest().authenticated()
                 )

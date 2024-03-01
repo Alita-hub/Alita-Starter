@@ -7,7 +7,7 @@ package com.alita.common.enums;
  *     4xx 客户端错误，不影响服务可用性
  *     5xx 服务端错误，影响服务可用性
  * 自定义系统编码：
- *
+ *     601-620 用户认证
  *
  * @author: alita
  */
@@ -39,7 +39,7 @@ public enum HttpCode {
     DELETE_FAIL(ERROR.code, "删除失败！"),
 
     /**
-    * 用户认证
+    * 用户认证（601 - 620）
     */
     AUTHENTICATION_SUCCESS(SUCCESS.code, "认证成功！"),
     AUTHENTICATION_FAIL(BAD_REQUEST.code, "认证失败！"),

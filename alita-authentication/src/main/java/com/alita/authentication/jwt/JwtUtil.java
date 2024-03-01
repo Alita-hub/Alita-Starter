@@ -1,17 +1,19 @@
 package com.alita.authentication.jwt;
 
+import com.alita.common.domain.entity.SysUserAccount;
 import io.jsonwebtoken.Jwts;
-
-import java.util.HashMap;
 
 import static io.jsonwebtoken.SignatureAlgorithm.HS256;
 
 public class JwtUtil {
 
-        public String createToken() {
-            String compact = Jwts.builder().setPayload("").setClaims(new HashMap<>()).signWith(HS256,"a111").compact();
-            Jwts.parser().setSigningKey("".getBytes()).parseClaimsJwt("").getBody();
-            return "";
-        }
+    public String createToken(SysUserAccount userAccount) {
+        String jwtToken = Jwts.builder()
+                .setSubject(userAccount.getPrincipal())
+                .signWith(HS256,"a111")
+                .compact();
+
+        return jwtToken;
+    }
 
 }
