@@ -47,9 +47,10 @@ public class AdminInit implements CommandLineRunner {
             sysUserAccount.setLoginType(LoginType.USERNAME);
 
             sysUserAccountMapper.insert(sysUserAccount);
+
+            System.out.println("管理员初始化完成！");
         }
 
-        System.out.println("管理员初始化完成！");
     }
 
 }

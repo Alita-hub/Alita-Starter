@@ -23,5 +23,10 @@
             <artifactId>alita-common</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.alita</groupId>
+            <artifactId>alita-framework-spring-security</artifactId>
+        </dependency>
+
     </dependencies>
 </project>

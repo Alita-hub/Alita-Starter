@@ -1,6 +1,7 @@
 package com.alita.authentication.service;
 
 import com.alita.authentication.core.ILoginStrategy;
+import com.alita.common.util.JwtUtil;
 import com.alita.common.domain.entity.SysUserAccount;
 import com.alita.common.domain.model.Login;
 import com.alita.framework.security.context.AuthenticationContextHolder;
@@ -22,12 +23,15 @@ public class UsernameLoginStrategyImpl implements ILoginStrategy {
     @Resource
     private AuthenticationManager authenticationManager;
 
+    @Resource
+    private JwtUtil jwtUtil;
+
     /**
      * 用户名密码登录认证
      * @param login
      */
     @Override
-    public boolean login(Login login)
+    public String login(Login login)
     {
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(login.getUsername(), login.getPassword());
 
@@ -36,8 +40,10 @@ public class UsernameLoginStrategyImpl implements ILoginStrategy {
         Authentication authenticate = authenticationManager.authenticate(authenticationToken);
 
         SysUserAccount principal = (SysUserAccount) authenticate.getPrincipal();
+        //生成jwt令牌
+        String token = jwtUtil.createToken(principal.getPrincipal());
 
-        return true;
+        return token;
     }
 
 }

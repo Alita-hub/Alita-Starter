@@ -32,6 +32,10 @@ mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml
   type-aliases-package: com.alita.*.domain
 
-
+# jwt配置
+jwt:
+  header: Authorization                      # header名称
+  secretKey: 1a!2b@3c#4d$5e%6f^              # jwt加密密钥
+  expired: 30                                # jwt令牌过期时间
 
 

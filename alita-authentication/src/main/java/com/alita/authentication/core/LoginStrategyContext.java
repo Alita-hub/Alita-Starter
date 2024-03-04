@@ -24,7 +24,7 @@ public class LoginStrategyContext {
      * @param login
      * @return boolean
      */
-    public boolean loginHandle(Login login)
+    public String loginHandle(Login login)
     {
         if (!Optional.ofNullable(login.getLoginType()).isPresent() && !LoginType.isContain(login.getLoginType()))
         {
@@ -35,12 +35,9 @@ public class LoginStrategyContext {
         ILoginStrategy loginStrategy = loginStrategyFactory.getLoginStrategy(login.getLoginType());
 
         //登录验证
-        boolean isLogin = loginStrategy.login(login);
+        String token = loginStrategy.login(login);
 
-        //登录后处理
-        // todo
-
-        return isLogin;
+        return token;
     }
 
 }

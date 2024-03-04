@@ -1,5 +1,6 @@
 package com.alita.framework.security.config;
 
+import com.alita.framework.security.filter.JwtAuthenticationFilter;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Bean;
@@ -12,11 +13,13 @@ import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import javax.annotation.Resource;
@@ -35,7 +38,10 @@ public class WebSecurityConfig {
      */
     @Resource
     @Qualifier("delegatedAuthenticationEntryPoint")
-    AuthenticationEntryPoint authEntryPoint;
+    private AuthenticationEntryPoint authEntryPoint;
+
+    @Resource
+    private JwtAuthenticationFilter jwtAuthenticationFilter;
 
     /**
      * 1. Spring Security默认使用ProviderManager和DaoAuthenticationProvider。
@@ -83,12 +89,15 @@ public class WebSecurityConfig {
     public SecurityFilterChain loginFilterChain(HttpSecurity http) throws Exception
     {
         http
+                //CSRF需要禁用，否则无法使用post请求
                 .csrf().disable()
-                .authorizeHttpRequests(
-                        authorize -> authorize.anyRequest().authenticated()
-                )
-                .exceptionHandling()
-                .authenticationEntryPoint(authEntryPoint)
+                //任何请求都需要认证后才能访问
+                .authorizeRequests().anyRequest().authenticated()
+                .and()
+                .exceptionHandling().authenticationEntryPoint(authEntryPoint)
+                .and()
+                //将jwt过滤器放到用户名密码登录前，对每一次的请求进行jwt验证
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 ;
 
         return http.build();

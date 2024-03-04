@@ -19,8 +19,8 @@
         </dependency>
 
         <dependency>
-            <groupId>com.alita</groupId>
-            <artifactId>alita-framework-spring-security</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
         <dependency>

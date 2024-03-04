@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class PhoneLoginStrategyImpl implements ILoginStrategy {
 
     @Override
-    public boolean login(Login login) {
-        return false;
+    public String login(Login login) {
+        return "false";
     }
 }

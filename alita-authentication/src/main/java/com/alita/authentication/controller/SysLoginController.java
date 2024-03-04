@@ -41,9 +41,9 @@ public class SysLoginController {
         //用户名校验
         usernameCheckout(login.getUsername());
         //用户登录处理
-        loginStrategyContext.loginHandle(login);
+        String token= loginStrategyContext.loginHandle(login);
 
-        return HttpResponse.response(HttpCode.AUTHENTICATION_SUCCESS);
+        return HttpResponse.response(HttpCode.AUTHENTICATION_SUCCESS,token);
     }
 
 

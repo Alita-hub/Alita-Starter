@@ -14,6 +14,6 @@ public interface ILoginStrategy {
      * @param login
      * @return boolean
      */
-    boolean login(Login login);
+    String login(Login login);
 
 }
