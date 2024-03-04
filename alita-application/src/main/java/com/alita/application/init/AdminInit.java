@@ -48,6 +48,8 @@ public class AdminInit implements CommandLineRunner {
 
             sysUserAccountMapper.insert(sysUserAccount);
         }
+
+        System.out.println("管理员初始化完成！");
     }
 
 }

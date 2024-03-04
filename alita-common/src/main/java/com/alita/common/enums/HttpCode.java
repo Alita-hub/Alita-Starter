@@ -8,6 +8,7 @@ package com.alita.common.enums;
  *     5xx 服务端错误，影响服务可用性
  * 自定义系统编码：
  *     601-620 用户认证
+ *     621-630 JWT令牌
  *
  * @author: alita
  */
@@ -33,11 +34,6 @@ public enum HttpCode {
     UPDATE_SUCCESS(SUCCESS.code, "更新成功！"),
     DELETE_SUCCESS(SUCCESS.code, "删除成功！"),
 
-    SELECT_FAIL(ERROR.code, "查询失败！"),
-    ADD_FAIL(ERROR.code, "添加失败！"),
-    UPDATE_FAIL(ERROR.code, "更新失败！"),
-    DELETE_FAIL(ERROR.code, "删除失败！"),
-
     /**
     * 用户认证（601 - 620）
     */
@@ -47,6 +43,15 @@ public enum HttpCode {
     USER_DISABLE(602, "账号被停用！"),
     USER_LOCKED(603, "账号被锁定！"),
 
+
+    /**
+     * JWT令牌（621 - 630）
+     */
+    JWT_EXPIRED(621, "令牌过期！"),
+    JWT_UNSUPPORTED(622, "无效的令牌！"),
+    JWT_MAL_FORMED(623, "令牌格式错误！"),
+    JWT_WRONG_SIGNATURE(624, "令牌签名错误！"),
+    JWT_ILLEGAL_ARGUMENT(625, "令牌解析错误！")
     ;
 
     private Integer code;

@@ -54,4 +54,20 @@ public class SysConfigService {
         return sysConfigPage;
     }
 
+
+    /**
+     * 根据configKey查询配置值
+     * @param configKey
+     * @return {@link SysConfig}
+     */
+    public SysConfig getConfig(String configKey) {
+        // 创建一个QueryWrapper对象，用于构建查询条件
+        QueryWrapper<SysConfig> queryWrapper = Wrappers.query();
+        queryWrapper.eq("config_key", configKey);
+
+        SysConfig sysConfig = sysConfigMapper.selectOne(queryWrapper);
+
+        return sysConfig;
+    }
+
 }
