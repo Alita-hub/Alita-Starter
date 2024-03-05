@@ -91,7 +91,7 @@ public class WebSecurityConfig {
         http = http
                 .authorizeRequests(
                         request -> request
-                                .antMatchers("/**/*.js", "/**/*.css", "/**/*.js", "/**/*.html", "/**/*.png").permitAll()
+                                .antMatchers("/**/*.js", "/**/*.css", "/**/*.js", "/**/*.html", "/**/*.png","/**/*.jpg", "/**/*.svg").permitAll()
                                 .antMatchers("/loginPage", "/login").permitAll()
                 );
 
