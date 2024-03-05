@@ -3,12 +3,15 @@ package com.alita.framework.security.handler;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
+import org.springframework.security.web.DefaultRedirectStrategy;
+import org.springframework.security.web.RedirectStrategy;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  * Spring Security 核心异常（如 AuthenticationException 和 AccessDeniedException）属于运行时异常。
@@ -18,12 +21,14 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author: alita
  */
-@Component("delegatedAuthenticationEntryPoint")
-public class DelegatedAuthenticationEntryPoint implements AuthenticationEntryPoint {
+@Component
+public class AuthenticationEntryPointImpl implements AuthenticationEntryPoint {
 
     @Resource
     @Qualifier("handlerExceptionResolver")
     private HandlerExceptionResolver resolver;
+
+    private final RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 
     /**
      * 主要作用：
@@ -34,13 +39,17 @@ public class DelegatedAuthenticationEntryPoint implements AuthenticationEntryPoi
      * @param authException
      */
     @Override
-    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException)
-    {
+    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException {
 
         /*
         * 这里注入了 DefaultHandlerExceptionResolver，并将 Handler 委托给该 Resolver（spring mvc解析器）。
         * 现在，可以使用 Exception Handler 方法通过 Controller Advice 来处理此 Security 异常。
         * */
         resolver.resolveException(request, response, null, authException);
+
+        //重定向登录页面
+        redirectStrategy.sendRedirect(request, response, "/loginPage");
     }
+
+
 }

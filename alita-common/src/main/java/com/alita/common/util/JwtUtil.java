@@ -38,32 +38,12 @@ public class JwtUtil {
     }
 
     /**
-     * 生成Jwt令牌
-     *
-     * @param principal
-     * @param exp
-     * @param secretKey
-     * @return {@link String}
-     */
-    public String createToken(String principal, Date exp, String secretKey) {
-        String token = Jwts.builder()
-                .setSubject(principal)
-                .setIssuedAt(new Date())
-                .setExpiration(exp)
-                .signWith(HS256, secretKey)
-                .compact();
-
-        return token;
-    }
-
-    /**
      * 解析Jwt令牌
      *
      * @param token
-     * @param secretKey
      * @return {@link Claims}
      */
-    public Claims parseJwt(String token, String secretKey) {
+    public Claims parseJwt(String token) {
         return Jwts.parser()
                 .setSigningKey(secretKey)
                 .parseClaimsJws(token)

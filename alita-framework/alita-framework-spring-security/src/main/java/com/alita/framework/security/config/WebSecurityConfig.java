@@ -20,7 +20,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import javax.annotation.Resource;
 
@@ -34,10 +33,9 @@ import javax.annotation.Resource;
 public class WebSecurityConfig {
 
     /**
-     * 未认证并且访问需要认证的资源时，自定义处理
+     * 未登录异常处理
      */
     @Resource
-    @Qualifier("delegatedAuthenticationEntryPoint")
     private AuthenticationEntryPoint authEntryPoint;
 
     @Resource
@@ -70,35 +68,48 @@ public class WebSecurityConfig {
     }
 
 
-    @Bean
-    WebSecurityCustomizer webSecurityCustomizer() {
-        return web -> web.ignoring()
-                .antMatchers("/authentication/**")
-                .antMatchers("/config/**");
-    }
-
-
     /**
-     * 认证拦截
+     * Spring Security 配置
      *
      * @param http
      * @return {@link SecurityFilterChain}
      * @throws Exception
      */
     @Bean
-    public SecurityFilterChain loginFilterChain(HttpSecurity http) throws Exception
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception
     {
-        http
-                //CSRF需要禁用，否则无法使用post请求
-                .csrf().disable()
-                //任何请求都需要认证后才能访问
-                .authorizeRequests().anyRequest().authenticated()
-                .and()
-                .exceptionHandling().authenticationEntryPoint(authEntryPoint)
-                .and()
-                //将jwt过滤器放到用户名密码登录前，对每一次的请求进行jwt验证
-                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
-                ;
+        //CSRF需要禁用，否则无法使用post请求
+        http = http.csrf().disable();
+
+        //不使用session
+        http = http
+                .sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and();
+
+        //以下接口不需要认证
+        http = http
+                .authorizeRequests(
+                        request -> request
+                                .antMatchers("/**/*.js", "/**/*.css", "/**/*.js", "/**/*.html", "/**/*.png").permitAll()
+                                .antMatchers("/loginPage", "/login").permitAll()
+                );
+
+        //任何请求都需要认证后才能访问
+        http = http
+                .authorizeRequests()
+                .anyRequest()
+                .authenticated()
+                .and();
+
+        //未登录异常处理，执行重定向到登录页面
+        http = http
+                .exceptionHandling()
+                .authenticationEntryPoint(authEntryPoint)
+                .and();
+
+        //添加Jwt Token 过滤器
+        http = http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }

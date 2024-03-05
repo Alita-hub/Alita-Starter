@@ -5,10 +5,9 @@ import com.alita.common.domain.model.HttpResponse;
 import com.alita.common.domain.model.Login;
 import com.alita.common.enums.HttpCode;
 import com.alita.common.exception.core.BadRequestException;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.regex.Matcher;
@@ -23,12 +22,22 @@ import java.util.regex.Pattern;
  * 用户认证接口
  * @author alita
  */
-@RequestMapping("/authentication")
-@RestController
+@RequestMapping
+@Controller
 public class SysLoginController {
 
     @Resource
     private LoginStrategyContext loginStrategyContext;
+
+    /**
+     * 登录页
+     * @param model
+     * @return {@link String}
+     */
+    @GetMapping("/loginPage")
+    public String loginPage(Model model) {
+        return "authentication/login";
+    }
 
     /**
      * 登录
@@ -36,6 +45,7 @@ public class SysLoginController {
      * @return {@link HttpResponse}
      */
     @PostMapping("/login")
+    @ResponseBody
     public HttpResponse usernameLogin(@RequestBody Login login)
     {
         //用户名校验
