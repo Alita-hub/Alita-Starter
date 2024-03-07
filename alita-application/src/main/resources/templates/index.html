@@ -1,17 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 	<!--begin::Head-->
 	<head><base href=""/>
 		<title>Alita Admin Template</title>
 		<meta charset="utf-8" />
-		<meta name="description" content="一款Java语言编写的后端快速开发脚手架，精美的后端管理系统界面，易维护，可扩展，快速产出！" />
-		<meta name="keywords" content="bootstrap, bootstrap 5, VueJs, Spring, admin themes, web development, free templates, bootstrap theme, bootstrap template, bootstrap dashboard, datatables" />
+		<meta name="description" content="阿丽塔快速开发脚手架，精美的后端管理系统界面，易维护，可扩展，快速产出！" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-		<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
-		<!--begin::Fonts(mandatory for all pages)-->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
-		<!--end::Fonts-->
+		<link th:fragment="shortcut-icon" rel="icon" th:href="@{assets/media/logos/favicon.ico}" />
 		<!--begin::Vendor Stylesheets(used for this page only)-->
 		<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />

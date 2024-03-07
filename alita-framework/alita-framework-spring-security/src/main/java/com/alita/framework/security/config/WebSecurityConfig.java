@@ -87,11 +87,11 @@ public class WebSecurityConfig {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and();
 
-        //以下接口不需要认证
+        //以下URI路径不需要认证
         http = http
                 .authorizeRequests(
                         request -> request
-                                .antMatchers("/**/*.js", "/**/*.css", "/**/*.js", "/**/*.html", "/**/*.png","/**/*.jpg", "/**/*.svg").permitAll()
+                                .antMatchers("/assets/**").permitAll()
                                 .antMatchers("/loginPage", "/login").permitAll()
                 );
 
