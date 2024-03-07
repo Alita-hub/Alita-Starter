@@ -35,7 +35,7 @@ public class SysLoginController {
      * @return {@link String}
      */
     @GetMapping("/loginPage")
-    public String loginPage(Model model) {
+    public String loginPage() {
         return "authentication/login";
     }
 
