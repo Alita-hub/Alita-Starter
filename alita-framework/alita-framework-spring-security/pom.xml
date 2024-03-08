@@ -16,6 +16,11 @@
             <groupId>com.alita</groupId>
             <artifactId>alita-common</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.alita</groupId>
+            <artifactId>alita-admin-api</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

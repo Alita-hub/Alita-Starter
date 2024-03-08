@@ -1,7 +1,6 @@
 package com.alita.framework.security.config;
 
 import com.alita.framework.security.filter.JwtAuthenticationFilter;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,7 +11,6 @@ import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -92,7 +90,7 @@ public class WebSecurityConfig {
                 .authorizeRequests(
                         request -> request
                                 .antMatchers("/assets/**").permitAll()
-                                .antMatchers("/loginPage", "/login").permitAll()
+                                .antMatchers("/loginPage", "/login", "/index").permitAll()
                 );
 
         //任何请求都需要认证后才能访问

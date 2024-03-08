@@ -10,14 +10,12 @@
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>alita-admin</artifactId>
+    <packaging>pom</packaging>
 
-    <dependencies>
+    <modules>
+        <module>alita-admin-api</module>
+        <module>alita-admin-provider</module>
+    </modules>
 
-        <dependency>
-            <groupId>com.alita</groupId>
-            <artifactId>alita-common</artifactId>
-        </dependency>
-
-    </dependencies>
 
 </project>

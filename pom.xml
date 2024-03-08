@@ -124,10 +124,17 @@
                 <version>${common-lang3.version}</version>
             </dependency>
 
-            <!-- 系统管理 -->
+            <!-- 系统管理-api -->
             <dependency>
                 <groupId>com.alita</groupId>
-                <artifactId>alita-admin</artifactId>
+                <artifactId>alita-admin-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- 系统管理-provider -->
+            <dependency>
+                <groupId>com.alita</groupId>
+                <artifactId>alita-admin-provider</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -135,13 +142,6 @@
             <dependency>
                 <groupId>com.alita</groupId>
                 <artifactId>alita-common</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <!-- 认证模块 -->
-            <dependency>
-                <groupId>com.alita</groupId>
-                <artifactId>alita-authentication</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -161,7 +161,6 @@
         <module>alita-business</module>
         <module>alita-common</module>
         <module>alita-application</module>
-        <module>alita-authentication</module>
     </modules>
 
     <build>
