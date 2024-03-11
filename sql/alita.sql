@@ -11,7 +11,7 @@
  Target Server Version : 50731
  File Encoding         : 65001
 
- Date: 04/03/2024 16:43:33
+ Date: 11/03/2024 17:41:28
 */
 
 SET NAMES utf8mb4;
@@ -28,6 +28,7 @@ CREATE TABLE `sys_config`  (
   `config_key` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '键',
   `config_value` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '值',
   `config_status` varchar(1) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '0' COMMENT '0=正常，1=删除',
+  `config_enable` varchar(1) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '0' COMMENT '0=启用，1=不启用',
   `create_time` datetime(0) NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime(0) NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '更新时间',
   PRIMARY KEY (`id`) USING BTREE,
@@ -37,8 +38,8 @@ CREATE TABLE `sys_config`  (
 -- ----------------------------
 -- Records of sys_config
 -- ----------------------------
-INSERT INTO `sys_config` VALUES (1, '认证', 'jwt密钥', 'jwtSecret', 'sd87d@d23ud$', '0', '2024-03-01 17:14:27', '2024-03-01 17:19:01');
-INSERT INTO `sys_config` VALUES (2, '认证', 'jwt令牌过期时间', 'jwtExpire', '30', '0', '2024-03-01 17:19:30', '2024-03-01 17:20:01');
+INSERT INTO `sys_config` VALUES (1, '认证', 'jwt密钥', 'jwtSecret', 'sd87d@d23ud$', '0', '0', '2024-03-01 17:14:27', '2024-03-04 17:01:22');
+INSERT INTO `sys_config` VALUES (2, '认证', 'jwt令牌过期时间', 'jwtExpire', '30', '0', '0', '2024-03-01 17:19:30', '2024-03-04 17:01:24');
 
 -- ----------------------------
 -- Table structure for sys_user_account
@@ -47,6 +48,7 @@ DROP TABLE IF EXISTS `sys_user_account`;
 CREATE TABLE `sys_user_account`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NULL DEFAULT NULL COMMENT '用户id',
+  `user_type` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '用户类型(admin=管理员，normal=普通用户)',
   `login_type` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '认证类型（username=用户名认证，phone=手机验证码，qq=第三方，wechat=第三方）',
   `principal` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '用户身份标识\r\n (手机号/邮箱/用户名或第三方应用的唯一标识)',
   `credential` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '密码凭证\r\n（加密密码/验证码/第三方登录access_token）',
@@ -61,7 +63,7 @@ CREATE TABLE `sys_user_account`  (
 -- ----------------------------
 -- Records of sys_user_account
 -- ----------------------------
-INSERT INTO `sys_user_account` VALUES (3, 1, 'username', 'admin', '$2a$10$CKrz22g/RzNxX.bqlYXhkucssjyjmRU.l03nUh99mcVSZVzIiK6Qa', '0', '2024-02-19 09:24:30', '2024-02-19 09:24:30');
+INSERT INTO `sys_user_account` VALUES (3, 1, 'admin', 'username', 'admin', '$2a$10$CKrz22g/RzNxX.bqlYXhkucssjyjmRU.l03nUh99mcVSZVzIiK6Qa', '0', '2024-02-19 09:24:30', '2024-03-11 16:50:26');
 
 -- ----------------------------
 -- Table structure for sys_user_profile

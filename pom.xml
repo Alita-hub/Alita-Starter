@@ -127,14 +127,14 @@
             <!-- 系统管理-api -->
             <dependency>
                 <groupId>com.alita</groupId>
-                <artifactId>alita-admin-api</artifactId>
+                <artifactId>alita-admin</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
-            <!-- 系统管理-provider -->
+            <!-- 接口管理 -->
             <dependency>
                 <groupId>com.alita</groupId>
-                <artifactId>alita-admin-provider</artifactId>
+                <artifactId>alita-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -161,6 +161,7 @@
         <module>alita-business</module>
         <module>alita-common</module>
         <module>alita-application</module>
+        <module>alita-api</module>
     </modules>
 
     <build>

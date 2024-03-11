@@ -1,6 +1,7 @@
 package com.alita.framework.security.config;
 
 import com.alita.framework.security.filter.JwtAuthenticationFilter;
+import com.alita.framework.security.handler.CustomAuthenticationSuccessHandler;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -36,8 +37,14 @@ public class WebSecurityConfig {
     @Resource
     private AuthenticationEntryPoint authEntryPoint;
 
+    /**
+     * Jwt令牌过滤器
+     */
     @Resource
     private JwtAuthenticationFilter jwtAuthenticationFilter;
+
+    @Resource
+    private CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler;
 
     /**
      * 1. Spring Security默认使用ProviderManager和DaoAuthenticationProvider。
@@ -90,8 +97,14 @@ public class WebSecurityConfig {
                 .authorizeRequests(
                         request -> request
                                 .antMatchers("/assets/**").permitAll()
-                                .antMatchers("/loginPage", "/login", "/index").permitAll()
+                                .antMatchers("/authentication/**").permitAll()
                 );
+
+        http = http
+                .formLogin()
+                .loginProcessingUrl("/authentication/login")
+                .successHandler(customAuthenticationSuccessHandler)
+                .and();
 
         //任何请求都需要认证后才能访问
         http = http

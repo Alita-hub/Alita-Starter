@@ -2,6 +2,7 @@ package com.alita.common.domain.entity;
 
 import com.alita.common.enums.AccountStatus;
 import com.alita.common.enums.LoginType;
+import com.alita.common.enums.UserType;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -25,11 +26,16 @@ public class SysUserAccount implements UserDetails {
     @TableId(type = IdType.AUTO)
     private Integer id;
 
-
     /**
      * 用户唯一id
      */
     private Integer userId;
+
+    /**
+     * 用户类型
+     * (admin=管理员，normal=普通用户)
+     */
+    private UserType userType;
 
     /**
      * 认证类型
@@ -124,6 +130,14 @@ public class SysUserAccount implements UserDetails {
 
     public void setUserId(Integer userId) {
         this.userId = userId;
+    }
+
+    public UserType getUserType() {
+        return userType;
+    }
+
+    public void setUserType(UserType userType) {
+        this.userType = userType;
     }
 
     public LoginType getLoginType() {

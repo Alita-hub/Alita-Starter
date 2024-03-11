@@ -12,12 +12,11 @@
     <artifactId>alita-application</artifactId>
 
     <dependencies>
-
         <!--管理模块-->
         <dependency>
             <groupId>com.alita</groupId>
-            <artifactId>alita-admin-provider</artifactId>
+            <artifactId>alita-admin</artifactId>
         </dependency>
-
     </dependencies>
+
 </project>

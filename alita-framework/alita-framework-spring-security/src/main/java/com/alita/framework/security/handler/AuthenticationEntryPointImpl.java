@@ -48,7 +48,7 @@ public class AuthenticationEntryPointImpl implements AuthenticationEntryPoint {
         resolver.resolveException(request, response, null, authException);
 
         //重定向登录页面
-        redirectStrategy.sendRedirect(request, response, "/loginPage");
+        redirectStrategy.sendRedirect(request, response, "/authentication/loginPage");
     }
 
 
