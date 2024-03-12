@@ -14,7 +14,7 @@
         <!--begin::Title-->
         <a
           href="#"
-          class="fs-4 fw-semobold text-hover-primary text-gray-600 m-0"
+          class="fs-4 fw-semibold text-hover-primary text-gray-600 m-0"
         >
           {{ title }}
         </a>
@@ -61,7 +61,7 @@
         <!--end::Number-->
 
         <!--begin::Label-->
-        <div class="fw-semobold text-gray-400">
+        <div class="fw-semibold text-gray-500">
           {{ footerText }}
         </div>
         <!--end::Label-->
@@ -69,12 +69,12 @@
       <!--end::Stats-->
 
       <!--begin::Indicator-->
-      <div class="d-flex align-items-center fw-semobold">
+      <div class="d-flex align-items-center fw-semibold">
         <span class="badge bg-light text-gray-700 px-3 py-2 me-2">
           {{ indicatorValue }}
         </span>
 
-        <span class="text-gray-400 fs-7">{{ indicatorLabel }}</span>
+        <span class="text-gray-500 fs-7">{{ indicatorLabel }}</span>
       </div>
       <!--end::Indicator-->
     </div>

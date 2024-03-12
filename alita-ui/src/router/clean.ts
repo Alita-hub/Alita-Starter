@@ -1,6 +1,6 @@
 import {
   createRouter,
-  createWebHashHistory,
+  createWebHistory,
   type RouteRecordRaw,
 } from "vue-router";
 import { useAuthStore } from "@/stores/auth";
@@ -10,7 +10,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     redirect: "/dashboard",
-    component: () => import("@/layouts/main-layout/MainLayout.vue"),
+    component: () => import("@/layouts/default-layout/DefaultLayout.vue"),
     meta: {
       middleware: "auth",
     },
@@ -89,8 +89,24 @@ const routes: Array<RouteRecordRaw> = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
+  scrollBehavior(to) {
+    // If the route has a hash, scroll to the section with the specified ID; otherwise, scroll to the top of the page.
+    if (to.hash) {
+      return {
+        el: to.hash,
+        top: 80,
+        behavior: "smooth",
+      };
+    } else {
+      return {
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      };
+    }
+  },
 });
 
 router.beforeEach((to, from, next) => {
@@ -116,13 +132,6 @@ router.beforeEach((to, from, next) => {
   } else {
     next();
   }
-
-  // Scroll page to top on every route change
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-  });
 });
 
 export default router;

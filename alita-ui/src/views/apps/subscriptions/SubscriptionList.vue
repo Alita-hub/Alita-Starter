@@ -12,6 +12,8 @@
             icon-class="fs-1 position-absolute ms-6"
           />
           <input
+            v-model="search"
+            @input="searchItems()"
             type="text"
             data-kt-subscription-table-filter="search"
             class="form-control form-control-solid w-250px ps-14"
@@ -79,6 +81,7 @@
       <KTDatatable
         @on-sort="sort"
         @on-items-select="onItemSelect"
+        @on-items-per-page-change="onItemsPerPageChange"
         :data="data"
         :header="headerConfig"
         :checkbox-enabled="true"
@@ -120,7 +123,7 @@
           </a>
           <!--begin::Menu-->
           <div
-            class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semobold fs-7 w-125px py-4"
+            class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
             data-kt-menu="true"
           >
             <!--begin::Menu item-->
@@ -151,10 +154,21 @@
 
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
-import { defineComponent, ref } from "vue";
+import { defineComponent, onMounted, ref } from "vue";
 import KTDatatable from "@/components/kt-datatable/KTDataTable.vue";
 import type { Sort } from "@/components/kt-datatable/table-partials/models";
 import arraySort from "array-sort";
+import { MenuComponent } from "@/assets/ts/components";
+
+interface ISubscription {
+  id: number;
+  customer: string;
+  status: string;
+  color: string;
+  billing: string;
+  product: string;
+  createdDate: string;
+}
 
 export default defineComponent({
   name: "kt-subscription-list",
@@ -162,7 +176,7 @@ export default defineComponent({
     KTDatatable,
   },
   setup() {
-    const data = ref([
+    const data = ref<Array<ISubscription>>([
       {
         id: 1,
         customer: "Emma Smith",
@@ -376,6 +390,12 @@ export default defineComponent({
       },
     ]);
 
+    const initData = ref<Array<ISubscription>>([]);
+
+    onMounted(() => {
+      initData.value.splice(0, data.value.length, ...data.value);
+    });
+
     const selectedIds = ref<Array<number>>([]);
     const deleteFewSubscriptions = () => {
       selectedIds.value.forEach((item) => {
@@ -400,7 +420,41 @@ export default defineComponent({
       selectedIds.value = selectedItems;
     };
 
+    const search = ref<string>("");
+    const searchItems = () => {
+      data.value.splice(0, data.value.length, ...initData.value);
+      if (search.value !== "") {
+        let results: Array<ISubscription> = [];
+        for (let j = 0; j < initData.value.length; j++) {
+          if (searchingFunc(initData.value[j], search.value)) {
+            results.push(initData.value[j]);
+          }
+        }
+        data.value.splice(0, data.value.length, ...results);
+      }
+      MenuComponent.reinitialization();
+    };
+
+    const searchingFunc = (obj: any, value: string): boolean => {
+      for (let key in obj) {
+        if (!Number.isInteger(obj[key]) && !(typeof obj[key] === "object")) {
+          if (obj[key].toLowerCase().indexOf(value.toLowerCase()) != -1) {
+            return true;
+          }
+        }
+      }
+      return false;
+    };
+
+    const onItemsPerPageChange = () => {
+      setTimeout(() => {
+        MenuComponent.reinitialization();
+      }, 0);
+    };
+
     return {
+      search,
+      searchItems,
       data,
       headerConfig,
       sort,
@@ -409,6 +463,7 @@ export default defineComponent({
       deleteFewSubscriptions,
       deleteSubscription,
       getAssetPath,
+      onItemsPerPageChange,
     };
   },
 });

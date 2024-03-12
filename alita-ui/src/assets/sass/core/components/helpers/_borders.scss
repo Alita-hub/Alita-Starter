@@ -21,6 +21,10 @@
 
 // Hover border colors
 @each $name, $value in $theme-colors {
+    .border-#{$name}-clarity {
+        border-color: var(--#{$prefix}#{$name}-clarity) !important;
+    }
+        
     .border-hover-#{$name}:hover {
         border-color: var(--#{$prefix}#{$name}) !important;
     }
@@ -28,6 +32,11 @@
     .border-active-#{$name}.active {
         border-color: var(--#{$prefix}#{$name}) !important;
     }   
+}
+
+.border-hover-primary-clarity:hover,
+.border-active-primary-clarity.active {
+    border-color: var(--#{$prefix}primary-clarity) !important;
 }
 
 // Hover transparent

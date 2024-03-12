@@ -20,6 +20,24 @@
 	@include button-custom-variant($color, $icon-color, $border-color, $bg-color, $color-active, $icon-color-active, $border-color-active, $bg-color-active);
 }
 
+// Outline hover basic style
+.btn.btn-hover-outline {
+	border-width: 1px;
+	border-style: solid;	
+	
+	$color: null;
+	$icon-color: null;
+	$border-color: null;
+	$bg-color: null;
+
+	$color-active: null;
+	$icon-color-active: null;
+	$border-color-active: $input-border-color;
+	$bg-color-active: null;
+
+	@include button-custom-variant($color, $icon-color, $border-color, $bg-color, $color-active, $icon-color-active, $border-color-active, $bg-color-active);
+}
+
 // Theme colors
 @each $name, $value in $theme-colors {
 	// Base
@@ -42,6 +60,11 @@
 		.btn.btn-light-#{$name} {
 			$color: var(--#{$prefix}#{$name});
 			$icon-color: var(--#{$prefix}#{$name});
+			@if $name == 'secondary' {
+					$color: var(--#{$prefix}#{$name}-inverse);
+					$icon-color: var(--#{$prefix}#{$name}-inverse);
+			}
+
 			$border-color: var(--#{$prefix}#{$name}-light);
 			$bg-color: var(--#{$prefix}#{$name}-light);
 	
@@ -94,6 +117,11 @@
 
 			$color-active: var(--#{$prefix}#{$name});
 			$icon-color-active: var(--#{$prefix}#{$name});
+			@if $name == 'secondary' {
+					$color-active: var(--#{$prefix}#{$name}-inverse);
+					$icon-color-active: var(--#{$prefix}#{$name}-inverse);
+			}
+
 			$border-color-active: var(--#{$prefix}#{$name}-light);
 			$bg-color-active: var(--#{$prefix}#{$name}-light);
 
@@ -106,12 +134,26 @@
 		$color: var(--#{$prefix}#{$name});
 		$icon-color: var(--#{$prefix}#{$name});
 		$border-color: var(--#{$prefix}#{$name});
+
+		@if $name == 'secondary' {
+				$color: var(--#{$prefix}#{$name}-inverse);
+				$icon-color: var(--#{$prefix}#{$name}-inverse);
+				$border-color: var(--#{$prefix}#{$name}-inverse);
+		}
+		
 		$bg-color: transparent;
 
 		$color-active: var(--#{$prefix}#{$name}-active);
 		$icon-color-active: var(--#{$prefix}#{$name}-active);
 		$border-color-active: var(--#{$prefix}#{$name});
+		@if $name == 'secondary' {
+				$color-active: var(--#{$prefix}#{$name}-inverse);
+				$icon-color-active: var(--#{$prefix}#{$name}-inverse);
+				$border-color-active: var(--#{$prefix}#{$name}-inverse);
+		}
+
 		$bg-color-active: var(--#{$prefix}#{$name}-light);
+
 
 		@include button-custom-variant($color, $icon-color, $border-color, $bg-color, $color-active, $icon-color-active, $border-color-active, $bg-color-active);
 	}
@@ -239,6 +281,27 @@
 		$bg-color-active: get($value, base);
 		$border-color-active: get($value, base);
 
+		@if $name == 'secondary' {
+			color: var(--#{$prefix}#{$name}-inverse);
+		} @else {
+			color: var(--#{$prefix}#{$name});
+		}
+
 		@include button-custom-variant($color, $icon-color, $border-color, $bg-color, $color-active, $icon-color-active, $border-color-active, $bg-color-active);
+	}
+}
+
+@include color-mode(dark) {
+	.btn.btn-dark {
+		@include button-custom-variant(
+			$color: $gray-800-dark, 
+			$icon-color: $gray-800-dark, 
+			$border-color: null, 
+			$bg-color: $gray-400-dark,
+			$color-active: lighten($gray-800-dark, 3%), 
+			$icon-color-active: lighten($gray-800-dark, 3%), 
+			$border-color-active: null, 
+			$bg-color-active: lighten($gray-400-dark, 3%),
+		);
 	}
 }

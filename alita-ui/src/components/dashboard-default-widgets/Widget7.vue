@@ -9,7 +9,7 @@
           >Authors Achievements</span
         >
 
-        <span class="text-gray-400 mt-1 fw-semibold fs-6"
+        <span class="text-gray-500 mt-1 fw-semibold fs-6"
           >Avg. 69.34% Conv. Rate</span
         >
       </h3>
@@ -19,7 +19,7 @@
       <div class="card-toolbar">
         <!--begin::Menu-->
         <button
-          class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
+          class="btn btn-icon btn-color-gray-500 btn-active-color-primary justify-content-end"
           data-kt-menu-trigger="click"
           data-kt-menu-placement="bottom-end"
           data-kt-menu-overflow="true"
@@ -92,7 +92,7 @@
               <table class="table table-row-dashed align-middle gs-0 gy-3 my-0">
                 <!--begin::Table head-->
                 <thead>
-                  <tr class="fs-7 fw-bold text-gray-400 border-bottom-0">
+                  <tr class="fs-7 fw-bold text-gray-500 border-bottom-0">
                     <th class="p-0 pb-3 min-w-150px text-start">AUTHOR</th>
                     <th class="p-0 pb-3 min-w-100px text-end pe-13">CONV.</th>
                     <th class="p-0 pb-3 w-125px text-end pe-7">PROGRESS</th>
@@ -118,7 +118,7 @@
                               >{{ row.agent.name }}</router-link
                             >
                             <span
-                              class="text-gray-400 fw-semibold d-block fs-7"
+                              class="text-gray-500 fw-semibold d-block fs-7"
                               >{{ row.agent.city }}</span
                             >
                           </div>

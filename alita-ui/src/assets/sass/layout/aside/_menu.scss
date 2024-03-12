@@ -46,5 +46,9 @@
         .menu-icon {
             justify-content: flex-start;
         }
-    }          
+    }      
+
+    .menu-sub-lg-dropdown {
+        background-color: get($aside-config, bg-color);
+    }    
 }

@@ -6,7 +6,7 @@
       <h3 class="card-title align-items-start flex-column">
         <span class="card-label fw-bold fs-3 mb-1">Sales Statistics</span>
 
-        <span class="text-muted fw-semobold fs-7">Recent sales statistics</span>
+        <span class="text-muted fw-semibold fs-7">Recent sales statistics</span>
       </h3>
 
       <div class="card-toolbar">
@@ -45,7 +45,7 @@
 
               <!--begin::Title-->
               <div>
-                <div class="fs-4 text-dark fw-bold">$2,034</div>
+                <div class="fs-4 text-gray-900 fw-bold">$2,034</div>
                 <div class="fs-7 text-muted fw-semobold">Author Sales</div>
               </div>
               <!--end::Title-->
@@ -69,7 +69,7 @@
 
               <!--begin::Title-->
               <div>
-                <div class="fs-4 text-dark fw-bold">$706</div>
+                <div class="fs-4 text-gray-900 fw-bold">$706</div>
                 <div class="fs-7 text-muted fw-semobold">Commision</div>
               </div>
               <!--end::Title-->
@@ -94,7 +94,7 @@
 
               <!--begin::Title-->
               <div>
-                <div class="fs-4 text-dark fw-bold">$49</div>
+                <div class="fs-4 text-gray-900 fw-bold">$49</div>
                 <div class="fs-7 text-muted fw-semobold">Average Bid</div>
               </div>
               <!--end::Title-->
@@ -115,7 +115,7 @@
 
               <!--begin::Title-->
               <div>
-                <div class="fs-4 text-dark fw-bold">$5.8M</div>
+                <div class="fs-4 text-gray-900 fw-bold">$5.8M</div>
                 <div class="fs-7 text-muted fw-semobold">All Time Sales</div>
               </div>
               <!--end::Title-->
@@ -164,7 +164,7 @@ export default defineComponent({
   },
   setup(props) {
     const chartRef = ref<typeof VueApexCharts | null>(null);
-    let chart: ApexOptions = {};
+    const chart = ref<ApexOptions>({});
     const store = useThemeStore();
 
     const series = [
@@ -179,7 +179,10 @@ export default defineComponent({
     });
 
     onBeforeMount(() => {
-      Object.assign(chart, chartOptions(props.chartColor, props.chartHeight));
+      Object.assign(
+        chart.value,
+        chartOptions(props.chartColor, props.chartHeight)
+      );
     });
 
     const refreshChart = () => {
@@ -187,9 +190,9 @@ export default defineComponent({
         return;
       }
 
-      Object.assign(chart, chartOptions(props.chartColor, props.chartHeight));
-
-      chartRef.value.refresh();
+      chartRef.value.updateOptions(
+        chartOptions(props.chartColor, props.chartHeight)
+      );
     };
 
     watch(themeMode, () => {

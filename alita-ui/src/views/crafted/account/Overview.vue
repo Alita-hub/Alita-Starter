@@ -24,12 +24,12 @@
       <!--begin::Row-->
       <div class="row mb-7">
         <!--begin::Label-->
-        <label class="col-lg-4 fw-semobold text-muted">Full Name</label>
+        <label class="col-lg-4 fw-semibold text-muted">Full Name</label>
         <!--end::Label-->
 
         <!--begin::Col-->
         <div class="col-lg-8">
-          <span class="fw-bold fs-6 text-dark">Max Smith</span>
+          <span class="fw-bold fs-6 text-gray-900">Max Smith</span>
         </div>
         <!--end::Col-->
       </div>
@@ -38,12 +38,12 @@
       <!--begin::Input group-->
       <div class="row mb-7">
         <!--begin::Label-->
-        <label class="col-lg-4 fw-semobold text-muted">Company</label>
+        <label class="col-lg-4 fw-semibold text-muted">Company</label>
         <!--end::Label-->
 
         <!--begin::Col-->
         <div class="col-lg-8 fv-row">
-          <span class="fw-semobold fs-6">Keenthemes</span>
+          <span class="fw-semibold fs-6">Keenthemes</span>
         </div>
         <!--end::Col-->
       </div>
@@ -52,7 +52,7 @@
       <!--begin::Input group-->
       <div class="row mb-7">
         <!--begin::Label-->
-        <label class="col-lg-4 fw-semobold text-muted">
+        <label class="col-lg-4 fw-semibold text-muted">
           Contact Phone
           <i
             class="fas fa-exclamation-circle ms-1 fs-7"
@@ -75,12 +75,12 @@
       <!--begin::Input group-->
       <div class="row mb-7">
         <!--begin::Label-->
-        <label class="col-lg-4 fw-semobold text-muted">Company Site</label>
+        <label class="col-lg-4 fw-semibold text-muted">Company Site</label>
         <!--end::Label-->
 
         <!--begin::Col-->
         <div class="col-lg-8">
-          <a href="#" class="fw-semobold fs-6 text-dark text-hover-primary"
+          <a href="#" class="fw-semobold fs-6 text-gray-900 text-hover-primary"
             >keenthemes.com</a
           >
         </div>
@@ -91,7 +91,7 @@
       <!--begin::Input group-->
       <div class="row mb-7">
         <!--begin::Label-->
-        <label class="col-lg-4 fw-semobold text-muted">
+        <label class="col-lg-4 fw-semibold text-muted">
           Country
           <i
             class="fas fa-exclamation-circle ms-1 fs-7"
@@ -103,7 +103,7 @@
 
         <!--begin::Col-->
         <div class="col-lg-8">
-          <span class="fw-bold fs-6 text-dark">Germany</span>
+          <span class="fw-bold fs-6 text-gray-900">Germany</span>
         </div>
         <!--end::Col-->
       </div>
@@ -112,12 +112,12 @@
       <!--begin::Input group-->
       <div class="row mb-7">
         <!--begin::Label-->
-        <label class="col-lg-4 fw-semobold text-muted">Communication</label>
+        <label class="col-lg-4 fw-semibold text-muted">Communication</label>
         <!--end::Label-->
 
         <!--begin::Col-->
         <div class="col-lg-8">
-          <span class="fw-bold fs-6 text-dark">Email, Phone</span>
+          <span class="fw-bold fs-6 text-gray-900">Email, Phone</span>
         </div>
         <!--end::Col-->
       </div>
@@ -126,12 +126,12 @@
       <!--begin::Input group-->
       <div class="row mb-10">
         <!--begin::Label-->
-        <label class="col-lg-4 fw-semobold text-muted">Allow Changes</label>
+        <label class="col-lg-4 fw-semibold text-muted">Allow Changes</label>
         <!--begin::Label-->
 
         <!--begin::Label-->
         <div class="col-lg-8">
-          <span class="fw-semobold fs-6">Yes</span>
+          <span class="fw-semibold fs-6">Yes</span>
         </div>
         <!--begin::Label-->
       </div>
@@ -147,7 +147,7 @@
         <!--begin::Wrapper-->
         <div class="d-flex flex-stack flex-grow-1">
           <!--begin::Content-->
-          <div class="fw-semobold">
+          <div class="fw-semibold">
             <h4 class="text-gray-800 fw-bold">We need your attention!</h4>
 
             <div class="fs-6 text-gray-600">

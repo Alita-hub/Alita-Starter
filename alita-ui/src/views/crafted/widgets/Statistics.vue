@@ -183,7 +183,7 @@
       <StatisticsWidget5
         widget-classes="card-xl-stretch mb-xl-8"
         icon-name="chart-simple"
-        color="white"
+        color="priamry"
         icon-color="primary"
         title="500M$"
         description="SAP UI Progress"
@@ -195,7 +195,7 @@
         widget-classes="card-xl-stretch mb-xl-8"
         icon-name="cheque"
         color="dark"
-        icon-color="white"
+        icon-color="primary"
         title="+3000"
         description="New Customers"
       ></StatisticsWidget5>

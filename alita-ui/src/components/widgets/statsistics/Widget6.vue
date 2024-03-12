@@ -12,9 +12,9 @@
       </a>
 
       <div class="py-1">
-        <span class="text-dark fs-1 fw-bold me-2">{{ progress }}</span>
+        <span class="text-gray-900 fs-1 fw-bold me-2">{{ progress }}</span>
 
-        <span class="fw-semobold text-muted fs-7">{{ title }}</span>
+        <span class="fw-semibold text-muted fs-7">{{ title }}</span>
       </div>
 
       <div :class="`bg-${color}`" class="progress h-7px bg-opacity-50 mt-7">

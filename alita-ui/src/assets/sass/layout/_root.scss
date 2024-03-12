@@ -15,6 +15,9 @@
     --#{$prefix}header-border-bottom: #{get($header-config, border-bottom)};
     --#{$prefix}header-box-shadow: #{get($header-config, box-shadow)};
 
+    // Aside
+    --#{$prefix}aside-border: #{get($aside-config, border)};
+
     // Footer
     --#{$prefix}footer-bg-color: #{get($footer-config, bg-color)};
 }
@@ -31,6 +34,9 @@
     --#{$prefix}header-bg-color: #{get($header-config, bg-color-dark)};
     --#{$prefix}header-border-bottom: #{get($header-config, border-bottom-dark)};
     --#{$prefix}header-box-shadow: #{get($header-config, box-shadow-dark)};
+
+    // Aside
+    --#{$prefix}aside-border: #{get($aside-config, border-dark)};
 
     // Footer
     --#{$prefix}footer-bg-color: #{get($footer-config, bg-color-dark)};

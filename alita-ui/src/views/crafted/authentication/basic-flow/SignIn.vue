@@ -12,11 +12,11 @@
       <!--begin::Heading-->
       <div class="text-center mb-10">
         <!--begin::Title-->
-        <h1 class="text-dark mb-3">Sign In</h1>
+        <h1 class="text-gray-900 mb-3">Sign In</h1>
         <!--end::Title-->
 
         <!--begin::Link-->
-        <div class="text-gray-400 fw-semobold fs-4">
+        <div class="text-gray-500 fw-semibold fs-4">
           New Here?
 
           <router-link to="/sign-up" class="link-primary fw-bold">
@@ -37,7 +37,7 @@
       <!--begin::Input group-->
       <div class="fv-row mb-10">
         <!--begin::Label-->
-        <label class="form-label fs-6 fw-bold text-dark">Email</label>
+        <label class="form-label fs-6 fw-bold text-gray-900">Email</label>
         <!--end::Label-->
 
         <!--begin::Input-->
@@ -62,7 +62,7 @@
         <!--begin::Wrapper-->
         <div class="d-flex flex-stack mb-2">
           <!--begin::Label-->
-          <label class="form-label fw-bold text-dark fs-6 mb-0">Password</label>
+          <label class="form-label fw-bold text-gray-900 fs-6 mb-0">Password</label>
           <!--end::Label-->
 
           <!--begin::Link-->
@@ -214,7 +214,7 @@ export default defineComponent({
           confirmButtonText: "Ok, got it!",
           heightAuto: false,
           customClass: {
-            confirmButton: "btn fw-semobold btn-light-primary",
+            confirmButton: "btn fw-semibold btn-light-primary",
           },
         }).then(() => {
           // Go to page after successfully login
@@ -228,7 +228,7 @@ export default defineComponent({
           confirmButtonText: "Try again!",
           heightAuto: false,
           customClass: {
-            confirmButton: "btn fw-semobold btn-light-danger",
+            confirmButton: "btn fw-semibold btn-light-danger",
           },
         }).then(() => {
           store.errors = {};

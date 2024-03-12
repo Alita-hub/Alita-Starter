@@ -29,7 +29,7 @@
                 <!--begin::Title-->
                 <div class="flex-shrink-0 me-5">
                   <span
-                    class="text-gray-400 fs-7 fw-bold me-2 d-block lh-1 pb-1"
+                    class="text-gray-500 fs-7 fw-bold me-2 d-block lh-1 pb-1"
                     >Featured</span
                   >
 
@@ -60,7 +60,7 @@
 
                   <!--begin::Info-->
                   <div class="m-0">
-                    <span class="fw-semibold text-gray-400 d-block fs-8"
+                    <span class="fw-semibold text-gray-500 d-block fs-8"
                       >Manager</span
                     >
                     <router-link
@@ -88,7 +88,7 @@
 
                   <!--begin::Info-->
                   <div class="m-0">
-                    <span class="fw-semibold text-gray-400 d-block fs-8"
+                    <span class="fw-semibold text-gray-500 d-block fs-8"
                       >Budget</span
                     >
                     <span class="fw-bold text-gray-800 fs-7">$64.800</span>
@@ -121,7 +121,7 @@
                   <!--end::Date-->
 
                   <!--begin::Label-->
-                  <div class="fw-semibold text-gray-400">Due Date</div>
+                  <div class="fw-semibold text-gray-500">Due Date</div>
                   <!--end::Label-->
                 </div>
                 <!--end::Stat-->
@@ -137,7 +137,7 @@
                   <!--end::Number-->
 
                   <!--begin::Label-->
-                  <div class="fw-semibold text-gray-400">Budget</div>
+                  <div class="fw-semibold text-gray-500">Budget</div>
                   <!--end::Label-->
                 </div>
                 <!--end::Stat-->

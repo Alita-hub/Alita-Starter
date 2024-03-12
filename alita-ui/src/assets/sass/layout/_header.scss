@@ -33,7 +33,8 @@
 			height: get($header-config, height, desktop);
 			padding: 0 get($aside-config, padding-x);
 			width: get($aside-config, width);
-			border-bottom: var(--#{$prefix}header-border-bottom);
+			border-right: var(--#{$prefix}aside-border);
+			border-bottom: 1px dashed $light-light-dark;
 			flex-shrink: 0;
 		}
 

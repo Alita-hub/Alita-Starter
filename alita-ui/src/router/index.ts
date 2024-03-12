@@ -1,6 +1,6 @@
 import {
   createRouter,
-  createWebHashHistory,
+  createWebHistory,
   type RouteRecordRaw,
 } from "vue-router";
 import { useAuthStore } from "@/stores/auth";
@@ -10,7 +10,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     redirect: "/dashboard",
-    component: () => import("@/layouts/main-layout/MainLayout.vue"),
+    component: () => import("@/layouts/default-layout/DefaultLayout.vue"),
     meta: {
       middleware: "auth",
     },
@@ -100,7 +100,8 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: "/crafted/pages/wizards/horizontal",
         name: "horizontal-wizard",
-        component: () => import("@/views/crafted/pages/wizards/Horizontal.vue"),
+        component: () =>
+          import("@/views/crafted/pages/wizards/HorizontalWizardPage.vue"),
         meta: {
           pageTitle: "Horizontal",
           breadcrumbs: ["Pages", "Wizard"],
@@ -109,7 +110,8 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: "/crafted/pages/wizards/vertical",
         name: "vertical-wizard",
-        component: () => import("@/views/crafted/pages/wizards/Vertical.vue"),
+        component: () =>
+          import("@/views/crafted/pages/wizards/VerticalWizardPage.vue"),
         meta: {
           pageTitle: "Vertical",
           breadcrumbs: ["Pages", "Wizard"],
@@ -439,15 +441,6 @@ const routes: Array<RouteRecordRaw> = [
     ],
   },
   {
-    path: "/multi-step-sign-up",
-    name: "multi-step-sign-up",
-    component: () =>
-      import("@/views/crafted/authentication/MultiStepSignUp.vue"),
-    meta: {
-      pageTitle: "Multi-step Sign up",
-    },
-  },
-  {
     path: "/",
     component: () => import("@/layouts/SystemLayout.vue"),
     children: [
@@ -477,8 +470,24 @@ const routes: Array<RouteRecordRaw> = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
+  scrollBehavior(to) {
+    // If the route has a hash, scroll to the section with the specified ID; otherwise, scroll to the top of the page.
+    if (to.hash) {
+      return {
+        el: to.hash,
+        top: 80,
+        behavior: "smooth",
+      };
+    } else {
+      return {
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      };
+    }
+  },
 });
 
 router.beforeEach((to, from, next) => {
@@ -504,13 +513,6 @@ router.beforeEach((to, from, next) => {
   } else {
     next();
   }
-
-  // Scroll page to top on every route change
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-  });
 });
 
 export default router;

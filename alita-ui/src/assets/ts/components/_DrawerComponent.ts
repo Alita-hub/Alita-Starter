@@ -229,10 +229,13 @@ class DrawerComponent {
       if (overlayClassOption) {
         this.overlayElement.classList.add(overlayClassOption.toString());
       }
-      this.overlayElement.addEventListener("click", (e) => {
-        e.preventDefault();
-        this._hide();
-      });
+
+      if (!this._getOption("permanent")) {
+        this.overlayElement.addEventListener("click", (e) => {
+          e.preventDefault();
+          this._hide();
+        });
+      }
     }
   };
 

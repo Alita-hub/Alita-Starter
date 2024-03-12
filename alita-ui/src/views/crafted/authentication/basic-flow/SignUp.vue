@@ -12,11 +12,11 @@
       <!--begin::Heading-->
       <div class="mb-10 text-center">
         <!--begin::Title-->
-        <h1 class="text-dark mb-3">Create an Account</h1>
+        <h1 class="text-gray-900 mb-3">Create an Account</h1>
         <!--end::Title-->
 
         <!--begin::Link-->
-        <div class="text-gray-400 fw-semobold fs-4">
+        <div class="text-gray-500 fw-semibold fs-4">
           Already have an account?
 
           <router-link to="/sign-in" class="link-primary fw-bold">
@@ -41,7 +41,7 @@
       <!--begin::Separator-->
       <div class="d-flex align-items-center mb-10">
         <div class="border-bottom border-gray-300 mw-50 w-100"></div>
-        <span class="fw-semobold text-gray-400 fs-7 mx-2">OR</span>
+        <span class="fw-semobold text-gray-500 fs-7 mx-2">OR</span>
         <div class="border-bottom border-gray-300 mw-50 w-100"></div>
       </div>
       <!--end::Separator-->
@@ -50,7 +50,7 @@
       <div class="row fv-row mb-7">
         <!--begin::Col-->
         <div class="col-xl-6">
-          <label class="form-label fw-bold text-dark fs-6">First Name</label>
+          <label class="form-label fw-bold text-gray-900 fs-6">First Name</label>
           <Field
             class="form-control form-control-lg form-control-solid"
             type="text"
@@ -68,7 +68,7 @@
 
         <!--begin::Col-->
         <div class="col-xl-6">
-          <label class="form-label fw-bold text-dark fs-6">Last Name</label>
+          <label class="form-label fw-bold text-gray-900 fs-6">Last Name</label>
           <Field
             class="form-control form-control-lg form-control-solid"
             type="text"
@@ -88,7 +88,7 @@
 
       <!--begin::Input group-->
       <div class="fv-row mb-7">
-        <label class="form-label fw-bold text-dark fs-6">Email</label>
+        <label class="form-label fw-bold text-gray-900 fs-6">Email</label>
         <Field
           class="form-control form-control-lg form-control-solid"
           type="email"
@@ -109,7 +109,7 @@
         <!--begin::Wrapper-->
         <div class="mb-1">
           <!--begin::Label-->
-          <label class="form-label fw-bold text-dark fs-6"> Password </label>
+          <label class="form-label fw-bold text-gray-900 fs-6"> Password </label>
           <!--end::Label-->
 
           <!--begin::Input wrapper-->
@@ -159,7 +159,7 @@
 
       <!--begin::Input group-->
       <div class="fv-row mb-5">
-        <label class="form-label fw-bold text-dark fs-6"
+        <label class="form-label fw-bold text-gray-900 fs-6"
           >Confirm Password</label
         >
         <Field
@@ -186,7 +186,7 @@
             name="toc"
             value="1"
           />
-          <span class="form-check-label fw-semobold text-gray-700 fs-6">
+          <span class="form-check-label fw-semibold text-gray-700 fs-6">
             I Agree &
             <a href="#" class="ms-1 link-primary">Terms and conditions</a>.
           </span>
@@ -248,7 +248,7 @@ export default defineComponent({
       password: Yup.string().required().label("Password"),
       password_confirmation: Yup.string()
         .required()
-        .oneOf([Yup.ref("password"), null], "Passwords must match")
+        .oneOf([Yup.ref("password")], "Passwords must match")
         .label("Password Confirmation"),
     });
 
@@ -283,7 +283,7 @@ export default defineComponent({
           confirmButtonText: "Ok, got it!",
           heightAuto: false,
           customClass: {
-            confirmButton: "btn fw-semobold btn-light-primary",
+            confirmButton: "btn fw-semibold btn-light-primary",
           },
         }).then(function () {
           // Go to page after successfully login
@@ -297,7 +297,7 @@ export default defineComponent({
           confirmButtonText: "Try again!",
           heightAuto: false,
           customClass: {
-            confirmButton: "btn fw-semobold btn-light-danger",
+            confirmButton: "btn fw-semibold btn-light-danger",
           },
         });
       }

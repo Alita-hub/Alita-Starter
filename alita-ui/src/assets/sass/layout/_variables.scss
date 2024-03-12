@@ -8,16 +8,16 @@ $root-font-size-lg:                             	13px; // Root font size for tab
 $root-font-size-md:                             	12px; // Root font size for mobile mode
 
 // Page bg
-$page-bg: 											$gray-100 !default;
-$page-bg-dark: 										#151521 !default;
+$page-bg: 											$white;
+$page-bg-dark: 										$coal-400;
 
 // App blank bg color
 $app-blank-bg-color: 								$white;
-$app-blank-bg-color-dark: 							#151521;
+$app-blank-bg-color-dark: 							$coal-400;
 
 
 // Content border radius
-$content-border-radius:								1.5rem !default;
+$content-border-radius:								1.5rem;
 
 // Content Spacing
 $content-spacing: (
@@ -34,11 +34,11 @@ $header-config: (
 	
 	z-index: 100,
 	bg-color: $white,
-	bg-color-dark: #1E1E2D,
+	bg-color-dark: $coal-400,
 	border-bottom: 0,
-	border-bottom-dark: 1px solid #2D2D43,
-	box-shadow: 0px 10px 30px 0px rgba(82,63,105,0.05),
-	box-shadow-dark: none	
+	border-bottom-dark: 0,
+	box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.03),
+	box-shadow-dark: 0px 3px 4px 0px rgba(0, 0, 0, 0.03)
 ) !default;
 
 // Aside
@@ -50,7 +50,9 @@ $aside-config: (
 	footer-padding-x: 15px,
 	menu-padding-x: 10px,
 	menu-indention: 0.75rem,
-	bg-color: #1E1E2D,
+	bg-color: $coal-500,
+	border: 0,
+	border-dark: 1px solid $coal-100,
 	scrollbar-color: #4d4d69,
 	scrollbar-hover-color: lighten(#4d4d69, 2%)	
 ) !default;
@@ -58,5 +60,5 @@ $aside-config: (
 // Aside
 $footer-config: (	
 	bg-color: $white,
-	bg-color-dark: #1B1B28,
+	bg-color-dark: $coal-400
 ) !default;

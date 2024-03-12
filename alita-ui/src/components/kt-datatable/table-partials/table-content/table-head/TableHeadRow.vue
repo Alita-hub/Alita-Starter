@@ -1,6 +1,6 @@
 <template>
   <thead>
-    <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+    <tr class="text-start text-gray-500 fw-bold fs-7 text-uppercase gs-0">
       <th v-if="checkboxEnabled" :style="{ width: '30px' }">
         <div
           class="form-check form-check-sm form-check-custom form-check-solid me-3"
@@ -40,7 +40,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref, watch } from "vue";
+import { computed, defineComponent, onMounted, ref, watch } from "vue";
 import type { Sort } from "@/components/kt-datatable/table-partials/models";
 
 export default defineComponent({
@@ -63,6 +63,10 @@ export default defineComponent({
     const columnLabelAndOrder = ref<Sort>({
       label: props.sortLabel,
       order: props.sortOrder,
+    });
+
+    onMounted(() => {
+      emit("on-sort", columnLabelAndOrder.value);
     });
 
     watch(

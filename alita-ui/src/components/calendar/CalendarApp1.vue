@@ -32,14 +32,12 @@
 
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
-import "@fullcalendar/core/vdom";
 import { defineComponent } from "vue";
 import FullCalendar from "@fullcalendar/vue3";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import listPlugin from "@fullcalendar/list";
 import interactionPlugin from "@fullcalendar/interaction";
-import type { CalendarOptions } from "@fullcalendar/core";
 import events, { TODAY } from "@/core/data/events";
 import NewEventModal from "@/components/modals/forms/NewEventModal.vue";
 import { Modal } from "bootstrap";
@@ -58,7 +56,7 @@ export default defineComponent({
       modal.show();
     };
 
-    const calendarOptions: CalendarOptions = {
+    const calendarOptions = {
       plugins: [dayGridPlugin, timeGridPlugin, listPlugin, interactionPlugin],
       headerToolbar: {
         left: "prev,next today",

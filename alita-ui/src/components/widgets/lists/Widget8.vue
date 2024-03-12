@@ -4,9 +4,9 @@
     <!--begin::Header-->
     <div class="card-header align-items-center border-0 mt-4">
       <h3 class="card-title align-items-start flex-column">
-        <span class="fw-bold text-dark">Latest Products</span>
+        <span class="fw-bold text-gray-900">Latest Products</span>
 
-        <span class="text-muted mt-1 fw-semobold fs-7">Gifts and more</span>
+        <span class="text-muted mt-1 fw-semibold fs-7">Gifts and more</span>
       </h3>
 
       <div class="card-toolbar">
@@ -57,7 +57,7 @@
                 >{{ item.title }}</a
               >
 
-              <span class="text-muted fw-semobold d-block pt-1">{{
+              <span class="text-muted fw-semibold d-block pt-1">{{
                 item.desc
               }}</span>
             </div>

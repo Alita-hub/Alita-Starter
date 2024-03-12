@@ -63,13 +63,23 @@
 
         &.badge-outline {
             border: 1px solid var(--#{$prefix}#{$name});
-            color: var(--#{$prefix}#{$name});
             background-color: transparent;
+
+            @if $name == 'secondary' {
+                color: var(--#{$prefix}#{$name}-inverse);
+            } @else {
+                color: var(--#{$prefix}#{$name});
+            }
         }
     }
 
-    .badge-light-#{$name} {
-        color: var(--#{$prefix}#{$name});
+    .badge-light-#{$name} {        
         background-color: var(--#{$prefix}#{$name}-light);
+
+        @if $name == 'secondary' {
+            color: var(--#{$prefix}#{$name}-inverse);
+        } @else {
+            color: var(--#{$prefix}#{$name});
+        }
     }    
 }

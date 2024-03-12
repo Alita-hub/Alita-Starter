@@ -19,7 +19,7 @@
         <!--end::Info-->
 
         <!--begin::Link-->
-        <a href="#" class="text-dark fw-bold text-hover-primary fs-4">
+        <a href="#" class="text-gray-900 fw-bold text-hover-primary fs-4">
           {{ title }}
         </a>
         <!--end::Link-->

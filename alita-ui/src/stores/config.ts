@@ -1,8 +1,8 @@
 import { ref } from "vue";
 import { defineStore } from "pinia";
 import objectPath from "object-path";
-import type LayoutConfigTypes from "@/core/config/LayoutConfigTypes";
-import layoutConfig from "@/core/config/DefaultLayoutConfig";
+import type LayoutConfigTypes from "@/layouts/default-layout/config/types";
+import layoutConfig from "@/layouts/default-layout/config/DefaultLayoutConfig";
 
 export const LS_CONFIG_NAME_KEY = "config_" + import.meta.env.VITE_APP_DEMO;
 

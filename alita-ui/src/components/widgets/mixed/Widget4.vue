@@ -5,7 +5,7 @@
     <div class="card-header border-0 py-5">
       <h3 class="card-title align-items-start flex-column">
         <span class="card-label fw-bold fs-3 mb-1">Action Needed</span>
-        <span class="text-muted fw-semobold fs-7"
+        <span class="text-muted fw-semibold fs-7"
           >Complete your profile setup</span
         >
       </h3>
@@ -81,7 +81,7 @@ export default defineComponent({
   },
   setup(props) {
     const chartRef = ref<typeof VueApexCharts | null>(null);
-    let chart: ApexOptions = {};
+    const chart = ref<ApexOptions>({});
     const store = useThemeStore();
 
     const series = ref([74]);
@@ -91,7 +91,10 @@ export default defineComponent({
     });
 
     onBeforeMount(() => {
-      Object.assign(chart, chartOptions(props.chartColor, props.chartHeight));
+      Object.assign(
+        chart.value,
+        chartOptions(props.chartColor, props.chartHeight)
+      );
     });
 
     const refreshChart = () => {
@@ -99,9 +102,9 @@ export default defineComponent({
         return;
       }
 
-      Object.assign(chart, chartOptions(props.chartColor, props.chartHeight));
-
-      chartRef.value.refresh();
+      chartRef.value.updateOptions(
+        chartOptions(props.chartColor, props.chartHeight)
+      );
     };
 
     watch(themeMode, () => {

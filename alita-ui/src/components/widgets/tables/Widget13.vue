@@ -6,7 +6,7 @@
       <h3 class="card-title align-items-start flex-column">
         <span class="card-label fw-bold fs-3 mb-1">Recent Orders</span>
 
-        <span class="text-muted mt-1 fw-semobold fs-7">Over 500 orders</span>
+        <span class="text-muted mt-1 fw-semibold fs-7">Over 500 orders</span>
       </h3>
       <div class="card-toolbar">
         <!--begin::Menu-->
@@ -82,7 +82,7 @@
                 <td>
                   <a
                     href="#"
-                    class="text-dark fw-bold text-hover-primary fs-6"
+                    class="text-gray-900 fw-bold text-hover-primary fs-6"
                     >{{ item.orderid }}</a
                   >
                 </td>
@@ -90,10 +90,10 @@
                 <td>
                   <a
                     href="#"
-                    class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6"
+                    class="text-gray-900 fw-bold text-hover-primary d-block mb-1 fs-6"
                     >{{ item.company.name }}</a
                   >
-                  <span class="text-muted fw-semobold text-muted d-block fs-7"
+                  <span class="text-muted fw-semibold text-muted d-block fs-7"
                     >Code: {{ item.country.code }}</span
                   >
                 </td>
@@ -101,10 +101,10 @@
                 <td>
                   <a
                     href="#"
-                    class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6"
+                    class="text-gray-900 fw-bold text-hover-primary d-block mb-1 fs-6"
                     >{{ item.date.value }}</a
                   >
-                  <span class="text-muted fw-semobold text-muted d-block fs-7"
+                  <span class="text-muted fw-semibold text-muted d-block fs-7"
                     >Code: {{ item.date.remarks }}</span
                   >
                 </td>
@@ -112,16 +112,16 @@
                 <td>
                   <a
                     href="#"
-                    class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6"
+                    class="text-gray-900 fw-bold text-hover-primary d-block mb-1 fs-6"
                     >{{ item.company.name }}</a
                   >
                   <span
-                    class="text-muted fw-semobold text-muted d-block fs-7"
+                    class="text-muted fw-semibold text-muted d-block fs-7"
                     >{{ item.company.fields }}</span
                   >
                 </td>
 
-                <td class="text-dark fw-bold text-hover-primary fs-6">
+                <td class="text-gray-900 fw-bold text-hover-primary fs-6">
                   {{ item.total }}
                 </td>
 

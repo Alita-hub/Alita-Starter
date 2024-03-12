@@ -96,21 +96,23 @@ export default defineComponent({
   emits: ["page-change"],
   setup(props, { emit }) {
     const startPage = computed(() => {
+      const floorVal = Math.floor(props.maxVisibleButtons / 2);
+
       if (
         props.totalPages < props.maxVisibleButtons ||
         props.currentPage === 1 ||
         props.currentPage <= Math.floor(props.maxVisibleButtons / 2) ||
-        (props.currentPage + 2 > props.totalPages &&
+        (props.currentPage + floorVal > props.totalPages &&
           props.totalPages === props.maxVisibleButtons)
       ) {
         return 1;
       }
 
-      if (props.currentPage + 2 > props.totalPages) {
+      if (props.currentPage + floorVal > props.totalPages) {
         return props.totalPages - props.maxVisibleButtons + 1;
       }
 
-      return props.currentPage - 2;
+      return props.currentPage - floorVal;
     });
 
     const endPage = computed(() => {

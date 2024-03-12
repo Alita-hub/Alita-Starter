@@ -6,7 +6,7 @@
       <h3 class="card-title align-items-start flex-column">
         <span class="card-label fw-bold text-gray-800">Projects Stats</span>
 
-        <span class="text-gray-400 mt-1 fw-semibold fs-6"
+        <span class="text-gray-500 mt-1 fw-semibold fs-6"
           >Updated 37 minutes ago</span
         >
       </h3>
@@ -28,7 +28,7 @@
         <table class="table table-row-dashed align-middle gs-0 gy-3 my-0">
           <!--begin::Table head-->
           <thead>
-            <tr class="fs-7 fw-bold text-gray-400 border-bottom-0">
+            <tr class="fs-7 fw-bold text-gray-500 border-bottom-0">
               <th class="p-0 pb-3 min-w-175px text-start">ITEM</th>
               <th class="p-0 pb-3 min-w-100px text-end">BUDGET</th>
               <th class="p-0 pb-3 min-w-100px text-end">PROGRESS</th>
@@ -54,7 +54,7 @@
                         class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6"
                         >{{ row.title }}</a
                       >
-                      <span class="text-gray-400 fw-semibold d-block fs-7">{{
+                      <span class="text-gray-500 fw-semibold d-block fs-7">{{
                         row.name
                       }}</span>
                     </div>

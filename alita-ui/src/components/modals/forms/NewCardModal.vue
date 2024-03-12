@@ -41,7 +41,7 @@
             <div class="d-flex flex-column mb-7 fv-row">
               <!--begin::Label-->
               <label
-                class="d-flex align-items-center fs-6 fw-semobold form-label mb-2"
+                class="d-flex align-items-center fs-6 fw-semibold form-label mb-2"
               >
                 <span class="required">Name On Card</span>
                 <i
@@ -70,7 +70,7 @@
             <!--begin::Input group-->
             <div class="d-flex flex-column mb-7 fv-row">
               <!--begin::Label-->
-              <label class="required fs-6 fw-semobold form-label mb-2"
+              <label class="required fs-6 fw-semibold form-label mb-2"
                 >Card Number</label
               >
               <!--end::Label-->
@@ -125,7 +125,7 @@
               <!--begin::Col-->
               <div class="col-md-8 fv-row">
                 <!--begin::Label-->
-                <label class="required fs-6 fw-semobold form-label mb-2"
+                <label class="required fs-6 fw-semibold form-label mb-2"
                   >Expiration Date</label
                 >
                 <!--end::Label-->
@@ -190,7 +190,7 @@
               <div class="col-md-4 fv-row">
                 <!--begin::Label-->
                 <label
-                  class="d-flex align-items-center fs-6 fw-semobold form-label mb-2"
+                  class="d-flex align-items-center fs-6 fw-semibold form-label mb-2"
                 >
                   <span class="required">CVV</span>
                   <i
@@ -238,10 +238,10 @@
             <div class="d-flex flex-stack">
               <!--begin::Label-->
               <div class="me-5">
-                <label class="fs-6 fw-semobold form-label"
+                <label class="fs-6 fw-semibold form-label"
                   >Save Card for further billing?</label
                 >
-                <div class="fs-7 fw-semobold text-gray-400">
+                <div class="fs-7 fw-semibold text-gray-500">
                   If you need more info, please check budget planning
                 </div>
               </div>
@@ -257,7 +257,7 @@
                   value="1"
                   checked
                 />
-                <span class="form-check-label fw-semobold text-gray-400">
+                <span class="form-check-label fw-semibold text-gray-500">
                   Save Card
                 </span>
               </label>
@@ -308,7 +308,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent, ref } from "vue";
 import { ErrorMessage, Field, Form as VForm } from "vee-validate";
 import Swal from "sweetalert2/dist/sweetalert2.js";
-import { hideModal } from "@/core/helpers/dom";
+import { hideModal } from "@/core/helpers/modal";
 import * as Yup from "yup";
 
 interface CardData {

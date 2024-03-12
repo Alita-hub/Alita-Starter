@@ -9,7 +9,7 @@
       <div class="card-toolbar">
         <!--begin::Menu-->
         <button
-          class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
+          class="btn btn-icon btn-color-gray-500 btn-active-color-primary justify-content-end"
           data-kt-menu-trigger="click"
           data-kt-menu-placement="bottom-end"
           data-kt-menu-overflow="true"
@@ -38,7 +38,7 @@
           <!--begin::Action-->
           <button
             type="button"
-            class="btn btn-icon btn-sm h-auto btn-color-gray-400 btn-active-color-primary justify-content-end"
+            class="btn btn-icon btn-sm h-auto btn-color-gray-500 btn-active-color-primary justify-content-end"
           >
             <KTIcon icon-name="exit-right-corner" icon-class="fs-2" />
           </button>

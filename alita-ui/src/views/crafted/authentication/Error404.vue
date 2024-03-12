@@ -47,7 +47,7 @@ import { getAssetPath, getIllustrationsPath } from "@/core/helpers/assets";
 import { defineComponent, onMounted } from "vue";
 import LayoutService from "@/core/services/LayoutService";
 import { useBodyStore } from "@/stores/body";
-import { themeMode } from "@/core/helpers/config";
+import { themeMode } from "@/layouts/default-layout/config/helper";
 
 export default defineComponent({
   name: "error-404",

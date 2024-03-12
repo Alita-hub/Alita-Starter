@@ -28,13 +28,13 @@
     <!--begin:: Card body-->
     <div class="card-body p-9">
       <!--begin::Name-->
-      <div class="fs-3 fw-bold text-dark">
+      <div class="fs-3 fw-bold text-gray-900">
         {{ title }}
       </div>
       <!--end::Name-->
 
       <!--begin::Description-->
-      <p class="text-gray-400 fw-semobold fs-5 mt-1 mb-7">
+      <p class="text-gray-500 fw-semibold fs-5 mt-1 mb-7">
         {{ getDescription }}
       </p>
       <!--end::Description-->
@@ -46,7 +46,7 @@
           class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-7 mb-3"
         >
           <div class="fs-6 text-gray-800 fw-bold">{{ getDate }}</div>
-          <div class="fw-semobold text-gray-400">Due Date</div>
+          <div class="fw-semibold text-gray-500">Due Date</div>
         </div>
         <!--end::Due-->
 
@@ -55,7 +55,7 @@
           class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 mb-3"
         >
           <div class="fs-6 text-gray-800 fw-bold">{{ getBudget }}</div>
-          <div class="fw-semobold text-gray-400">Budget</div>
+          <div class="fw-semibold text-gray-500">Budget</div>
         </div>
         <!--end::Budget-->
       </div>

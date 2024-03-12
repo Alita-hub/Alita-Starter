@@ -6,7 +6,7 @@
       <h3 class="card-title align-items-start flex-column">
         <span class="card-label fw-bold fs-3 mb-1">Files</span>
 
-        <span class="text-muted mt-1 fw-semobold fs-7"
+        <span class="text-muted mt-1 fw-semibold fs-7"
           >Over 100 pending files</span
         >
       </h3>
@@ -65,18 +65,18 @@
                 <td>
                   <a
                     href="#"
-                    class="text-dark fw-bold text-hover-primary mb-1 fs-6"
+                    class="text-gray-900 fw-bold text-hover-primary mb-1 fs-6"
                   >
                     {{ item.title }}
                   </a>
                 </td>
-                <td class="text-end text-muted fw-semobold">
+                <td class="text-end text-muted fw-semibold">
                   {{ item.technologies }}
                 </td>
-                <td class="text-end text-muted fw-semobold">
+                <td class="text-end text-muted fw-semibold">
                   {{ item.users }}
                 </td>
-                <td class="text-end text-dark fw-bold fs-6 pe-0">
+                <td class="text-end text-gray-900 fw-bold fs-6 pe-0">
                   {{ item.size }}
                 </td>
               </tr>

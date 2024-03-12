@@ -10,7 +10,7 @@
       <!--begin::Wrapper-->
       <div class="d-flex flex-column flex-grow-1">
         <!--begin::Title-->
-        <a href="#" class="text-dark text-hover-primary fw-bold fs-3"
+        <a href="#" class="text-gray-900 text-hover-primary fw-bold fs-3"
           >Earnings</a
         >
         <!--end::Title-->
@@ -31,15 +31,15 @@
       <!--begin::Stats-->
       <div class="pt-5">
         <!--begin::Symbol-->
-        <span class="text-dark fw-bold fs-2x lh-0">$</span>
+        <span class="text-gray-900 fw-bold fs-2x lh-0">$</span>
         <!--end::Symbol-->
 
         <!--begin::Number-->
-        <span class="text-dark fw-bold fs-3x me-2 lh-0">560</span>
+        <span class="text-gray-900 fw-bold fs-3x me-2 lh-0">560</span>
         <!--end::Number-->
 
         <!--begin::Text-->
-        <span class="text-dark fw-bold fs-6 lh-0">+ 28% this week</span>
+        <span class="text-gray-900 fw-bold fs-6 lh-0">+ 28% this week</span>
         <!--end::Text-->
       </div>
       <!--end::Stats-->
@@ -66,7 +66,7 @@ export default defineComponent({
   },
   setup(props) {
     const chartRef = ref<typeof VueApexCharts | null>(null);
-    let chart: ApexOptions = {};
+    const chart = ref<ApexOptions>({});
     const store = useThemeStore();
 
     const series = [
@@ -81,7 +81,7 @@ export default defineComponent({
     });
 
     onBeforeMount(() => {
-      Object.assign(chart, chartOptions(props.chartHeight));
+      Object.assign(chart.value, chartOptions(props.chartHeight));
     });
 
     const refreshChart = () => {
@@ -89,9 +89,7 @@ export default defineComponent({
         return;
       }
 
-      Object.assign(chart, chartOptions(props.chartHeight));
-
-      chartRef.value.refresh();
+      chartRef.value.updateOptions(chartOptions(props.chartHeight));
     };
 
     watch(themeMode, () => {

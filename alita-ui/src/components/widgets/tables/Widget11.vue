@@ -6,7 +6,7 @@
       <h3 class="card-title align-items-start flex-column">
         <span class="card-label fw-bold fs-3 mb-1">New Arrivals</span>
 
-        <span class="text-muted mt-1 fw-semobold fs-7"
+        <span class="text-muted mt-1 fw-semibold fs-7"
           >Over 500 new products</span
         >
       </h3>
@@ -51,11 +51,11 @@
                     <div class="d-flex justify-content-start flex-column">
                       <a
                         href="#"
-                        class="text-dark fw-bold text-hover-primary mb-1 fs-6"
+                        class="text-gray-900 fw-bold text-hover-primary mb-1 fs-6"
                         >{{ item.product.name }}</a
                       >
                       <span
-                        class="text-muted fw-semobold text-muted d-block fs-7"
+                        class="text-muted fw-semibold text-muted d-block fs-7"
                         >{{ item.product.specs }}</span
                       >
                     </div>
@@ -65,10 +65,10 @@
                 <td>
                   <a
                     href="#"
-                    class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6"
+                    class="text-gray-900 fw-bold text-hover-primary d-block mb-1 fs-6"
                     >{{ item.price }}</a
                   >
-                  <span class="text-muted fw-semobold text-muted d-block fs-7"
+                  <span class="text-muted fw-semibold text-muted d-block fs-7"
                     >Paid</span
                   >
                 </td>
@@ -76,10 +76,10 @@
                 <td>
                   <a
                     href="#"
-                    class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6"
+                    class="text-gray-900 fw-bold text-hover-primary d-block mb-1 fs-6"
                     >{{ item.deposit }}</a
                   >
-                  <span class="text-muted fw-semobold text-muted d-block fs-7"
+                  <span class="text-muted fw-semibold text-muted d-block fs-7"
                     >Rejected</span
                   >
                 </td>
@@ -87,11 +87,11 @@
                 <td>
                   <a
                     href="#"
-                    class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6"
+                    class="text-gray-900 fw-bold text-hover-primary d-block mb-1 fs-6"
                     >{{ item.agent.name }}</a
                   >
                   <span
-                    class="text-muted fw-semobold text-muted d-block fs-7"
+                    class="text-muted fw-semibold text-muted d-block fs-7"
                     >{{ item.agent.position }}</span
                   >
                 </td>

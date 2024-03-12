@@ -57,7 +57,7 @@
 <script lang="ts">
 import { computed, defineComponent, onMounted, ref } from "vue";
 import Prism from "prismjs";
-import { useCopyClipboard } from "@/core/helpers/documentation";
+import { useCopyClipboard } from "@/core/helpers/system";
 
 export default defineComponent({
   name: "CodeHighlighter",

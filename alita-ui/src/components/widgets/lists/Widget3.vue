@@ -3,7 +3,7 @@
   <div class="card" :class="widgetClasses">
     <!--begin::Header-->
     <div class="card-header border-0">
-      <h3 class="card-title fw-bold text-dark">Todo</h3>
+      <h3 class="card-title fw-bold text-gray-900">Todo</h3>
 
       <div class="card-toolbar">
         <!--begin::Menu-->
@@ -49,7 +49,7 @@
               item.title
             }}</a>
 
-            <span class="text-muted fw-semobold d-block">{{ item.text }}</span>
+            <span class="text-muted fw-semibold d-block">{{ item.text }}</span>
           </div>
           <!--end::Description-->
 

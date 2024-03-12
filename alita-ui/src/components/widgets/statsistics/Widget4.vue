@@ -11,9 +11,9 @@
         </span>
 
         <div class="d-flex flex-column text-end">
-          <span class="text-dark fw-bold fs-2">{{ change }}</span>
+          <span class="text-gray-900 fw-bold fs-2">{{ change }}</span>
 
-          <span class="text-muted fw-semobold mt-1">{{ description }}</span>
+          <span class="text-muted fw-semibold mt-1">{{ description }}</span>
         </div>
       </div>
 
@@ -54,7 +54,7 @@ export default defineComponent({
   components: {},
   setup(props) {
     const chartRef = ref<typeof VueApexCharts | null>(null);
-    let chart: ApexOptions = {};
+    const chart = ref<ApexOptions>({});
     const store = useThemeStore();
 
     const series = [
@@ -69,7 +69,7 @@ export default defineComponent({
     });
 
     onBeforeMount(() => {
-      Object.assign(chart, chartOptions(props.color, props.height));
+      Object.assign(chart.value, chartOptions(props.color, props.height));
     });
 
     const refreshChart = () => {
@@ -77,9 +77,7 @@ export default defineComponent({
         return;
       }
 
-      Object.assign(chart, chartOptions(props.color, props.height));
-
-      chartRef.value.refresh();
+      chartRef.value.updateOptions(chartOptions(props.color, props.height));
     };
 
     watch(themeMode, () => {

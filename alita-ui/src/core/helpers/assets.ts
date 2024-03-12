@@ -1,4 +1,4 @@
-import { illustrationsSet } from "@/core/helpers/config";
+import { illustrationsSet } from "@/layouts/default-layout/config/helper";
 import { useThemeStore } from "@/stores/theme";
 
 export const getIllustrationsPath = (illustrationName: string): string => {

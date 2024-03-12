@@ -6,7 +6,7 @@
       <h3 class="card-title align-items-start flex-column">
         <span class="card-label fw-bold fs-3 mb-1">Recent Orders</span>
 
-        <span class="text-muted fw-semobold fs-7"
+        <span class="text-muted fw-semibold fs-7"
           >More than 500+ new orders</span
         >
       </h3>
@@ -60,7 +60,7 @@ export default defineComponent({
   components: {},
   setup() {
     const chartRef = ref<typeof VueApexCharts | null>(null);
-    let chart: ApexOptions = {};
+    const chart = ref<ApexOptions>({});
     const store = useThemeStore();
 
     const series = [
@@ -88,7 +88,7 @@ export default defineComponent({
     });
 
     onBeforeMount(() => {
-      Object.assign(chart, chartOptions());
+      Object.assign(chart.value, chartOptions());
     });
 
     const refreshChart = () => {
@@ -96,9 +96,7 @@ export default defineComponent({
         return;
       }
 
-      Object.assign(chart, chartOptions());
-
-      chartRef.value.refresh();
+      chartRef.value.updateOptions(chartOptions());
     };
 
     watch(themeMode, () => {

@@ -42,14 +42,14 @@
         <div class="row g-0 mb-7">
           <!--begin::Col-->
           <div class="col mx-5">
-            <div class="fs-6 text-gray-400">Avarage Sale</div>
+            <div class="fs-6 text-gray-500">Avarage Sale</div>
             <div class="fs-2 fw-bold text-gray-800">$650</div>
           </div>
           <!--end::Col-->
 
           <!--begin::Col-->
           <div class="col mx-5">
-            <div class="fs-6 text-gray-400">Comissions</div>
+            <div class="fs-6 text-gray-500">Comissions</div>
             <div class="fs-2 fw-bold text-gray-800">$29,500</div>
           </div>
           <!--end::Col-->
@@ -60,14 +60,14 @@
         <div class="row g-0">
           <!--begin::Col-->
           <div class="col mx-5">
-            <div class="fs-6 text-gray-400">Revenue</div>
+            <div class="fs-6 text-gray-500">Revenue</div>
             <div class="fs-2 fw-bold text-gray-800">$55,000</div>
           </div>
           <!--end::Col-->
 
           <!--begin::Col-->
           <div class="col mx-5">
-            <div class="fs-6 text-gray-400">Expenses</div>
+            <div class="fs-6 text-gray-500">Expenses</div>
             <div class="fs-2 fw-bold text-gray-800">$1,130,600</div>
           </div>
           <!--end::Col-->
@@ -102,7 +102,7 @@ export default defineComponent({
   },
   setup(props) {
     const chartRef = ref<typeof VueApexCharts | null>(null);
-    let chart: ApexOptions = {};
+    const chart = ref<ApexOptions>({});
     const store = useThemeStore();
 
     const series = ref([
@@ -121,7 +121,7 @@ export default defineComponent({
     });
 
     onBeforeMount(() => {
-      Object.assign(chart, chartOptions(props.chartHeight));
+      Object.assign(chart.value, chartOptions(props.chartHeight));
     });
 
     const refreshChart = () => {
@@ -129,9 +129,7 @@ export default defineComponent({
         return;
       }
 
-      Object.assign(chart, chartOptions(props.chartHeight));
-
-      chartRef.value.refresh();
+      chartRef.value.updateOptions(chartOptions(props.chartHeight));
     };
 
     watch(themeMode, () => {

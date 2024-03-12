@@ -17,11 +17,11 @@
 
           <!--begin:Title-->
           <div class="d-flex flex-column flex-grow-1 my-lg-0 my-2 pr-3">
-            <a href="#" class="text-dark fw-bold text-hover-primary fs-5">
+            <a href="#" class="text-gray-900 fw-bold text-hover-primary fs-5">
               {{ title }}
             </a>
 
-            <span class="text-muted fw-semobold">
+            <span class="text-muted fw-semibold">
               {{ date }}
             </span>
           </div>
@@ -48,7 +48,7 @@
 
       <!--begin:Stats-->
       <div class="d-flex flex-column w-100 mt-12">
-        <span class="text-dark me-2 fw-bold pb-3"> Progress </span>
+        <span class="text-gray-900 me-2 fw-bold pb-3"> Progress </span>
 
         <div class="progress h-5px w-100">
           <div
@@ -66,7 +66,7 @@
 
       <!--begin:Team-->
       <div class="d-flex flex-column mt-10">
-        <div class="text-dark me-2 fw-bold pb-4">Team</div>
+        <div class="text-gray-900 me-2 fw-bold pb-4">Team</div>
 
         <div class="d-flex">
           <a

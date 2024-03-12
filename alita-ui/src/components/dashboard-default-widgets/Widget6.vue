@@ -4,8 +4,8 @@
     <div class="card-header pt-5">
       <!--begin::Title-->
       <h3 class="card-title align-items-start flex-column">
-        <span class="card-label fw-bold text-dark">Performance Overview</span>
-        <span class="text-gray-400 mt-1 fw-semibold fs-6"
+        <span class="card-label fw-bold text-gray-900">Performance Overview</span>
+        <span class="text-gray-500 mt-1 fw-semibold fs-6"
           >Users from all channels</span
         >
       </h3>
@@ -53,7 +53,7 @@
           <div class="mb-5">
             <!--begin::Statistics-->
             <div class="d-flex align-items-center mb-2">
-              <span class="fs-1 fw-semibold text-gray-400 me-1 mt-n1">$</span>
+              <span class="fs-1 fw-semibold text-gray-500 me-1 mt-n1">$</span>
 
               <span class="fs-3x fw-bold text-gray-800 me-2 lh-1 ls-n2"
                 >18,89</span
@@ -70,7 +70,7 @@
             <!--end::Statistics-->
 
             <!--begin::Description-->
-            <span class="fs-6 fw-semibold text-gray-400"
+            <span class="fs-6 fw-semibold text-gray-500"
               >Avarage cost per interaction</span
             >
             <!--end::Description-->
@@ -199,7 +199,7 @@
           <div class="mb-5">
             <!--begin::Statistics-->
             <div class="d-flex align-items-center mb-2">
-              <span class="fs-1 fw-semibold text-gray-400 me-1 mt-n1">$</span>
+              <span class="fs-1 fw-semibold text-gray-500 me-1 mt-n1">$</span>
 
               <span class="fs-3x fw-bold text-gray-800 me-2 lh-1 ls-n2"
                 >8,55</span
@@ -216,7 +216,7 @@
             <!--end::Statistics-->
 
             <!--begin::Description-->
-            <span class="fs-6 fw-semibold text-gray-400"
+            <span class="fs-6 fw-semibold text-gray-500"
               >Avarage cost per interaction</span
             >
             <!--end::Description-->
@@ -359,7 +359,7 @@ export default defineComponent({
   setup(props) {
     const chartRef1 = ref<typeof VueApexCharts | null>(null);
     const chartRef2 = ref<typeof VueApexCharts | null>(null);
-    let chart: ApexOptions = {};
+    const chart = ref<ApexOptions>({});
     const store = useThemeStore();
 
     const series1 = [
@@ -421,11 +421,7 @@ export default defineComponent({
     });
 
     onMounted(() => {
-      Object.assign(chart, chartOptions(props.height));
-
-      setTimeout(() => {
-        refreshChart();
-      }, 200);
+      Object.assign(chart.value, chartOptions(props.height));
     });
 
     const refreshChart = () => {
@@ -433,10 +429,8 @@ export default defineComponent({
         return;
       }
 
-      Object.assign(chart, chartOptions(props.height));
-
-      chartRef1.value.refresh();
-      chartRef2.value.refresh();
+      chartRef1.value.updateOptions(chartOptions(props.height));
+      chartRef2.value.updateOptions(chartOptions(props.height));
     };
 
     watch(themeMode, () => {

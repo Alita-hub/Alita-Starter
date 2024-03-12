@@ -7,13 +7,13 @@
         <!--begin::Info-->
         <div class="d-flex align-items-center">
           <!--begin::Currency-->
-          <span class="fs-4 fw-semibold text-gray-400 me-1 align-self-start"
+          <span class="fs-4 fw-semibold text-gray-500 me-1 align-self-start"
             >$</span
           >
           <!--end::Currency-->
 
           <!--begin::Amount-->
-          <span class="fs-2hx fw-bold text-dark me-2 lh-1 ls-n2">69,700</span>
+          <span class="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2">69,700</span>
           <!--end::Amount-->
 
           <!--begin::Badge-->
@@ -26,7 +26,7 @@
         <!--end::Info-->
 
         <!--begin::Subtitle-->
-        <span class="text-gray-400 pt-1 fw-semibold fs-6"
+        <span class="text-gray-500 pt-1 fw-semibold fs-6"
           >Projects Earnings in April</span
         >
         <!--end::Subtitle-->

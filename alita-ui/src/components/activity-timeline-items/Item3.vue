@@ -20,7 +20,7 @@
         <!--begin::Title-->
         <a
           href="#"
-          class="fs-5 fw-semobold text-gray-800 text-hover-primary mb-2"
+          class="fs-5 fw-semibold text-gray-800 text-hover-primary mb-2"
           >3 New Incoming Project Files:</a
         >
         <!--end::Title-->
@@ -63,7 +63,7 @@
             <!--end::Icon-->
 
             <!--begin::Info-->
-            <div class="ms-1 fw-semobold">
+            <div class="ms-1 fw-semibold">
               <!--begin::Desc-->
               <a href="#" class="fs-6 text-hover-primary fw-bold"
                 >Finance KPI App Guidelines</a
@@ -71,7 +71,7 @@
               <!--end::Desc-->
 
               <!--begin::Number-->
-              <div class="text-gray-400">1.9mb</div>
+              <div class="text-gray-500">1.9mb</div>
               <!--end::Number-->
             </div>
             <!--begin::Info-->
@@ -89,7 +89,7 @@
             <!--end::Icon-->
 
             <!--begin::Info-->
-            <div class="ms-1 fw-semobold">
+            <div class="ms-1 fw-semibold">
               <!--begin::Desc-->
               <a href="#" class="fs-6 text-hover-primary fw-bold"
                 >Client UAT Testing Results</a
@@ -97,7 +97,7 @@
               <!--end::Desc-->
 
               <!--begin::Number-->
-              <div class="text-gray-400">18kb</div>
+              <div class="text-gray-500">18kb</div>
               <!--end::Number-->
             </div>
             <!--end::Info-->
@@ -115,7 +115,7 @@
             <!--end::Icon-->
 
             <!--begin::Info-->
-            <div class="ms-1 fw-semobold">
+            <div class="ms-1 fw-semibold">
               <!--begin::Desc-->
               <a href="#" class="fs-6 text-hover-primary fw-bold"
                 >Finance Reports</a
@@ -123,7 +123,7 @@
               <!--end::Desc-->
 
               <!--begin::Number-->
-              <div class="text-gray-400">20mb</div>
+              <div class="text-gray-500">20mb</div>
               <!--end::Number-->
             </div>
             <!--end::Icon-->

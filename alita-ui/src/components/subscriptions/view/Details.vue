@@ -32,10 +32,10 @@
           <!--begin::Row-->
           <div class="flex-equal me-5">
             <!--begin::Details-->
-            <table class="table fs-6 fw-semobold gs-0 gy-2 gx-2 m-0">
+            <table class="table fs-6 fw-semibold gs-0 gy-2 gx-2 m-0">
               <!--begin::Row-->
               <tr>
-                <td class="text-gray-400 min-w-175px w-175px">Bill to:</td>
+                <td class="text-gray-500 min-w-175px w-175px">Bill to:</td>
                 <td class="text-gray-800 min-w-200px">
                   <router-link
                     to="/subscriptions/view"
@@ -49,14 +49,14 @@
 
               <!--begin::Row-->
               <tr>
-                <td class="text-gray-400">Customer Name:</td>
+                <td class="text-gray-500">Customer Name:</td>
                 <td class="text-gray-800">Emma Smith</td>
               </tr>
               <!--end::Row-->
 
               <!--begin::Row-->
               <tr>
-                <td class="text-gray-400">Address:</td>
+                <td class="text-gray-500">Address:</td>
                 <td class="text-gray-800">
                   Floor 10, 101 Avenue of the Light Square, New York, NY, 10050.
                 </td>
@@ -65,7 +65,7 @@
 
               <!--begin::Row-->
               <tr>
-                <td class="text-gray-400">Phone:</td>
+                <td class="text-gray-500">Phone:</td>
                 <td class="text-gray-800">(555) 555-1234</td>
               </tr>
               <!--end::Row-->
@@ -77,10 +77,10 @@
           <!--begin::Row-->
           <div class="flex-equal">
             <!--begin::Details-->
-            <table class="table fs-6 fw-semobold gs-0 gy-2 gx-2 m-0">
+            <table class="table fs-6 fw-semibold gs-0 gy-2 gx-2 m-0">
               <!--begin::Row-->
               <tr>
-                <td class="text-gray-400 min-w-175px w-175px">
+                <td class="text-gray-500 min-w-175px w-175px">
                   Subscribed Product:
                 </td>
                 <td class="text-gray-800 min-w-200px">
@@ -93,21 +93,21 @@
 
               <!--begin::Row-->
               <tr>
-                <td class="text-gray-400">Subscription Fees:</td>
+                <td class="text-gray-500">Subscription Fees:</td>
                 <td class="text-gray-800">$149.99 / Year</td>
               </tr>
               <!--end::Row-->
 
               <!--begin::Row-->
               <tr>
-                <td class="text-gray-400">Billing method:</td>
+                <td class="text-gray-500">Billing method:</td>
                 <td class="text-gray-800">Annually</td>
               </tr>
               <!--end::Row-->
 
               <!--begin::Row-->
               <tr>
-                <td class="text-gray-400">Currency:</td>
+                <td class="text-gray-500">Currency:</td>
                 <td class="text-gray-800">USD - US Dollar</td>
               </tr>
               <!--end::Row-->
@@ -134,7 +134,7 @@
             <thead>
               <!--begin::Table row-->
               <tr
-                class="border-bottom border-gray-200 text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0"
+                class="border-bottom border-gray-200 text-start text-gray-500 fw-bold fs-7 text-uppercase gs-0"
               >
                 <th class="min-w-150px">Product</th>
                 <th class="min-w-125px">Subscription ID</th>
@@ -147,7 +147,7 @@
             <!--end::Table head-->
 
             <!--begin::Table body-->
-            <tbody class="fw-semobold text-gray-800">
+            <tbody class="fw-semibold text-gray-800">
               <tr>
                 <td>
                   <label class="w-150px">Basic Bundle</label>
@@ -175,7 +175,7 @@
               <tr>
                 <td>
                   <label class="w-150px">Pro Bundle</label>
-                  <div class="fw-normal text-gray-400">Basic yearly bundle</div>
+                  <div class="fw-normal text-gray-500">Basic yearly bundle</div>
                 </td>
                 <td>
                   <span class="badge badge-light-danger">sub_4567_3433</span>
@@ -213,7 +213,7 @@
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
-import UserMenu from "@/layouts/main-layout/menus/UserAccountMenu.vue";
+import UserMenu from "@/layouts/default-layout/components/menus/UserAccountMenu.vue";
 
 export default defineComponent({
   name: "kt-details",

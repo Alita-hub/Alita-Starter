@@ -5,11 +5,11 @@
     <div class="card-body d-flex flex-column p-0">
       <div class="d-flex flex-stack flex-grow-1 card-p">
         <div class="d-flex flex-column me-2">
-          <a href="#" class="text-dark text-hover-primary fw-bold fs-3">{{
+          <a href="#" class="text-gray-900 text-hover-primary fw-bold fs-3">{{
             title
           }}</a>
 
-          <span class="text-muted fw-semobold mt-1">{{ description }}</span>
+          <span class="text-muted fw-semibold mt-1">{{ description }}</span>
         </div>
 
         <span class="symbol symbol-50px">
@@ -58,7 +58,7 @@ export default defineComponent({
   components: {},
   setup(props) {
     const chartRef = ref<typeof VueApexCharts | null>(null);
-    let chart: ApexOptions = {};
+    const chart = ref<ApexOptions>({});
     const store = useThemeStore();
 
     const series = [
@@ -73,7 +73,7 @@ export default defineComponent({
     });
 
     onBeforeMount(() => {
-      Object.assign(chart, chartOptions(props.color, props.height));
+      Object.assign(chart.value, chartOptions(props.color, props.height));
     });
 
     const refreshChart = () => {
@@ -81,9 +81,7 @@ export default defineComponent({
         return;
       }
 
-      Object.assign(chart, chartOptions(props.color, props.height));
-
-      chartRef.value.refresh();
+      chartRef.value.updateOptions(chartOptions(props.color, props.height));
     };
 
     watch(themeMode, () => {

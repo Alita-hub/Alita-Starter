@@ -61,7 +61,7 @@
             <!--end::Name-->
 
             <!--begin::Email-->
-            <a href="#" class="fw-semobold text-gray-600 text-hover-primary"
+            <a href="#" class="fw-semibold text-gray-600 text-hover-primary"
               >sean@dellito.com</a
             >
             <!--end::Email-->
@@ -89,7 +89,7 @@
           <!--end::Plan-->
 
           <!--begin::Price-->
-          <span class="fw-semobold text-gray-600">$149.99 / Year</span>
+          <span class="fw-semibold text-gray-600">$149.99 / Year</span>
           <!--end::Price-->
         </div>
         <!--end::Details-->
@@ -109,7 +109,7 @@
         <!--begin::Details-->
         <div class="mb-0">
           <!--begin::Card info-->
-          <div class="fw-semobold text-gray-600 d-flex align-items-center">
+          <div class="fw-semibold text-gray-600 d-flex align-items-center">
             Mastercard
 
             <img
@@ -121,7 +121,7 @@
           <!--end::Card info-->
 
           <!--begin::Card expiry-->
-          <div class="fw-semobold text-gray-600">Expires Dec 2024</div>
+          <div class="fw-semibold text-gray-600">Expires Dec 2024</div>
           <!--end::Card expiry-->
         </div>
         <!--end::Details-->
@@ -139,31 +139,31 @@
         <!--end::Title-->
 
         <!--begin::Details-->
-        <table class="table fs-6 fw-semobold gs-0 gy-2 gx-2">
+        <table class="table fs-6 fw-semibold gs-0 gy-2 gx-2">
           <!--begin::Row-->
           <tr class="">
-            <td class="text-gray-400">Subscription ID:</td>
+            <td class="text-gray-500">Subscription ID:</td>
             <td class="text-gray-800">sub_4567_8765</td>
           </tr>
           <!--end::Row-->
 
           <!--begin::Row-->
           <tr class="">
-            <td class="text-gray-400">Started:</td>
+            <td class="text-gray-500">Started:</td>
             <td class="text-gray-800">15 Apr 2021</td>
           </tr>
           <!--end::Row-->
 
           <!--begin::Row-->
           <tr class="">
-            <td class="text-gray-400">Status:</td>
+            <td class="text-gray-500">Status:</td>
             <td><span class="badge badge-light-success">Active</span></td>
           </tr>
           <!--end::Row-->
 
           <!--begin::Row-->
           <tr class="">
-            <td class="text-gray-400">Next Invoice:</td>
+            <td class="text-gray-500">Next Invoice:</td>
             <td class="text-gray-800">15 Apr 2022</td>
           </tr>
           <!--end::Row-->
@@ -192,7 +192,7 @@
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
-import UserMenu from "@/layouts/main-layout/menus/UserAccountMenu.vue";
+import UserMenu from "@/layouts/default-layout/components/menus/UserAccountMenu.vue";
 
 export default defineComponent({
   name: "kt-summary",

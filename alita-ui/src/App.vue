@@ -8,7 +8,7 @@ import { RouterView } from "vue-router";
 import { useConfigStore } from "@/stores/config";
 import { useThemeStore } from "@/stores/theme";
 import { useBodyStore } from "@/stores/body";
-import { themeConfigValue } from "@/core/helpers/config";
+import { themeConfigValue } from "@/layouts/default-layout/config/helper";
 import { initializeComponents } from "@/core/plugins/keenthemes";
 
 export default defineComponent({
@@ -24,7 +24,7 @@ export default defineComponent({
     onBeforeMount(() => {
       /**
        * Overrides the layout config using saved data from localStorage
-       * remove this to use static config (@/core/config/DefaultLayoutConfig.ts)
+       * remove this to use static config (@/layouts/default-layout/config/DefaultLayoutConfig.ts)
        */
       configStore.overrideLayoutConfig();
 
@@ -51,7 +51,7 @@ export default defineComponent({
 @import "quill/dist/quill.snow.css";
 @import "animate.css";
 @import "sweetalert2/dist/sweetalert2.css";
-@import "nouislider/distribute/nouislider.css";
+@import "nouislider/dist/nouislider.css";
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 @import "socicon/css/socicon.css";
 @import "line-awesome/dist/line-awesome/css/line-awesome.css";
@@ -61,7 +61,6 @@ export default defineComponent({
 @import "element-plus/dist/index.css";
 
 // Main demo style scss
-@import "assets/fonticon/fonticon.css";
 @import "assets/keenicons/duotone/style.css";
 @import "assets/keenicons/outline/style.css";
 @import "assets/keenicons/solid/style.css";

@@ -8,14 +8,14 @@
         <!--begin::Section-->
         <div class="pt-15 mb-10">
           <!--begin::Title-->
-          <h3 class="text-dark text-center fs-1 fw-bold lh-lg">
+          <h3 class="text-gray-900 text-center fs-1 fw-bold lh-lg">
             Upgrade to Pro<br />
             For Limitless Features
           </h3>
           <!--end::Title-->
 
           <!--begin::Text-->
-          <div class="text-center text-gray-600 fs-6 fw-semobold pt-4 pb-1">
+          <div class="text-center text-gray-600 fs-6 fw-semibold pt-4 pb-1">
             They stoping you from amazing poorly about drive.<br />
             Outlines keep you honest.
           </div>

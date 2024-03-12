@@ -25,13 +25,11 @@
 
       <!--begin::Description-->
       <div class="ms-6">
-        <p class="list-unstyled text-gray-600 fw-semobold fs-6 p-0 m-0">
-          The layout builder is to assist your set and configure your preferred
-          project layout specifications and preview it in real time and export
-          the HTML template with its includable partials of this demo. The
-          downloaded version does not include the assets folder since the layout
-          builder's main purpose is to help to generate the final HTML code
-          without hassle.
+        <p class="list-unstyled text-gray-600 fw-semibold fs-6 p-0 m-0">
+          The layout builder will assist you in setting up your preferred layout
+          for your project, generating a layout configuration, and previewing it
+          in real-time. To preview the default layout configuration, simply
+          empty your localStorage or press the 'Reset' button.
         </p>
       </div>
       <!--end::Description-->
@@ -43,7 +41,7 @@
     <!--begin::Header-->
     <div class="card-header card-header-stretch">
       <ul
-        class="nav nav-stretch nav-line-tabs fw-semobold border-0"
+        class="nav nav-stretch nav-line-tabs fw-semibold border-0"
         role="tablist"
         id="kt_layout_builder_tabs"
         ref="kt_layout_builder_tabs"
@@ -126,7 +124,7 @@
             <div class="form-group d-flex flex-stack">
               <!--begin::Heading-->
               <div class="d-flex flex-column">
-                <h4 class="fw-bold text-dark">Keenicons Style</h4>
+                <h4 class="fw-bold text-gray-900">Keenicons Style</h4>
                 <div>
                   <span class="fs-7 fw-semibold text-muted"
                     >Select global UI icons style.</span
@@ -554,7 +552,7 @@
               @click="reset($event)"
               type="button"
               id="kt_layout_builder_reset"
-              class="btn btn-active-light btn-color-muted fw-semobold"
+              class="btn btn-active-light btn-color-muted fw-semibold"
             >
               Reset
             </button>
@@ -586,9 +584,9 @@
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent, onMounted, ref } from "vue";
-import { config } from "@/core/helpers/config";
+import { config } from "@/layouts/default-layout/config/helper";
 import CodeHighlighter from "@/components/highlighters/CodeHighlighter.vue";
-import { themeName } from "@/core/helpers/documentation";
+import { themeName } from "@/core/helpers/system";
 import { LS_CONFIG_NAME_KEY } from "@/stores/config";
 
 const LS_BUILDER_TAB_NAME =

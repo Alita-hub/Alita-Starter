@@ -43,14 +43,14 @@
               icon-name="chart-simple"
               icon-class="fs-3x text-warning d-block my-2"
             />
-            <a href="#" class="text-warning fw-semobold fs-6"> Weekly Sales </a>
+            <a href="#" class="text-warning fw-semibold fs-6"> Weekly Sales </a>
           </div>
           <div class="col bg-light-primary px-6 py-8 rounded-2 mb-7">
             <KTIcon
               icon-name="plus"
               icon-class="fs-3x text-primary d-block my-2"
             />
-            <a href="#" class="text-primary fw-semobold fs-6"> New Users </a>
+            <a href="#" class="text-primary fw-semibold fs-6"> New Users </a>
           </div>
         </div>
         <!--end::Row-->
@@ -61,7 +61,7 @@
               icon-name="abstract-26"
               icon-class="fs-3x text-danger d-block my-2"
             />
-            <a href="#" class="text-danger fw-semobold fs-6 mt-2">
+            <a href="#" class="text-danger fw-semibold fs-6 mt-2">
               Item Orders
             </a>
           </div>
@@ -70,7 +70,7 @@
               icon-name="sms"
               icon-class="fs-3x text-success d-block my-2"
             />
-            <a href="#" class="text-success fw-semobold fs-6 mt-2">
+            <a href="#" class="text-success fw-semibold fs-6 mt-2">
               Bug Reports
             </a>
           </div>
@@ -105,7 +105,7 @@ export default defineComponent({
   },
   setup(props) {
     const chartRef = ref<typeof VueApexCharts | null>(null);
-    let chart: ApexOptions = {};
+    const chart = ref<ApexOptions>({});
     const store = useThemeStore();
 
     const series = ref([
@@ -120,7 +120,10 @@ export default defineComponent({
     });
 
     onBeforeMount(() => {
-      Object.assign(chart, chartOptions(props.widgetColor, props.strokeColor));
+      Object.assign(
+        chart.value,
+        chartOptions(props.widgetColor, props.strokeColor)
+      );
     });
 
     const refreshChart = () => {
@@ -128,9 +131,9 @@ export default defineComponent({
         return;
       }
 
-      Object.assign(chart, chartOptions(props.widgetColor, props.strokeColor));
-
-      chartRef.value.refresh();
+      chartRef.value.updateOptions(
+        chartOptions(props.widgetColor, props.strokeColor)
+      );
     };
 
     watch(themeMode, () => {

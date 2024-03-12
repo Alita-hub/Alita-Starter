@@ -1,5 +1,5 @@
 import objectPath from "object-path";
-import { config } from "@/core/helpers/config";
+import { config } from "@/layouts/default-layout/config/helper";
 import { useBodyStore } from "@/stores/body";
 import { useConfigStore } from "@/stores/config";
 

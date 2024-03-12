@@ -4,7 +4,7 @@
     <div class="card-header border-0 pt-5">
       <h3 class="card-title align-items-start flex-column">
         <span class="card-label fw-bold fs-3 mb-1">Latest Products</span>
-        <span class="text-muted mt-1 fw-semobold fs-7"
+        <span class="text-muted mt-1 fw-semibold fs-7"
           >More than 400 new products</span
         >
       </h3>
@@ -77,14 +77,14 @@
                   <td>
                     <a
                       href="#"
-                      class="text-dark fw-bold text-hover-primary mb-1 fs-6"
+                      class="text-gray-900 fw-bold text-hover-primary mb-1 fs-6"
                       >Brad Simmons</a
                     >
-                    <span class="text-muted fw-semobold d-block"
+                    <span class="text-muted fw-semibold d-block"
                       >Movie Creator</span
                     >
                   </td>
-                  <td class="text-end text-muted fw-semobold">React, HTML</td>
+                  <td class="text-end text-muted fw-semibold">React, HTML</td>
                   <td class="text-end">
                     <span class="badge badge-light-success">Approved</span>
                   </td>
@@ -114,14 +114,14 @@
                   <td>
                     <a
                       href="#"
-                      class="text-dark fw-bold text-hover-primary mb-1 fs-6"
+                      class="text-gray-900 fw-bold text-hover-primary mb-1 fs-6"
                       >Popular Authors</a
                     >
-                    <span class="text-muted fw-semobold d-block"
+                    <span class="text-muted fw-semibold d-block"
                       >Most Successful</span
                     >
                   </td>
-                  <td class="text-end text-muted fw-semobold">Python, MySQL</td>
+                  <td class="text-end text-muted fw-semibold">Python, MySQL</td>
                   <td class="text-end">
                     <span class="badge badge-light-warning">In Progress</span>
                   </td>
@@ -151,14 +151,14 @@
                   <td>
                     <a
                       href="#"
-                      class="text-dark fw-bold text-hover-primary mb-1 fs-6"
+                      class="text-gray-900 fw-bold text-hover-primary mb-1 fs-6"
                       >New Users</a
                     >
-                    <span class="text-muted fw-semobold d-block"
+                    <span class="text-muted fw-semibold d-block"
                       >Awesome Users</span
                     >
                   </td>
-                  <td class="text-end text-muted fw-semobold">
+                  <td class="text-end text-muted fw-semibold">
                     Laravel,Metronic
                   </td>
                   <td class="text-end">
@@ -190,14 +190,14 @@
                   <td>
                     <a
                       href="#"
-                      class="text-dark fw-bold text-hover-primary mb-1 fs-6"
+                      class="text-gray-900 fw-bold text-hover-primary mb-1 fs-6"
                       >Active Customers</a
                     >
-                    <span class="text-muted fw-semobold d-block"
+                    <span class="text-muted fw-semibold d-block"
                       >Movie Creator</span
                     >
                   </td>
-                  <td class="text-end text-muted fw-semobold">AngularJS, C#</td>
+                  <td class="text-end text-muted fw-semibold">AngularJS, C#</td>
                   <td class="text-end">
                     <span class="badge badge-light-danger">Rejected</span>
                   </td>
@@ -231,14 +231,14 @@
                   <td>
                     <a
                       href="#"
-                      class="text-dark fw-bold text-hover-primary mb-1 fs-6"
+                      class="text-gray-900 fw-bold text-hover-primary mb-1 fs-6"
                       >Bestseller Theme</a
                     >
-                    <span class="text-muted fw-semobold d-block"
+                    <span class="text-muted fw-semibold d-block"
                       >Best Customers</span
                     >
                   </td>
-                  <td class="text-end text-muted fw-semobold">ReactJS, Ruby</td>
+                  <td class="text-end text-muted fw-semibold">ReactJS, Ruby</td>
                   <td class="text-end">
                     <span class="badge badge-light-warning">In Progress</span>
                   </td>
@@ -294,14 +294,14 @@
                   <td>
                     <a
                       href="#"
-                      class="text-dark fw-bold text-hover-primary mb-1 fs-6"
+                      class="text-gray-900 fw-bold text-hover-primary mb-1 fs-6"
                       >Brad Simmons</a
                     >
-                    <span class="text-muted fw-semobold d-block"
+                    <span class="text-muted fw-semibold d-block"
                       >Movie Creator</span
                     >
                   </td>
-                  <td class="text-end text-muted fw-semobold">React, HTML</td>
+                  <td class="text-end text-muted fw-semibold">React, HTML</td>
                   <td class="text-end">
                     <span class="badge badge-light-success">Approved</span>
                   </td>
@@ -331,14 +331,14 @@
                   <td>
                     <a
                       href="#"
-                      class="text-dark fw-bold text-hover-primary mb-1 fs-6"
+                      class="text-gray-900 fw-bold text-hover-primary mb-1 fs-6"
                       >Popular Authors</a
                     >
-                    <span class="text-muted fw-semobold d-block"
+                    <span class="text-muted fw-semibold d-block"
                       >Most Successful</span
                     >
                   </td>
-                  <td class="text-end text-muted fw-semobold">Python, MySQL</td>
+                  <td class="text-end text-muted fw-semibold">Python, MySQL</td>
                   <td class="text-end">
                     <span class="badge badge-light-warning">In Progress</span>
                   </td>
@@ -368,14 +368,14 @@
                   <td>
                     <a
                       href="#"
-                      class="text-dark fw-bold text-hover-primary mb-1 fs-6"
+                      class="text-gray-900 fw-bold text-hover-primary mb-1 fs-6"
                       >Active Customers</a
                     >
-                    <span class="text-muted fw-semobold d-block"
+                    <span class="text-muted fw-semibold d-block"
                       >Movie Creator</span
                     >
                   </td>
-                  <td class="text-end text-muted fw-semobold">AngularJS, C#</td>
+                  <td class="text-end text-muted fw-semibold">AngularJS, C#</td>
                   <td class="text-end">
                     <span class="badge badge-light-danger">Rejected</span>
                   </td>
@@ -435,14 +435,14 @@
                   <td>
                     <a
                       href="#"
-                      class="text-dark fw-bold text-hover-primary mb-1 fs-6"
+                      class="text-gray-900 fw-bold text-hover-primary mb-1 fs-6"
                       >Bestseller Theme</a
                     >
-                    <span class="text-muted fw-semobold d-block"
+                    <span class="text-muted fw-semibold d-block"
                       >Best Customers</span
                     >
                   </td>
-                  <td class="text-end text-muted fw-semobold">ReactJS, Ruby</td>
+                  <td class="text-end text-muted fw-semibold">ReactJS, Ruby</td>
                   <td class="text-end">
                     <span class="badge badge-light-warning">In Progress</span>
                   </td>
@@ -472,14 +472,14 @@
                   <td>
                     <a
                       href="#"
-                      class="text-dark fw-bold text-hover-primary mb-1 fs-6"
+                      class="text-gray-900 fw-bold text-hover-primary mb-1 fs-6"
                       >Active Customers</a
                     >
-                    <span class="text-muted fw-semobold d-block"
+                    <span class="text-muted fw-semibold d-block"
                       >Movie Creator</span
                     >
                   </td>
-                  <td class="text-end text-muted fw-semobold">AngularJS, C#</td>
+                  <td class="text-end text-muted fw-semibold">AngularJS, C#</td>
                   <td class="text-end">
                     <span class="badge badge-light-danger">Rejected</span>
                   </td>
@@ -509,14 +509,14 @@
                   <td>
                     <a
                       href="#"
-                      class="text-dark fw-bold text-hover-primary mb-1 fs-6"
+                      class="text-gray-900 fw-bold text-hover-primary mb-1 fs-6"
                       >New Users</a
                     >
-                    <span class="text-muted fw-semobold d-block"
+                    <span class="text-muted fw-semibold d-block"
                       >Awesome Users</span
                     >
                   </td>
-                  <td class="text-end text-muted fw-semobold">
+                  <td class="text-end text-muted fw-semibold">
                     Laravel,Metronic
                   </td>
                   <td class="text-end">
@@ -550,14 +550,14 @@
                   <td>
                     <a
                       href="#"
-                      class="text-dark fw-bold text-hover-primary mb-1 fs-6"
+                      class="text-gray-900 fw-bold text-hover-primary mb-1 fs-6"
                       >Popular Authors</a
                     >
-                    <span class="text-muted fw-semobold d-block"
+                    <span class="text-muted fw-semibold d-block"
                       >Most Successful</span
                     >
                   </td>
-                  <td class="text-end text-muted fw-semobold">Python, MySQL</td>
+                  <td class="text-end text-muted fw-semibold">Python, MySQL</td>
                   <td class="text-end">
                     <span class="badge badge-light-warning">In Progress</span>
                   </td>

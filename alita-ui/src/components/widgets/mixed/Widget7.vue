@@ -7,11 +7,11 @@
       <div class="flex-grow-1 card-p pb-0">
         <div class="d-flex flex-stack flex-wrap">
           <div class="me-2">
-            <a href="#" class="text-dark text-hover-primary fw-bold fs-3"
+            <a href="#" class="text-gray-900 text-hover-primary fw-bold fs-3"
               >Generate Reports</a
             >
 
-            <div class="text-muted fs-7 fw-semobold">
+            <div class="text-muted fs-7 fw-semibold">
               Finance and accounting reports
             </div>
           </div>
@@ -54,8 +54,7 @@ export default defineComponent({
   },
   setup(props) {
     const chartRef = ref<typeof VueApexCharts | null>(null);
-    const color = ref(props.chartColor);
-    let chart: ApexOptions = {};
+    const chart = ref<ApexOptions>({});
     const store = useThemeStore();
 
     const series = ref([
@@ -70,7 +69,10 @@ export default defineComponent({
     });
 
     onBeforeMount(() => {
-      Object.assign(chart, chartOptions(color.value, props.chartHeight));
+      Object.assign(
+        chart.value,
+        chartOptions(props.chartColor, props.chartHeight)
+      );
     });
 
     const refreshChart = () => {
@@ -78,9 +80,9 @@ export default defineComponent({
         return;
       }
 
-      Object.assign(chart, chartOptions(color.value, props.chartHeight));
-
-      chartRef.value.refresh();
+      chartRef.value.updateOptions(
+        chartOptions(props.chartColor, props.chartHeight)
+      );
     };
 
     watch(themeMode, () => {

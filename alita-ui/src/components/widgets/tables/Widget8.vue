@@ -5,7 +5,7 @@
     <div class="card-header border-0 pt-5">
       <h3 class="card-title align-items-start flex-column">
         <span class="card-label fw-bold fs-3 mb-1">Latest Products</span>
-        <span class="text-muted mt-1 fw-semobold fs-7"
+        <span class="text-muted mt-1 fw-semibold fs-7"
           >More than 100 new orders</span
         >
       </h3>
@@ -86,19 +86,19 @@
                       <td>
                         <a
                           href="#"
-                          class="text-dark fw-bold text-hover-primary mb-1 fs-6"
+                          class="text-gray-900 fw-bold text-hover-primary mb-1 fs-6"
                           >{{ item1.info.event }}</a
                         >
-                        <span class="text-muted fw-semobold d-block fs-7">{{
+                        <span class="text-muted fw-semibold d-block fs-7">{{
                           item1.info.user
                         }}</span>
                       </td>
                       <td class="text-end">
-                        <span class="text-dark fw-bold d-block fs-7">{{
+                        <span class="text-gray-900 fw-bold d-block fs-7">{{
                           item1.date
                         }}</span>
 
-                        <span class="text-muted fw-semobold d-block fs-8"
+                        <span class="text-muted fw-semibold d-block fs-8"
                           >Date</span
                         >
                       </td>
