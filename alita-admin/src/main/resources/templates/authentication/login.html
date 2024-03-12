@@ -210,10 +210,10 @@
 							const jwtObj = AlitaUtil.parseJWT(response.data.data)
 							//存储令牌
 							AlitaCookie.set("jwtToken", response.data.data, { expires: jwtObj.expDate });
-							// const redirectUrl = formElement.getAttribute("data-alita-redirect-url");
-							// if (redirectUrl) {
-							// 	location.href = redirectUrl;
-							// }
+							const redirectUrl = formElement.getAttribute("data-alita-redirect-url");
+							if (redirectUrl) {
+								AlitaRequest.get("/home");
+							}
 
 						} else {
 							Swal.fire({

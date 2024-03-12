@@ -24,17 +24,7 @@ public class AuthenticationEvents {
      */
     @EventListener
     public void onSuccess(AuthenticationSuccessEvent success) {
-        Authentication authentication = success.getAuthentication();
-        SysUserAccount user = (SysUserAccount) authentication.getPrincipal();
 
-        if (user.getUserType().equals(UserType.ADMIN)) {
-            //管理员跳转到后台主页
-            //redirectStrategy.sendRedirect(request, response, "/authentication/loginPage");
-        }
-
-        if (user.getUserType().equals(UserType.NORMAL)) {
-            //普通用户跳转到网站首页
-        }
     }
 
     /**
