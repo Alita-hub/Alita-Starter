@@ -30,3 +30,6 @@ replay_pid*
 target
 logs
 
+
+# vue
+package-lock.json
