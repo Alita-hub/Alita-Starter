@@ -7,7 +7,7 @@
       id="kt_login_signin_form"
       @submit="onSubmitLogin"
       :validation-schema="login"
-      :initial-values="{ email: 'admin@demo.com', password: 'demo' }"
+      :initial-values="{ username: 'admin@demo.com', password: 'demo' }"
     >
       <!--begin::Heading-->
       <div class="text-center mb-10">
@@ -62,7 +62,9 @@
         <!--begin::Wrapper-->
         <div class="d-flex flex-stack mb-2">
           <!--begin::Label-->
-          <label class="form-label fw-bold text-gray-900 fs-6 mb-0">Password</label>
+          <label class="form-label fw-bold text-gray-900 fs-6 mb-0"
+            >Password</label
+          >
           <!--end::Label-->
 
           <!--begin::Link-->
@@ -205,7 +207,7 @@ export default defineComponent({
       // Send login request
       await store.login(values);
       const error = Object.values(store.errors);
-
+      
       if (error.length === 0) {
         Swal.fire({
           text: "You have successfully logged in!",
@@ -238,7 +240,7 @@ export default defineComponent({
       //Deactivate indicator
       submitButton.value?.removeAttribute("data-kt-indicator");
       // eslint-disable-next-line
-        submitButton.value!.disabled = false;
+      submitButton.value!.disabled = false;
     };
 
     return {
