@@ -13,7 +13,7 @@ export const getToken = (): string | null => {
  * @description save token into localStorage
  * @param token: string
  */
-export const saveToken = (name:string, token: string, options: any): void => {
+export const saveToken = (token: string, options: any): void => {
   StorageService.setCookie(JWT_TOKEN_KEY, token, options);
 };
 

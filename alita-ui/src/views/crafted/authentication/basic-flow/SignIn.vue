@@ -7,7 +7,7 @@
       id="kt_login_signin_form"
       @submit="onSubmitLogin"
       :validation-schema="login"
-      :initial-values="{ username: 'admin@demo.com', password: 'demo' }"
+      :initial-values="{ username: 'admin', password: 'admin@123456', loginType: 'username' }"
     >
       <!--begin::Heading-->
       <div class="text-center mb-10">
@@ -37,7 +37,7 @@
       <!--begin::Input group-->
       <div class="fv-row mb-10">
         <!--begin::Label-->
-        <label class="form-label fs-6 fw-bold text-gray-900">Email</label>
+        <label class="form-label fs-6 fw-bold text-gray-900">Username</label>
         <!--end::Label-->
 
         <!--begin::Input-->
@@ -45,13 +45,13 @@
           tabindex="1"
           class="form-control form-control-lg form-control-solid"
           type="text"
-          name="email"
+          name="username"
           autocomplete="off"
         />
         <!--end::Input-->
         <div class="fv-plugins-message-container">
           <div class="fv-help-block">
-            <ErrorMessage name="email" />
+            <ErrorMessage name="username" />
           </div>
         </div>
       </div>
@@ -62,9 +62,7 @@
         <!--begin::Wrapper-->
         <div class="d-flex flex-stack mb-2">
           <!--begin::Label-->
-          <label class="form-label fw-bold text-gray-900 fs-6 mb-0"
-            >Password</label
-          >
+          <label class="form-label fw-bold text-gray-900 fs-6 mb-0">Password</label>
           <!--end::Label-->
 
           <!--begin::Link-->
@@ -187,7 +185,7 @@ export default defineComponent({
 
     //Create form validation object
     const login = Yup.object().shape({
-      email: Yup.string().email().required().label("Email"),
+      username: Yup.string().required(),
       password: Yup.string().min(4).required().label("Password"),
     });
 
@@ -207,7 +205,7 @@ export default defineComponent({
       // Send login request
       await store.login(values);
       const error = Object.values(store.errors);
-      
+
       if (error.length === 0) {
         Swal.fire({
           text: "You have successfully logged in!",
@@ -240,7 +238,7 @@ export default defineComponent({
       //Deactivate indicator
       submitButton.value?.removeAttribute("data-kt-indicator");
       // eslint-disable-next-line
-      submitButton.value!.disabled = false;
+        submitButton.value!.disabled = false;
     };
 
     return {

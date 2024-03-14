@@ -5,6 +5,7 @@ import {
 } from "vue-router";
 import { useAuthStore } from "@/stores/auth";
 import { useConfigStore } from "@/stores/config";
+import JwtService from "@/core/services/JwtService";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -502,7 +503,8 @@ router.beforeEach((to, from, next) => {
 
   // before page access check if page requires authentication
   if (to.meta.middleware == "auth") {
-    if (authStore.isAuthenticated) {
+    if (authStore.isAuthenticated && JwtService.getToken()) {
+      console.log(JwtService.getToken())
       next();
     } else {
       next({ name: "sign-in" });
