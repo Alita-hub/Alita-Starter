@@ -1,9 +1,9 @@
 <template>
   <!--begin::Empty-->
-  <div data-kt-search-element="empty" class="text-center d-none">
+  <div data-alita-search-element="empty" class="text-center d-none">
     <!--begin::Icon-->
     <div class="pt-10 pb-10">
-      <KTIcon icon-name="search-list" icon-class="fs-4x opacity-50" />
+      <AlitaIcon icon-name="search-list" icon-class="fs-4x opacity-50" />
     </div>
     <!--end::Icon-->
 
@@ -22,7 +22,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "kt-empty",
+  name: "alita-empty",
   components: {},
   setup() {
     return {

@@ -41,7 +41,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, onMounted, ref, watch } from "vue";
-import type { Sort } from "@/components/kt-datatable/table-partials/models";
+import type { Sort } from "@/components/alita-datatable/table-partials/models";
 
 export default defineComponent({
   name: "table-head-row",

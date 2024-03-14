@@ -76,7 +76,7 @@
                             :class="`bg-light-${item1.icon.color}`"
                             class="symbol-label"
                           >
-                            <KTIcon
+                            <AlitaIcon
                               :icon-name="item1.icon.file"
                               :icon-class="`text-${item1.icon.color} fs-2x`"
                             />
@@ -131,7 +131,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "kt-widget-8",
+  name: "alita-widget-8",
   components: {},
   props: {
     widgetClasses: String,

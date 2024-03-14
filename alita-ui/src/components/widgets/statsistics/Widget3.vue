@@ -46,7 +46,7 @@ import { getCSSVariableValue } from "@/assets/ts/_utils";
 import type VueApexCharts from "vue3-apexcharts";
 
 export default defineComponent({
-  name: "kt-widget-3",
+  name: "alita-widget-3",
   props: {
     widgetClasses: String,
     title: String,

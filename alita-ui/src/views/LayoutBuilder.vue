@@ -16,7 +16,7 @@
             d="M10.2,21.23,4.91,18.17a3.58,3.58,0,0,1-1.8-3.11V8.94a3.58,3.58,0,0,1,1.8-3.11L10.2,2.77a3.62,3.62,0,0,1,3.6,0l5.29,3.06a3.58,3.58,0,0,1,1.8,3.11v6.12a3.58,3.58,0,0,1-1.8,3.11L13.8,21.23A3.62,3.62,0,0,1,10.2,21.23Z"
           ></path>
         </svg>
-        <KTIcon
+        <AlitaIcon
           icon-name="wrench"
           icon-class="fs-2x fs-lg-3x text-primary position-absolute"
         />
@@ -141,9 +141,9 @@
               <!--begin::Options-->
               <div
                 class="d-flex flex-stack gap-3 mw-lg-600px"
-                data-kt-buttons="true"
-                data-kt-buttons-target=".form-check-image,.form-check-input"
-                data-kt-initialized="1"
+                data-alita-buttons="true"
+                data-alita-buttons-target=".form-check-image,.form-check-input"
+                data-alita-initialized="1"
               >
                 <!--begin::Option-->
                 <label
@@ -154,7 +154,7 @@
                   <div
                     class="form-check-wrapper d-flex flex-center border-gray-200 border-2 mb-0 py-3 px-4"
                   >
-                    <KTIcon
+                    <AlitaIcon
                       icon-type="duotone"
                       icon-name="picture"
                       icon-class="fs-1 text-gray-500 parent-active-gray-700 parent-hover-gray-700"

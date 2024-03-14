@@ -20,11 +20,11 @@
         <!--begin::Menu-->
         <button
           class="btn btn-icon btn-color-gray-500 btn-active-color-primary justify-content-end"
-          data-kt-menu-trigger="click"
-          data-kt-menu-placement="bottom-end"
-          data-kt-menu-overflow="true"
+          data-alita-menu-trigger="click"
+          data-alita-menu-placement="bottom-end"
+          data-alita-menu-overflow="true"
         >
-          <KTIcon
+          <AlitaIcon
             icon-name="dots-square"
             icon-class="fs-1 text-gray-300 me-n1"
           />
@@ -54,7 +54,7 @@
             >
               <!--begin::Icon-->
               <div class="nav-icon mb-3">
-                <KTIcon :icon-name="item.icon" icon-class="fs-1 p-0" />
+                <AlitaIcon :icon-name="item.icon" icon-class="fs-1 p-0" />
               </div>
               <!--end::Icon-->
 
@@ -137,7 +137,7 @@
                           v-if="row.icon"
                           class="badge badge-light-success fs-base"
                         >
-                          <KTIcon
+                          <AlitaIcon
                             icon-name="arrow-up"
                             icon-class="fs-5 text-success ms-n1"
                           />
@@ -146,7 +146,7 @@
                         <!--end::Label-->
                         <!--begin::Label-->
                         <span v-else class="badge badge-light-danger fs-base">
-                          <KTIcon
+                          <AlitaIcon
                             icon-name="arrow-down"
                             icon-class="fs-5 text-danger ms-n1"
                           />
@@ -160,7 +160,7 @@
                           href="#"
                           class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px"
                         >
-                          <KTIcon
+                          <AlitaIcon
                             icon-name="black-right"
                             icon-class="fs-5 text-gray-700"
                           />

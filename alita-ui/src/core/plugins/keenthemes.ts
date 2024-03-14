@@ -8,7 +8,7 @@ import {
 } from "@/assets/ts/components";
 import { ThemeModeComponent } from "@/assets/ts/layout";
 import type { App } from "vue";
-import KTIcon from "@/core/helpers/kt-icon/KTIcon.vue";
+import AlitaIcon from "@/core/helpers/alita-icon/AlitaIcon.vue";
 
 /**
  * @description Initialize KeenThemes custom components
@@ -47,11 +47,11 @@ const reinitializeScrollComponent = async () => {
 };
 
 /**
- * Initialize KTIcon global component instance
+ * Initialize AlitaIcon global component instance
  * @param app vue instance
  */
 function initKtIcon(app: App<Element>) {
-  app.component("KTIcon", KTIcon);
+  app.component("AlitaIcon", AlitaIcon);
 }
 
 export {

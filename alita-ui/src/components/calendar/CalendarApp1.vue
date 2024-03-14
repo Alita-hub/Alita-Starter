@@ -7,7 +7,7 @@
 
       <div class="card-toolbar">
         <button class="btn btn-flex btn-primary" @click="newEvent()">
-          <KTIcon icon-name="plus" icon-class="fs-2" />
+          <AlitaIcon icon-name="plus" icon-class="fs-2" />
           Add Event
         </button>
       </div>

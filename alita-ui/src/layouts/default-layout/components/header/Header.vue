@@ -17,17 +17,20 @@
         id="kt_aside_toggle"
         class="btn btn-icon w-auto px-0 btn-active-color-primary aside-minimize"
         :class="{ active: asideMinimized }"
-        data-kt-toggle="true"
-        data-kt-toggle-state="active"
-        data-kt-toggle-target="body"
-        data-kt-toggle-name="aside-minimize"
+        data-alita-toggle="true"
+        data-alita-toggle-state="active"
+        data-alita-toggle-target="body"
+        data-alita-toggle-name="aside-minimize"
       >
-        <KTIcon
+        <AlitaIcon
           icon-name="exit-left"
           icon-class="fs-1 me-n1 minimize-default"
         />
 
-        <KTIcon icon-name="entrance-left" icon-class="fs-1 minimize-active" />
+        <AlitaIcon
+          icon-name="entrance-left"
+          icon-class="fs-1 minimize-active"
+        />
       </div>
       <!--end::Aside minimize-->
 
@@ -40,7 +43,7 @@
           class="btn btn-icon btn-active-color-primary w-30px h-30px"
           id="kt_aside_mobile_toggle"
         >
-          <KTIcon icon-name="abstract-14" icon-class="fs-1" />
+          <AlitaIcon icon-name="abstract-14" icon-class="fs-1" />
         </div>
       </div>
       <!--end::Aside toggle-->

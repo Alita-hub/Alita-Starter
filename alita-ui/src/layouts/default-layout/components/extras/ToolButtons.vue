@@ -32,7 +32,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "kt-toolbar-buttons",
+  name: "alita-toolbar-buttons",
   components: {},
 });
 </script>

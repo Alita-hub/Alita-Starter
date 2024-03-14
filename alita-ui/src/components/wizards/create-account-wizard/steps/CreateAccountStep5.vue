@@ -1,6 +1,6 @@
 <template>
   <!--begin::Step 5-->
-  <div data-kt-stepper-element="content">
+  <div data-alita-stepper-element="content">
     <!--begin::Wrapper-->
     <div class="w-100">
       <!--begin::Heading-->
@@ -34,7 +34,7 @@
         <div
           class="notice d-flex bg-light-warning rounded border-warning border border-dashed p-6"
         >
-          <KTIcon
+          <AlitaIcon
             icon-name="information-5"
             icon-class="fs-2tx text-warning me-4"
           />

@@ -62,11 +62,11 @@
 
         <!--begin::Follow-->
         <a v-if="connected" href="#" class="btn btn-sm btn-light-primary">
-          <KTIcon icon-name="check" icon-class="fs-3" />
+          <AlitaIcon icon-name="check" icon-class="fs-3" />
           Connected
         </a>
         <a v-else href="#" class="btn btn-sm btn-light">
-          <KTIcon icon-name="plus" icon-class="fs-3" />
+          <AlitaIcon icon-name="plus" icon-class="fs-3" />
           Connect
         </a>
         <!--end::Follow-->

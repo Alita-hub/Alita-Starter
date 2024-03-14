@@ -14,11 +14,11 @@
         <button
           type="button"
           class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
-          data-kt-menu-trigger="click"
-          data-kt-menu-placement="bottom-end"
-          data-kt-menu-flip="top-end"
+          data-alita-menu-trigger="click"
+          data-alita-menu-placement="bottom-end"
+          data-alita-menu-flip="top-end"
         >
-          <KTIcon icon-name="category" icon-class="fs-2" />
+          <AlitaIcon icon-name="category" icon-class="fs-2" />
         </button>
         <Dropdown1></Dropdown1>
         <!--end::Menu-->
@@ -38,7 +38,7 @@
               <!--begin::Symbol-->
               <div class="symbol symbol-50px me-3">
                 <div class="symbol-label bg-light-info">
-                  <KTIcon icon-name="bucket" icon-class="fs-1 text-info" />
+                  <AlitaIcon icon-name="bucket" icon-class="fs-1 text-info" />
                 </div>
               </div>
               <!--end::Symbol-->
@@ -59,7 +59,7 @@
               <!--begin::Symbol-->
               <div class="symbol symbol-50px me-3">
                 <div class="symbol-label bg-light-danger">
-                  <KTIcon
+                  <AlitaIcon
                     icon-name="abstract-26"
                     icon-class="fs-1 text-danger"
                   />
@@ -87,7 +87,10 @@
               <!--begin::Symbol-->
               <div class="symbol symbol-50px me-3">
                 <div class="symbol-label bg-light-success">
-                  <KTIcon icon-name="basket" icon-class="fs-1 text-success" />
+                  <AlitaIcon
+                    icon-name="basket"
+                    icon-class="fs-1 text-success"
+                  />
                 </div>
               </div>
               <!--end::Symbol-->
@@ -108,7 +111,10 @@
               <!--begin::Symbol-->
               <div class="symbol symbol-50px me-3">
                 <div class="symbol-label bg-light-primary">
-                  <KTIcon icon-name="package" icon-class="fs-1 text-primary" />
+                  <AlitaIcon
+                    icon-name="package"
+                    icon-class="fs-1 text-primary"
+                  />
                 </div>
               </div>
               <!--end::Symbol-->

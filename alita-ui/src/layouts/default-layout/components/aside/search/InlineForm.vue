@@ -1,13 +1,13 @@
 <template>
   <form
-    data-kt-search-element="form"
+    data-alita-search-element="form"
     class="w-100 position-relative d-none d-lg-block"
     autocomplete="off"
   >
     <input type="hidden" />
 
     <!--begin::Icon-->
-    <KTIcon
+    <AlitaIcon
       icon-name="magnifier"
       icon-class="fs-2 search-icon position-absolute top-50 translate-middle-y ms-4"
     />
@@ -20,14 +20,14 @@
       name="search"
       value=""
       placeholder="Search..."
-      data-kt-search-element="input"
+      data-alita-search-element="input"
     />
     <!--end::Input-->
 
     <!--begin::Spinner-->
     <span
       class="position-absolute top-50 end-0 translate-middle-y lh-0 d-none me-5"
-      data-kt-search-element="spinner"
+      data-alita-search-element="spinner"
     >
       <span
         class="spinner-border h-15px w-15px align-middle text-gray-500"
@@ -38,9 +38,9 @@
     <!--begin::Reset-->
     <span
       class="btn btn-flush btn-active-color-primary position-absolute top-50 end-0 translate-middle-y lh-0 me-4 d-none"
-      data-kt-search-element="clear"
+      data-alita-search-element="clear"
     >
-      <KTIcon icon-name="cross" icon-class="fs-2 fs-lg-1 me-0" />
+      <AlitaIcon icon-name="cross" icon-class="fs-2 fs-lg-1 me-0" />
     </span>
     <!--end::Reset-->
   </form>

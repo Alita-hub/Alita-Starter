@@ -1,6 +1,6 @@
 <template>
   <!--begin::Step 1-->
-  <div class="current" data-kt-stepper-element="content">
+  <div class="current" data-alita-stepper-element="content">
     <div class="w-100">
       <!--begin::Input group-->
       <div class="fv-row mb-10">
@@ -53,7 +53,10 @@
               <!--begin:Icon-->
               <span class="symbol symbol-50px me-6">
                 <span class="symbol-label bg-light-primary">
-                  <KTIcon icon-name="compass" icon-class="fs-1 text-primary" />
+                  <AlitaIcon
+                    icon-name="compass"
+                    icon-class="fs-1 text-primary"
+                  />
                 </span>
               </span>
               <!--end:Icon-->
@@ -90,7 +93,10 @@
               <!--begin:Icon-->
               <span class="symbol symbol-50px me-6">
                 <span class="symbol-label bg-light-danger">
-                  <KTIcon icon-name="category" icon-class="fs-1 text-danger" />
+                  <AlitaIcon
+                    icon-name="category"
+                    icon-class="fs-1 text-danger"
+                  />
                 </span>
               </span>
               <!--end:Icon-->
@@ -127,7 +133,7 @@
               <!--begin:Icon-->
               <span class="symbol symbol-50px me-6">
                 <span class="symbol-label bg-light-success">
-                  <KTIcon icon-name="timer" icon-class="fs-1 text-success" />
+                  <AlitaIcon icon-name="timer" icon-class="fs-1 text-success" />
                 </span>
               </span>
               <!--end:Icon-->

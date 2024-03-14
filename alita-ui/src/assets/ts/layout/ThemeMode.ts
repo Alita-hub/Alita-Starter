@@ -7,7 +7,7 @@ class ThemeMode {
   element: HTMLElement | null = null;
 
   private getParamName = (postfix: string): string => {
-    const ktName = document.body.hasAttribute("data-kt-name");
+    const ktName = document.body.hasAttribute("data-alita-name");
     const name = ktName ? ktName + "_" : "";
     return "kt_" + name + "theme_mode_" + postfix;
   };
@@ -66,11 +66,11 @@ class ThemeMode {
     // Read active menu mode value
     const activeMenuItem: HTMLElement | null =
       this.menu?.querySelector(
-        '[data-kt-element="mode"][data-kt-value="' + menuMode + '"]'
+        '[data-alitaita-element="modedata-alita-alita-value="' + menuMode + '"]'
       ) || null;
 
     // Enable switching state
-    this.element?.setAttribute("data-kt-theme-mode-switching", "true");
+    this.element?.setAttribute("data-alitaita-theme-mode-switching", "true");
 
     // Set mode to the target element
     this.element?.setAttribute("data-bs-theme", mode);
@@ -78,7 +78,7 @@ class ThemeMode {
     // Disable switching state
     const self = this;
     setTimeout(function () {
-      self.element?.removeAttribute("data-kt-theme-mode-switching");
+      self.element?.removeAttribute("data-alitaita-theme-mode-switching");
     }, 300);
 
     // Store mode value in storage
@@ -99,9 +99,9 @@ class ThemeMode {
   public getMenuMode = (): Mode | "" => {
     const menuModeParam = this.getParamName("menu");
     const menuItem = this.menu?.querySelector(
-      '.active[data-kt-element="mode"]'
+      '.active[data-alitaita-element="mode"]'
     );
-    const dataKTValue = menuItem?.getAttribute("data-kt-value");
+    const dataKTValue = menuItem?.getAttribute("data-alitaita-value");
     if (dataKTValue) {
       return dataKTValue as Mode;
     }
@@ -123,23 +123,23 @@ class ThemeMode {
   private initMode = (): void => {
     this.setMode(this.getMode(), this.getMenuMode());
     if (this.element) {
-      EventHandlerUtil.trigger(this.element, "kt.thememode.init");
+      EventHandlerUtil.trigger(this.element, "alita.thememode.init");
     }
   };
 
   private getActiveMenuItem = (): HTMLElement | null => {
     return (
       this.menu?.querySelector(
-        '[data-kt-element="mode"][data-kt-value="' + this.getMenuMode() + '"]'
+        '[data-alitaita-element="modedata-alita-alita-value="' + this.getMenuMode() + '"]'
       ) || null
     );
   };
 
   private setActiveMenuItem = (item: HTMLElement): void => {
     const menuModeParam = this.getParamName("menu");
-    const menuMode = item.getAttribute("data-kt-value");
+    const menuMode = item.getAttribute("data-alitaita-value");
     const activeItem = this.menu?.querySelector(
-      '.active[data-kt-element="mode"]'
+      '.active[data-alitaita-element="mode"]'
     );
     if (activeItem) {
       activeItem.classList.remove("active");
@@ -153,12 +153,12 @@ class ThemeMode {
 
   private handleMenu = (): void => {
     this.menu
-      ?.querySelectorAll<HTMLElement>('[data-kt-element="mode"]')
+      ?.querySelectorAll<HTMLElement>('[data-alitaita-element="mode"]')
       ?.forEach((item: HTMLElement) => {
         item.addEventListener("click", (e) => {
           e.preventDefault();
 
-          const menuMode: string | null = item.getAttribute("data-kt-value");
+          const menuMode: string | null = item.getAttribute("data-alitaita-value");
           const mode = menuMode === "system" ? this.getSystemMode() : menuMode;
 
           if (mode) {
@@ -170,55 +170,55 @@ class ThemeMode {
 
   public flipImages = () => {
     document
-      .querySelectorAll<HTMLElement>("[data-kt-img-dark]")
+      .querySelectorAll<HTMLElement>("[data-alitaita-img-dark]")
       ?.forEach((item: HTMLElement) => {
         if (item.tagName === "IMG") {
           if (
             this.getMode() === "dark" &&
-            item.hasAttribute("data-kt-img-dark")
+            item.hasAttribute("data-alitaita-img-dark")
           ) {
             item.setAttribute(
-              "data-kt-img-light",
+              "data-alitaita-img-light",
               item.getAttribute("src") || ""
             );
             item.setAttribute(
               "src",
-              item.getAttribute("data-kt-img-dark") || ""
+              item.getAttribute("data-alitaita-img-dark") || ""
             );
           } else if (
             this.getMode() === "light" &&
-            item.hasAttribute("data-kt-img-light")
+            item.hasAttribute("data-alitaita-img-light")
           ) {
             item.setAttribute(
-              "data-kt-img-dark",
+              "data-alitaita-img-dark",
               item.getAttribute("src") || ""
             );
             item.setAttribute(
               "src",
-              item.getAttribute("data-kt-img-light") || ""
+              item.getAttribute("data-alitaita-img-light") || ""
             );
           }
         } else {
           if (
             this.getMode() === "dark" &&
-            item.hasAttribute("data-kt-img-dark")
+            item.hasAttribute("data-alitaita-img-dark")
           ) {
             item.setAttribute(
-              "data-kt-img-light",
+              "data-alitaita-img-light",
               item.getAttribute("src") || ""
             );
             item.style.backgroundImage =
-              "url('" + item.getAttribute("data-kt-img-dark") + "')";
+              "url('" + item.getAttribute("data-alitaita-img-dark") + "')";
           } else if (
             this.getMode() === "light" &&
-            item.hasAttribute("data-kt-img-light")
+            item.hasAttribute("data-alitaita-img-light")
           ) {
             item.setAttribute(
-              "data-kt-img-dark",
+              "data-alitaita-img-dark",
               item.getAttribute("src") || ""
             );
             item.style.backgroundImage =
-              "url('" + item.getAttribute("data-kt-img-light") + "')";
+              "url('" + item.getAttribute("data-alitaita-img-light") + "')";
           }
         }
       });
@@ -238,7 +238,7 @@ class ThemeMode {
 
   public init = () => {
     this.menu = document.querySelector<HTMLElement>(
-      '[data-kt-element="theme-mode-menu"]'
+      '[data-alitaita-element="theme-mode-menu"]'
     );
     this.element = document.documentElement;
 

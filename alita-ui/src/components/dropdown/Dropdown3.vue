@@ -2,7 +2,7 @@
   <!--begin::Menu-->
   <div
     class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold py-4 w-250px fs-6"
-    data-kt-menu="true"
+    data-alita-menu="true"
   >
     <!--begin::Menu item-->
     <div class="menu-item px-5">
@@ -35,8 +35,8 @@
     <!--begin::Menu item-->
     <div
       class="menu-item px-5"
-      data-kt-menu-trigger="hover"
-      data-kt-menu-placement="left-start"
+      data-alita-menu-trigger="hover"
+      data-alita-menu-placement="left-start"
     >
       <a href="#" class="menu-link px-5">
         <span class="menu-title">Subscription</span>

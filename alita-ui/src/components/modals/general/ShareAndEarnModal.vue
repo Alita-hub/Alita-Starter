@@ -17,7 +17,7 @@
             class="btn btn-sm btn-icon btn-active-color-primary"
             data-bs-dismiss="modal"
           >
-            <KTIcon icon-name="cross" icon-class="fs-1" />
+            <AlitaIcon icon-name="cross" icon-class="fs-1" />
           </div>
           <!--end::Close-->
         </div>

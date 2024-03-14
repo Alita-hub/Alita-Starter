@@ -11,10 +11,10 @@
           type="button"
           :class="`btn-active-color-${widgetColor}`"
           class="btn btn-sm btn-icon btn-color-white btn-active-white border-0 me-n3"
-          data-kt-menu-trigger="click"
-          data-kt-menu-placement="bottom-end"
+          data-alita-menu-trigger="click"
+          data-alita-menu-placement="bottom-end"
         >
-          <KTIcon icon-name="category" icon-class="fs-2" />
+          <AlitaIcon icon-name="category" icon-class="fs-2" />
         </button>
         <Dropdown3></Dropdown3>
         <!--end::Menu-->

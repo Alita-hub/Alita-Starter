@@ -3,25 +3,25 @@
   <div
     ref="searchRef"
     class="d-flex align-items-center w-100"
-    data-kt-search="true"
-    data-kt-search-keypress="true"
-    data-kt-search-min-length="2"
-    data-kt-search-enter="enter"
-    data-kt-search-layout="menu"
-    data-kt-search-responsive="false"
-    data-kt-menu-trigger="auto"
-    data-kt-menu-permanent="true"
-    data-kt-menu-placement="bottom-start"
+    data-alita-search="true"
+    data-alita-search-keypress="true"
+    data-alita-search-min-length="2"
+    data-alita-search-enter="enter"
+    data-alita-search-layout="menu"
+    data-alita-search-responsive="false"
+    data-alita-menu-trigger="auto"
+    data-alita-menu-permanent="true"
+    data-alita-menu-placement="bottom-start"
   >
     <InlineForm />
 
     <!--begin::Menu-->
     <div
-      data-kt-search-element="content"
+      data-alita-search-element="content"
       class="menu menu-sub menu-sub-dropdown w-300px w-md-350px py-7 px-7 overflow-hidden"
     >
       <!--begin::Wrapper-->
-      <div data-kt-search-element="wrapper">
+      <div data-alita-search-element="wrapper">
         <Results />
 
         <AsideMain />
@@ -50,7 +50,7 @@ import InlineForm from "@/layouts/default-layout/components/aside/search/InlineF
 import { SearchComponent } from "@/assets/ts/components";
 
 export default defineComponent({
-  name: "kt-search",
+  name: "alita-search",
   components: {
     Results,
     AsideMain,
@@ -98,13 +98,15 @@ export default defineComponent({
     onMounted(() => {
       nextTick(() => {
         // Initialize search handler
-        const searchObject = SearchComponent.createInsance("[data-kt-search]");
+        const searchObject = SearchComponent.createInsance(
+          "[data-alita-search]"
+        );
 
         // Search handler
-        searchObject?.on("kt.search.process", processs);
+        searchObject?.on("alita.search.process", processs);
 
         // Clear handler
-        searchObject?.on("kt.search.cleared", clear);
+        searchObject?.on("alita.search.cleared", clear);
       });
     });
 

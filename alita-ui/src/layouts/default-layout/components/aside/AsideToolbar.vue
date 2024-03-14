@@ -41,11 +41,11 @@
           <a
             href="#"
             class="btn btn-icon btn-sm btn-active-color-primary mt-n2"
-            data-kt-menu-trigger="click"
-            data-kt-menu-placement="bottom-start"
-            data-kt-menu-overflow="true"
+            data-alita-menu-trigger="click"
+            data-alita-menu-placement="bottom-start"
+            data-alita-menu-overflow="true"
           >
-            <KTIcon icon-name="setting-2" icon-class="text-muted fs-1" />
+            <AlitaIcon icon-name="setting-2" icon-class="text-muted fs-1" />
           </a>
 
           <UserMenu />
@@ -73,7 +73,7 @@ import UserMenu from "@/layouts/default-layout/components/menus/UserAccountMenu.
 import AsideSearch from "@/layouts/default-layout/components/aside/AsideSearch.vue";
 
 export default defineComponent({
-  name: "kt--aside-toolbar",
+  name: "alita--aside-toolbar",
   components: {
     UserMenu,
     AsideSearch,

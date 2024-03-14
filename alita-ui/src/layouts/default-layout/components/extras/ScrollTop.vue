@@ -5,9 +5,9 @@
     id="kt_scrolltop"
     ref="kt_scrolltop"
     class="scrolltop"
-    data-kt-scrolltop="true"
+    data-alita-scrolltop="true"
   >
-    <KTIcon icon-name="arrow-up" icon-class="fs-2x" />
+    <AlitaIcon icon-name="arrow-up" icon-class="fs-2x" />
   </div>
   <!-- end::Scrolltop -->
 </template>

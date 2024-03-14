@@ -22,7 +22,7 @@
             class="btn btn-sm btn-icon btn-active-color-primary"
             data-bs-dismiss="modal"
           >
-            <KTIcon icon-name="cross" icon-class="fs-1" />
+            <AlitaIcon icon-name="cross" icon-class="fs-1" />
           </div>
           <!--end::Close-->
         </div>
@@ -219,7 +219,7 @@
                   <div
                     class="position-absolute translate-middle-y top-50 end-0 me-3"
                   >
-                    <KTIcon icon-name="credit-cart" icon-class="fs-2hx" />
+                    <AlitaIcon icon-name="credit-cart" icon-class="fs-2hx" />
                   </div>
                   <!--end::CVV icon-->
                 </div>
@@ -354,13 +354,13 @@ export default defineComponent({
       //Disable button
       submitButtonRef.value.disabled = true;
       // Activate indicator
-      submitButtonRef.value.setAttribute("data-kt-indicator", "on");
+      submitButtonRef.value.setAttribute("data-alita-indicator", "on");
 
       setTimeout(() => {
         if (submitButtonRef.value) {
           submitButtonRef.value.disabled = false;
 
-          submitButtonRef.value?.removeAttribute("data-kt-indicator");
+          submitButtonRef.value?.removeAttribute("data-alita-indicator");
         }
 
         Swal.fire({

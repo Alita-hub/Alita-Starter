@@ -8,7 +8,7 @@
     <!--begin::Timeline icon-->
     <div class="timeline-icon symbol symbol-circle symbol-40px">
       <div class="symbol-label bg-light">
-        <KTIcon icon-name="sms" icon-class="fs-2 text-gray-500" />
+        <AlitaIcon icon-name="sms" icon-class="fs-2 text-gray-500" />
       </div>
     </div>
     <!--end::Timeline icon-->

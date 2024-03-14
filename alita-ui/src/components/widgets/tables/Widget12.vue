@@ -15,11 +15,11 @@
         <button
           type="button"
           class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
-          data-kt-menu-trigger="click"
-          data-kt-menu-placement="bottom-end"
-          data-kt-menu-flip="top-end"
+          data-alita-menu-trigger="click"
+          data-alita-menu-placement="bottom-end"
+          data-alita-menu-flip="top-end"
         >
-          <KTIcon icon-name="category" icon-class="fs-2" />
+          <AlitaIcon icon-name="category" icon-class="fs-2" />
         </button>
         <Dropdown2></Dropdown2>
         <!--end::Menu-->
@@ -164,7 +164,7 @@ import { defineComponent } from "vue";
 import Dropdown2 from "@/components/dropdown/Dropdown2.vue";
 
 export default defineComponent({
-  name: "kt-widget-12",
+  name: "alita-widget-12",
   components: {
     Dropdown2,
   },

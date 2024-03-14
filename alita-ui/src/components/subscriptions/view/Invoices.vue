@@ -220,10 +220,10 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import Datatable from "@/components/kt-datatable/KTDataTable.vue";
+import Datatable from "@/components/alita-datatable/KTDataTable.vue";
 
 export default defineComponent({
-  name: "kt-invoices",
+  name: "alita-invoices",
   props: {
     cardClasses: String,
   },

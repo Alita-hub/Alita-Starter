@@ -1,5 +1,6 @@
 import type { AxiosResponse, AxiosInstance } from "axios";
-import axios from "axios";
+import axios, { HttpStatusCode } from "axios";
+import { useAuthStore } from "@/stores/auth";
 import JwtService from "@/core/services/JwtService";
 
 /**
@@ -18,19 +19,29 @@ class ApiService {
       baseURL: import.meta.env.VITE_APP_API_URL
     });
 
-    // 设置拦截器，在请求发送前，统一添加 Token 请求头
+    // 请求拦截器，在请求发送前，统一添加 Token 请求头
     ApiService.axiosInstance.interceptors.request.use(
-      config => {
+      request => {
         const token = JwtService.getToken();
         if (token) {
-          config.headers.Authorization = `${token}`;
-        } 
-        return config;
+          request.headers.Authorization = `${token}`;
+        }
+        return request;
       },
       error => {
         return Promise.reject(error);
       }
     );
+
+    // 响应拦截器，统一拦截Unauthorized
+    ApiService.axiosInstance.interceptors.response.use(
+      response => {
+        if (response.status === HttpStatusCode.Unauthorized) {
+          useAuthStore().isAuthenticated = false;
+        }
+        return response;
+      }
+    )
   }
 
   /**

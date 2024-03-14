@@ -39,7 +39,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "kt-widget-6",
+  name: "alita-widget-6",
   props: {
     widgetClasses: String,
     color: String,

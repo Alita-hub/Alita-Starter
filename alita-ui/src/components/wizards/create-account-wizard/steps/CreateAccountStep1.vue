@@ -1,6 +1,6 @@
 <template>
   <!--begin::Step 1-->
-  <div class="current" data-kt-stepper-element="content">
+  <div class="current" data-alita-stepper-element="content">
     <!--begin::Wrapper-->
     <div class="w-100">
       <!--begin::Heading-->
@@ -43,7 +43,7 @@
               class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center mb-10"
               for="kt_create_account_form_account_type_personal"
             >
-              <KTIcon icon-name="address-book" icon-class="fs-3x me-5" />
+              <AlitaIcon icon-name="address-book" icon-class="fs-3x me-5" />
 
               <!--begin::Info-->
               <span class="d-block fw-semibold text-start">
@@ -74,7 +74,7 @@
               class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center"
               for="kt_create_account_form_account_type_corporate"
             >
-              <KTIcon icon-name="briefcase" icon-class="fs-3x me-5" />
+              <AlitaIcon icon-name="briefcase" icon-class="fs-3x me-5" />
 
               <!--begin::Info-->
               <span class="d-block fw-semibold text-start">

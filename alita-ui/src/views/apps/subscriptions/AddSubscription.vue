@@ -43,7 +43,7 @@ import NewCardModal from "@/components/modals/forms/NewCardModal.vue";
 import CreateAccountModal from "@/components/modals/wizards/CreateAccountModal.vue";
 
 export default defineComponent({
-  name: "kt-add-subscription",
+  name: "alita-add-subscription",
   components: {
     AddSummary,
     Customer,

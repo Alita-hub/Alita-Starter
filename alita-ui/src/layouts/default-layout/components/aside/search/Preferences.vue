@@ -1,5 +1,5 @@
 <template>
-  <form data-kt-search-element="preferences" class="pt-1 d-none">
+  <form data-alita-search-element="preferences" class="pt-1 d-none">
     <!--begin::Heading-->
     <h3 class="fw-semobold text-gray-900 mb-7">Search Preferences</h3>
     <!--end::Heading-->

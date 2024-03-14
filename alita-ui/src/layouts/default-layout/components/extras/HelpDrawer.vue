@@ -3,14 +3,14 @@
   <div
     id="kt_help"
     class="bg-body"
-    data-kt-drawer="true"
-    data-kt-drawer-name="help"
-    data-kt-drawer-activate="true"
-    data-kt-drawer-overlay="true"
-    data-kt-drawer-width="{default:'350px', 'md': '525px'}"
-    data-kt-drawer-direction="end"
-    data-kt-drawer-toggle="#kt_help_toggle"
-    data-kt-drawer-close="#kt_help_close"
+    data-alita-drawer="true"
+    data-alita-drawer-name="help"
+    data-alita-drawer-activate="true"
+    data-alita-drawer-overlay="true"
+    data-alita-drawer-width="{default:'350px', 'md': '525px'}"
+    data-alita-drawer-direction="end"
+    data-alita-drawer-toggle="#kt_help_toggle"
+    data-alita-drawer-close="#kt_help_close"
   >
     <!--begin::Card-->
     <div class="card shadow-none rounded-0 w-100">
@@ -26,7 +26,7 @@
             class="btn btn-sm btn-icon explore-btn-dismiss me-n5"
             id="kt_help_close"
           >
-            <KTIcon icon-name="cross" icon-class="fs-2" />
+            <AlitaIcon icon-name="cross" icon-class="fs-2" />
           </button>
         </div>
       </div>
@@ -38,11 +38,11 @@
         <div
           id="kt_help_scroll"
           class="hover-scroll-overlay-y"
-          data-kt-scroll="true"
-          data-kt-scroll-height="auto"
-          data-kt-scroll-wrappers="#kt_help_body"
-          data-kt-scroll-dependencies="#kt_help_header"
-          data-kt-scroll-offset="5px"
+          data-alita-scroll="true"
+          data-alita-scroll-height="auto"
+          data-alita-scroll-wrappers="#kt_help_body"
+          data-alita-scroll-dependencies="#kt_help_header"
+          data-alita-scroll-offset="5px"
         >
           <!--begin::Support-->
           <div
@@ -84,7 +84,7 @@
             <div
               class="d-flex flex-center w-50px h-50px w-lg-75px h-lg-75px flex-shrink-0 rounded bg-light-warning"
             >
-              <KTIcon
+              <AlitaIcon
                 icon-name="abstract-26"
                 icon-class="text-warning fs-2x fs-lg-3x"
               />
@@ -109,7 +109,10 @@
                 <!--end::Description-->
               </div>
               <!--end::Wrapper-->
-              <KTIcon icon-name="arrow-right" icon-class="text-gray-500 fs-2" />
+              <AlitaIcon
+                icon-name="arrow-right"
+                icon-class="text-gray-500 fs-2"
+              />
             </div>
             <!--end::Info-->
           </div>
@@ -120,7 +123,7 @@
             <div
               class="d-flex flex-center w-50px h-50px w-lg-75px h-lg-75px flex-shrink-0 rounded bg-light-primary"
             >
-              <KTIcon
+              <AlitaIcon
                 icon-name="gift"
                 icon-class="text-primary fs-2x fs-lg-3x"
               />
@@ -145,7 +148,10 @@
                 <!--end::Description-->
               </div>
               <!--end::Wrapper-->
-              <KTIcon icon-name="arrow-right" icon-class="text-gray-500 fs-2" />
+              <AlitaIcon
+                icon-name="arrow-right"
+                icon-class="text-gray-500 fs-2"
+              />
             </div>
             <!--end::Info-->
           </div>
@@ -156,7 +162,7 @@
             <div
               class="d-flex flex-center w-50px h-50px w-lg-75px h-lg-75px flex-shrink-0 rounded bg-light-info"
             >
-              <KTIcon
+              <AlitaIcon
                 icon-name="design-frame"
                 icon-class="text-info fs-2x fs-lg-3x"
               />
@@ -180,7 +186,7 @@
                 <!--end::Description-->
               </div>
               <!--end::Wrapper-->
-              <KTIcon icon-name="phone" icon-class="text-gray-500 fs-2" />
+              <AlitaIcon icon-name="phone" icon-class="text-gray-500 fs-2" />
             </div>
             <!--end::Info-->
           </div>
@@ -191,7 +197,7 @@
             <div
               class="d-flex flex-center w-50px h-50px w-lg-75px h-lg-75px flex-shrink-0 rounded bg-light-danger"
             >
-              <KTIcon
+              <AlitaIcon
                 icon-name="wifi"
                 icon-class="text-danger fs-2x fs-lg-3x"
               />
@@ -216,7 +222,10 @@
                 <!--end::Description-->
               </div>
               <!--end::Wrapper-->
-              <KTIcon icon-name="arrow-right" icon-class="text-gray-500 fs-2" />
+              <AlitaIcon
+                icon-name="arrow-right"
+                icon-class="text-gray-500 fs-2"
+              />
             </div>
             <!--end::Info-->
           </div>
@@ -236,7 +245,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "kt-help-drawer",
+  name: "alita-help-drawer",
   components: {},
   setup() {
     return {

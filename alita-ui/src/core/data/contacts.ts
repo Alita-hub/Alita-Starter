@@ -10,7 +10,7 @@ const contacts = [
   {
     image: getAssetPath("media/avatars/300-1.jpg"),
     name: "Max Smith",
-    email: "max@kt.com",
+    email: "max@alita.com",
     time: "5 hrs",
     color: "danger",
   },

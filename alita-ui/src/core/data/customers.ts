@@ -41,7 +41,7 @@ const customers: Array<ICustomer> = [
   {
     id: Math.floor(Math.random() * 99999) + 1,
     name: "Max Smith",
-    email: "max@kt.com",
+    email: "max@alita.com",
     company: "Bistro Union",
     payment: {
       icon: getAssetPath("media/svg/card-logos/mastercard.svg"),
@@ -185,7 +185,7 @@ const customers: Array<ICustomer> = [
   {
     id: Math.floor(Math.random() * 99999) + 1,
     name: "Max Smith",
-    email: "max@kt.com",
+    email: "max@alita.com",
     company: "Bistro Union",
     payment: {
       icon: getAssetPath("media/svg/card-logos/mastercard.svg"),
@@ -329,7 +329,7 @@ const customers: Array<ICustomer> = [
   {
     id: Math.floor(Math.random() * 99999) + 1,
     name: "Max Smith",
-    email: "max@kt.com",
+    email: "max@alita.com",
     company: "Bistro Union",
     payment: {
       icon: getAssetPath("media/svg/card-logos/mastercard.svg"),
@@ -473,7 +473,7 @@ const customers: Array<ICustomer> = [
   {
     id: Math.floor(Math.random() * 99999) + 1,
     name: "Max Smith",
-    email: "max@kt.com",
+    email: "max@alita.com",
     company: "Bistro Union",
     payment: {
       icon: getAssetPath("media/svg/card-logos/mastercard.svg"),
@@ -617,7 +617,7 @@ const customers: Array<ICustomer> = [
   {
     id: Math.floor(Math.random() * 99999) + 1,
     name: "Max Smith",
-    email: "max@kt.com",
+    email: "max@alita.com",
     company: "Bistro Union",
     payment: {
       icon: getAssetPath("media/svg/card-logos/mastercard.svg"),
@@ -761,7 +761,7 @@ const customers: Array<ICustomer> = [
   {
     id: Math.floor(Math.random() * 99999) + 1,
     name: "Max Smith",
-    email: "max@kt.com",
+    email: "max@alita.com",
     company: "Bistro Union",
     payment: {
       icon: getAssetPath("media/svg/card-logos/mastercard.svg"),

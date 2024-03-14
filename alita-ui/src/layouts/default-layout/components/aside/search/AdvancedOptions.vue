@@ -1,7 +1,7 @@
 <template>
   <form
     ref="emptyElementRef"
-    data-kt-search-element="advanced-options-form"
+    data-alita-search-element="advanced-options-form"
     class="pt-1 d-none"
   >
     <!--begin::Heading-->

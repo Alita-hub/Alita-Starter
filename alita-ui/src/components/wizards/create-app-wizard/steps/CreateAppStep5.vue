@@ -1,6 +1,6 @@
 <template>
   <!--begin::Step 5-->
-  <div data-kt-stepper-element="content">
+  <div data-alita-stepper-element="content">
     <div class="w-100 text-center">
       <!--begin::Heading-->
       <h1 class="fw-bold text-gray-900 mb-3">Release!</h1>

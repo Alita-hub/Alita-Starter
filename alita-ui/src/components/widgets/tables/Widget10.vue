@@ -15,11 +15,11 @@
         <button
           type="button"
           class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
-          data-kt-menu-trigger="click"
-          data-kt-menu-placement="bottom-end"
-          data-kt-menu-flip="top-end"
+          data-alita-menu-trigger="click"
+          data-alita-menu-placement="bottom-end"
+          data-alita-menu-flip="top-end"
         >
-          <KTIcon icon-name="category" icon-class="fs-2" />
+          <AlitaIcon icon-name="category" icon-class="fs-2" />
         </button>
         <Dropdown2></Dropdown2>
         <!--end::Menu-->
@@ -118,21 +118,21 @@
                     href="#"
                     class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
                   >
-                    <KTIcon icon-name="switch" icon-class="fs-3" />
+                    <AlitaIcon icon-name="switch" icon-class="fs-3" />
                   </a>
 
                   <a
                     href="#"
                     class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
                   >
-                    <KTIcon icon-name="pencil" icon-class="fs-3" />
+                    <AlitaIcon icon-name="pencil" icon-class="fs-3" />
                   </a>
 
                   <a
                     href="#"
                     class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"
                   >
-                    <KTIcon icon-name="trash" icon-class="fs-3" />
+                    <AlitaIcon icon-name="trash" icon-class="fs-3" />
                   </a>
                 </td>
               </tr>
@@ -155,7 +155,7 @@ import { defineComponent } from "vue";
 import Dropdown2 from "@/components/dropdown/Dropdown2.vue";
 
 export default defineComponent({
-  name: "kt-widget-10",
+  name: "alita-widget-10",
   components: {
     Dropdown2,
   },
@@ -194,7 +194,7 @@ export default defineComponent({
         user: {
           avatar: getAssetPath("media/avatars/300-1.jpg"),
           name: "Max Smith",
-          email: "max@kt.com",
+          email: "max@alita.com",
         },
         price: "$760,000",
         technologies: "Python, MySQL",

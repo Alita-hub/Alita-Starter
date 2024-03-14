@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import TableItemsPerPageSelect from "@/components/kt-datatable/table-partials/table-content/table-footer/TableItemsPerPageSelect.vue";
+import TableItemsPerPageSelect from "@/components/alita-datatable/table-partials/table-content/table-footer/TableItemsPerPageSelect.vue";
 import TablePagination from "./table-content/table-footer/TablePagination.vue";
 import {
   computed,

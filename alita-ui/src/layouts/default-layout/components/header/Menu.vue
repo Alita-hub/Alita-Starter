@@ -2,22 +2,22 @@
   <!--begin::Menu wrapper-->
   <div
     class="header-menu align-items-stretch"
-    data-kt-drawer="true"
-    data-kt-drawer-name="header-menu"
-    data-kt-drawer-activate="{default: true, lg: false}"
-    data-kt-drawer-overlay="true"
-    data-kt-drawer-width="{default:'200px', '300px': '250px'}"
-    data-kt-drawer-direction="end"
-    data-kt-drawer-toggle="#kt_header_menu_mobile_toggle"
-    data-kt-swapper="true"
-    data-kt-swapper-mode="prepend"
-    data-kt-swapper-parent="{default: '#kt_body', lg: '#kt_header_nav'}"
+    data-alita-drawer="true"
+    data-alita-drawer-name="header-menu"
+    data-alita-drawer-activate="{default: true, lg: false}"
+    data-alita-drawer-overlay="true"
+    data-alita-drawer-width="{default:'200px', '300px': '250px'}"
+    data-alita-drawer-direction="end"
+    data-alita-drawer-toggle="#kt_header_menu_mobile_toggle"
+    data-alita-swapper="true"
+    data-alita-swapper-mode="prepend"
+    data-alita-swapper-parent="{default: '#kt_body', lg: '#kt_header_nav'}"
   >
     <!--begin::Menu-->
     <div
       class="menu menu-lg-rounded menu-column menu-lg-row menu-state-bg menu-title-gray-700 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-400 fw-semibold my-5 my-lg-0 align-items-stretch"
       id="#kt_header_menu"
-      data-kt-menu="true"
+      data-alita-menu="true"
     >
       <template v-for="(item, i) in MainMenuConfig" :key="i">
         <template v-if="!item.heading">
@@ -38,8 +38,8 @@
         </template>
         <div
           v-if="item.heading"
-          data-kt-menu-trigger="click"
-          data-kt-menu-placement="bottom-start"
+          data-alita-menu-trigger="click"
+          data-alita-menu-placement="bottom-start"
           class="menu-item menu-lg-down-accordion me-lg-1"
         >
           <span
@@ -56,8 +56,8 @@
             <template v-for="(menuItem, j) in item.pages" :key="j">
               <div
                 v-if="menuItem.sectionTitle && menuItem.route"
-                data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                data-kt-menu-placement="right-start"
+                data-alita-menu-trigger="{default:'click', lg: 'hover'}"
+                data-alita-menu-placement="right-start"
                 class="menu-item menu-lg-down-accordion"
               >
                 <span
@@ -71,7 +71,7 @@
                       :class="menuItem.bootstrapIcon"
                       class="bi fs-3"
                     ></i>
-                    <KTIcon
+                    <AlitaIcon
                       v-if="headerMenuIcons === 'keenthemes'"
                       :icon-name="menuItem.keenthemesIcon"
                       icon-class="fs-2"
@@ -88,8 +88,8 @@
                   <template v-for="(menuItem1, k) in menuItem.sub" :key="k">
                     <div
                       v-if="menuItem1.sectionTitle && menuItem1.route"
-                      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                      data-kt-menu-placement="right-start"
+                      data-alita-menu-trigger="{default:'click', lg: 'hover'}"
+                      data-alita-menu-placement="right-start"
                       class="menu-item menu-lg-down-accordion"
                     >
                       <span
@@ -155,7 +155,7 @@
                   :to="menuItem.route"
                 >
                   <span class="menu-icon">
-                    <KTIcon icon-name="element-8" icon-class="fs-2" />
+                    <AlitaIcon icon-name="element-8" icon-class="fs-2" />
                   </span>
                   <span class="menu-title">{{
                     translate(menuItem.heading)
@@ -168,8 +168,8 @@
       </template>
 
       <div
-        data-kt-menu-trigger="click"
-        data-kt-menu-placement="bottom-start"
+        data-alita-menu-trigger="click"
+        data-alita-menu-placement="bottom-start"
         class="menu-item menu-lg-down-accordion me-lg-1"
       >
         <span class="menu-link py-3">
@@ -189,7 +189,7 @@
                   v-if="headerMenuIcons === 'bootstrap'"
                   class="bi bi-box fs-3"
                 ></i>
-                <KTIcon
+                <AlitaIcon
                   v-if="headerMenuIcons === 'keenthemes'"
                   icon-name="rocket"
                   icon-class="fs-2"
@@ -208,7 +208,7 @@
                   v-if="headerMenuIcons === 'bootstrap'"
                   class="bi bi-card-text fs-3"
                 ></i>
-                <KTIcon
+                <AlitaIcon
                   v-if="headerMenuIcons === 'keenthemes'"
                   icon-name="abstract-26"
                   icon-class="fs-2"
@@ -227,7 +227,7 @@
                   v-if="headerMenuIcons === 'bootstrap'"
                   class="bi bi-journal-code fs-3"
                 ></i>
-                <KTIcon
+                <AlitaIcon
                   v-if="headerMenuIcons === 'keenthemes'"
                   icon-name="code"
                   icon-class="fs-2"
@@ -242,8 +242,8 @@
       </div>
 
       <div
-        data-kt-menu-trigger="click"
-        data-kt-menu-placement="bottom-start"
+        data-alita-menu-trigger="click"
+        data-alita-menu-placement="bottom-start"
         class="menu-item menu-lg-down-accordion me-lg-1"
       >
         <span class="menu-link py-3">
@@ -255,7 +255,7 @@
           style=""
         >
           <!--begin:Row-->
-          <div class="row" data-kt-menu-dismiss="true">
+          <div class="row" data-alita-menu-dismiss="true">
             <!--begin:Col-->
             <div class="col-lg-4 border-left-lg-1">
               <div class="menu-inline menu-column menu-active-bg">

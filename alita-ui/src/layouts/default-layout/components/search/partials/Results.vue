@@ -229,7 +229,7 @@
         <!--begin::Symbol-->
         <div class="symbol symbol-40px symbol-circle me-4">
           <span class="symbol-label bg-light">
-            <KTIcon icon-name="document" icon-class="fs-2 text-primary" />
+            <AlitaIcon icon-name="document" icon-class="fs-2 text-primary" />
           </span>
         </div>
         <!--end::Symbol-->
@@ -249,7 +249,10 @@
         <!--begin::Symbol-->
         <div class="symbol symbol-40px symbol-circle me-4">
           <span class="symbol-label bg-light">
-            <KTIcon icon-name="chart-simple" icon-class="fs-2 text-primary" />
+            <AlitaIcon
+              icon-name="chart-simple"
+              icon-class="fs-2 text-primary"
+            />
           </span>
         </div>
         <!--end::Symbol-->
@@ -269,7 +272,10 @@
         <!--begin::Symbol-->
         <div class="symbol symbol-40px symbol-circle me-4">
           <span class="symbol-label bg-light">
-            <KTIcon icon-name="message-text-2" icon-class="fs-2 text-primary" />
+            <AlitaIcon
+              icon-name="message-text-2"
+              icon-class="fs-2 text-primary"
+            />
           </span>
         </div>
         <!--end::Symbol-->
@@ -291,7 +297,10 @@
         <!--begin::Symbol-->
         <div class="symbol symbol-40px symbol-circle me-4">
           <span class="symbol-label bg-light">
-            <KTIcon icon-name="profile-circle" icon-class="fs-2 text-primary" />
+            <AlitaIcon
+              icon-name="profile-circle"
+              icon-class="fs-2 text-primary"
+            />
           </span>
         </div>
         <!--end::Symbol-->
@@ -313,7 +322,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "kt-results",
+  name: "alita-results",
   components: {},
   setup() {
     return {

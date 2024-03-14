@@ -2,7 +2,7 @@
   <!--begin::Menu-->
   <div
     class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold py-4 fs-6 w-275px"
-    data-kt-menu="true"
+    data-alita-menu="true"
   >
     <!--begin::Menu item-->
     <div class="menu-item px-3">
@@ -22,7 +22,7 @@
             >
           </div>
           <a href="#" class="fw-semibold text-muted text-hover-primary fs-7"
-            >max@kt.com</a
+            >max@alita.com</a
           >
         </div>
         <!--end::Username-->
@@ -58,9 +58,9 @@
     <!--begin::Menu item-->
     <div
       class="menu-item px-5"
-      data-kt-menu-trigger="hover"
-      data-kt-menu-placement="left-start"
-      data-kt-menu-flip="center, top"
+      data-alita-menu-trigger="hover"
+      data-alita-menu-placement="left-start"
+      data-alita-menu-flip="center, top"
     >
       <router-link to="/pages/profile/overview" class="menu-link px-5">
         <span class="menu-title">My Subscription</span>
@@ -154,9 +154,9 @@
     <!--begin::Menu item-->
     <div
       class="menu-item px-5"
-      data-kt-menu-trigger="hover"
-      data-kt-menu-placement="left-start"
-      data-kt-menu-flip="center, top"
+      data-alita-menu-trigger="hover"
+      data-alita-menu-placement="left-start"
+      data-alita-menu-flip="center, top"
     >
       <router-link to="/pages/profile/overview" class="menu-link px-5">
         <span class="menu-title position-relative">
@@ -305,7 +305,7 @@ import { useAuthStore } from "@/stores/auth";
 import { useRouter } from "vue-router";
 
 export default defineComponent({
-  name: "kt-user-menu",
+  name: "alita-user-menu",
   components: {},
   setup() {
     const router = useRouter();

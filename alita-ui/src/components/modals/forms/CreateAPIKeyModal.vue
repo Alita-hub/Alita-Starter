@@ -22,7 +22,7 @@
             class="btn btn-sm btn-icon btn-active-color-primary"
             data-bs-dismiss="modal"
           >
-            <KTIcon icon-name="cross" icon-class="fs-1" />
+            <AlitaIcon icon-name="cross" icon-class="fs-1" />
           </div>
           <!--end::Close-->
         </div>
@@ -41,17 +41,17 @@
             <div
               class="scroll-y me-n7 pe-7"
               id="kt_modal_create_api_key_scroll"
-              data-kt-scroll="true"
-              data-kt-scroll-activate="{default: false, lg: true}"
-              data-kt-scroll-max-height="auto"
-              data-kt-scroll-dependencies="#kt_modal_create_api_key_header"
-              data-kt-scroll-wrappers="#kt_modal_create_api_key_scroll"
-              data-kt-scroll-offset="300px"
+              data-alita-scroll="true"
+              data-alita-scroll-activate="{default: false, lg: true}"
+              data-alita-scroll-max-height="auto"
+              data-alita-scroll-dependencies="#kt_modal_create_api_key_header"
+              data-alita-scroll-wrappers="#kt_modal_create_api_key_scroll"
+              data-alita-scroll-offset="300px"
             >
               <div
                 class="notice d-flex bg-light-warning rounded border-warning border border-dashed mb-10 p-6"
               >
-                <KTIcon
+                <AlitaIcon
                   icon-name="information-5"
                   icon-class="fs-2tx text-warning me-4"
                 />
@@ -296,13 +296,13 @@ export default defineComponent({
       //Disable button
       submitButtonRef.value.disabled = true;
       // Activate indicator
-      submitButtonRef.value.setAttribute("data-kt-indicator", "on");
+      submitButtonRef.value.setAttribute("data-alita-indicator", "on");
 
       setTimeout(() => {
         if (submitButtonRef.value) {
           submitButtonRef.value.disabled = false;
 
-          submitButtonRef.value?.removeAttribute("data-kt-indicator");
+          submitButtonRef.value?.removeAttribute("data-alita-indicator");
         }
 
         Swal.fire({

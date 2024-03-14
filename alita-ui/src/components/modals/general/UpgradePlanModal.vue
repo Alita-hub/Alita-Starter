@@ -17,7 +17,7 @@
             class="btn btn-sm btn-icon btn-active-color-primary"
             data-bs-dismiss="modal"
           >
-            <KTIcon icon-name="cross" icon-class="fs-1" />
+            <AlitaIcon icon-name="cross" icon-class="fs-1" />
           </div>
           <!--end::Close-->
         </div>
@@ -41,7 +41,7 @@
             <!--begin::Nav group-->
             <div
               class="nav-group nav-group-outline mx-auto"
-              data-kt-buttons="true"
+              data-alita-buttons="true"
             >
               <button
                 @click="current = 'month'"
@@ -137,7 +137,7 @@
 
                           <span class="fs-7 opacity-50"
                             >/
-                            <span data-kt-element="period">Mon</span>
+                            <span data-alita-element="period">Mon</span>
                           </span>
                         </template>
                       </div>
@@ -195,7 +195,7 @@
                                   {{ feature.title }}
                                 </span>
 
-                                <KTIcon
+                                <AlitaIcon
                                   icon-name="check-circle"
                                   icon-class="fs-1 text-success"
                                 />
@@ -206,7 +206,7 @@
                                 >
                                   {{ feature.title }}
                                 </span>
-                                <KTIcon
+                                <AlitaIcon
                                   icon-name="cross-circle"
                                   icon-class="fs-1"
                                 />

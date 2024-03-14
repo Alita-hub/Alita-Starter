@@ -14,11 +14,11 @@
         <button
           type="button"
           class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
-          data-kt-menu-trigger="click"
-          data-kt-menu-placement="bottom-end"
-          data-kt-menu-flip="top-end"
+          data-alita-menu-trigger="click"
+          data-alita-menu-placement="bottom-end"
+          data-alita-menu-flip="top-end"
         >
-          <KTIcon icon-name="category" icon-class="fs-2" />
+          <AlitaIcon icon-name="category" icon-class="fs-2" />
         </button>
         <Dropdown1></Dropdown1>
         <!--end::Menu-->
@@ -41,7 +41,7 @@
             <!--begin::Stat-->
             <div class="d-flex align-items-center">
               <div class="fs-4 fw-bold">$650</div>
-              <KTIcon
+              <AlitaIcon
                 icon-name="arrow-up"
                 icon-class="fs-5 text-success d-block ms-1"
               />
@@ -87,7 +87,7 @@
             <!--begin::Stat-->
             <div class="d-flex align-items-center">
               <div class="fs-4 fw-bold">$1,480,00</div>
-              <KTIcon
+              <AlitaIcon
                 icon-name="arrow-down"
                 icon-class="fs-5 text-danger ms-1"
               />

@@ -22,7 +22,7 @@
             data-bs-dismiss="modal"
             class="btn btn-icon btn-sm btn-active-icon-primary"
           >
-            <KTIcon icon-name="cross" icon-class="fs-1" />
+            <AlitaIcon icon-name="cross" icon-class="fs-1" />
           </div>
           <!--end::Close-->
         </div>
@@ -40,12 +40,12 @@
             <div
               class="scroll-y me-n7 pe-7"
               id="kt_modal_add_customer_scroll"
-              data-kt-scroll="true"
-              data-kt-scroll-activate="{default: false, lg: true}"
-              data-kt-scroll-max-height="auto"
-              data-kt-scroll-dependencies="#kt_modal_add_customer_header"
-              data-kt-scroll-wrappers="#kt_modal_add_customer_scroll"
-              data-kt-scroll-offset="300px"
+              data-alita-scroll="true"
+              data-alita-scroll-activate="{default: false, lg: true}"
+              data-alita-scroll-max-height="auto"
+              data-alita-scroll-dependencies="#kt_modal_add_customer_header"
+              data-alita-scroll-wrappers="#kt_modal_add_customer_scroll"
+              data-alita-scroll-offset="300px"
             >
               <!--begin::Input group-->
               <div class="fv-row mb-7">
@@ -112,7 +112,7 @@
               >
                 Shipping Information
                 <span class="ms-2 rotate-180">
-                  <KTIcon icon-name="down" icon-class="fs-3" />
+                  <AlitaIcon icon-name="down" icon-class="fs-3" />
                 </span>
               </div>
               <!--end::Billing toggle-->
@@ -299,13 +299,16 @@
 
             <!--begin::Button-->
             <button
-              :data-kt-indicator="loading ? 'on' : null"
+              :data-alita-indicator="loading ? 'on' : null"
               class="btn btn-lg btn-primary"
               type="submit"
             >
               <span v-if="!loading" class="indicator-label">
                 Submit
-                <KTIcon icon-name="arrow-right" icon-class="fs-2 me-2 me-0" />
+                <AlitaIcon
+                  icon-name="arrow-right"
+                  icon-class="fs-2 me-2 me-0"
+                />
               </span>
               <span v-if="loading" class="indicator-progress">
                 Please wait...

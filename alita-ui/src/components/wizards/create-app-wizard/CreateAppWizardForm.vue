@@ -14,10 +14,10 @@
         <button
           type="button"
           class="btn btn-lg btn-light-primary me-3"
-          data-kt-stepper-action="previous"
+          data-alita-stepper-action="previous"
           @click="previousStep()"
         >
-          <KTIcon icon-name="arrow-left" icon-class="fs-3 me-1" />
+          <AlitaIcon icon-name="arrow-left" icon-class="fs-3 me-1" />
           Back
         </button>
       </div>
@@ -33,7 +33,7 @@
         >
           <span class="indicator-label">
             Submit
-            <KTIcon icon-name="arrow-right" icon-class="fs-3 ms-2 me-0" />
+            <AlitaIcon icon-name="arrow-right" icon-class="fs-3 ms-2 me-0" />
           </span>
           <span class="indicator-progress">
             Please wait...
@@ -45,7 +45,7 @@
 
         <button v-else type="submit" class="btn btn-lg btn-primary">
           Continue
-          <KTIcon icon-name="arrow-right" icon-class="fs-3 ms-1 me-0" />
+          <AlitaIcon icon-name="arrow-right" icon-class="fs-3 ms-1 me-0" />
         </button>
       </div>
       <!--end::Wrapper-->

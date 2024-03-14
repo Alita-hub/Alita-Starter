@@ -4,17 +4,17 @@
     id="kt_aside_menu_wrapper"
     ref="scrollElRef"
     class="hover-scroll-overlay-y px-2 my-5 my-lg-5"
-    data-kt-scroll="true"
-    data-kt-scroll-height="auto"
-    data-kt-scroll-dependencies="{default: '#kt_aside_toolbar, #kt_aside_footer', lg: '#kt_header, #kt_aside_toolbar, #kt_aside_footer'}"
-    data-kt-scroll-wrappers="#kt_aside_menu"
-    data-kt-scroll-offset="5px"
+    data-alita-scroll="true"
+    data-alita-scroll-height="auto"
+    data-alita-scroll-dependencies="{default: '#kt_aside_toolbar, #kt_aside_footer', lg: '#kt_header, #kt_aside_toolbar, #kt_aside_footer'}"
+    data-alita-scroll-wrappers="#kt_aside_menu"
+    data-alita-scroll-offset="5px"
   >
     <!--begin::Menu-->
     <div
       id="#kt_aside_menu"
       class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500"
-      data-kt-menu="true"
+      data-alita-menu="true"
     >
       <template v-for="(item, i) in MainMenuConfig" :key="i">
         <div v-if="item.heading" class="menu-item">
@@ -42,7 +42,7 @@
                     :class="menuItem.bootstrapIcon"
                     class="bi fs-3"
                   ></i>
-                  <KTIcon
+                  <AlitaIcon
                     v-else-if="asideMenuIcons === 'keenthemes'"
                     :icon-name="menuItem.keenthemesIcon"
                     icon-class="fs-2"
@@ -58,8 +58,8 @@
             v-if="menuItem.sectionTitle && menuItem.route"
             :class="{ show: hasActiveChildren(menuItem.route) }"
             class="menu-item menu-accordion"
-            data-kt-menu-sub="accordion"
-            data-kt-menu-trigger="click"
+            data-alita-menu-sub="accordion"
+            data-alita-menu-trigger="click"
           >
             <span class="menu-link">
               <span
@@ -71,7 +71,7 @@
                   :class="menuItem.bootstrapIcon"
                   class="bi fs-3"
                 ></i>
-                <KTIcon
+                <AlitaIcon
                   v-else-if="asideMenuIcons === 'keenthemes'"
                   :icon-name="menuItem.keenthemesIcon"
                   icon-class="fs-2"
@@ -107,8 +107,8 @@
                   v-if="item2.sectionTitle && item2.route"
                   :class="{ show: hasActiveChildren(item2.route) }"
                   class="menu-item menu-accordion"
-                  data-kt-menu-sub="accordion"
-                  data-kt-menu-trigger="click"
+                  data-alita-menu-sub="accordion"
+                  data-alita-menu-trigger="click"
                 >
                   <span class="menu-link">
                     <span class="menu-bullet">
@@ -162,7 +162,7 @@
               v-if="asideMenuIcons === 'bootstrap'"
               class="bi bi-card-text fs-3"
             ></i>
-            <KTIcon
+            <AlitaIcon
               v-else-if="asideMenuIcons === 'keenthemes'"
               icon-name="document"
               icon-class="fs-2"
@@ -189,7 +189,7 @@ import { asideMenuIcons } from "@/layouts/default-layout/config/helper";
 import MainMenuConfig from "@/layouts/default-layout/config/MainMenuConfig";
 
 export default defineComponent({
-  name: "kt-menu",
+  name: "alita-menu",
   components: {},
   setup() {
     const { t, te } = useI18n();

@@ -57,10 +57,10 @@
                   class="btn btn-icon btn-flex btn-active-light-primary w-30px h-30px me-3"
                   data-bs-toggle="tooltip"
                   title=""
-                  data-kt-action="product_remove"
+                  data-alita-action="product_remove"
                   data-bs-original-title="Delete"
                 >
-                  <KTIcon icon-name="trash" icon-class="fs-3" />
+                  <AlitaIcon icon-name="trash" icon-class="fs-3" />
                 </a>
                 <!--end::Delete-->
               </td>
@@ -76,10 +76,10 @@
                   class="btn btn-icon btn-flex btn-active-light-primary w-30px h-30px me-3"
                   data-bs-toggle="tooltip"
                   title=""
-                  data-kt-action="product_remove"
+                  data-alita-action="product_remove"
                   data-bs-original-title="Delete"
                 >
-                  <KTIcon icon-name="trash" icon-class="fs-3" />
+                  <AlitaIcon icon-name="trash" icon-class="fs-3" />
                 </a>
                 <!--end::Delete-->
               </td>
@@ -95,10 +95,10 @@
                   class="btn btn-icon btn-flex btn-active-light-primary w-30px h-30px me-3"
                   data-bs-toggle="tooltip"
                   title=""
-                  data-kt-action="product_remove"
+                  data-alita-action="product_remove"
                   data-bs-original-title="Delete"
                 >
-                  <KTIcon icon-name="trash" icon-class="fs-3" />
+                  <AlitaIcon icon-name="trash" icon-class="fs-3" />
                 </a>
                 <!--end::Delete-->
               </td>
@@ -120,7 +120,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "kt-products",
+  name: "alita-products",
   components: {},
   setup() {
     return {

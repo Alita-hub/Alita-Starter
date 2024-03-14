@@ -7,7 +7,7 @@
       <div class="card-title">
         <!--begin::Search-->
         <div class="d-flex align-items-center position-relative my-1">
-          <KTIcon
+          <AlitaIcon
             icon-name="magnifier"
             icon-class="fs-1 position-absolute ms-6"
           />
@@ -15,7 +15,7 @@
             v-model="search"
             @input="searchItems()"
             type="text"
-            data-kt-subscription-table-filter="search"
+            data-alita-subscription-table-filter="search"
             class="form-control form-control-solid w-250px ps-14"
             placeholder="Search Subscriptions"
           />
@@ -30,7 +30,7 @@
         <div
           v-if="selectedIds.length === 0"
           class="d-flex justify-content-end"
-          data-kt-subscription-table-toolbar="base"
+          data-alita-subscription-table-toolbar="base"
         >
           <!--begin::Export-->
           <button
@@ -39,7 +39,7 @@
             data-bs-toggle="modal"
             data-bs-target="#kt_subscriptions_export_modal"
           >
-            <KTIcon icon-name="exit-up" icon-class="fs-2" />
+            <AlitaIcon icon-name="exit-up" icon-class="fs-2" />
             Export
           </button>
           <!--end::Export-->
@@ -49,7 +49,7 @@
             to="/apps/subscriptions/add-subscription"
             class="btn btn-primary"
           >
-            <KTIcon icon-name="plus" icon-class="fs-2" />
+            <AlitaIcon icon-name="plus" icon-class="fs-2" />
             Add Subscription
           </router-link>
           <!--end::Add subscription-->
@@ -115,16 +115,16 @@
           <a
             href="#"
             class="btn btn-sm btn-light btn-active-light-primary"
-            data-kt-menu-trigger="click"
-            data-kt-menu-placement="bottom-end"
-            data-kt-menu-flip="top-end"
+            data-alita-menu-trigger="click"
+            data-alita-menu-placement="bottom-end"
+            data-alita-menu-flip="top-end"
             >Actions
-            <KTIcon icon-name="down" icon-class="fs-5 m-0" />
+            <AlitaIcon icon-name="down" icon-class="fs-5 m-0" />
           </a>
           <!--begin::Menu-->
           <div
             class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-            data-kt-menu="true"
+            data-alita-menu="true"
           >
             <!--begin::Menu item-->
             <div class="menu-item px-3">
@@ -155,8 +155,8 @@
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent, onMounted, ref } from "vue";
-import KTDatatable from "@/components/kt-datatable/KTDataTable.vue";
-import type { Sort } from "@/components/kt-datatable/table-partials/models";
+import KTDatatable from "@/components/alita-datatable/KTDataTable.vue";
+import type { Sort } from "@/components/alita-datatable/table-partials/models";
 import arraySort from "array-sort";
 import { MenuComponent } from "@/assets/ts/components";
 
@@ -171,7 +171,7 @@ interface ISubscription {
 }
 
 export default defineComponent({
-  name: "kt-subscription-list",
+  name: "alita-subscription-list",
   components: {
     KTDatatable,
   },

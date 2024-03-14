@@ -112,7 +112,10 @@
                           href="#"
                           class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                         >
-                          <KTIcon icon-name="arrow-right" icon-class="fs-2" />
+                          <AlitaIcon
+                            icon-name="arrow-right"
+                            icon-class="fs-2"
+                          />
                         </a>
                       </td>
                     </tr>
@@ -137,7 +140,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "kt-widget-6",
+  name: "alita-widget-6",
   components: {},
   props: {
     widgetClasses: String,

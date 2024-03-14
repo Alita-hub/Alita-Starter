@@ -10,11 +10,11 @@
         <!--begin::Menu-->
         <button
           class="btn btn-icon btn-color-gray-500 btn-active-color-primary justify-content-end"
-          data-kt-menu-trigger="click"
-          data-kt-menu-placement="bottom-end"
-          data-kt-menu-overflow="true"
+          data-alita-menu-trigger="click"
+          data-alita-menu-placement="bottom-end"
+          data-alita-menu-overflow="true"
         >
-          <KTIcon
+          <AlitaIcon
             icon-name="dots-square"
             icon-class="fs-1 text-gray-300 me-n1"
           />
@@ -40,7 +40,7 @@
             type="button"
             class="btn btn-icon btn-sm h-auto btn-color-gray-500 btn-active-color-primary justify-content-end"
           >
-            <KTIcon icon-name="exit-right-corner" icon-class="fs-2" />
+            <AlitaIcon icon-name="exit-right-corner" icon-class="fs-2" />
           </button>
           <!--end::Action-->
         </div>

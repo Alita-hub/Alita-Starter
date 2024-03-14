@@ -180,7 +180,7 @@
         widget-classes="card-xl-stretch mb-5 mb-xl-8"
         :image="getAssetPath('media/svg/brand-logos/vimeo.svg')"
         time="2 weeks ago"
-        title="KT.com - High Quality Templates"
+        title="alita.com - High Quality Templates"
         description="Easy to use, incredibly flexible and secure<br/>
             with in-depth documentation that outlines<br/>
             everything for you"

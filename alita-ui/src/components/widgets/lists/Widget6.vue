@@ -10,11 +10,11 @@
         <button
           type="button"
           class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
-          data-kt-menu-trigger="click"
-          data-kt-menu-placement="bottom-end"
-          data-kt-menu-flip="top-end"
+          data-alita-menu-trigger="click"
+          data-alita-menu-placement="bottom-end"
+          data-alita-menu-flip="top-end"
         >
-          <KTIcon icon-name="category" icon-class="fs-2" />
+          <AlitaIcon icon-name="category" icon-class="fs-2" />
         </button>
         <Dropdown3></Dropdown3>
         <!--end::Menu-->
@@ -34,7 +34,7 @@
           class="d-flex align-items-center rounded p-5 mb-7"
         >
           <!--begin::Icon-->
-          <KTIcon
+          <AlitaIcon
             icon-name="abstract-26"
             :icon-class="`text-${item.color} fs-1 me-5`"
           />
@@ -70,7 +70,7 @@ import { defineComponent, ref } from "vue";
 import Dropdown3 from "@/components/dropdown/Dropdown3.vue";
 
 export default defineComponent({
-  name: "kt-widget-6",
+  name: "alita-widget-6",
   components: {
     Dropdown3,
   },

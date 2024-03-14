@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-4" data-kt-search-element="suggestion">
+  <div class="mb-4" data-alita-search-element="suggestion">
     <!--begin::Heading-->
     <div class="d-flex flex-stack fw-semibold mb-4">
       <!--begin::Label-->
@@ -14,7 +14,7 @@
         <!--begin::Symbol-->
         <div class="symbol symbol-40px symbol-circle me-4">
           <span class="symbol-label bg-light">
-            <KTIcon icon-name="phone" icon-class="fs-2 text-primary" />
+            <AlitaIcon icon-name="phone" icon-class="fs-2 text-primary" />
           </span>
         </div>
         <!--end::Symbol-->
@@ -33,7 +33,10 @@
         <!--begin::Symbol-->
         <div class="symbol symbol-40px symbol-circle me-4">
           <span class="symbol-label bg-light">
-            <KTIcon icon-name="chart-simple" icon-class="fs-2 text-primary" />
+            <AlitaIcon
+              icon-name="chart-simple"
+              icon-class="fs-2 text-primary"
+            />
           </span>
         </div>
         <!--end::Symbol-->
@@ -52,7 +55,7 @@
         <!--begin::Symbol-->
         <div class="symbol symbol-40px symbol-circle me-4">
           <span class="symbol-label bg-light">
-            <KTIcon icon-name="chart" icon-class="fs-2 text-primary" />
+            <AlitaIcon icon-name="chart" icon-class="fs-2 text-primary" />
           </span>
         </div>
         <!--end::Symbol-->
@@ -71,7 +74,10 @@
         <!--begin::Symbol-->
         <div class="symbol symbol-40px symbol-circle me-4">
           <span class="symbol-label bg-light">
-            <KTIcon icon-name="chart-simple-3" icon-class="fs-2 text-primary" />
+            <AlitaIcon
+              icon-name="chart-simple-3"
+              icon-class="fs-2 text-primary"
+            />
           </span>
         </div>
         <!--end::Symbol-->
@@ -90,7 +96,7 @@
         <!--begin::Symbol-->
         <div class="symbol symbol-40px symbol-circle me-4">
           <span class="symbol-label bg-light">
-            <KTIcon icon-name="sms" icon-class="fs-2 text-primary" />
+            <AlitaIcon icon-name="sms" icon-class="fs-2 text-primary" />
           </span>
         </div>
         <!--end::Symbol-->
@@ -109,7 +115,7 @@
         <!--begin::Symbol-->
         <div class="symbol symbol-40px symbol-circle me-4">
           <span class="symbol-label bg-light">
-            <KTIcon icon-name="bank" icon-class="fs-2 text-primary" />
+            <AlitaIcon icon-name="bank" icon-class="fs-2 text-primary" />
           </span>
         </div>
         <!--end::Symbol-->
@@ -128,7 +134,10 @@
         <!--begin::Symbol-->
         <div class="symbol symbol-40px symbol-circle me-4">
           <span class="symbol-label bg-light">
-            <KTIcon icon-name="chart-simple-3" icon-class="fs-2 text-primary" />
+            <AlitaIcon
+              icon-name="chart-simple-3"
+              icon-class="fs-2 text-primary"
+            />
           </span>
         </div>
         <!--end::Symbol-->
@@ -152,7 +161,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "kt-main",
+  name: "alita-main",
   components: {},
   setup() {
     return {

@@ -3,14 +3,14 @@
   <div
     class="card card-flush mb-0"
     id="kt_view_summary"
-    data-kt-sticky="true"
-    data-kt-sticky-name="view-subscription-summary"
-    data-kt-sticky-offset="{default: false, lg: '200px'}"
-    data-kt-sticky-width="{lg: '250px', xl: '300px'}"
-    data-kt-sticky-left="auto"
-    data-kt-sticky-top="150px"
-    data-kt-sticky-animation="false"
-    data-kt-sticky-zindex="95"
+    data-alita-sticky="true"
+    data-alita-sticky-name="view-subscription-summary"
+    data-alita-sticky-offset="{default: false, lg: '200px'}"
+    data-alita-sticky-width="{lg: '250px', xl: '300px'}"
+    data-alita-sticky-left="auto"
+    data-alita-sticky-top="150px"
+    data-alita-sticky-animation="false"
+    data-alita-sticky-zindex="95"
   >
     <!--begin::Card header-->
     <div class="card-header">
@@ -26,10 +26,10 @@
         <a
           href="#"
           class="btn btn-sm btn-light btn-icon"
-          data-kt-menu-trigger="click"
-          data-kt-menu-placement="bottom-end"
+          data-alita-menu-trigger="click"
+          data-alita-menu-placement="bottom-end"
         >
-          <KTIcon icon-name="dots-horizontal" icon-class="fs-3" />
+          <AlitaIcon icon-name="dots-horizontal" icon-class="fs-3" />
         </a>
         <UserMenu></UserMenu>
         <!--end::More options-->
@@ -195,7 +195,7 @@ import { defineComponent } from "vue";
 import UserMenu from "@/layouts/default-layout/components/menus/UserAccountMenu.vue";
 
 export default defineComponent({
-  name: "kt-summary",
+  name: "alita-summary",
   components: {
     UserMenu,
   },

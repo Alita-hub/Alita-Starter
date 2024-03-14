@@ -23,7 +23,7 @@
               id="kt_modal_add_event_close"
               data-bs-dismiss="modal"
             >
-              <KTIcon icon-name="cross" icon-class="fs-1" />
+              <AlitaIcon icon-name="cross" icon-class="fs-1" />
             </div>
           </div>
           <!--end::Modal header-->
@@ -154,13 +154,16 @@
             <!--end::Button-->
             <!--begin::Button-->
             <button
-              :data-kt-indicator="loading ? 'on' : null"
+              :data-alita-indicator="loading ? 'on' : null"
               class="btn btn-lg btn-primary"
               type="submit"
             >
               <span v-if="!loading" class="indicator-label">
                 Submit
-                <KTIcon icon-name="arrow-right" icon-class="fs-3 ms-2 me-0" />
+                <AlitaIcon
+                  icon-name="arrow-right"
+                  icon-class="fs-3 ms-2 me-0"
+                />
               </span>
               <span v-if="loading" class="indicator-progress">
                 Please wait...

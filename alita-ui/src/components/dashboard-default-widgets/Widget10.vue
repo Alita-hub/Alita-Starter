@@ -73,7 +73,7 @@
                     v-if="row.icon"
                     class="badge badge-light-success fs-base"
                   >
-                    <KTIcon
+                    <AlitaIcon
                       icon-name="arrow-up"
                       icon-class="fs-5 text-success ms-n1"
                     />
@@ -82,7 +82,7 @@
                   <!--end::Label-->
                   <!--begin::Label-->
                   <span v-else class="badge badge-light-danger fs-base">
-                    <KTIcon
+                    <AlitaIcon
                       icon-name="arrow-down"
                       icon-class="fs-5 text-danger ms-n1"
                     />
@@ -103,7 +103,7 @@
                     href="#"
                     class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px"
                   >
-                    <KTIcon
+                    <AlitaIcon
                       icon-name="black-right"
                       icon-class="fs-5 text-gray-700"
                     />

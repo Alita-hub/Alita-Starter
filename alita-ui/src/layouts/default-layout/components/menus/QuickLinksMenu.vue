@@ -2,7 +2,7 @@
   <!--begin::Menu-->
   <div
     class="menu menu-sub menu-sub-dropdown menu-column w-250px w-lg-325px"
-    data-kt-menu="true"
+    data-alita-menu="true"
   >
     <!--begin::Heading-->
     <div
@@ -31,7 +31,7 @@
           href="#"
           class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-end border-bottom"
         >
-          <KTIcon icon-name="euro" icon-class="fs-3x text-success mb-2" />
+          <AlitaIcon icon-name="euro" icon-class="fs-3x text-success mb-2" />
           <span class="fs-5 fw-semibold text-gray-800 mb-0">Accounting</span>
           <span class="fs-7 text-gray-500">eCommerce</span>
         </a>
@@ -44,7 +44,7 @@
           href="#"
           class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-bottom"
         >
-          <KTIcon icon-name="sms" icon-class="fs-3x text-success mb-2" />
+          <AlitaIcon icon-name="sms" icon-class="fs-3x text-success mb-2" />
           <span class="fs-5 fw-semibold text-gray-800 mb-0"
             >Administration</span
           >
@@ -59,7 +59,7 @@
           href="#"
           class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-end"
         >
-          <KTIcon
+          <AlitaIcon
             icon-name="abstract-41"
             icon-class="fs-3x text-success mb-2"
           />
@@ -75,7 +75,10 @@
           href="#"
           class="d-flex flex-column flex-center h-100 p-6 bg-hover-light"
         >
-          <KTIcon icon-name="briefcase" icon-class="fs-3x text-success mb-2" />
+          <AlitaIcon
+            icon-name="briefcase"
+            icon-class="fs-3x text-success mb-2"
+          />
           <span class="fs-5 fw-semibold text-gray-800 mb-0">Customers</span>
           <span class="fs-7 text-gray-500">Latest cases</span>
         </a>
@@ -88,7 +91,7 @@
     <div class="py-2 text-center border-top">
       <a href="#" class="btn btn-color-gray-600 btn-active-color-primary">
         View All
-        <KTIcon icon-name="arrow-right" icon-class="fs-5" />
+        <AlitaIcon icon-name="arrow-right" icon-class="fs-5" />
       </a>
     </div>
     <!--end::View more-->
@@ -101,7 +104,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "kt-quick-links-menu",
+  name: "alita-quick-links-menu",
   components: {},
   setup() {
     return {

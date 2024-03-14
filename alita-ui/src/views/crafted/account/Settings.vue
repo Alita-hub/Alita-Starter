@@ -43,7 +43,7 @@
               <!--begin::Image input-->
               <div
                 class="image-input image-input-outline"
-                data-kt-image-input="true"
+                data-alita-image-input="true"
                 :style="{
                   backgroundImage: `url(${getAssetPath(
                     '/media/avatars/blank.png'
@@ -60,7 +60,7 @@
                 <!--begin::Label-->
                 <label
                   class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                  data-kt-image-input-action="change"
+                  data-alita-image-input-action="change"
                   data-bs-toggle="tooltip"
                   title="Change avatar"
                 >
@@ -76,7 +76,7 @@
                 <!--begin::Remove-->
                 <span
                   class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                  data-kt-image-input-action="remove"
+                  data-alita-image-input-action="remove"
                   data-bs-toggle="tooltip"
                   @click="removeImage()"
                   title="Remove avatar"
@@ -1501,7 +1501,7 @@
         <div
           class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6"
         >
-          <KTIcon
+          <AlitaIcon
             icon-name="design-frame"
             icon-class="fs-2tx text-primary me-4"
           />
@@ -1533,7 +1533,9 @@
               />
 
               <div class="d-flex flex-column">
-                <a href="#" class="fs-5 text-gray-900 text-hover-primary fw-bold"
+                <a
+                  href="#"
+                  class="fs-5 text-gray-900 text-hover-primary fw-bold"
                   >Google</a
                 >
                 <div class="fs-6 fw-semibold text-gray-500">
@@ -1567,7 +1569,9 @@
               />
 
               <div class="d-flex flex-column">
-                <a href="#" class="fs-5 text-gray-900 text-hover-primary fw-bold"
+                <a
+                  href="#"
+                  class="fs-5 text-gray-900 text-hover-primary fw-bold"
                   >Github</a
                 >
                 <div class="fs-6 fw-semibold text-gray-500">
@@ -1601,7 +1605,9 @@
               />
 
               <div class="d-flex flex-column">
-                <a href="#" class="fs-5 text-gray-900 text-hover-primary fw-bold"
+                <a
+                  href="#"
+                  class="fs-5 text-gray-900 text-hover-primary fw-bold"
                   >Slack</a
                 >
                 <div class="fs-6 fw-semibold text-gray-500">
@@ -1940,8 +1946,8 @@
                         value=""
                         id="kt_settings_notification_email"
                         checked
-                        data-kt-check="true"
-                        data-kt-check-target="[data-kt-settings-notification=email]"
+                        data-alita-check="true"
+                        data-alita-check-target="[data-alita-settings-notification=email]"
                       />
                       <label
                         class="form-check-label ps-2"
@@ -1959,8 +1965,8 @@
                         value=""
                         id="kt_settings_notification_phone"
                         checked
-                        data-kt-check="true"
-                        data-kt-check-target="[data-kt-settings-notification=phone]"
+                        data-alita-check="true"
+                        data-alita-check-target="[data-alita-settings-notification=phone]"
                       />
                       <label
                         class="form-check-label ps-2"
@@ -1984,7 +1990,7 @@
                         value="1"
                         id="billing1"
                         checked
-                        data-kt-settings-notification="email"
+                        data-alita-settings-notification="email"
                       />
                       <label
                         class="form-check-label ps-2"
@@ -2000,7 +2006,7 @@
                         value=""
                         id="billing2"
                         checked
-                        data-kt-settings-notification="phone"
+                        data-alita-settings-notification="phone"
                       />
                       <label
                         class="form-check-label ps-2"
@@ -2022,7 +2028,7 @@
                         value=""
                         id="team1"
                         checked
-                        data-kt-settings-notification="email"
+                        data-alita-settings-notification="email"
                       />
                       <label class="form-check-label ps-2" for="team1"></label>
                     </div>
@@ -2034,7 +2040,7 @@
                         type="checkbox"
                         value=""
                         id="team2"
-                        data-kt-settings-notification="phone"
+                        data-alita-settings-notification="phone"
                       />
                       <label class="form-check-label ps-2" for="team2"></label>
                     </div>
@@ -2052,7 +2058,7 @@
                         type="checkbox"
                         value=""
                         id="project1"
-                        data-kt-settings-notification="email"
+                        data-alita-settings-notification="email"
                       />
                       <label
                         class="form-check-label ps-2"
@@ -2068,7 +2074,7 @@
                         value=""
                         id="project2"
                         checked
-                        data-kt-settings-notification="phone"
+                        data-alita-settings-notification="phone"
                       />
                       <label
                         class="form-check-label ps-2"
@@ -2089,7 +2095,7 @@
                         type="checkbox"
                         value=""
                         id="newsletter1"
-                        data-kt-settings-notification="email"
+                        data-alita-settings-notification="email"
                       />
                       <label
                         class="form-check-label ps-2"
@@ -2104,7 +2110,7 @@
                         type="checkbox"
                         value=""
                         id="newsletter2"
-                        data-kt-settings-notification="phone"
+                        data-alita-settings-notification="phone"
                       />
                       <label
                         class="form-check-label ps-2"
@@ -2178,7 +2184,7 @@
           <div
             class="notice d-flex bg-light-warning rounded border-warning border border-dashed mb-9 p-6"
           >
-            <KTIcon
+            <AlitaIcon
               icon-name="information-5"
               icon-class="fs-2tx text-warning me-4"
             />
@@ -2341,10 +2347,10 @@ export default defineComponent({
     const saveChanges1 = () => {
       if (submitButton1.value) {
         // Activate indicator
-        submitButton1.value.setAttribute("data-kt-indicator", "on");
+        submitButton1.value.setAttribute("data-alita-indicator", "on");
 
         setTimeout(() => {
-          submitButton1.value?.removeAttribute("data-kt-indicator");
+          submitButton1.value?.removeAttribute("data-alita-indicator");
         }, 2000);
       }
     };
@@ -2352,10 +2358,10 @@ export default defineComponent({
     const saveChanges2 = () => {
       if (submitButton2.value) {
         // Activate indicator
-        submitButton2.value.setAttribute("data-kt-indicator", "on");
+        submitButton2.value.setAttribute("data-alita-indicator", "on");
 
         setTimeout(() => {
-          submitButton2.value?.removeAttribute("data-kt-indicator");
+          submitButton2.value?.removeAttribute("data-alita-indicator");
         }, 2000);
       }
     };
@@ -2363,10 +2369,10 @@ export default defineComponent({
     const saveChanges3 = () => {
       if (submitButton3.value) {
         // Activate indicator
-        submitButton3.value.setAttribute("data-kt-indicator", "on");
+        submitButton3.value.setAttribute("data-alita-indicator", "on");
 
         setTimeout(() => {
-          submitButton3.value?.removeAttribute("data-kt-indicator");
+          submitButton3.value?.removeAttribute("data-alita-indicator");
         }, 2000);
       }
     };
@@ -2374,10 +2380,10 @@ export default defineComponent({
     const saveChanges4 = () => {
       if (submitButton4.value) {
         // Activate indicator
-        submitButton4.value.setAttribute("data-kt-indicator", "on");
+        submitButton4.value.setAttribute("data-alita-indicator", "on");
 
         setTimeout(() => {
-          submitButton4.value?.removeAttribute("data-kt-indicator");
+          submitButton4.value?.removeAttribute("data-alita-indicator");
         }, 2000);
       }
     };
@@ -2385,10 +2391,10 @@ export default defineComponent({
     const deactivateAccount = () => {
       if (submitButton5.value) {
         // Activate indicator
-        submitButton5.value.setAttribute("data-kt-indicator", "on");
+        submitButton5.value.setAttribute("data-alita-indicator", "on");
 
         setTimeout(() => {
-          submitButton5.value?.removeAttribute("data-kt-indicator");
+          submitButton5.value?.removeAttribute("data-alita-indicator");
 
           Swal.fire({
             text: "Email is successfully changed!",
@@ -2409,10 +2415,10 @@ export default defineComponent({
     const updateEmail = () => {
       if (updateEmailButton.value) {
         // Activate indicator
-        updateEmailButton.value.setAttribute("data-kt-indicator", "on");
+        updateEmailButton.value.setAttribute("data-alita-indicator", "on");
 
         setTimeout(() => {
-          updateEmailButton.value?.removeAttribute("data-kt-indicator");
+          updateEmailButton.value?.removeAttribute("data-alita-indicator");
 
           emailFormDisplay.value = false;
         }, 2000);
@@ -2422,10 +2428,10 @@ export default defineComponent({
     const updatePassword = () => {
       if (updatePasswordButton.value) {
         // Activate indicator
-        updatePasswordButton.value.setAttribute("data-kt-indicator", "on");
+        updatePasswordButton.value.setAttribute("data-alita-indicator", "on");
 
         setTimeout(() => {
-          updatePasswordButton.value?.removeAttribute("data-kt-indicator");
+          updatePasswordButton.value?.removeAttribute("data-alita-indicator");
 
           Swal.fire({
             text: "Password is successfully changed!",

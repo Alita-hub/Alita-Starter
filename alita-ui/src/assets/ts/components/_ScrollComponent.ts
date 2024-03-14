@@ -30,13 +30,13 @@ class ScrollComponent {
     this.options = Object.assign(defaultScrollOptions, options);
     this.id = this.element.getAttribute("id") || "";
     this.update();
-    // this.element.setAttribute('data-kt-scrolltop', 'true')
+    // this.element.setAttribute('data-alita-scrolltop', 'true')
     DataUtil.set(this.element, "scroll", this);
   }
 
   private getOption = (name: string) => {
-    if (this.element.hasAttribute("data-kt-scroll-" + name) === true) {
-      const attr = this.element.getAttribute("data-kt-scroll-" + name) || "";
+    if (this.element.hasAttribute("data-alitaita-scroll-" + name) === true) {
+      const attr = this.element.getAttribute("data-alitaita-scroll-" + name) || "";
       let value: string | JSON | boolean = getAttributeValueByBreakpoint(attr);
       if (value !== null && String(value) === "true") {
         value = true;
@@ -209,7 +209,7 @@ class ScrollComponent {
     // Activate/deactivate
     if (
       this.getOption("activate") === true ||
-      !this.element.hasAttribute("data-kt-scroll-activate")
+      !this.element.hasAttribute("data-alitaita-scroll-activate")
     ) {
       this.setupHeight();
       this.setupScrollHandler();
@@ -266,9 +266,9 @@ class ScrollComponent {
     });
   }
 
-  public static destroyAll(attr: string = '[data-kt-scroll="true"]') {}
+  public static destroyAll(attr: string = '[data-alitaita-scroll="true"]') {}
 
-  public static bootstrap(attr: string = '[data-kt-scroll="true"]') {
+  public static bootstrap(attr: string = '[data-alitaita-scroll="true"]') {
     ScrollComponent.createInstances(attr);
     ScrollComponent.resize();
   }
@@ -284,12 +284,12 @@ class ScrollComponent {
     return scroll;
   };
 
-  public static reinitialization(attr: string = '[data-kt-scroll="true"]') {
+  public static reinitialization(attr: string = '[data-alitaita-scroll="true"]') {
     ScrollComponent.createInstances(attr);
   }
 
   public static updateAll() {
-    const elements = document.body.querySelectorAll('[data-kt-scroll="true"]');
+    const elements = document.body.querySelectorAll('[data-alitaita-scroll="true"]');
     elements.forEach((element: Element) => {
       const instance = ScrollComponent.getInstance(element as HTMLElement);
       if (instance) {

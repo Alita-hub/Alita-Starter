@@ -2,7 +2,7 @@
   <!--begin::Menu 1-->
   <div
     class="menu menu-sub menu-sub-dropdown w-250px w-md-300px"
-    data-kt-menu="true"
+    data-alita-menu="true"
   >
     <!--begin::Header-->
     <div class="px-7 py-5">
@@ -107,7 +107,7 @@
         <button
           type="reset"
           class="btn btn-sm btn-light btn-active-light-primary me-2"
-          data-kt-menu-dismiss="true"
+          data-alita-menu-dismiss="true"
         >
           Reset
         </button>
@@ -115,7 +115,7 @@
         <button
           type="submit"
           class="btn btn-sm btn-primary"
-          data-kt-menu-dismiss="true"
+          data-alita-menu-dismiss="true"
         >
           Apply
         </button>

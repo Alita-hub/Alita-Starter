@@ -10,7 +10,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "kt-loading",
+  name: "alita-loading",
   components: {},
 });
 </script>

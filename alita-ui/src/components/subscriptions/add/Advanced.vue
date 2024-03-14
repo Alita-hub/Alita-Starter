@@ -71,9 +71,9 @@
                   <button
                     type="button"
                     class="btn btn-icon btn-flex btn-active-light-primary w-30px h-30px me-3"
-                    data-kt-action="field_remove"
+                    data-alita-action="field_remove"
                   >
-                    <KTIcon icon-name="trash" icon-class="fs-3" />
+                    <AlitaIcon icon-name="trash" icon-class="fs-3" />
                   </button>
                 </td>
               </tr>
@@ -196,7 +196,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "kt-advanced",
+  name: "alita-advanced",
   components: {},
   setup() {
     return {

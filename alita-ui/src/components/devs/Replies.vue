@@ -1,6 +1,6 @@
 <template>
   <!--begin::Heading-->
-  <a id="answers" data-kt-scroll-offset="{default: 100, lg: 125}"></a>
+  <a id="answers" data-alita-scroll-offset="{default: 100, lg: 125}"></a>
   <h2 class="fw-bold text-gray-900 mb-10">Replies(14)</h2>
   <!--end::Heading-->
 
@@ -64,7 +64,7 @@
                 data-bs-dismiss="click"
               >
                 {{ reply.upvotes }}
-                <KTIcon
+                <AlitaIcon
                   icon-name="black-right"
                   :icon-class="`fs-7 ${reply.upvotes ? '' : 'mx-2 me-0'}`"
                 />

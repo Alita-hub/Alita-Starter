@@ -3,13 +3,13 @@
   <div
     id="kt_aside"
     class="aside"
-    data-kt-drawer="true"
-    data-kt-drawer-name="aside"
-    data-kt-drawer-activate="{default: true, lg: false}"
-    data-kt-drawer-overlay="true"
-    data-kt-drawer-width="{default:'200px', '300px': '250px'}"
-    data-kt-drawer-direction="start"
-    data-kt-drawer-toggle="#kt_aside_mobile_toggle"
+    data-alita-drawer="true"
+    data-alita-drawer-name="aside"
+    data-alita-drawer-activate="{default: true, lg: false}"
+    data-alita-drawer-overlay="true"
+    data-alita-drawer-width="{default:'200px', '300px': '250px'}"
+    data-alita-drawer-direction="start"
+    data-alita-drawer-toggle="#kt_aside_mobile_toggle"
   >
     <!--begin::Aside Toolbarl-->
     <div class="aside-toolbar flex-column-auto" id="kt_aside_toolbar">
@@ -32,7 +32,7 @@
         class="btn btn-custom btn-primary w-100"
       >
         <span class="btn-label">{{ t("docsAndComponents") }}</span>
-        <KTIcon icon-name="document" icon-class="btn-icon fs-2" />
+        <AlitaIcon icon-name="document" icon-class="btn-icon fs-2" />
       </a>
     </div>
     <!--end::Footer-->

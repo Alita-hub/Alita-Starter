@@ -93,7 +93,7 @@
                       href="#"
                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                     >
-                      <KTIcon icon-name="arrow-right" icon-class="fs-2" />
+                      <AlitaIcon icon-name="arrow-right" icon-class="fs-2" />
                     </a>
                   </td>
                 </tr>
@@ -131,7 +131,7 @@
                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                     >
                       <!--begin::Svg Icon | path: -->
-                      <KTIcon icon-name="arrow-right" icon-class="fs-2" />
+                      <AlitaIcon icon-name="arrow-right" icon-class="fs-2" />
                       <!--end::Svg Icon-->
                     </a>
                   </td>
@@ -170,7 +170,7 @@
                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                     >
                       <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-                      <KTIcon icon-name="arrow-right" icon-class="fs-2" />
+                      <AlitaIcon icon-name="arrow-right" icon-class="fs-2" />
                       <!--end::Svg Icon-->
                     </a>
                   </td>
@@ -207,7 +207,7 @@
                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                     >
                       <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-                      <KTIcon icon-name="arrow-right" icon-class="fs-2" />
+                      <AlitaIcon icon-name="arrow-right" icon-class="fs-2" />
                       <!--end::Svg Icon-->
                     </a>
                   </td>
@@ -247,7 +247,7 @@
                       href="#"
                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                     >
-                      <KTIcon icon-name="arrow-right" icon-class="fs-2" />
+                      <AlitaIcon icon-name="arrow-right" icon-class="fs-2" />
                     </a>
                   </td>
                 </tr>
@@ -310,7 +310,7 @@
                       href="#"
                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                     >
-                      <KTIcon icon-name="arrow-right" icon-class="fs-2" />
+                      <AlitaIcon icon-name="arrow-right" icon-class="fs-2" />
                     </a>
                   </td>
                 </tr>
@@ -348,7 +348,7 @@
                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                     >
                       <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-                      <KTIcon icon-name="arrow-right" icon-class="fs-2" />
+                      <AlitaIcon icon-name="arrow-right" icon-class="fs-2" />
                       <!--end::Svg Icon-->
                     </a>
                   </td>
@@ -384,7 +384,7 @@
                       href="#"
                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                     >
-                      <KTIcon icon-name="arrow-right" icon-class="fs-2" />
+                      <AlitaIcon icon-name="arrow-right" icon-class="fs-2" />
                     </a>
                   </td>
                 </tr>
@@ -452,7 +452,7 @@
                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                     >
                       <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-                      <KTIcon icon-name="arrow-right" icon-class="fs-2" />
+                      <AlitaIcon icon-name="arrow-right" icon-class="fs-2" />
                       <!--end::Svg Icon-->
                     </a>
                   </td>
@@ -489,7 +489,7 @@
                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                     >
                       <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-                      <KTIcon icon-name="arrow-right" icon-class="fs-2" />
+                      <AlitaIcon icon-name="arrow-right" icon-class="fs-2" />
                       <!--end::Svg Icon-->
                     </a>
                   </td>
@@ -528,7 +528,7 @@
                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                     >
                       <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-                      <KTIcon icon-name="arrow-right" icon-class="fs-2" />
+                      <AlitaIcon icon-name="arrow-right" icon-class="fs-2" />
                       <!--end::Svg Icon-->
                     </a>
                   </td>
@@ -567,7 +567,7 @@
                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                     >
                       <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-                      <KTIcon icon-name="arrow-right" icon-class="fs-2" />
+                      <AlitaIcon icon-name="arrow-right" icon-class="fs-2" />
                       <!--end::Svg Icon-->
                     </a>
                   </td>
@@ -590,7 +590,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "kt-widget-5",
+  name: "alita-widget-5",
   components: {},
   props: {
     widgetClasses: String,

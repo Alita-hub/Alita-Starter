@@ -6,7 +6,10 @@
       <div class="d-flex flex-stack card-p flex-grow-1">
         <span class="symbol symbol-50px me-2">
           <span :class="`symbol-label bg-light-${color}`">
-            <KTIcon :icon-name="iconName" :icon-class="`text-${color} fs-2x`" />
+            <AlitaIcon
+              :icon-name="iconName"
+              :icon-class="`text-${color} fs-2x`"
+            />
           </span>
         </span>
 
@@ -42,7 +45,7 @@ import { getCSSVariableValue } from "@/assets/ts/_utils";
 import type VueApexCharts from "vue3-apexcharts";
 
 export default defineComponent({
-  name: "kt-widget-4",
+  name: "alita-widget-4",
   props: {
     widgetClasses: String,
     iconName: String,

@@ -81,7 +81,7 @@ class LayoutService {
       objectPath.get(config.value, "aside.toggle")
     ) {
       this.bodyStore.addBodyAttribute({
-        qualifiedName: "data-kt-aside-minimize",
+        qualifiedName: "data-alita-aside-minimize",
         value: "on",
       });
     }
@@ -94,7 +94,7 @@ class LayoutService {
     // Default minimized
     if (objectPath.get(config.value, "aside.minimized")) {
       this.bodyStore.addBodyAttribute({
-        qualifiedName: "data-kt-aside-minimize",
+        qualifiedName: "data-alitaita-aside-minimize",
         value: "on",
       });
     }

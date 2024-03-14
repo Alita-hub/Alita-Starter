@@ -40,10 +40,10 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, ref, watch } from "vue";
-import TableHeadRow from "@/components/kt-datatable/table-partials/table-content/table-head/TableHeadRow.vue";
-import TableBodyRow from "@/components/kt-datatable/table-partials/table-content/table-body/TableBodyRow.vue";
-import Loading from "@/components/kt-datatable/table-partials/Loading.vue";
-import type { Sort } from "@/components/kt-datatable/table-partials/models";
+import TableHeadRow from "@/components/alita-datatable/table-partials/table-content/table-head/TableHeadRow.vue";
+import TableBodyRow from "@/components/alita-datatable/table-partials/table-content/table-body/TableBodyRow.vue";
+import Loading from "@/components/alita-datatable/table-partials/Loading.vue";
+import type { Sort } from "@/components/alita-datatable/table-partials/models";
 
 export default defineComponent({
   name: "table-body",
@@ -103,7 +103,7 @@ export default defineComponent({
     const itemsSelect = (value: any) => {
       selectedItems.value = [];
       //eslint-disable-next-line
-      value.forEach((item:any) => {
+      value.forEach((item: any) => {
         if (!selectedItems.value.includes(item)) selectedItems.value.push(item);
       });
     };

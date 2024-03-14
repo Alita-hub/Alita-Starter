@@ -33,7 +33,10 @@
                   >Max Smith</a
                 >
                 <a href="#">
-                  <KTIcon icon-name="verify" icon-class="fs-1 text-primary" />
+                  <AlitaIcon
+                    icon-name="verify"
+                    icon-class="fs-1 text-primary"
+                  />
                 </a>
 
                 <a
@@ -52,22 +55,25 @@
                   href="#"
                   class="d-flex align-items-center text-gray-500 text-hover-primary me-5 mb-2"
                 >
-                  <KTIcon icon-name="profile-circle" icon-class="fs-4 me-1" />
+                  <AlitaIcon
+                    icon-name="profile-circle"
+                    icon-class="fs-4 me-1"
+                  />
                   Developer
                 </a>
                 <a
                   href="#"
                   class="d-flex align-items-center text-gray-500 text-hover-primary me-5 mb-2"
                 >
-                  <KTIcon icon-name="geolocation" icon-class="fs-4 me-1" />
+                  <AlitaIcon icon-name="geolocation" icon-class="fs-4 me-1" />
                   SF, Bay Area
                 </a>
                 <a
                   href="#"
                   class="d-flex align-items-center text-gray-500 text-hover-primary mb-2"
                 >
-                  <KTIcon icon-name="sms" icon-class="fs-4 me-1" />
-                  max@kt.com
+                  <AlitaIcon icon-name="sms" icon-class="fs-4 me-1" />
+                  max@alita.com
                 </a>
               </div>
               <!--end::Info-->
@@ -81,7 +87,7 @@
                 class="btn btn-sm btn-light me-2"
                 id="kt_user_follow_button"
               >
-                <KTIcon icon-name="check" icon-class="fs-3 d-none" />
+                <AlitaIcon icon-name="check" icon-class="fs-3 d-none" />
                 Follow
               </a>
 
@@ -97,9 +103,9 @@
               <div class="me-0">
                 <button
                   class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
-                  data-kt-menu-trigger="click"
-                  data-kt-menu-placement="bottom-end"
-                  data-kt-menu-flip="top-end"
+                  data-alita-menu-trigger="click"
+                  data-alita-menu-placement="bottom-end"
+                  data-alita-menu-flip="top-end"
                 >
                   <i class="bi bi-three-dots fs-3"></i>
                 </button>
@@ -123,7 +129,7 @@
                 >
                   <!--begin::Number-->
                   <div class="d-flex align-items-center">
-                    <KTIcon
+                    <AlitaIcon
                       icon-name="arrow-up"
                       icon-class="fs-3 text-success me-2"
                     />
@@ -143,14 +149,14 @@
                 >
                   <!--begin::Number-->
                   <div class="d-flex align-items-center">
-                    <KTIcon
+                    <AlitaIcon
                       icon-name="arrow-down"
                       icon-class="fs-3 text-danger me-2"
                     />
                     <div
                       class="fs-2 fw-bold"
-                      data-kt-countup="true"
-                      data-kt-countup-value="75"
+                      data-alita-countup="true"
+                      data-alita-countup-value="75"
                     >
                       75
                     </div>
@@ -169,15 +175,15 @@
                 >
                   <!--begin::Number-->
                   <div class="d-flex align-items-center">
-                    <KTIcon
+                    <AlitaIcon
                       icon-name="arrow-up"
                       icon-class="fs-3 text-success me-2"
                     />
                     <div
                       class="fs-2 fw-bold"
-                      data-kt-countup="true"
-                      data-kt-countup-value="60"
-                      data-kt-countup-prefix="%"
+                      data-alita-countup="true"
+                      data-alita-countup-value="60"
+                      data-alita-countup-prefix="%"
                     >
                       60%
                     </div>
@@ -266,7 +272,7 @@ import { defineComponent } from "vue";
 import Dropdown3 from "@/components/dropdown/Dropdown3.vue";
 
 export default defineComponent({
-  name: "kt-account",
+  name: "alita-account",
   components: {
     Dropdown3,
   },

@@ -13,18 +13,14 @@ export interface User {
 }
 
 export const useAuthStore = defineStore("auth", () => {
-  const errors = ref({});
+  const msg = ref('');
   const user = ref<User>({} as User);
   const isAuthenticated = ref(!!JwtService.getToken());
-
-  function setError(error: any) {
-    errors.value = { ...error };
-  }
 
   function purgeAuth() {
     isAuthenticated.value = false;
     user.value = {} as User;
-    errors.value = [];
+    msg.value = '';
     JwtService.destroyToken();
   }
 
@@ -33,13 +29,13 @@ export const useAuthStore = defineStore("auth", () => {
       .then(({ data }) => {
         if(data.code == HttpStatusCode.Ok) {
           isAuthenticated.value = true;
-          JwtService.saveToken(user.value.token, {});
+          JwtService.saveToken(data.data);
         } else {
-          errors.value = data.msg;
+          msg.value = data.msg;
         }
       })
       .catch(({ response }) => {
-        setError(response.data.errors);
+        msg.value = response.msg;
       });
   }
 
@@ -53,23 +49,23 @@ export const useAuthStore = defineStore("auth", () => {
 
       })
       .catch(({ response }) => {
-        setError(response.data.errors);
+        msg.value = response.msg;
       });
   }
 
   function forgotPassword(email: string) {
     return ApiService.post("forgot_password", email)
       .then(() => {
-        setError({});
+        msg.value = '';
       })
       .catch(({ response }) => {
-        setError(response.data.errors);
+        msg.value = response.msg;
       });
   }
 
 
   return {
-    errors,
+    msg,
     user,
     isAuthenticated,
     login,

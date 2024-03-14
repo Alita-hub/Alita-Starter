@@ -42,9 +42,9 @@ class StickyComponent {
     this.element = _element;
     this.options = Object.assign(defaultStickyOptions, options);
     this.instanceUid = getUniqueIdWithPrefix("sticky");
-    this.instanceName = this.element.getAttribute("data-kt-sticky-name");
-    this.attributeName = "data-kt-sticky-" + this.instanceName;
-    this.attributeName2 = "data-kt-" + this.instanceName;
+    this.instanceName = this.element.getAttribute("data-alita-sticky-name");
+    this.attributeName = "data-alitaita-sticky-" + this.instanceName;
+    this.attributeName2 = "data-alitaita-" + this.instanceName;
     this.eventTriggerState = true;
     this.lastScrollTop = 0;
 
@@ -84,8 +84,8 @@ class StickyComponent {
         }
 
         if (this.eventTriggerState === true) {
-          EventHandlerUtil.trigger(this.element, "kt.sticky.on");
-          EventHandlerUtil.trigger(this.element, "kt.sticky.change");
+          EventHandlerUtil.trigger(this.element, "alita.sticky.on");
+          EventHandlerUtil.trigger(this.element, "alita.sticky.change");
 
           this.eventTriggerState = false;
         }
@@ -98,8 +98,8 @@ class StickyComponent {
         }
 
         if (this.eventTriggerState === false) {
-          EventHandlerUtil.trigger(this.element, "kt.sticky.off");
-          EventHandlerUtil.trigger(this.element, "kt.sticky.change");
+          EventHandlerUtil.trigger(this.element, "alita.sticky.off");
+          EventHandlerUtil.trigger(this.element, "alita.sticky.change");
 
           this.eventTriggerState = true;
         }
@@ -118,8 +118,8 @@ class StickyComponent {
       }
 
       if (this.eventTriggerState === true) {
-        EventHandlerUtil.trigger(this.element, "kt.sticky.on");
-        EventHandlerUtil.trigger(this.element, "kt.sticky.change");
+        EventHandlerUtil.trigger(this.element, "alita.sticky.on");
+        EventHandlerUtil.trigger(this.element, "alita.sticky.change");
         this.eventTriggerState = false;
       }
     } else {
@@ -131,15 +131,15 @@ class StickyComponent {
       }
 
       if (this.eventTriggerState === false) {
-        EventHandlerUtil.trigger(this.element, "kt.sticky.off");
-        EventHandlerUtil.trigger(this.element, "kt.sticky.change");
+        EventHandlerUtil.trigger(this.element, "alita.sticky.off");
+        EventHandlerUtil.trigger(this.element, "alita.sticky.change");
         this.eventTriggerState = true;
       }
     }
   };
 
   private getOption = (name: string) => {
-    const dataStickyAttr = "data-kt-sticky-" + name;
+    const dataStickyAttr = "data-alitaita-sticky-" + name;
     if (this.element.hasAttribute(dataStickyAttr) === true) {
       const attrValueInStr = this.element.getAttribute(dataStickyAttr);
       const attrValue = getAttributeValueByBreakpoint(attrValueInStr || "");
@@ -292,11 +292,11 @@ class StickyComponent {
     return sticky;
   };
 
-  public static bootstrap(attr: string = '[data-kt-sticky="true"]') {
+  public static bootstrap(attr: string = '[data-alitaita-sticky="true"]') {
     StickyComponent.createInstances(attr);
   }
 
-  public static reInitialization(attr: string = '[data-kt-sticky="true"]') {
+  public static reInitialization(attr: string = '[data-alitaita-sticky="true"]') {
     StickyComponent.createInstances(attr);
   }
 }

@@ -15,7 +15,7 @@
           data-bs-toggle="modal"
           data-bs-target="#kt_modal_new_card"
         >
-          <KTIcon icon-name="plus-square" icon-class="fs-3" />
+          <AlitaIcon icon-name="plus-square" icon-class="fs-3" />
           Add new method</a
         >
       </div>
@@ -25,7 +25,7 @@
     <!--begin::Card body-->
     <div id="kt_customer_view_payment_method" class="card-body pt-0">
       <!--begin::Option-->
-      <div class="py-0" data-kt-customer-payment-method="row">
+      <div class="py-0" data-alita-customer-payment-method="row">
         <!--begin::Header-->
         <div class="py-3 d-flex flex-stack flex-wrap">
           <!--begin::Toggle-->
@@ -39,7 +39,7 @@
           >
             <!--begin::Arrow-->
             <div class="me-3 rotate-90">
-              <KTIcon icon-name="right" icon-class="fs-3" />
+              <AlitaIcon icon-name="right" icon-class="fs-3" />
             </div>
             <!--end::Arrow-->
             <!--begin::Logo-->
@@ -75,7 +75,7 @@
                 title=""
                 data-bs-original-title="Edit"
               >
-                <KTIcon icon-name="pencil" icon-class="fs-3" />
+                <AlitaIcon icon-name="pencil" icon-class="fs-3" />
               </span>
             </a>
             <!--end::Edit-->
@@ -85,10 +85,10 @@
               class="btn btn-icon btn-active-light-primary w-30px h-30px me-3"
               data-bs-toggle="tooltip"
               title=""
-              data-kt-customer-payment-method="delete"
+              data-alita-customer-payment-method="delete"
               data-bs-original-title="Delete"
             >
-              <KTIcon icon-name="trash" icon-class="fs-3" />
+              <AlitaIcon icon-name="trash" icon-class="fs-3" />
             </a>
             <!--end::Delete-->
             <!--begin::More-->
@@ -97,23 +97,23 @@
               class="btn btn-icon btn-active-light-primary w-30px h-30px"
               data-bs-toggle="tooltip"
               title=""
-              data-kt-menu-trigger="click"
-              data-kt-menu-placement="bottom-end"
+              data-alita-menu-trigger="click"
+              data-alita-menu-placement="bottom-end"
               data-bs-original-title="More Options"
             >
-              <KTIcon icon-name="switch" icon-class="fs-3" />
+              <AlitaIcon icon-name="switch" icon-class="fs-3" />
             </a>
             <!--begin::Menu-->
             <div
               class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold w-150px py-3"
-              data-kt-menu="true"
+              data-alita-menu="true"
             >
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a
                   href="#"
                   class="menu-link px-3"
-                  data-kt-payment-mehtod-action="set_as_primary"
+                  data-alita-payment-mehtod-action="set_as_primary"
                   >Set as Primary</a
                 >
               </div>
@@ -201,7 +201,7 @@
                     <td class="text-muted min-w-125px w-125px">CVC check</td>
                     <td class="text-gray-800">
                       Passed
-                      <KTIcon
+                      <AlitaIcon
                         icon-name="check-circle"
                         icon-class="fs-2 text-success"
                       />
@@ -219,7 +219,7 @@
       <!--end::Option-->
       <div class="separator separator-dashed"></div>
       <!--begin::Option-->
-      <div class="py-0" data-kt-customer-payment-method="row">
+      <div class="py-0" data-alita-customer-payment-method="row">
         <!--begin::Header-->
         <div class="py-3 d-flex flex-stack flex-wrap">
           <!--begin::Toggle-->
@@ -233,7 +233,7 @@
           >
             <!--begin::Arrow-->
             <div class="me-3 rotate-90">
-              <KTIcon icon-name="right" icon-class="fs-3" />
+              <AlitaIcon icon-name="right" icon-class="fs-3" />
             </div>
             <!--end::Arrow-->
             <!--begin::Logo-->
@@ -268,7 +268,7 @@
                 title=""
                 data-bs-original-title="Edit"
               >
-                <KTIcon icon-name="pencil" icon-class="fs-3" />
+                <AlitaIcon icon-name="pencil" icon-class="fs-3" />
               </span>
             </a>
             <!--end::Edit-->
@@ -278,10 +278,10 @@
               class="btn btn-icon btn-active-light-primary w-30px h-30px me-3"
               data-bs-toggle="tooltip"
               title=""
-              data-kt-customer-payment-method="delete"
+              data-alita-customer-payment-method="delete"
               data-bs-original-title="Delete"
             >
-              <KTIcon icon-name="trash" icon-class="fs-3" />
+              <AlitaIcon icon-name="trash" icon-class="fs-3" />
             </a>
             <!--end::Delete-->
             <!--begin::More-->
@@ -290,23 +290,23 @@
               class="btn btn-icon btn-active-light-primary w-30px h-30px"
               data-bs-toggle="tooltip"
               title=""
-              data-kt-menu-trigger="click"
-              data-kt-menu-placement="bottom-end"
+              data-alita-menu-trigger="click"
+              data-alita-menu-placement="bottom-end"
               data-bs-original-title="More Options"
             >
-              <KTIcon icon-name="switch" icon-class="fs-3" />
+              <AlitaIcon icon-name="switch" icon-class="fs-3" />
             </a>
             <!--begin::Menu-->
             <div
               class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold w-150px py-3"
-              data-kt-menu="true"
+              data-alita-menu="true"
             >
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a
                   href="#"
                   class="menu-link px-3"
-                  data-kt-payment-mehtod-action="set_as_primary"
+                  data-alita-payment-mehtod-action="set_as_primary"
                   >Set as Primary</a
                 >
               </div>
@@ -396,7 +396,7 @@
                     <td class="text-muted min-w-125px w-125px">CVC check</td>
                     <td class="text-gray-800">
                       Passed
-                      <KTIcon
+                      <AlitaIcon
                         icon-name="check"
                         icon-class="fs-2 text-success"
                       />
@@ -414,7 +414,7 @@
       <!--end::Option-->
       <div class="separator separator-dashed"></div>
       <!--begin::Option-->
-      <div class="py-0" data-kt-customer-payment-method="row">
+      <div class="py-0" data-alita-customer-payment-method="row">
         <!--begin::Header-->
         <div class="py-3 d-flex flex-stack flex-wrap">
           <!--begin::Toggle-->
@@ -428,7 +428,7 @@
           >
             <!--begin::Arrow-->
             <div class="me-3 rotate-90">
-              <KTIcon icon-name="right" icon-class="fs-3" />
+              <AlitaIcon icon-name="right" icon-class="fs-3" />
             </div>
             <!--end::Arrow-->
             <!--begin::Logo-->
@@ -464,7 +464,7 @@
                 title=""
                 data-bs-original-title="Edit"
               >
-                <KTIcon icon-name="pencil" icon-class="fs-3" />
+                <AlitaIcon icon-name="pencil" icon-class="fs-3" />
               </span>
             </a>
             <!--end::Edit-->
@@ -474,10 +474,10 @@
               class="btn btn-icon btn-active-light-primary w-30px h-30px me-3"
               data-bs-toggle="tooltip"
               title=""
-              data-kt-customer-payment-method="delete"
+              data-alita-customer-payment-method="delete"
               data-bs-original-title="Delete"
             >
-              <KTIcon icon-name="trash" icon-class="fs-3" />
+              <AlitaIcon icon-name="trash" icon-class="fs-3" />
             </a>
             <!--end::Delete-->
             <!--begin::More-->
@@ -486,23 +486,23 @@
               class="btn btn-icon btn-active-light-primary w-30px h-30px"
               data-bs-toggle="tooltip"
               title=""
-              data-kt-menu-trigger="click"
-              data-kt-menu-placement="bottom-end"
+              data-alita-menu-trigger="click"
+              data-alita-menu-placement="bottom-end"
               data-bs-original-title="More Options"
             >
-              <KTIcon icon-name="switch" icon-class="fs-3" />
+              <AlitaIcon icon-name="switch" icon-class="fs-3" />
             </a>
             <!--begin::Menu-->
             <div
               class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold w-150px py-3"
-              data-kt-menu="true"
+              data-alita-menu="true"
             >
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a
                   href="#"
                   class="menu-link px-3"
-                  data-kt-payment-mehtod-action="set_as_primary"
+                  data-alita-payment-mehtod-action="set_as_primary"
                   >Set as Primary</a
                 >
               </div>
@@ -572,7 +572,7 @@
                     <td class="text-muted min-w-125px w-125px">Email</td>
                     <td class="text-gray-800">
                       <a href="#" class="text-gray-900 text-hover-primary"
-                        >max@kt.com</a
+                        >max@alita.com</a
                       >
                     </td>
                   </tr>
@@ -592,7 +592,10 @@
                     <td class="text-gray-800">
                       Failed
 
-                      <KTIcon icon-name="cross" icon-class="fs-2 text-danger" />
+                      <AlitaIcon
+                        icon-name="cross"
+                        icon-class="fs-2 text-danger"
+                      />
                     </td>
                   </tr>
                 </tbody>

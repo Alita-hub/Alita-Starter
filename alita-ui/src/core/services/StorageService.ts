@@ -1,4 +1,4 @@
-interface CookieOptions {
+export interface CookieOptions {
     expires?: Date;
     path?: string;
     domain?: string;

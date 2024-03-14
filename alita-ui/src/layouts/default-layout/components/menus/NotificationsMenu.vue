@@ -2,7 +2,7 @@
   <!--begin::Menu-->
   <div
     class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px"
-    data-kt-menu="true"
+    data-alita-menu="true"
   >
     <!--begin::Heading-->
     <div
@@ -66,7 +66,7 @@
                 <!--begin::Symbol-->
                 <div class="symbol symbol-35px me-4">
                   <span :class="`bg-light-${item.state}`" class="symbol-label">
-                    <KTIcon
+                    <AlitaIcon
                       :icon-name="item.icon"
                       :icon-class="`text-${item.state}`"
                     />
@@ -102,7 +102,7 @@
         <div class="py-3 text-center border-top">
           <a href="#" class="btn btn-color-gray-600 btn-active-color-primary">
             View All
-            <KTIcon icon-name="arrow-right" icon-class="fs-5" />
+            <AlitaIcon icon-name="arrow-right" icon-class="fs-5" />
           </a>
         </div>
         <!--end::View more-->
@@ -196,7 +196,7 @@
         <div class="py-3 text-center border-top">
           <a href="#" class="btn btn-color-gray-600 btn-active-color-primary">
             View All
-            <KTIcon icon-name="arrow-right" icon-class="fs-5" />
+            <AlitaIcon icon-name="arrow-right" icon-class="fs-5" />
           </a>
         </div>
         <!--end::View more-->

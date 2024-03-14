@@ -1,6 +1,7 @@
 package com.alita.framework.security.handler;
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.DefaultRedirectStrategy;
@@ -28,8 +29,6 @@ public class AuthenticationEntryPointImpl implements AuthenticationEntryPoint {
     @Qualifier("handlerExceptionResolver")
     private HandlerExceptionResolver resolver;
 
-    private final RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
-
     /**
      * 主要作用：
      *      1. 处理未认证的用户，引导进入认证流程（直接重定向到登录页面）
@@ -47,8 +46,8 @@ public class AuthenticationEntryPointImpl implements AuthenticationEntryPoint {
         * */
         resolver.resolveException(request, response, null, authException);
 
-        //重定向登录页面
-        redirectStrategy.sendRedirect(request, response, "/authentication/loginPage");
+        //返回401
+        response.sendError(HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED.getReasonPhrase());
     }
 
 

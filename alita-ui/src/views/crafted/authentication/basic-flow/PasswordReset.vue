@@ -99,7 +99,7 @@ export default defineComponent({
       // eslint-disable-next-line
       submitButton.value!.disabled = true;
       // Activate loading indicator
-      submitButton.value?.setAttribute("data-kt-indicator", "on");
+      submitButton.value?.setAttribute("data-alita-indicator", "on");
 
       // dummy delay
       // Send login request
@@ -131,9 +131,9 @@ export default defineComponent({
         });
       }
 
-      submitButton.value?.removeAttribute("data-kt-indicator");
+      submitButton.value?.removeAttribute("data-alita-indicator");
       // eslint-disable-next-line
-        submitButton.value!.disabled = false;
+      submitButton.value!.disabled = false;
     };
 
     return {

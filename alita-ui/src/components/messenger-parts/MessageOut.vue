@@ -22,7 +22,7 @@
       <!--begin::Text-->
       <div
         class="p-5 rounded bg-light-primary text-gray-900 fw-semobold mw-lg-400px text-end"
-        data-kt-element="message-text"
+        data-alita-element="message-text"
       >
         {{ text }}
       </div>

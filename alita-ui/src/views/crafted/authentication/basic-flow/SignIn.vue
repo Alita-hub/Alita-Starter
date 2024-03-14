@@ -7,7 +7,11 @@
       id="kt_login_signin_form"
       @submit="onSubmitLogin"
       :validation-schema="login"
-      :initial-values="{ username: 'admin', password: 'admin@123456', loginType: 'username' }"
+      :initial-values="{
+        username: 'admin',
+        password: 'admin@123456',
+        loginType: 'username',
+      }"
     >
       <!--begin::Heading-->
       <div class="text-center mb-10">
@@ -62,7 +66,9 @@
         <!--begin::Wrapper-->
         <div class="d-flex flex-stack mb-2">
           <!--begin::Label-->
-          <label class="form-label fw-bold text-gray-900 fs-6 mb-0">Password</label>
+          <label class="form-label fw-bold text-gray-900 fs-6 mb-0"
+            >Password</label
+          >
           <!--end::Label-->
 
           <!--begin::Link-->
@@ -178,7 +184,7 @@ export default defineComponent({
     ErrorMessage,
   },
   setup() {
-    const store = useAuthStore();
+    const authStore = useAuthStore();
     const router = useRouter();
 
     const submitButton = ref<HTMLButtonElement | null>(null);
@@ -193,24 +199,27 @@ export default defineComponent({
     const onSubmitLogin = async (values: any) => {
       values = values as User;
       // Clear existing errors
-      store.logout();
+      authStore.logout();
 
       if (submitButton.value) {
         // eslint-disable-next-line
         submitButton.value!.disabled = true;
         // Activate indicator
-        submitButton.value.setAttribute("data-kt-indicator", "on");
+        submitButton.value.setAttribute("data-alita-indicator", "on");
       }
 
       // Send login request
-      await store.login(values);
-      const error = Object.values(store.errors);
+      await authStore.login(values);
+      const msg = Object.values(authStore.msg);
 
-      if (error.length === 0) {
+      if (authStore.isAuthenticated) {
         Swal.fire({
-          text: "You have successfully logged in!",
+          text: "认证成功！",
           icon: "success",
+          showConfirmButton: false,
+          showCancelButton: false,
           buttonsStyling: false,
+          timer: 1000,
           confirmButtonText: "Ok, got it!",
           heightAuto: false,
           customClass: {
@@ -222,7 +231,7 @@ export default defineComponent({
         });
       } else {
         Swal.fire({
-          text: error[0] as string,
+          text: msg[0] as string,
           icon: "error",
           buttonsStyling: false,
           confirmButtonText: "Try again!",
@@ -231,14 +240,14 @@ export default defineComponent({
             confirmButton: "btn fw-semibold btn-light-danger",
           },
         }).then(() => {
-          store.errors = {};
+          authStore.msg = "";
         });
       }
 
       //Deactivate indicator
-      submitButton.value?.removeAttribute("data-kt-indicator");
+      submitButton.value?.removeAttribute("data-alita-indicator");
       // eslint-disable-next-line
-        submitButton.value!.disabled = false;
+      submitButton.value!.disabled = false;
     };
 
     return {

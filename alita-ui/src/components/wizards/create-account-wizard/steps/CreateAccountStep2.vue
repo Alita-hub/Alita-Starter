@@ -1,6 +1,6 @@
 <template>
   <!--begin::Step 2-->
-  <div data-kt-stepper-element="content">
+  <div data-alita-stepper-element="content">
     <!--begin::Wrapper-->
     <div class="w-100">
       <!--begin::Heading-->
@@ -32,7 +32,7 @@
         <!--end::Label-->
 
         <!--begin::Row-->
-        <div class="row mb-2" data-kt-buttons="true">
+        <div class="row mb-2" data-alita-buttons="true">
           <!--begin::Col-->
           <div class="col">
             <!--begin::Option-->
@@ -166,7 +166,7 @@
               <!--begin::Icon-->
               <span class="symbol symbol-50px me-6">
                 <span class="symbol-label">
-                  <KTIcon icon-name="bank" icon-class="fs-1 text-gray-600" />
+                  <AlitaIcon icon-name="bank" icon-class="fs-1 text-gray-600" />
                 </span>
               </span>
               <!--end::Icon-->
@@ -204,7 +204,10 @@
               <!--begin::Icon-->
               <span class="symbol symbol-50px me-6">
                 <span class="symbol-label">
-                  <KTIcon icon-name="chart" icon-class="fs-1 text-gray-600" />
+                  <AlitaIcon
+                    icon-name="chart"
+                    icon-class="fs-1 text-gray-600"
+                  />
                 </span>
               </span>
               <!--end::Icon-->
@@ -243,7 +246,7 @@
               <!--begin::Icon-->
               <span class="symbol symbol-50px me-6">
                 <span class="symbol-label">
-                  <KTIcon
+                  <AlitaIcon
                     icon-name="chart-pie-4"
                     icon-class="fs-1 text-gray-600"
                   />

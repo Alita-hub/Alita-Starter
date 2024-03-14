@@ -3,14 +3,14 @@
   <div
     class="card card-flush pt-3 mb-0"
     id="kt_add_summary"
-    data-kt-sticky="true"
-    data-kt-sticky-name="add-subscription-summary"
-    data-kt-sticky-offset="{default: false, lg: '200px'}"
-    data-kt-sticky-width="{lg: '250px', xl: '300px'}"
-    data-kt-sticky-left="auto"
-    data-kt-sticky-top="150px"
-    data-kt-sticky-animation="false"
-    data-kt-sticky-zindex="95"
+    data-alita-sticky="true"
+    data-alita-sticky-name="add-subscription-summary"
+    data-alita-sticky-offset="{default: false, lg: '200px'}"
+    data-alita-sticky-width="{lg: '250px', xl: '300px'}"
+    data-alita-sticky-left="auto"
+    data-alita-sticky-top="150px"
+    data-alita-sticky-animation="false"
+    data-alita-sticky-zindex="95"
   >
     <!--begin::Card header-->
     <div class="card-header">
@@ -140,7 +140,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "kt-summary",
+  name: "alita-summary",
   components: {},
   setup() {
     return {

@@ -3,14 +3,14 @@
   <div
     id="kt_drawer_chat"
     class="bg-body"
-    data-kt-drawer="true"
-    data-kt-drawer-name="chat"
-    data-kt-drawer-activate="true"
-    data-kt-drawer-overlay="true"
-    data-kt-drawer-width="{default:'300px', 'md': '500px'}"
-    data-kt-drawer-direction="end"
-    data-kt-drawer-toggle="#kt_drawer_chat_toggle"
-    data-kt-drawer-close="#kt_drawer_chat_close"
+    data-alita-drawer="true"
+    data-alita-drawer-name="chat"
+    data-alita-drawer-activate="true"
+    data-alita-drawer-overlay="true"
+    data-alita-drawer-width="{default:'300px', 'md': '500px'}"
+    data-alita-drawer-direction="end"
+    data-alita-drawer-toggle="#kt_drawer_chat_toggle"
+    data-alita-drawer-close="#kt_drawer_chat_close"
   >
     <!--begin::Messenger-->
     <div class="card w-100" id="kt_drawer_chat_messenger">
@@ -45,9 +45,9 @@
           <div class="me-2">
             <button
               class="btn btn-sm btn-icon btn-active-icon-primary"
-              data-kt-menu-trigger="click"
-              data-kt-menu-placement="bottom-end"
-              data-kt-menu-flip="top-end"
+              data-alita-menu-trigger="click"
+              data-alita-menu-placement="bottom-end"
+              data-alita-menu-flip="top-end"
             >
               <i class="bi bi-three-dots fs-3"></i>
             </button>
@@ -60,7 +60,7 @@
             class="btn btn-sm btn-icon btn-active-icon-primary"
             id="kt_drawer_chat_close"
           >
-            <KTIcon icon-name="cross" icon-class="fs-2x" />
+            <AlitaIcon icon-name="cross" icon-class="fs-2x" />
           </div>
           <!--end::Close-->
         </div>
@@ -74,13 +74,13 @@
         <div
           class="scroll-y me-n5 pe-5"
           ref="messagesRef"
-          data-kt-element="messages"
-          data-kt-scroll="true"
-          data-kt-scroll-activate="true"
-          data-kt-scroll-height="auto"
-          data-kt-scroll-dependencies="#kt_drawer_chat_messenger_header, #kt_drawer_chat_messenger_footer"
-          data-kt-scroll-wrappers="#kt_drawer_chat_messenger_body"
-          data-kt-scroll-offset="0px"
+          data-alita-element="messages"
+          data-alita-scroll="true"
+          data-alita-scroll-activate="true"
+          data-alita-scroll-height="auto"
+          data-alita-scroll-dependencies="#kt_drawer_chat_messenger_header, #kt_drawer_chat_messenger_footer"
+          data-alita-scroll-wrappers="#kt_drawer_chat_messenger_body"
+          data-alita-scroll-offset="0px"
         >
           <template v-for="(item, index) in messages" :key="index">
             <MessageIn
@@ -109,7 +109,7 @@
         <!--begin::Input-->
         <input
           class="form-control form-control-flush mb-3"
-          data-kt-element="input"
+          data-alita-element="input"
           placeholder="Type a message"
           v-model="newMessageText"
           @keydown.enter="addNewMessage"
@@ -144,7 +144,7 @@
             @click="addNewMessage"
             class="btn btn-primary"
             type="button"
-            data-kt-element="send"
+            data-alita-element="send"
           >
             Send
           </button>

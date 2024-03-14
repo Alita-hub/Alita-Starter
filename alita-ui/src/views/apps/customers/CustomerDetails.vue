@@ -36,7 +36,10 @@
               >
                 <div class="fs-4 fw-bold text-gray-700">
                   <span class="w-75px">6,900</span>
-                  <KTIcon icon-name="arrow-up" icon-class="fs-3 text-success" />
+                  <AlitaIcon
+                    icon-name="arrow-up"
+                    icon-class="fs-3 text-success"
+                  />
                 </div>
                 <div class="fw-semibold text-muted">Earnings</div>
               </div>
@@ -48,7 +51,7 @@
               >
                 <div class="fs-4 fw-bold text-gray-700">
                   <span class="w-50px">130</span>
-                  <KTIcon
+                  <AlitaIcon
                     icon-name="arrow-down"
                     icon-class="fs-3 text-danger"
                   />
@@ -63,7 +66,10 @@
               >
                 <div class="fs-4 fw-bold text-gray-700">
                   <span class="w-50px">500</span>
-                  <KTIcon icon-name="arrow-up" icon-class="fs-3 text-success" />
+                  <AlitaIcon
+                    icon-name="arrow-up"
+                    icon-class="fs-3 text-success"
+                  />
                 </div>
                 <div class="fw-semibold text-muted">Hours</div>
               </div>
@@ -85,7 +91,7 @@
             >
               Details
               <span class="ms-2 rotate-180">
-                <KTIcon icon-name="down" icon-class="fs-3" />
+                <AlitaIcon icon-name="down" icon-class="fs-3" />
               </span>
             </div>
 
@@ -167,7 +173,7 @@
           <div
             class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6"
           >
-            <KTIcon
+            <AlitaIcon
               icon-name="design-frame"
               icon-class="fs-2tx text-primary me-4"
             />
@@ -198,7 +204,9 @@
                 />
 
                 <div class="d-flex flex-column">
-                  <a href="#" class="fs-5 text-gray-900 text-hover-primary fw-bold"
+                  <a
+                    href="#"
+                    class="fs-5 text-gray-900 text-hover-primary fw-bold"
                     >Google</a
                   >
                   <div class="fs-6 fw-semibold text-muted">
@@ -247,7 +255,9 @@
                 />
 
                 <div class="d-flex flex-column">
-                  <a href="#" class="fs-5 text-gray-900 text-hover-primary fw-bold"
+                  <a
+                    href="#"
+                    class="fs-5 text-gray-900 text-hover-primary fw-bold"
                     >Github</a
                   >
                   <div class="fs-6 fw-semibold text-muted">
@@ -296,7 +306,9 @@
                 />
 
                 <div class="d-flex flex-column">
-                  <a href="#" class="fs-5 text-gray-900 text-hover-primary fw-bold"
+                  <a
+                    href="#"
+                    class="fs-5 text-gray-900 text-hover-primary fw-bold"
                     >Slack</a
                   >
                   <div class="fs-6 fw-semibold text-muted">
@@ -377,7 +389,7 @@
         <li class="nav-item">
           <a
             class="nav-link text-active-primary pb-4"
-            data-kt-countup-tabs="true"
+            data-alita-countup-tabs="true"
             data-bs-toggle="tab"
             href="#kt_customer_view_overview_statements"
             >Statements</a
@@ -391,12 +403,12 @@
           <a
             href="#"
             class="btn btn-primary ps-7"
-            data-kt-menu-trigger="click"
-            data-kt-menu-attach="parent"
-            data-kt-menu-placement="bottom-end"
+            data-alita-menu-trigger="click"
+            data-alita-menu-attach="parent"
+            data-alita-menu-placement="bottom-end"
           >
             Actions
-            <KTIcon icon-name="down" icon-class="fs-2 me-0" />
+            <AlitaIcon icon-name="down" icon-class="fs-2 me-0" />
           </a>
           <Dropdown3></Dropdown3>
           <!--end::Menu-->

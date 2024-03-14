@@ -5,7 +5,7 @@
     <div class="card-header card-header-stretch">
       <!--begin::Title-->
       <div class="card-title d-flex align-items-center">
-        <KTIcon
+        <AlitaIcon
           icon-name="calendar-8"
           icon-class="fs-1 text-primary me-3 lh-0"
         />

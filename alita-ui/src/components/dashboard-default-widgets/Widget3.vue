@@ -13,12 +13,17 @@
           <!--end::Currency-->
 
           <!--begin::Amount-->
-          <span class="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2">69,700</span>
+          <span class="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2"
+            >69,700</span
+          >
           <!--end::Amount-->
 
           <!--begin::Badge-->
           <span class="badge badge-light-success fs-base">
-            <KTIcon icon-name="arrow-up" icon-class="fs-5 text-success ms-n1" />
+            <AlitaIcon
+              icon-name="arrow-up"
+              icon-class="fs-5 text-success ms-n1"
+            />
             2.2%
           </span>
           <!--end::Badge-->
@@ -45,8 +50,8 @@
             minWidth: `${chartSize}px`,
             minHeight: `${chartSize}px`,
           }"
-          :data-kt-size="chartSize"
-          :data-kt-line="11"
+          :data-alita-size="chartSize"
+          :data-alita-line="11"
         ></div>
       </div>
       <!--end::Chart-->
@@ -132,16 +137,16 @@ export default defineComponent({
       }
 
       var options = {
-        size: el.getAttribute("data-kt-size")
-          ? parseInt(el.getAttribute("data-kt-size") as string)
+        size: el.getAttribute("data-alita-size")
+          ? parseInt(el.getAttribute("data-alita-size") as string)
           : 70,
-        lineWidth: el.getAttribute("data-kt-line")
-          ? parseInt(el.getAttribute("data-kt-line") as string)
+        lineWidth: el.getAttribute("data-alita-line")
+          ? parseInt(el.getAttribute("data-alita-line") as string)
           : 11,
-        rotate: el.getAttribute("data-kt-rotate")
-          ? parseInt(el.getAttribute("data-kt-rotate") as string)
+        rotate: el.getAttribute("data-alita-rotate")
+          ? parseInt(el.getAttribute("data-alita-rotate") as string)
           : 145,
-        //percent:  el.getAttribute('data-kt-percent') ,
+        //percent:  el.getAttribute('data-alita-percent') ,
       };
 
       var canvas = document.createElement("canvas");

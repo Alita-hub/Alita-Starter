@@ -17,7 +17,7 @@
           data-bs-toggle="modal"
           data-bs-target="#kt_modal_adjust_balance"
         >
-          <KTIcon icon-name="pencil" icon-class="fs-3" />
+          <AlitaIcon icon-name="pencil" icon-class="fs-3" />
           Adjust Balance
         </a>
       </div>

@@ -19,7 +19,7 @@
           <div class="d-flex align-items-center">
             <template v-for="(icon, i) in question.icons" :key="i">
               <span class="ms-1" data-bs-toggle="tooltip" :title="icon.tooltip">
-                <KTIcon
+                <AlitaIcon
                   :icon-name="icon.name"
                   :icon-class="`fs-1 ${icon.class}`"
                 />
@@ -97,7 +97,7 @@
               data-bs-dismiss="click"
             >
               {{ question.upvotes }}
-              <KTIcon
+              <AlitaIcon
                 icon-name="black-right"
                 :icon-class="`fs-7 ${question.upvotes ? '' : 'ms-2 me-0'}`"
               />

@@ -12,7 +12,7 @@
     <div class="d-flex my-2">
       <!--begin::Search-->
       <div class="d-flex align-items-center position-relative me-4">
-        <KTIcon
+        <AlitaIcon
           icon-name="magnifier"
           icon-class="fs-3 position-absolute ms-3"
         />

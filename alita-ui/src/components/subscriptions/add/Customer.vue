@@ -97,7 +97,7 @@ import { defineComponent, ref } from "vue";
 import Notice from "@/components/Notice.vue";
 
 export default defineComponent({
-  name: "kt-customer",
+  name: "alita-customer",
   components: {
     Notice,
   },

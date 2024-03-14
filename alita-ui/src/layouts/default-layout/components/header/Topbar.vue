@@ -75,7 +75,7 @@
           data-bs-toggle="modal"
           data-bs-target="#kt_modal_invite_friends"
         >
-          <KTIcon icon-name="delete-files" icon-class="fs-2" />
+          <AlitaIcon icon-name="delete-files" icon-class="fs-2" />
         </a>
         <!--end::Action-->
 
@@ -86,7 +86,7 @@
             to="/apps/subscriptions/add-subscription"
             class="btn btn-sm btn-icon btn-icon-muted btn-active-icon-primary"
           >
-            <KTIcon icon-name="add-files" icon-class="fs-2" />
+            <AlitaIcon icon-name="add-files" icon-class="fs-2" />
           </router-link>
           <!--end::Menu wrapper-->
         </div>
@@ -101,7 +101,7 @@
             data-bs-toggle="modal"
             data-bs-target="#kt_modal_create_app"
           >
-            <KTIcon icon-name="file-up" icon-class="fs-2" />
+            <AlitaIcon icon-name="file-up" icon-class="fs-2" />
           </a>
           <!--end::Menu wrapper-->
         </div>
@@ -117,12 +117,12 @@
       <a
         href="#"
         class="btn btn-sm btn-icon btn-icon-muted btn-active-icon-primary"
-        data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-        data-kt-menu-attach="parent"
-        data-kt-menu-placement="bottom-end"
+        data-alita-menu-trigger="{default:'click', lg: 'hover'}"
+        data-alita-menu-attach="parent"
+        data-alita-menu-placement="bottom-end"
       >
-        <KTIcon icon-name="night-day" icon-class="theme-light-show fs-2" />
-        <KTIcon icon-name="moon" icon-class="theme-dark-show fs-2" />
+        <AlitaIcon icon-name="night-day" icon-class="theme-light-show fs-2" />
+        <AlitaIcon icon-name="moon" icon-class="theme-dark-show fs-2" />
       </a>
       <!--begin::Menu toggle-->
       <KTThemeModeSwitcher></KTThemeModeSwitcher>

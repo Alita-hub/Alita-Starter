@@ -12,7 +12,7 @@
           <!--begin::Form-->
           <form class="w-100 position-relative" autocomplete="off">
             <!--begin::Icon-->
-            <KTIcon
+            <AlitaIcon
               icon-name="magnifier"
               icon-class="fs-2 fs-lg-1 text-gray-500 position-absolute top-50 ms-5 translate-middle-y"
             />
@@ -37,12 +37,12 @@
           <!--begin::List-->
           <div
             class="scroll-y me-n5 pe-5 h-200px h-lg-auto"
-            data-kt-scroll="true"
-            data-kt-scroll-activate="{default: false, lg: true}"
-            data-kt-scroll-max-height="auto"
-            data-kt-scroll-dependencies="#kt_header, #kt_toolbar, #kt_footer, #kt_chat_contacts_header"
-            data-kt-scroll-wrappers="#kt_content, #kt_chat_contacts_body"
-            data-kt-scroll-offset="0px"
+            data-alita-scroll="true"
+            data-alita-scroll-activate="{default: false, lg: true}"
+            data-alita-scroll-max-height="auto"
+            data-alita-scroll-dependencies="#kt_header, #kt_toolbar, #kt_footer, #kt_chat_contacts_header"
+            data-alita-scroll-wrappers="#kt_content, #kt_chat_contacts_body"
+            data-alita-scroll-offset="0px"
           >
             <template v-for="(item, index) in contacts" :key="index">
               <div class="d-flex flex-stack py-4">
@@ -188,9 +188,9 @@
             <div class="me-n3">
               <button
                 class="btn btn-sm btn-icon btn-active-light-primary"
-                data-kt-menu-trigger="click"
-                data-kt-menu-placement="bottom-end"
-                data-kt-menu-flip="top-end"
+                data-alita-menu-trigger="click"
+                data-alita-menu-placement="bottom-end"
+                data-alita-menu-flip="top-end"
               >
                 <i class="bi bi-three-dots fs-2"></i>
               </button>
@@ -208,13 +208,13 @@
           <div
             class="scroll-y me-n5 pe-5 h-300px h-lg-auto"
             ref="messagesRef"
-            data-kt-element="messages"
-            data-kt-scroll="true"
-            data-kt-scroll-activate="{default: false, lg: true}"
-            data-kt-scroll-max-height="auto"
-            data-kt-scroll-dependencies="#kt_header, #kt_app_header, #kt_app_toolbar, #kt_toolbar, #kt_footer, #kt_app_footer, #kt_chat_messenger_header, #kt_chat_messenger_footer"
-            data-kt-scroll-wrappers="#kt_content, #kt_app_content, #kt_chat_messenger_body"
-            data-kt-scroll-offset="5px"
+            data-alita-element="messages"
+            data-alita-scroll="true"
+            data-alita-scroll-activate="{default: false, lg: true}"
+            data-alita-scroll-max-height="auto"
+            data-alita-scroll-dependencies="#kt_header, #kt_app_header, #kt_app_toolbar, #kt_toolbar, #kt_footer, #kt_app_footer, #kt_chat_messenger_header, #kt_chat_messenger_footer"
+            data-alita-scroll-wrappers="#kt_content, #kt_app_content, #kt_chat_messenger_body"
+            data-alita-scroll-offset="5px"
           >
             <template v-for="(item, index) in messages" :key="index">
               <MessageIn
@@ -245,7 +245,7 @@
             v-model="newMessageText"
             @keydown.enter="addNewMessage"
             class="form-control form-control-flush mb-3"
-            data-kt-element="input"
+            data-alita-element="input"
             placeholder="Type a message"
           />
           <!--end::Input-->
@@ -278,7 +278,7 @@
               @click="addNewMessage"
               class="btn btn-primary"
               type="button"
-              data-kt-element="send"
+              data-alita-element="send"
             >
               Send
             </button>

@@ -18,7 +18,7 @@
           data-bs-toggle="modal"
           data-bs-target="#kt_modal_add_payment"
         >
-          <KTIcon icon-name="plus-square" icon-class="fs-3" />
+          <AlitaIcon icon-name="plus-square" icon-class="fs-3" />
           Add payment
         </button>
         <!--end::Filter-->
@@ -53,16 +53,16 @@
           <a
             href="#"
             class="btn btn-sm btn-light btn-active-light-primary"
-            data-kt-menu-trigger="click"
-            data-kt-menu-placement="bottom-end"
-            data-kt-menu-flip="top-end"
+            data-alita-menu-trigger="click"
+            data-alita-menu-placement="bottom-end"
+            data-alita-menu-flip="top-end"
             >Actions
-            <KTIcon icon-name="down" icon-class="fs-5 m-0" />
+            <AlitaIcon icon-name="down" icon-class="fs-5 m-0" />
           </a>
           <!--begin::Menu-->
           <div
             class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-            data-kt-menu="true"
+            data-alita-menu="true"
           >
             <!--begin::Menu item-->
             <div class="menu-item px-3">
@@ -93,7 +93,7 @@
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent, ref } from "vue";
-import Datatable from "@/components/kt-datatable/KTDataTable.vue";
+import Datatable from "@/components/alita-datatable/KTDataTable.vue";
 
 export default defineComponent({
   name: "payment-records",

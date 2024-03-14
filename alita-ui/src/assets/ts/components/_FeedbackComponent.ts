@@ -45,7 +45,7 @@ class FeedbackComponent {
     });
   };
 
-  private _go = () => {};
+  private _go = () => { };
 
   private showPopup = () => {
     this.element = document.createElement("DIV");
@@ -81,7 +81,7 @@ class FeedbackComponent {
   // ** Public API  ** //
   ///////////////////////
   public show = () => {
-    if (EventHandlerUtil.trigger(this.element, "kt.feedback.show") === false) {
+    if (EventHandlerUtil.trigger(this.element, "alita.feedback.show") === false) {
       return;
     }
 
@@ -89,13 +89,13 @@ class FeedbackComponent {
       this.showPopup();
     }
 
-    EventHandlerUtil.trigger(this.element, "kt.feedback.shown");
+    EventHandlerUtil.trigger(this.element, "alita.feedback.shown");
 
     return this;
   };
 
   public hide = () => {
-    if (EventHandlerUtil.trigger(this.element, "kt.feedback.hide") === false) {
+    if (EventHandlerUtil.trigger(this.element, "alita.feedback.hide") === false) {
       return;
     }
 
@@ -104,7 +104,7 @@ class FeedbackComponent {
     }
 
     this.shown = false;
-    EventHandlerUtil.trigger(this.element, "kt.feedback.hidden");
+    EventHandlerUtil.trigger(this.element, "alita.feedback.hidden");
     return this;
   };
 

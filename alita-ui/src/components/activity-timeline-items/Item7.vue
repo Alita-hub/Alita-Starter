@@ -8,7 +8,7 @@
     <!--begin::Timeline icon-->
     <div class="timeline-icon symbol symbol-circle symbol-40px">
       <div class="symbol-label bg-light">
-        <KTIcon icon-name="pencil" icon-class="fs-2 text-gray-500" />
+        <AlitaIcon icon-name="pencil" icon-class="fs-2 text-gray-500" />
       </div>
     </div>
     <!--end::Timeline icon-->
@@ -49,7 +49,7 @@
           class="notice d-flex bg-light-primary rounded border-primary border border-dashed min-w-lg-600px flex-shrink-0 p-6"
         >
           <!--begin::Icon-->
-          <KTIcon
+          <AlitaIcon
             icon-name="disconnect"
             icon-class="fs-2tx text-primary me-4"
           />

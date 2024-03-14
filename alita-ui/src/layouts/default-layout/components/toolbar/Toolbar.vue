@@ -12,9 +12,9 @@
     >
       <!--begin::Page title-->
       <div
-        data-kt-swapper="true"
-        data-kt-swapper-mode="prepend"
-        data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
+        data-alita-swapper="true"
+        data-alita-swapper-mode="prepend"
+        data-alita-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
         class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0"
       >
         <!--begin::Title-->
@@ -65,11 +65,11 @@
           <a
             href="#"
             class="btn btn-sm btn-flex btn-light btn-active-primary fw-bold"
-            data-kt-menu-trigger="click"
-            data-kt-menu-placement="bottom-end"
-            data-kt-menu-flip="top-end"
+            data-alita-menu-trigger="click"
+            data-alita-menu-placement="bottom-end"
+            data-alita-menu-flip="top-end"
           >
-            <KTIcon icon-name="filer" icon-class="fs-5 text-gray-500 me-1" />
+            <AlitaIcon icon-name="filer" icon-class="fs-5 text-gray-500 me-1" />
             Filter
           </a>
 

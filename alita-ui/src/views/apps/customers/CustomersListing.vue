@@ -5,7 +5,7 @@
       <div class="card-title">
         <!--begin::Search-->
         <div class="d-flex align-items-center position-relative my-1">
-          <KTIcon
+          <AlitaIcon
             icon-name="magnifier"
             icon-class="fs-1 position-absolute ms-6"
           />
@@ -26,7 +26,7 @@
         <div
           v-if="selectedIds.length === 0"
           class="d-flex justify-content-end"
-          data-kt-customer-table-toolbar="base"
+          data-alita-customer-table-toolbar="base"
         >
           <!--begin::Export-->
           <button
@@ -35,7 +35,7 @@
             data-bs-toggle="modal"
             data-bs-target="#kt_customers_export_modal"
           >
-            <KTIcon icon-name="exit-up" icon-class="fs-2" />
+            <AlitaIcon icon-name="exit-up" icon-class="fs-2" />
             Export
           </button>
           <!--end::Export-->
@@ -46,7 +46,7 @@
             data-bs-toggle="modal"
             data-bs-target="#kt_modal_add_customer"
           >
-            <KTIcon icon-name="plus" icon-class="fs-2" />
+            <AlitaIcon icon-name="plus" icon-class="fs-2" />
             Add Customer
           </button>
           <!--end::Add customer-->
@@ -56,7 +56,7 @@
         <div
           v-else
           class="d-flex justify-content-end align-items-center"
-          data-kt-customer-table-toolbar="selected"
+          data-alita-customer-table-toolbar="selected"
         >
           <div class="fw-bold me-5">
             <span class="me-2">{{ selectedIds.length }}</span
@@ -74,19 +74,19 @@
         <!--begin::Group actions-->
         <div
           class="d-flex justify-content-end align-items-center d-none"
-          data-kt-customer-table-toolbar="selected"
+          data-alita-customer-table-toolbar="selected"
         >
           <div class="fw-bold me-5">
             <span
               class="me-2"
-              data-kt-customer-table-select="selected_count"
+              data-alita-customer-table-select="selected_count"
             ></span
             >Selected
           </div>
           <button
             type="button"
             class="btn btn-danger"
-            data-kt-customer-table-select="delete_selected"
+            data-alita-customer-table-select="delete_selected"
           >
             Delete Selected
           </button>
@@ -128,16 +128,16 @@
           <a
             href="#"
             class="btn btn-sm btn-light btn-active-light-primary"
-            data-kt-menu-trigger="click"
-            data-kt-menu-placement="bottom-end"
-            data-kt-menu-flip="top-end"
+            data-alita-menu-trigger="click"
+            data-alita-menu-placement="bottom-end"
+            data-alita-menu-flip="top-end"
             >Actions
-            <KTIcon icon-name="down" icon-class="fs-5 m-0" />
+            <AlitaIcon icon-name="down" icon-class="fs-5 m-0" />
           </a>
           <!--begin::Menu-->
           <div
             class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-            data-kt-menu="true"
+            data-alita-menu="true"
           >
             <!--begin::Menu item-->
             <div class="menu-item px-3">
@@ -169,8 +169,8 @@
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent, onMounted, ref } from "vue";
-import Datatable from "@/components/kt-datatable/KTDataTable.vue";
-import type { Sort } from "@/components/kt-datatable//table-partials/models";
+import Datatable from "@/components/alita-datatable/KTDataTable.vue";
+import type { Sort } from "@/components/alita-datatable//table-partials/models";
 import ExportCustomerModal from "@/components/modals/forms/ExportCustomerModal.vue";
 import AddCustomerModal from "@/components/modals/forms/AddCustomerModal.vue";
 import type { ICustomer } from "@/core/data/customers";

@@ -144,7 +144,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "kt-events",
+  name: "alita-events",
   components: {},
   setup() {
     return {

@@ -12,7 +12,7 @@
       </h3>
 
       <!--begin::Toolbar-->
-      <div class="card-toolbar" data-kt-buttons="true">
+      <div class="card-toolbar" data-alita-buttons="true">
         <a
           class="btn btn-sm btn-color-muted btn-active btn-active-primary active px-4 me-1"
           id="kt_charts_widget_3_year_btn"

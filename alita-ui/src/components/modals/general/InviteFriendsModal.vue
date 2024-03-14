@@ -17,7 +17,7 @@
             class="btn btn-sm btn-icon btn-active-color-primary"
             data-bs-dismiss="modal"
           >
-            <KTIcon icon-name="cross" icon-class="fs-1" />
+            <AlitaIcon icon-name="cross" icon-class="fs-1" />
           </div>
           <!--end::Close-->
         </div>
@@ -198,7 +198,7 @@ export default defineComponent({
       {
         avatar: getAssetPath("media/avatars/300-1.jpg"),
         name: "Max Smith",
-        email: "max@kt.com",
+        email: "max@alita.com",
         access: "3",
       },
       {

@@ -50,7 +50,9 @@
       <div class="row fv-row mb-7">
         <!--begin::Col-->
         <div class="col-xl-6">
-          <label class="form-label fw-bold text-gray-900 fs-6">First Name</label>
+          <label class="form-label fw-bold text-gray-900 fs-6"
+            >First Name</label
+          >
           <Field
             class="form-control form-control-lg form-control-solid"
             type="text"
@@ -105,11 +107,13 @@
       <!--end::Input group-->
 
       <!--begin::Input group-->
-      <div class="mb-10 fv-row" data-kt-password-meter="true">
+      <div class="mb-10 fv-row" data-alita-password-meter="true">
         <!--begin::Wrapper-->
         <div class="mb-1">
           <!--begin::Label-->
-          <label class="form-label fw-bold text-gray-900 fs-6"> Password </label>
+          <label class="form-label fw-bold text-gray-900 fs-6">
+            Password
+          </label>
           <!--end::Label-->
 
           <!--begin::Input wrapper-->
@@ -131,7 +135,7 @@
           <!--begin::Meter-->
           <div
             class="d-flex align-items-center mb-3"
-            data-kt-password-meter-control="highlight"
+            data-alita-password-meter-control="highlight"
           >
             <div
               class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"
@@ -268,7 +272,7 @@ export default defineComponent({
       submitButton.value!.disabled = true;
 
       // Activate indicator
-      submitButton.value?.setAttribute("data-kt-indicator", "on");
+      submitButton.value?.setAttribute("data-alita-indicator", "on");
 
       // Send login request
       await store.register(values);
@@ -302,7 +306,7 @@ export default defineComponent({
         });
       }
 
-      submitButton.value?.removeAttribute("data-kt-indicator");
+      submitButton.value?.removeAttribute("data-alita-indicator");
       // eslint-disable-next-line
       submitButton.value!.disabled = false;
     };

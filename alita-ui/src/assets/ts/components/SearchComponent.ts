@@ -37,8 +37,8 @@ const defaultSearchOptions: ISearchOptions = {
 
 const defaultSearchQueires: ISearchQueries = {
   componentName: "search",
-  instanseQuery: "[data-kt-search]",
-  attrQuery: "data-kt-search-",
+  instanseQuery: "[data-alita-search]",
+  attrQuery: "data-alitaita-search-",
 };
 
 class SearchComponent {
@@ -106,7 +106,7 @@ class SearchComponent {
 
   private _getElement = (name: string) => {
     return this.element.querySelector(
-      '[data-kt-search-element="' + name + '"]'
+      '[data-alitaita-search-element="' + name + '"]'
     );
   };
 
@@ -235,7 +235,7 @@ class SearchComponent {
       if (this.toggleElement) {
         this.toggleElement.addEventListener("click", this.show);
 
-        this.menuObject.on("kt.menu.dropdown.show", function () {
+        this.menuObject.on("alita.menu.dropdown.show", function () {
           // @ts-ignore
           if (isVisibleElement(context.toggleElement)) {
             // @ts-ignore
@@ -245,7 +245,7 @@ class SearchComponent {
           }
         });
 
-        this.menuObject.on("kt.menu.dropdown.hide", function () {
+        this.menuObject.on("alita.menu.dropdown.hide", function () {
           // @ts-ignore
           if (isVisibleElement(context.toggleElement)) {
             // @ts-ignore
@@ -256,7 +256,7 @@ class SearchComponent {
         });
       }
 
-      this.menuObject.on("kt.menu.dropdown.shown", function () {
+      this.menuObject.on("alita.menu.dropdown.shown", function () {
         // @ts-ignore
         context.inputElement.focus();
       });
@@ -341,7 +341,7 @@ class SearchComponent {
       this.inputElement.focus();
 
       this.processing = true;
-      EventHandlerUtil.trigger(this.element, "kt.search.process", this);
+      EventHandlerUtil.trigger(this.element, "alita.search.process", this);
     }
   };
 
@@ -370,7 +370,7 @@ class SearchComponent {
 
   // Clear
   public clear = () => {
-    if (EventHandlerUtil.trigger(this.element, "kt.search.clear") === false) {
+    if (EventHandlerUtil.trigger(this.element, "alita.search.clear") === false) {
       return;
     }
 
@@ -393,7 +393,7 @@ class SearchComponent {
       this.hide();
     }
 
-    EventHandlerUtil.trigger(this.element, "kt.search.cleared");
+    EventHandlerUtil.trigger(this.element, "alita.search.cleared");
   };
 
   public isProcessing = () => {

@@ -13,7 +13,7 @@
       <div class="card-toolbar">
         <!--begin::Button-->
         <button type="button" class="btn btn-sm btn-light-primary">
-          <KTIcon icon-name="cloud-change" icon-class="fs-3" />
+          <AlitaIcon icon-name="cloud-change" icon-class="fs-3" />
           Download Report
         </button>
         <!--end::Button-->

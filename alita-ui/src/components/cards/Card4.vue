@@ -60,8 +60,8 @@
         <!--begin::Link-->
         <button
           class="btn btn-sm btn-light-primary fw-bold"
-          data-kt-drawer-toggle="true"
-          data-kt-drawer-target="#kt_drawer_chat"
+          data-alita-drawer-toggle="true"
+          data-alita-drawer-target="#kt_drawer_chat"
           @click="openDrawer()"
         >
           Send Message

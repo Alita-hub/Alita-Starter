@@ -30,7 +30,7 @@ import Invoices from "@/components/subscriptions/view/Invoices.vue";
 import ViewSummary from "@/components/subscriptions/view/Summary.vue";
 
 export default defineComponent({
-  name: "kt-view-subscription",
+  name: "alita-view-subscription",
   components: {
     ViewDetails,
     Events,

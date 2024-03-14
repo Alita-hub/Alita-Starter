@@ -1,7 +1,7 @@
 <template>
   <div
     class="card card-flush pt-3 mb-5 mb-lg-10"
-    data-kt-subscriptions-form="pricing"
+    data-alita-subscriptions-form="pricing"
   >
     <div class="card-header">
       <div class="card-title">
@@ -32,11 +32,14 @@
               <div
                 class="btn btn-sm btn-icon btn-active-color-primary ms-n3 me-2"
               >
-                <KTIcon
+                <AlitaIcon
                   icon-name="minus-square"
                   icon-class="toggle-on text-primary fs-2"
                 />
-                <KTIcon icon-name="plus-square" icon-class="toggle-off fs-2" />
+                <AlitaIcon
+                  icon-name="plus-square"
+                  icon-class="toggle-off fs-2"
+                />
               </div>
 
               <img
@@ -139,7 +142,7 @@
                       <td class="text-muted min-w-125px w-125px">CVC check</td>
                       <td class="text-gray-800">
                         Passed
-                        <KTIcon
+                        <AlitaIcon
                           icon-name="check-circle"
                           icon-class="fs-2 text-success"
                         />
@@ -164,12 +167,15 @@
               <div
                 class="btn btn-sm btn-icon btn-active-color-primary ms-n3 me-2"
               >
-                <KTIcon
+                <AlitaIcon
                   icon-name="minus-square"
                   icon-class="toggle-on text-primary fs-2"
                 />
 
-                <KTIcon icon-name="plus-square" icon-class="toggle-off fs-2" />
+                <AlitaIcon
+                  icon-name="plus-square"
+                  icon-class="toggle-off fs-2"
+                />
               </div>
 
               <img
@@ -266,7 +272,7 @@
                       <td class="text-muted min-w-125px w-125px">CVC check</td>
                       <td class="text-gray-800">
                         Passed
-                        <KTIcon
+                        <AlitaIcon
                           icon-name="check"
                           icon-class="fs-2 text-success"
                         />
@@ -291,11 +297,14 @@
               <div
                 class="btn btn-sm btn-icon btn-active-color-primary ms-n3 me-2"
               >
-                <KTIcon
+                <AlitaIcon
                   icon-name="minus-square"
                   icon-class="toggle-on text-primary fs-2"
                 />
-                <KTIcon icon-name="plus-square" icon-class="toggle-off fs-2" />
+                <AlitaIcon
+                  icon-name="plus-square"
+                  icon-class="toggle-off fs-2"
+                />
               </div>
 
               <img
@@ -376,7 +385,7 @@
                       <td class="text-muted min-w-125px w-125px">Email</td>
                       <td class="text-gray-800">
                         <a href="#" class="text-gray-900 text-hover-primary"
-                          >max@kt.com</a
+                          >max@alita.com</a
                         >
                       </td>
                     </tr>
@@ -396,7 +405,7 @@
                       <td class="text-gray-800">
                         Failed
 
-                        <KTIcon
+                        <AlitaIcon
                           icon-name="cross"
                           icon-class="fs-2 text-danger"
                         />
@@ -418,7 +427,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "kt-payment-method",
+  name: "alita-payment-method",
   components: {},
   setup() {
     return {

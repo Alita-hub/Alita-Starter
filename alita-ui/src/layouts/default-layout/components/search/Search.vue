@@ -1,20 +1,20 @@
 <template>
-  <MenuComponent menu-selector="#kt-search-menu">
+  <MenuComponent menu-selector="#alita-search-menu">
     <template v-slot:toggle>
       <!--begin::Search-->
       <div
         id="kt_header_search"
         class="header-search d-flex align-items-stretch"
-        data-kt-menu-target="#kt-search-menu"
-        data-kt-menu-trigger="click"
-        data-kt-menu-attach="parent"
-        data-kt-menu-placement="bottom-end"
-        data-kt-menu-flip="bottom"
+        data-alita-menu-target="#alita-search-menu"
+        data-alita-menu-trigger="click"
+        data-alita-menu-attach="parent"
+        data-alita-menu-placement="bottom-end"
+        data-alita-menu-flip="bottom"
       >
         <!--begin::Search toggle-->
         <div class="d-flex align-items-center" id="kt_header_search_toggle">
           <div class="btn btn-icon btn-active-light-primary">
-            <KTIcon icon-name="magnifier" icon-class="fs-2 fs-md-1" />
+            <AlitaIcon icon-name="magnifier" icon-class="fs-2 fs-md-1" />
           </div>
         </div>
         <!--end::Search toggle-->
@@ -25,15 +25,15 @@
       <!--begin::Menu-->
       <div
         class="menu menu-sub menu-sub-dropdown menu-column p-7 w-325px w-md-375px"
-        data-kt-menu="true"
-        id="kt-search-menu"
+        data-alita-menu="true"
+        id="alita-search-menu"
       >
         <!--begin::Wrapper-->
         <div>
           <!--begin::Form-->
           <form class="w-100 position-relative mb-3" autocomplete="off">
             <!--begin::Icon-->
-            <KTIcon
+            <AlitaIcon
               icon-name="magnifier"
               icon-class="fs-2 fs-lg-1 text-gray-500 position-absolute top-50 translate-middle-y ms-0"
             />
@@ -68,7 +68,7 @@
               @click="reset()"
               class="btn btn-flush btn-active-color-primary position-absolute top-50 end-0 translate-middle-y lh-0"
             >
-              <KTIcon icon-name="cross" icon-class="fs-2 fs-lg-1 me-0" />
+              <AlitaIcon icon-name="cross" icon-class="fs-2 fs-lg-1 me-0" />
             </span>
             <!--end::Reset-->
 
@@ -82,7 +82,7 @@
                 data-bs-toggle="tooltip"
                 title="Show search preferences"
               >
-                <KTIcon icon-name="setting-2" icon-class="fs-1" />
+                <AlitaIcon icon-name="setting-2" icon-class="fs-1" />
               </div>
               <!--end::Preferences toggle-->
 
@@ -94,7 +94,7 @@
                 data-bs-toggle="tooltip"
                 title="Show more search options"
               >
-                <KTIcon icon-name="down" icon-class="fs-2" />
+                <AlitaIcon icon-name="down" icon-class="fs-2" />
               </div>
               <!--end::Advanced search toggle-->
             </div>
@@ -452,7 +452,7 @@ import Empty from "@/layouts/default-layout/components/search/partials/Empty.vue
 import MenuComponent from "@/components/menu/MenuComponent.vue";
 
 export default defineComponent({
-  name: "kt-search",
+  name: "alita-search",
   components: {
     Results,
     PartialMain,
