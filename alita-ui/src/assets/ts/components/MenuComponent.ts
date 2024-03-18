@@ -78,8 +78,9 @@ class MenuComponent {
    * 触发元素可以是指定的目标元素，也可以是最接近的包含特定属性的父元素之一。
    */
   private _setTriggerElement = () => {
+
     // 根据菜单元素的 ID 查询目标元素
-    const target = document.querySelector(`[data-alita-menu-target="#${this.element.getAttribute("id")}"]`);
+    const target = document.querySelector(`[data-alita-menu-target="#${this.element.getAttribute("id")}"`);
 
     // 如果找到目标元素，则将其作为触发元素
     if (target) {
@@ -1047,9 +1048,7 @@ class MenuComponent {
   };
 
 
-  ///////////////////////
-  // ** Public API  ** //
-  ///////////////////////
+  /* 对外暴露的接口 */
   public click = (element: HTMLElement, e: Event) => {
     return this._click(element, e);
   };

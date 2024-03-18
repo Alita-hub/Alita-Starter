@@ -2,7 +2,7 @@
   <!--begin::Stepper-->
   <div
     class="stepper stepper-pills stepper-column d-flex flex-column flex-xl-row flex-row-fluid"
-    id="kt_create_account_stepper"
+    id="alita_create_account_stepper"
     ref="createAccountStepperRef"
   >
     <!--begin::Aside-->

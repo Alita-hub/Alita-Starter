@@ -2,7 +2,7 @@
   <!--begin::Modal - Create Api Key-->
   <div
     class="modal fade"
-    id="kt_modal_create_api_key"
+    id="alita_modal_create_api_key"
     ref="createAPIKeyModalRef"
     tabindex="-1"
     aria-hidden="true"
@@ -12,7 +12,7 @@
       <!--begin::Modal content-->
       <div class="modal-content">
         <!--begin::Modal header-->
-        <div class="modal-header" id="kt_modal_create_api_key_header">
+        <div class="modal-header" id="alita_modal_create_api_key_header">
           <!--begin::Modal title-->
           <h2>Create API Key</h2>
           <!--end::Modal title-->
@@ -30,7 +30,7 @@
 
         <!--begin::Form-->
         <VForm
-          id="kt_modal_create_api_key_form"
+          id="alita_modal_create_api_key_form"
           class="form"
           @submit="submit"
           :validation-schema="validationSchema"
@@ -40,12 +40,12 @@
             <!--begin::Scroll-->
             <div
               class="scroll-y me-n7 pe-7"
-              id="kt_modal_create_api_key_scroll"
+              id="alita_modal_create_api_key_scroll"
               data-alita-scroll="true"
               data-alita-scroll-activate="{default: false, lg: true}"
               data-alita-scroll-max-height="auto"
-              data-alita-scroll-dependencies="#kt_modal_create_api_key_header"
-              data-alita-scroll-wrappers="#kt_modal_create_api_key_scroll"
+              data-alita-scroll-dependencies="#alita_modal_create_api_key_header"
+              data-alita-scroll-wrappers="#alita_modal_create_api_key_scroll"
               data-alita-scroll-offset="300px"
             >
               <div
@@ -212,7 +212,7 @@
             <!--begin::Button-->
             <button
               type="reset"
-              id="kt_modal_create_api_key_cancel"
+              id="alita_modal_create_api_key_cancel"
               class="btn btn-light me-3"
             >
               Discard
@@ -223,7 +223,7 @@
             <button
               ref="submitButtonRef"
               type="submit"
-              id="kt_modal_create_api_key_submit"
+              id="alita_modal_create_api_key_submit"
               class="btn btn-primary"
             >
               <span class="indicator-label"> Submit </span>

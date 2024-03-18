@@ -1,7 +1,7 @@
 <template>
   <!--begin::Aside-->
   <div
-    id="kt_aside"
+    id="alita_aside"
     class="aside"
     data-alita-drawer="true"
     data-alita-drawer-name="aside"
@@ -9,10 +9,10 @@
     data-alita-drawer-overlay="true"
     data-alita-drawer-width="{default:'200px', '300px': '250px'}"
     data-alita-drawer-direction="start"
-    data-alita-drawer-toggle="#kt_aside_mobile_toggle"
+    data-alita-drawer-toggle="#alita_aside_mobile_toggle"
   >
     <!--begin::Aside Toolbarl-->
-    <div class="aside-toolbar flex-column-auto" id="kt_aside_toolbar">
+    <div class="aside-toolbar flex-column-auto" id="alita_aside_toolbar">
       <!--begin::Aside user-->
       <AsideToolbar />
       <!--end::Aside user-->
@@ -26,7 +26,7 @@
     <!--end::Aside menu-->
 
     <!--begin::Footer-->
-    <div class="aside-footer flex-column-auto py-5" id="kt_aside_footer">
+    <div class="aside-footer flex-column-auto py-5" id="alita_aside_footer">
       <a
         href="https://preview.keenthemes.com/metronic8/vue/docs/index"
         class="btn btn-custom btn-primary w-100"

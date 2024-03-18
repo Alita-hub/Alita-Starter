@@ -77,7 +77,7 @@
               <a
                 href="#"
                 class="btn btn-sm btn-light me-2"
-                id="kt_user_follow_button"
+                id="alita_user_follow_button"
               >
                 <AlitaIcon icon-name="check" icon-class="fs-3 d-none" />
                 Follow
@@ -87,7 +87,7 @@
                 href="#"
                 class="btn btn-sm btn-primary me-3"
                 data-bs-toggle="modal"
-                data-bs-target="#kt_modal_offer_a_deal"
+                data-bs-target="#alita_modal_offer_a_deal"
                 >Hire Me</a
               >
 

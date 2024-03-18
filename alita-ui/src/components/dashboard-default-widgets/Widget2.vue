@@ -49,7 +49,7 @@
           href="#"
           class="symbol symbol-35px symbol-circle"
           data-bs-toggle="modal"
-          data-bs-target="#kt_modal_view_users"
+          data-bs-target="#alita_modal_view_users"
         >
           <span class="symbol-label bg-dark text-gray-300 fs-8 fw-bold"
             >+42</span

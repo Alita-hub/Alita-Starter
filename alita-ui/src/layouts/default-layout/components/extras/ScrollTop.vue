@@ -2,8 +2,8 @@
   <!-- begin::Scrolltop -->
   <div
     v-if="scrolltopDispaly"
-    id="kt_scrolltop"
-    ref="kt_scrolltop"
+    id="alita_scrolltop"
+    ref="alita_scrolltop"
     class="scrolltop"
     data-alita-scrolltop="true"
   >

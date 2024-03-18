@@ -29,7 +29,7 @@
         <!--begin::Table-->
         <table
           class="table align-middle table-row-dashed fw-semibold text-gray-600 fs-6 gy-5"
-          id="kt_table_customers_logs"
+          id="alita_table_customers_logs"
         >
           <!--begin::Table body-->
           <tbody>

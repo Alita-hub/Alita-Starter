@@ -9,7 +9,7 @@ class ThemeMode {
   private getParamName = (postfix: string): string => {
     const ktName = document.body.hasAttribute("data-alita-name");
     const name = ktName ? ktName + "_" : "";
-    return "kt_" + name + "theme_mode_" + postfix;
+    return "alita_" + name + "theme_mode_" + postfix;
   };
 
   public getMode = (): Mode => {
@@ -66,11 +66,11 @@ class ThemeMode {
     // Read active menu mode value
     const activeMenuItem: HTMLElement | null =
       this.menu?.querySelector(
-        '[data-alitaita-element="modedata-alita-alita-value="' + menuMode + '"]'
+        '[data-alita-element="modedata-alita-alita-value="' + menuMode + '"]'
       ) || null;
 
     // Enable switching state
-    this.element?.setAttribute("data-alitaita-theme-mode-switching", "true");
+    this.element?.setAttribute("data-alita-theme-mode-switching", "true");
 
     // Set mode to the target element
     this.element?.setAttribute("data-bs-theme", mode);
@@ -78,7 +78,7 @@ class ThemeMode {
     // Disable switching state
     const self = this;
     setTimeout(function () {
-      self.element?.removeAttribute("data-alitaita-theme-mode-switching");
+      self.element?.removeAttribute("data-alita-theme-mode-switching");
     }, 300);
 
     // Store mode value in storage
@@ -99,9 +99,9 @@ class ThemeMode {
   public getMenuMode = (): Mode | "" => {
     const menuModeParam = this.getParamName("menu");
     const menuItem = this.menu?.querySelector(
-      '.active[data-alitaita-element="mode"]'
+      '.active[data-alita-element="mode"]'
     );
-    const dataKTValue = menuItem?.getAttribute("data-alitaita-value");
+    const dataKTValue = menuItem?.getAttribute("data-alita-value");
     if (dataKTValue) {
       return dataKTValue as Mode;
     }
@@ -130,16 +130,16 @@ class ThemeMode {
   private getActiveMenuItem = (): HTMLElement | null => {
     return (
       this.menu?.querySelector(
-        '[data-alitaita-element="modedata-alita-alita-value="' + this.getMenuMode() + '"]'
+        '[data-alita-element="modedata-alita-alita-value="' + this.getMenuMode() + '"]'
       ) || null
     );
   };
 
   private setActiveMenuItem = (item: HTMLElement): void => {
     const menuModeParam = this.getParamName("menu");
-    const menuMode = item.getAttribute("data-alitaita-value");
+    const menuMode = item.getAttribute("data-alita-value");
     const activeItem = this.menu?.querySelector(
-      '.active[data-alitaita-element="mode"]'
+      '.active[data-alita-element="mode"]'
     );
     if (activeItem) {
       activeItem.classList.remove("active");
@@ -153,12 +153,12 @@ class ThemeMode {
 
   private handleMenu = (): void => {
     this.menu
-      ?.querySelectorAll<HTMLElement>('[data-alitaita-element="mode"]')
+      ?.querySelectorAll<HTMLElement>('[data-alita-element="mode"]')
       ?.forEach((item: HTMLElement) => {
         item.addEventListener("click", (e) => {
           e.preventDefault();
 
-          const menuMode: string | null = item.getAttribute("data-alitaita-value");
+          const menuMode: string | null = item.getAttribute("data-alita-value");
           const mode = menuMode === "system" ? this.getSystemMode() : menuMode;
 
           if (mode) {
@@ -170,55 +170,55 @@ class ThemeMode {
 
   public flipImages = () => {
     document
-      .querySelectorAll<HTMLElement>("[data-alitaita-img-dark]")
+      .querySelectorAll<HTMLElement>("[data-alita-img-dark]")
       ?.forEach((item: HTMLElement) => {
         if (item.tagName === "IMG") {
           if (
             this.getMode() === "dark" &&
-            item.hasAttribute("data-alitaita-img-dark")
+            item.hasAttribute("data-alita-img-dark")
           ) {
             item.setAttribute(
-              "data-alitaita-img-light",
+              "data-alita-img-light",
               item.getAttribute("src") || ""
             );
             item.setAttribute(
               "src",
-              item.getAttribute("data-alitaita-img-dark") || ""
+              item.getAttribute("data-alita-img-dark") || ""
             );
           } else if (
             this.getMode() === "light" &&
-            item.hasAttribute("data-alitaita-img-light")
+            item.hasAttribute("data-alita-img-light")
           ) {
             item.setAttribute(
-              "data-alitaita-img-dark",
+              "data-alita-img-dark",
               item.getAttribute("src") || ""
             );
             item.setAttribute(
               "src",
-              item.getAttribute("data-alitaita-img-light") || ""
+              item.getAttribute("data-alita-img-light") || ""
             );
           }
         } else {
           if (
             this.getMode() === "dark" &&
-            item.hasAttribute("data-alitaita-img-dark")
+            item.hasAttribute("data-alita-img-dark")
           ) {
             item.setAttribute(
-              "data-alitaita-img-light",
+              "data-alita-img-light",
               item.getAttribute("src") || ""
             );
             item.style.backgroundImage =
-              "url('" + item.getAttribute("data-alitaita-img-dark") + "')";
+              "url('" + item.getAttribute("data-alita-img-dark") + "')";
           } else if (
             this.getMode() === "light" &&
-            item.hasAttribute("data-alitaita-img-light")
+            item.hasAttribute("data-alita-img-light")
           ) {
             item.setAttribute(
-              "data-alitaita-img-dark",
+              "data-alita-img-dark",
               item.getAttribute("src") || ""
             );
             item.style.backgroundImage =
-              "url('" + item.getAttribute("data-alitaita-img-light") + "')";
+              "url('" + item.getAttribute("data-alita-img-light") + "')";
           }
         }
       });
@@ -238,7 +238,7 @@ class ThemeMode {
 
   public init = () => {
     this.menu = document.querySelector<HTMLElement>(
-      '[data-alitaita-element="theme-mode-menu"]'
+      '[data-alita-element="theme-mode-menu"]'
     );
     this.element = document.documentElement;
 

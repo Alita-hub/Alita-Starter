@@ -30,7 +30,7 @@ class LayoutService {
   public static initLayout(): void {
     this.bodyStore.addBodyAttribute({
       qualifiedName: "id",
-      value: "kt_body",
+      value: "alita_body",
     });
   }
 
@@ -94,7 +94,7 @@ class LayoutService {
     // Default minimized
     if (objectPath.get(config.value, "aside.minimized")) {
       this.bodyStore.addBodyAttribute({
-        qualifiedName: "data-alitaita-aside-minimize",
+        qualifiedName: "data-alita-aside-minimize",
         value: "on",
       });
     }
@@ -112,7 +112,7 @@ class LayoutService {
 
   public static emptyElementClassesAndAttributes(element: HTMLElement): void {
     element.className = "";
-    for (let i = element.attributes.length; i-- > 0; )
+    for (let i = element.attributes.length; i-- > 0;)
       element.removeAttributeNode(element.attributes[i]);
   }
 }

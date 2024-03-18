@@ -38,7 +38,7 @@ const defaultSearchOptions: ISearchOptions = {
 const defaultSearchQueires: ISearchQueries = {
   componentName: "search",
   instanseQuery: "[data-alita-search]",
-  attrQuery: "data-alitaita-search-",
+  attrQuery: "data-alita-search-",
 };
 
 class SearchComponent {
@@ -106,7 +106,7 @@ class SearchComponent {
 
   private _getElement = (name: string) => {
     return this.element.querySelector(
-      '[data-alitaita-search-element="' + name + '"]'
+      '[data-alita-search-element="' + name + '"]'
     );
   };
 

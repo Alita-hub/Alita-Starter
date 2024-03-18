@@ -2,7 +2,7 @@
   <!--begin::Stepper-->
   <div
     class="stepper stepper-links d-flex flex-column"
-    id="kt_create_account_stepper"
+    id="alita_create_account_stepper"
     ref="createAccountStepperRef"
   >
     <!--begin::Nav-->

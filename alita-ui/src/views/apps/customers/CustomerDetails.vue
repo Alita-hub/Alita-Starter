@@ -84,10 +84,10 @@
             <div
               class="fw-bold rotate collapsible"
               data-bs-toggle="collapse"
-              href="#kt_customer_view_details"
+              href="#alita_customer_view_details"
               role="button"
               aria-expanded="false"
-              aria-controls="kt_customer_view_details"
+              aria-controls="alita_customer_view_details"
             >
               Details
               <span class="ms-2 rotate-180">
@@ -104,7 +104,7 @@
                 href="#"
                 class="btn btn-sm btn-light-primary"
                 data-bs-toggle="modal"
-                data-bs-target="#kt_modal_update_customer"
+                data-bs-target="#alita_modal_update_customer"
               >
                 Edit
               </a>
@@ -115,7 +115,7 @@
           <div class="separator separator-dashed my-3"></div>
 
           <!--begin::Details content-->
-          <div id="kt_customer_view_details" class="collapse show">
+          <div id="alita_customer_view_details" class="collapse show">
             <div class="py-5 fs-6">
               <!--begin::Badge-->
               <div class="badge badge-light-info d-inline">Premium user</div>
@@ -226,7 +226,7 @@
                     name="google"
                     type="checkbox"
                     value="1"
-                    id="kt_modal_connected_accounts_google"
+                    id="alita_modal_connected_accounts_google"
                     checked
                   />
                   <!--end::Input-->
@@ -234,7 +234,7 @@
                   <!--begin::Label-->
                   <span
                     class="form-check-label fw-semibold text-muted"
-                    for="kt_modal_connected_accounts_google"
+                    for="alita_modal_connected_accounts_google"
                   ></span>
                   <!--end::Label-->
                 </label>
@@ -277,7 +277,7 @@
                     name="github"
                     type="checkbox"
                     value="1"
-                    id="kt_modal_connected_accounts_github"
+                    id="alita_modal_connected_accounts_github"
                     checked
                   />
                   <!--end::Input-->
@@ -285,7 +285,7 @@
                   <!--begin::Label-->
                   <span
                     class="form-check-label fw-semibold text-muted"
-                    for="kt_modal_connected_accounts_github"
+                    for="alita_modal_connected_accounts_github"
                   ></span>
                   <!--end::Label-->
                 </label>
@@ -327,14 +327,14 @@
                     name="slack"
                     type="checkbox"
                     value="1"
-                    id="kt_modal_connected_accounts_slack"
+                    id="alita_modal_connected_accounts_slack"
                   />
                   <!--end::Input-->
 
                   <!--begin::Label-->
                   <span
                     class="form-check-label fw-semibold text-muted"
-                    for="kt_modal_connected_accounts_slack"
+                    for="alita_modal_connected_accounts_slack"
                   ></span>
                   <!--end::Label-->
                 </label>
@@ -368,7 +368,7 @@
           <a
             class="nav-link text-active-primary pb-4 active"
             data-bs-toggle="tab"
-            href="#kt_customer_view_overview_tab"
+            href="#alita_customer_view_overview_tab"
             >Overview</a
           >
         </li>
@@ -379,7 +379,7 @@
           <a
             class="nav-link text-active-primary pb-4"
             data-bs-toggle="tab"
-            href="#kt_customer_view_overview_events_and_logs_tab"
+            href="#alita_customer_view_overview_events_and_logs_tab"
             >Events & Logs</a
           >
         </li>
@@ -391,7 +391,7 @@
             class="nav-link text-active-primary pb-4"
             data-alita-countup-tabs="true"
             data-bs-toggle="tab"
-            href="#kt_customer_view_overview_statements"
+            href="#alita_customer_view_overview_statements"
             >Statements</a
           >
         </li>
@@ -422,7 +422,7 @@
         <!--begin:::Tab pane-->
         <div
           class="tab-pane fade show active"
-          id="kt_customer_view_overview_tab"
+          id="alita_customer_view_overview_tab"
           role="tabpanel"
         >
           <PaymentRecords card-classes="mb-6 mb-xl-9"></PaymentRecords>
@@ -438,7 +438,7 @@
         <!--begin:::Tab pane-->
         <div
           class="tab-pane fade"
-          id="kt_customer_view_overview_events_and_logs_tab"
+          id="alita_customer_view_overview_events_and_logs_tab"
           role="tabpanel"
         >
           <Logs card-classes="mb-6 mb-xl-9"></Logs>
@@ -449,7 +449,7 @@
         <!--begin:::Tab pane-->
         <div
           class="tab-pane fade"
-          id="kt_customer_view_overview_statements"
+          id="alita_customer_view_overview_statements"
           role="tabpanel"
         >
           <Earnings card-classes="mb-6 mb-xl-9"></Earnings>

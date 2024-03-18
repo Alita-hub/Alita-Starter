@@ -2,7 +2,7 @@
   <!--begin::Stepper-->
   <div
     class="stepper stepper-pills stepper-column d-flex flex-column flex-xl-row flex-row-fluid"
-    id="kt_modal_create_app_stepper"
+    id="alita_modal_create_app_stepper"
     ref="createAppStepperRef"
   >
     <!--begin::Aside-->

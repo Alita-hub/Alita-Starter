@@ -1,9 +1,9 @@
 <template>
   <!--begin::Toolbar-->
-  <div class="toolbar" id="kt_toolbar">
+  <div class="toolbar" id="alita_toolbar">
     <!--begin::Container-->
     <div
-      id="kt_toolbar_container"
+      id="alita_toolbar_container"
       :class="{
         'container-fluid': toolbarWidthFluid,
         'container-xxl': !toolbarWidthFluid,
@@ -14,7 +14,7 @@
       <div
         data-alita-swapper="true"
         data-alita-swapper-mode="prepend"
-        data-alita-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
+        data-alita-swapper-parent="{default: '#alita_content_container', 'lg': '#alita_toolbar_container'}"
         class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0"
       >
         <!--begin::Title-->
@@ -83,8 +83,8 @@
           href="#"
           class="btn btn-sm btn-primary"
           data-bs-toggle="modal"
-          data-bs-target="#kt_modal_create_app"
-          id="kt_toolbar_primary_button"
+          data-bs-target="#alita_modal_create_app"
+          id="alita_toolbar_primary_button"
         >
           Create
         </a>

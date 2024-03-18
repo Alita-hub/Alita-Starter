@@ -45,7 +45,7 @@
       <!--begin::Chart-->
       <div class="d-flex flex-center me-5 pt-2">
         <div
-          id="kt_card_widget_17_chart"
+          id="alita_card_widget_17_chart"
           :style="{
             minWidth: `${chartSize}px`,
             minHeight: `${chartSize}px`,
@@ -130,7 +130,7 @@ export default defineComponent({
   setup(props, { expose }) {
     const initChart = () => {
       expose();
-      var el = document.getElementById("kt_card_widget_17_chart");
+      var el = document.getElementById("alita_card_widget_17_chart");
 
       if (!el) {
         return;

@@ -15,13 +15,13 @@
 
       <!--begin::Toolbar-->
       <div class="card-toolbar">
-        <ul class="nav" id="kt_chart_widget_8_tabs">
+        <ul class="nav" id="alita_chart_widget_8_tabs">
           <li class="nav-item">
             <a
               class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light fw-bold px-4 me-1"
               data-bs-toggle="tab"
-              id="kt_chart_widget_8_week_toggle"
-              href="#kt_chart_widget_8_week_tab"
+              id="alita_chart_widget_8_week_toggle"
+              href="#alita_chart_widget_8_week_tab"
               >Month</a
             >
           </li>
@@ -30,8 +30,8 @@
             <a
               class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light fw-bold px-4 me-1 active"
               data-bs-toggle="tab"
-              id="kt_chart_widget_8_month_toggle"
-              href="#kt_chart_widget_8_month_tab"
+              id="alita_chart_widget_8_month_toggle"
+              href="#alita_chart_widget_8_month_tab"
               >Week</a
             >
           </li>
@@ -48,7 +48,7 @@
         <!--begin::Tab pane-->
         <div
           class="tab-pane fade"
-          id="kt_chart_widget_8_week_tab"
+          id="alita_chart_widget_8_week_tab"
           role="tabpanel"
         >
           <!--begin::Statistics-->
@@ -194,7 +194,7 @@
         <!--begin::Tab pane-->
         <div
           class="tab-pane fade active show"
-          id="kt_chart_widget_8_month_tab"
+          id="alita_chart_widget_8_month_tab"
           role="tabpanel"
         >
           <!--begin::Statistics-->

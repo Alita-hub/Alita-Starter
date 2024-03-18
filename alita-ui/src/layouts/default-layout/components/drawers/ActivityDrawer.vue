@@ -1,7 +1,7 @@
 <template>
   <!--begin::Activities drawer-->
   <div
-    id="kt_activities"
+    id="alita_activities"
     class="bg-body"
     data-alita-drawer="true"
     data-alita-drawer-name="activities"
@@ -9,19 +9,19 @@
     data-alita-drawer-overlay="true"
     data-alita-drawer-width="{default:'300px', 'lg': '900px'}"
     data-alita-drawer-direction="end"
-    data-alita-drawer-toggle="#kt_activities_toggle"
-    data-alita-drawer-close="#kt_activities_close"
+    data-alita-drawer-toggle="#alita_activities_toggle"
+    data-alita-drawer-close="#alita_activities_close"
   >
     <div class="card shadow-none">
       <!--begin::Header-->
-      <div class="card-header" id="kt_activities_header">
+      <div class="card-header" id="alita_activities_header">
         <h3 class="card-title fw-bold text-gray-900">Activity Logs</h3>
 
         <div class="card-toolbar">
           <button
             type="button"
             class="btn btn-sm btn-icon btn-active-light-primary me-n5"
-            id="kt_activities_close"
+            id="alita_activities_close"
           >
             <AlitaIcon icon-name="cross" icon-class="fs-1" />
           </button>
@@ -30,15 +30,15 @@
       <!--end::Header-->
 
       <!--begin::Body-->
-      <div class="card-body position-relative" id="kt_activities_body">
+      <div class="card-body position-relative" id="alita_activities_body">
         <!--begin::Content-->
         <div
-          id="kt_activities_scroll"
+          id="alita_activities_scroll"
           class="position-relative scroll-y me-n5 pe-5"
           data-alita-scroll="true"
           data-alita-scroll-height="auto"
-          data-alita-scroll-wrappers="#kt_activities_body"
-          data-alita-scroll-dependencies="#kt_activities_header, #kt_activities_footer"
+          data-alita-scroll-wrappers="#alita_activities_body"
+          data-alita-scroll-dependencies="#alita_activities_header, #alita_activities_footer"
           data-alita-scroll-offset="5px"
         >
           <!--begin::Timeline items-->
@@ -59,7 +59,7 @@
       <!--end::Body-->
 
       <!--begin::Footer-->
-      <div class="card-footer py-5 text-center" id="kt_activities_footer">
+      <div class="card-footer py-5 text-center" id="alita_activities_footer">
         <a href="#" class="btn btn-bg-body text-primary">
           View All Activities
           <AlitaIcon icon-name="arrow-right" icon-class="fs-3 text-primary" />

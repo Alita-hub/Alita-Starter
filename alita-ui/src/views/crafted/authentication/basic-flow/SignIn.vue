@@ -4,7 +4,7 @@
     <!--begin::Form-->
     <VForm
       class="form w-100"
-      id="kt_login_signin_form"
+      id="alita_login_signin_form"
       @submit="onSubmitLogin"
       :validation-schema="login"
       :initial-values="{
@@ -103,7 +103,7 @@
           tabindex="3"
           type="submit"
           ref="submitButton"
-          id="kt_sign_in_submit"
+          id="alita_sign_in_submit"
           class="btn btn-lg btn-primary w-100 mb-5"
         >
           <span class="indicator-label"> Continue </span>
@@ -196,8 +196,8 @@ export default defineComponent({
     });
 
     //Form submit function
-    const onSubmitLogin = async (values: any) => {
-      values = values as User;
+    const onSubmitLogin = async (params: any) => {
+      params = params as User;
       // Clear existing errors
       authStore.logout();
 
@@ -209,8 +209,7 @@ export default defineComponent({
       }
 
       // Send login request
-      await authStore.login(values);
-      const msg = Object.values(authStore.msg);
+      await authStore.login(params);
 
       if (authStore.isAuthenticated) {
         Swal.fire({
@@ -231,7 +230,7 @@ export default defineComponent({
         });
       } else {
         Swal.fire({
-          text: msg[0] as string,
+          text: authStore.msg,
           icon: "error",
           buttonsStyling: false,
           confirmButtonText: "Try again!",

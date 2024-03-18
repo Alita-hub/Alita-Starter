@@ -2,7 +2,7 @@
   <!--begin::Modal - Invite Friends-->
   <div
     class="modal fade"
-    id="kt_modal_invite_friends"
+    id="alita_modal_invite_friends"
     tabindex="-1"
     aria-hidden="true"
   >

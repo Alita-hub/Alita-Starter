@@ -15,13 +15,13 @@
       <div class="card-toolbar" data-alita-buttons="true">
         <a
           class="btn btn-sm btn-color-muted btn-active btn-active-primary active px-4 me-1"
-          id="kt_charts_widget_6_sales_btn"
+          id="alita_charts_widget_6_sales_btn"
           >Sales</a
         >
 
         <a
           class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4 me-1"
-          id="kt_charts_widget_6_expenses_btn"
+          id="alita_charts_widget_6_expenses_btn"
           >Expenses</a
         >
       </div>

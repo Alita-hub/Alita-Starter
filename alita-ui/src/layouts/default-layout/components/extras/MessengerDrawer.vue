@@ -1,7 +1,7 @@
 <template>
   <!--begin::Chat drawer-->
   <div
-    id="kt_drawer_chat"
+    id="alita_drawer_chat"
     class="bg-body"
     data-alita-drawer="true"
     data-alita-drawer-name="chat"
@@ -9,13 +9,13 @@
     data-alita-drawer-overlay="true"
     data-alita-drawer-width="{default:'300px', 'md': '500px'}"
     data-alita-drawer-direction="end"
-    data-alita-drawer-toggle="#kt_drawer_chat_toggle"
-    data-alita-drawer-close="#kt_drawer_chat_close"
+    data-alita-drawer-toggle="#alita_drawer_chat_toggle"
+    data-alita-drawer-close="#alita_drawer_chat_close"
   >
     <!--begin::Messenger-->
-    <div class="card w-100" id="kt_drawer_chat_messenger">
+    <div class="card w-100" id="alita_drawer_chat_messenger">
       <!--begin::Card header-->
-      <div class="card-header pe-5" id="kt_drawer_chat_messenger_header">
+      <div class="card-header pe-5" id="alita_drawer_chat_messenger_header">
         <!--begin::Title-->
         <div class="card-title">
           <!--begin::User-->
@@ -58,7 +58,7 @@
           <!--begin::Close-->
           <div
             class="btn btn-sm btn-icon btn-active-icon-primary"
-            id="kt_drawer_chat_close"
+            id="alita_drawer_chat_close"
           >
             <AlitaIcon icon-name="cross" icon-class="fs-2x" />
           </div>
@@ -69,7 +69,7 @@
       <!--end::Card header-->
 
       <!--begin::Card body-->
-      <div class="card-body" id="kt_drawer_chat_messenger_body">
+      <div class="card-body" id="alita_drawer_chat_messenger_body">
         <!--begin::Messages-->
         <div
           class="scroll-y me-n5 pe-5"
@@ -78,8 +78,8 @@
           data-alita-scroll="true"
           data-alita-scroll-activate="true"
           data-alita-scroll-height="auto"
-          data-alita-scroll-dependencies="#kt_drawer_chat_messenger_header, #kt_drawer_chat_messenger_footer"
-          data-alita-scroll-wrappers="#kt_drawer_chat_messenger_body"
+          data-alita-scroll-dependencies="#alita_drawer_chat_messenger_header, #alita_drawer_chat_messenger_footer"
+          data-alita-scroll-wrappers="#alita_drawer_chat_messenger_body"
           data-alita-scroll-offset="0px"
         >
           <template v-for="(item, index) in messages" :key="index">
@@ -105,7 +105,7 @@
       <!--end::Card body-->
 
       <!--begin::Card footer-->
-      <div class="card-footer pt-4" id="kt_drawer_chat_messenger_footer">
+      <div class="card-footer pt-4" id="alita_drawer_chat_messenger_footer">
         <!--begin::Input-->
         <input
           class="form-control form-control-flush mb-3"

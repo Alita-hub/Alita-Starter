@@ -11,10 +11,10 @@ class ApiService {
   public static axiosInstance: AxiosInstance;
 
   /**
-   * @description initialize axios
+   * @description 初始化Axios，配置拦截器
    */
   public static init() {
-    // new instance of axios with a custom config.
+    // 创建axios自定义实例
     ApiService.axiosInstance = axios.create({
       baseURL: import.meta.env.VITE_APP_API_URL
     });
@@ -45,7 +45,7 @@ class ApiService {
   }
 
   /**
-   * @description send the GET HTTP request
+   * @description 发送Get请求
    * @param resource: string
    * @param params: AxiosRequestConfig
    * @returns Promise<AxiosResponse>
@@ -55,7 +55,7 @@ class ApiService {
   }
 
   /**
-   * @description send the GET HTTP request
+   * @description 发送Get请求，使用占位符传参
    * @param resource: string
    * @param slug: string
    * @returns Promise<AxiosResponse>
@@ -68,7 +68,7 @@ class ApiService {
   }
 
   /**
-   * @description set the POST HTTP request
+   * @description 发送Post请求
    * @param resource: string
    * @param params: AxiosRequestConfig
    * @returns Promise<AxiosResponse>
@@ -78,7 +78,7 @@ class ApiService {
   }
 
   /**
-   * @description send the UPDATE HTTP request
+   * @description 发送Update请求
    * @param resource: string
    * @param slug: string
    * @param params: AxiosRequestConfig
@@ -93,7 +93,7 @@ class ApiService {
   }
 
   /**
-   * @description Send the PUT HTTP request
+   * @description 发送Put请求
    * @param resource: string
    * @param params: AxiosRequestConfig
    * @returns Promise<AxiosResponse>
@@ -103,7 +103,7 @@ class ApiService {
   }
 
   /**
-   * @description Send the DELETE HTTP request
+   * @description 发送Delete请求
    * @param resource: string
    * @returns Promise<AxiosResponse>
    */

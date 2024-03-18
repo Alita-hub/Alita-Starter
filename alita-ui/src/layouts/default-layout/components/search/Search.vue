@@ -3,7 +3,7 @@
     <template v-slot:toggle>
       <!--begin::Search-->
       <div
-        id="kt_header_search"
+        id="alita_header_search"
         class="header-search d-flex align-items-stretch"
         data-alita-menu-target="#alita-search-menu"
         data-alita-menu-trigger="click"
@@ -12,7 +12,7 @@
         data-alita-menu-flip="bottom"
       >
         <!--begin::Search toggle-->
-        <div class="d-flex align-items-center" id="kt_header_search_toggle">
+        <div class="d-flex align-items-center" id="alita_header_search_toggle">
           <div class="btn btn-icon btn-active-light-primary">
             <AlitaIcon icon-name="magnifier" icon-class="fs-2 fs-md-1" />
           </div>

@@ -4,7 +4,7 @@
     description="Click on the below buttons to launch <br/>a share & earn example."
     :image="getIllustrationsPath('9.png')"
     button-text="Share & Earn"
-    modal-id="kt_modal_share_earn"
+    modal-id="alita_modal_share_earn"
   ></KTModalsCard>
 
   <KTShareAndEarnModal></KTShareAndEarnModal>

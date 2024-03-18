@@ -4,7 +4,7 @@
     description="Click on the below buttons to launch <br/>two-factor authentication setup example."
     :image="getIllustrationsPath('4.png')"
     button-text="Enable Two-factor Authentication"
-    modal-id="kt_modal_two_factor_authentication"
+    modal-id="alita_modal_two_factor_authentication"
   ></KTModalCard>
 
   <KTTwoFactorAuthModal></KTTwoFactorAuthModal>

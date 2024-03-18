@@ -62,7 +62,7 @@ const defaultSwapperOptions: ISwapperOptions = {
 const defaultSwapperQueires: ISwapperQueries = {
   componentName: "swapper",
   instanseQuery: '[data-alita-swapper="true"]',
-  attrQuery: "data-alitaita-swapper-",
+  attrQuery: "data-alita-swapper-",
 };
 
 class SwapperComponent {
@@ -116,7 +116,7 @@ class SwapperComponent {
       ? document.querySelector(parentSelector)
       : null;
     if (parentElement && this.element.parentNode !== parentElement) {
-      const alreadyPended = document.getElementById("kt_header_menu") !== null;
+      const alreadyPended = document.getElementById("alita_header_menu") !== null;
       if (!alreadyPended) {
         if (mode === "prepend") {
           parentElement.prepend(this.element);

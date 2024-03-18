@@ -2,7 +2,7 @@
   <!--begin::Modal - Two-factor authentication-->
   <div
     class="modal fade"
-    id="kt_modal_two_factor_authentication"
+    id="alita_modal_two_factor_authentication"
     tabindex="-1"
     aria-hidden="true"
   >
@@ -47,12 +47,12 @@
                 name="auth_option"
                 value="apps"
                 checked
-                id="kt_modal_two_factor_authentication_option_1"
+                id="alita_modal_two_factor_authentication_option_1"
                 v-model="value"
               />
               <label
                 class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center mb-5"
-                for="kt_modal_two_factor_authentication_option_1"
+                for="alita_modal_two_factor_authentication_option_1"
               >
                 <AlitaIcon icon-name="setting-2" icon-class="fs-4x me-4" />
 
@@ -74,12 +74,12 @@
                 class="btn-check"
                 name="auth_option"
                 value="sms"
-                id="kt_modal_two_factor_authentication_option_2"
+                id="alita_modal_two_factor_authentication_option_2"
                 v-model="value"
               />
               <label
                 class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center"
-                for="kt_modal_two_factor_authentication_option_2"
+                for="alita_modal_two_factor_authentication_option_2"
               >
                 <AlitaIcon icon-name="message-text-2" icon-class="fs-4x me-4" />
 

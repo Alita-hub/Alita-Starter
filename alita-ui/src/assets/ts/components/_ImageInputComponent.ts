@@ -24,8 +24,8 @@ const defaultImageInputQueires: IImageInputQueries = {
   instanseQuery: "[data-alita-image-input]",
   inputQuery: 'input[type="file"]',
   wrapperQuery: ".image-input-wrapper",
-  cancelQuery: '[data-alitaita-image-input-action="cancel"]',
-  removeQuery: '[data-alitaita-image-input-action="remove"]',
+  cancelQuery: '[data-alita-image-input-action="cancel"]',
+  removeQuery: '[data-alita-image-input-action="remove"]',
   hiddenQuery: 'input[type="hidden"]',
 };
 

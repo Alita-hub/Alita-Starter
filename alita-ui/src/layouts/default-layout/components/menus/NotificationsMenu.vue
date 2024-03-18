@@ -25,7 +25,7 @@
           <a
             class="nav-link text-white opacity-75 opacity-state-100 pb-4"
             data-bs-toggle="tab"
-            href="#kt_topbar_notifications_1"
+            href="#alita_topbar_notifications_1"
             >Alerts</a
           >
         </li>
@@ -34,7 +34,7 @@
           <a
             class="nav-link text-white opacity-75 opacity-state-100 pb-4 active"
             data-bs-toggle="tab"
-            href="#kt_topbar_notifications_2"
+            href="#alita_topbar_notifications_2"
             >Updates</a
           >
         </li>
@@ -43,7 +43,7 @@
           <a
             class="nav-link text-white opacity-75 opacity-state-100 pb-4"
             data-bs-toggle="tab"
-            href="#kt_topbar_notifications_3"
+            href="#alita_topbar_notifications_3"
             >Logs</a
           >
         </li>
@@ -55,7 +55,11 @@
     <!--begin::Tab content-->
     <div class="tab-content">
       <!--begin::Tab panel-->
-      <div class="tab-pane fade" id="kt_topbar_notifications_1" role="tabpanel">
+      <div
+        class="tab-pane fade"
+        id="alita_topbar_notifications_1"
+        role="tabpanel"
+      >
         <!--begin::Items-->
         <div class="scroll-y mh-325px my-5 px-8">
           <template v-for="(item, index) in data1" :key="index">
@@ -112,7 +116,7 @@
       <!--begin::Tab panel-->
       <div
         class="tab-pane fade show active"
-        id="kt_topbar_notifications_2"
+        id="alita_topbar_notifications_2"
         role="tabpanel"
       >
         <!--begin::Wrapper-->
@@ -136,7 +140,7 @@
                 href="#"
                 class="btn btn-sm btn-primary px-6"
                 data-bs-toggle="modal"
-                data-bs-target="#kt_modal_upgrade_plan"
+                data-bs-target="#alita_modal_upgrade_plan"
                 >Upgrade</a
               >
             </div>
@@ -157,7 +161,11 @@
       <!--end::Tab panel-->
 
       <!--begin::Tab panel-->
-      <div class="tab-pane fade" id="kt_topbar_notifications_3" role="tabpanel">
+      <div
+        class="tab-pane fade"
+        id="alita_topbar_notifications_3"
+        role="tabpanel"
+      >
         <!--begin::Items-->
         <div class="scroll-y mh-325px my-5 px-8">
           <template v-for="(item, index) in data2" :key="index">

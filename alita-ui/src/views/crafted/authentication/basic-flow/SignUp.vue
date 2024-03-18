@@ -6,7 +6,7 @@
       class="form w-100 fv-plugins-bootstrap5 fv-plugins-framework"
       novalidate
       @submit="onSubmitRegister"
-      id="kt_login_signup_form"
+      id="alita_login_signup_form"
       :validation-schema="registration"
     >
       <!--begin::Heading-->
@@ -201,7 +201,7 @@
       <!--begin::Actions-->
       <div class="text-center">
         <button
-          id="kt_sign_up_submit"
+          id="alita_sign_up_submit"
           ref="submitButton"
           type="submit"
           class="btn btn-lg btn-primary"

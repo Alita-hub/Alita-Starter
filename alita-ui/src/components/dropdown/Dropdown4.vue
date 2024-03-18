@@ -18,7 +18,7 @@
         href="#"
         class="menu-link px-3"
         data-bs-toggle="modal"
-        data-bs-target="#kt_modal_users_search"
+        data-bs-target="#alita_modal_users_search"
       >
         Add Contact
       </a>
@@ -31,7 +31,7 @@
         href="#"
         class="menu-link flex-stack px-3"
         data-bs-toggle="modal"
-        data-bs-target="#kt_modal_invite_friends"
+        data-bs-target="#alita_modal_invite_friends"
       >
         Invite Contacts
 

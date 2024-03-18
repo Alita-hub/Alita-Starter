@@ -8,15 +8,15 @@
     data-alita-drawer-overlay="true"
     data-alita-drawer-width="{default:'200px', '300px': '250px'}"
     data-alita-drawer-direction="end"
-    data-alita-drawer-toggle="#kt_header_menu_mobile_toggle"
+    data-alita-drawer-toggle="#alita_header_menu_mobile_toggle"
     data-alita-swapper="true"
     data-alita-swapper-mode="prepend"
-    data-alita-swapper-parent="{default: '#kt_body', lg: '#kt_header_nav'}"
+    data-alita-swapper-parent="{default: '#alita_body', lg: '#alita_header_nav'}"
   >
     <!--begin::Menu-->
     <div
       class="menu menu-lg-rounded menu-column menu-lg-row menu-state-bg menu-title-gray-700 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-400 fw-semibold my-5 my-lg-0 align-items-stretch"
-      id="#kt_header_menu"
+      id="#alita_header_menu"
       data-alita-menu="true"
     >
       <template v-for="(item, i) in MainMenuConfig" :key="i">

@@ -1,7 +1,7 @@
 <template>
   <div
     class="modal fade"
-    id="kt_modal_create_app"
+    id="alita_modal_create_app"
     tabindex="-1"
     aria-hidden="true"
     ref="modalRef"

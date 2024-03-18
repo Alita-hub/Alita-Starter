@@ -43,8 +43,8 @@
       <ul
         class="nav nav-stretch nav-line-tabs fw-semibold border-0"
         role="tablist"
-        id="kt_layout_builder_tabs"
-        ref="kt_layout_builder_tabs"
+        id="alita_layout_builder_tabs"
+        ref="alita_layout_builder_tabs"
       >
         <li class="nav-item">
           <a
@@ -111,14 +111,14 @@
     <!--end::Header-->
 
     <!--begin::Form-->
-    <form class="form" id="kt_layout_builder_form" @submit="submit($event)">
+    <form class="form" id="alita_layout_builder_form" @submit="submit($event)">
       <!--begin::Body-->
       <div class="card-body">
-        <div class="tab-content pt-3" id="kt_tabs">
+        <div class="tab-content pt-3" id="alita_tabs">
           <div
             class="tab-pane"
             :class="{ active: tabIndex === 0 }"
-            id="kt_builder_main"
+            id="alita_builder_main"
           >
             <!--begin::Form group-->
             <div class="form-group d-flex flex-stack">
@@ -408,7 +408,7 @@
           <div
             class="tab-pane"
             :class="{ active: tabIndex === 1 }"
-            id="kt_builder_header"
+            id="alita_builder_header"
           >
             <div class="row mb-10">
               <label class="col-lg-3 col-form-label text-lg-end">Width:</label>
@@ -430,7 +430,7 @@
           <div
             class="tab-pane"
             :class="{ active: tabIndex === 3 }"
-            id="kt_builder_aside"
+            id="alita_builder_aside"
           >
             <div class="row mb-10">
               <label class="col-lg-3 col-form-label text-lg-end"
@@ -474,7 +474,7 @@
           <div
             class="tab-pane"
             :class="{ active: tabIndex === 4 }"
-            id="kt_builder_content"
+            id="alita_builder_content"
           >
             <div class="row mb-10">
               <label class="col-lg-3 col-form-label text-lg-end">Width:</label>
@@ -496,7 +496,7 @@
           <div
             class="tab-pane"
             :class="{ active: tabIndex === 5 }"
-            id="kt_builder_footer"
+            id="alita_builder_footer"
           >
             <div class="row mb-10">
               <label class="col-lg-3 col-form-label text-lg-end">Width:</label>
@@ -525,18 +525,18 @@
           <div class="col-lg-9">
             <input
               type="hidden"
-              id="kt_layout_builder_tab"
+              id="alita_layout_builder_tab"
               name="layout-builder[tab]"
             />
             <input
               type="hidden"
-              id="kt_layout_builder_action"
+              id="alita_layout_builder_action"
               name="layout-builder[action]"
             />
 
             <button
               type="submit"
-              id="kt_layout_builder_preview"
+              id="alita_layout_builder_preview"
               class="btn btn-primary me-2"
             >
               <span class="indicator-label"> Preview </span>
@@ -551,7 +551,7 @@
             <button
               @click="reset($event)"
               type="button"
-              id="kt_layout_builder_reset"
+              id="alita_layout_builder_reset"
               class="btn btn-active-light btn-color-muted fw-semibold"
             >
               Reset

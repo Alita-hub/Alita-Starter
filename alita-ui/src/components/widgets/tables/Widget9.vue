@@ -20,7 +20,7 @@
           href="#"
           class="btn btn-sm btn-light-primary"
           data-bs-toggle="modal"
-          data-bs-target="#kt_modal_invite_friends"
+          data-bs-target="#alita_modal_invite_friends"
         >
           <AlitaIcon icon-name="plus" icon-class="fs-3" />
           New Member

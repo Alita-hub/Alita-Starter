@@ -2,7 +2,7 @@
   <!--begin::Modal - New Target-->
   <div
     class="modal fade"
-    id="kt_modal_new_target"
+    id="alita_modal_new_target"
     ref="newTargetModalRef"
     tabindex="-1"
     aria-hidden="true"
@@ -28,7 +28,7 @@
         <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
           <!--begin:Form-->
           <el-form
-            id="kt_modal_new_target_form"
+            id="alita_modal_new_target_form"
             @submit.prevent="submit()"
             :model="targetData"
             :rules="rules"
@@ -263,7 +263,7 @@
             <div class="text-center">
               <button
                 type="reset"
-                id="kt_modal_new_target_cancel"
+                id="alita_modal_new_target_cancel"
                 class="btn btn-light me-3"
               >
                 Cancel

@@ -4,7 +4,7 @@
     description="Click on the below buttons to launch <br/>create app modal example."
     :image="getIllustrationsPath('15.png')"
     button-text="Create App"
-    modal-id="kt_modal_create_app"
+    modal-id="alita_modal_create_app"
   ></KTModalCard>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div
     class="modal fade"
-    id="kt_modal_add_customer"
+    id="alita_modal_add_customer"
     ref="addCustomerModalRef"
     tabindex="-1"
     aria-hidden="true"
@@ -11,14 +11,14 @@
       <!--begin::Modal content-->
       <div class="modal-content">
         <!--begin::Modal header-->
-        <div class="modal-header" id="kt_modal_add_customer_header">
+        <div class="modal-header" id="alita_modal_add_customer_header">
           <!--begin::Modal title-->
           <h2 class="fw-bold">Add a Customer</h2>
           <!--end::Modal title-->
 
           <!--begin::Close-->
           <div
-            id="kt_modal_add_customer_close"
+            id="alita_modal_add_customer_close"
             data-bs-dismiss="modal"
             class="btn btn-icon btn-sm btn-active-icon-primary"
           >
@@ -39,12 +39,12 @@
             <!--begin::Scroll-->
             <div
               class="scroll-y me-n7 pe-7"
-              id="kt_modal_add_customer_scroll"
+              id="alita_modal_add_customer_scroll"
               data-alita-scroll="true"
               data-alita-scroll-activate="{default: false, lg: true}"
               data-alita-scroll-max-height="auto"
-              data-alita-scroll-dependencies="#kt_modal_add_customer_header"
-              data-alita-scroll-wrappers="#kt_modal_add_customer_scroll"
+              data-alita-scroll-dependencies="#alita_modal_add_customer_header"
+              data-alita-scroll-wrappers="#alita_modal_add_customer_scroll"
               data-alita-scroll-offset="300px"
             >
               <!--begin::Input group-->
@@ -105,10 +105,10 @@
               <div
                 class="fw-bold fs-3 rotate collapsible mb-7"
                 data-bs-toggle="collapse"
-                href="#kt_modal_add_customer_billing_info"
+                href="#alita_modal_add_customer_billing_info"
                 role="button"
                 aria-expanded="false"
-                aria-controls="kt_customer_view_details"
+                aria-controls="alita_customer_view_details"
               >
                 Shipping Information
                 <span class="ms-2 rotate-180">
@@ -119,7 +119,7 @@
 
               <!--begin::Billing form-->
               <div
-                id="kt_modal_add_customer_billing_info"
+                id="alita_modal_add_customer_billing_info"
                 class="collapse show"
               >
                 <!--begin::Input group-->
@@ -259,7 +259,7 @@
                         name="billing"
                         type="checkbox"
                         value="1"
-                        id="kt_modal_add_customer_billing"
+                        id="alita_modal_add_customer_billing"
                         checked
                       />
                       <!--end::Input-->
@@ -267,7 +267,7 @@
                       <!--begin::Label-->
                       <span
                         class="form-check-label fw-semibold text-muted"
-                        for="kt_modal_add_customer_billing"
+                        for="alita_modal_add_customer_billing"
                       >
                         Yes
                       </span>
@@ -290,7 +290,7 @@
             <!--begin::Button-->
             <button
               type="reset"
-              id="kt_modal_add_customer_cancel"
+              id="alita_modal_add_customer_cancel"
               class="btn btn-light me-3"
             >
               Discard

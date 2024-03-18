@@ -45,16 +45,16 @@
       <!--end::Header-->
 
       <!--begin::Form-->
-      <form id="kt_forms_widget_1_form" class="ql-quil ql-quil-plain pb-3">
+      <form id="alita_forms_widget_1_form" class="ql-quil ql-quil-plain pb-3">
         <!--begin::Editor-->
-        <div id="kt_forms_widget_1_editor" class="py-6"></div>
+        <div id="alita_forms_widget_1_editor" class="py-6"></div>
         <!--end::Editor-->
 
         <div class="separator"></div>
 
         <!--begin::Toolbar-->
         <div
-          id="kt_forms_widget_1_editor_toolbar"
+          id="alita_forms_widget_1_editor_toolbar"
           class="ql-toolbar d-flex flex-stack py-2"
         >
           <div class="me-2">
@@ -108,13 +108,13 @@ export default defineComponent({
   },
   setup() {
     onMounted(() => {
-      const editorId = "kt_forms_widget_1_editor";
+      const editorId = "alita_forms_widget_1_editor";
 
       // init editor
       const options = {
         modules: {
           toolbar: {
-            container: "#kt_forms_widget_1_editor_toolbar",
+            container: "#alita_forms_widget_1_editor_toolbar",
           },
         },
         theme: "snow",

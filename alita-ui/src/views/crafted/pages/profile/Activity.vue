@@ -23,44 +23,44 @@
         >
           <li class="nav-item" role="presentation">
             <a
-              id="kt_activity_today_tab"
+              id="alita_activity_today_tab"
               class="nav-link justify-content-center text-active-gray-800 active"
               data-bs-toggle="tab"
               role="tab"
-              href="#kt_activity_today"
+              href="#alita_activity_today"
             >
               Today
             </a>
           </li>
           <li class="nav-item" role="presentation">
             <a
-              id="kt_activity_week_tab"
+              id="alita_activity_week_tab"
               class="nav-link justify-content-center text-active-gray-800"
               data-bs-toggle="tab"
               role="tab"
-              href="#kt_activity_week"
+              href="#alita_activity_week"
             >
               Week
             </a>
           </li>
           <li class="nav-item" role="presentation">
             <a
-              id="kt_activity_month_tab"
+              id="alita_activity_month_tab"
               class="nav-link justify-content-center text-active-gray-800"
               data-bs-toggle="tab"
               role="tab"
-              href="#kt_activity_month"
+              href="#alita_activity_month"
             >
               Month
             </a>
           </li>
           <li class="nav-item" role="presentation">
             <a
-              id="kt_activity_year_tab"
+              id="alita_activity_year_tab"
               class="nav-link justify-content-center text-active-gray-800 text-hover-gray-800"
               data-bs-toggle="tab"
               role="tab"
-              href="#kt_activity_year"
+              href="#alita_activity_year"
             >
               2021
             </a>
@@ -78,10 +78,10 @@
       <div class="tab-content">
         <!--begin::Tab panel-->
         <div
-          id="kt_activity_today"
+          id="alita_activity_today"
           class="card-body p-0 tab-pane fade show active"
           role="tabpanel"
-          aria-labelledby="kt_activity_today_tab"
+          aria-labelledby="alita_activity_today_tab"
         >
           <!--begin::Timeline-->
           <div class="timeline">
@@ -100,10 +100,10 @@
 
         <!--begin::Tab panel-->
         <div
-          id="kt_activity_week"
+          id="alita_activity_week"
           class="card-body p-0 tab-pane fade show"
           role="tabpanel"
-          aria-labelledby="kt_activity_week_tab"
+          aria-labelledby="alita_activity_week_tab"
         >
           <!--begin::Timeline-->
           <div class="timeline">
@@ -119,10 +119,10 @@
 
         <!--begin::Tab panel-->
         <div
-          id="kt_activity_month"
+          id="alita_activity_month"
           class="card-body p-0 tab-pane fade show"
           role="tabpanel"
-          aria-labelledby="kt_activity_month_tab"
+          aria-labelledby="alita_activity_month_tab"
         >
           <!--begin::Timeline-->
           <div class="timeline">
@@ -139,10 +139,10 @@
 
         <!--begin::Tab panel-->
         <div
-          id="kt_activity_year"
+          id="alita_activity_year"
           class="card-body p-0 tab-pane fade show"
           role="tabpanel"
-          aria-labelledby="kt_activity_year_tab"
+          aria-labelledby="alita_activity_year_tab"
         >
           <!--begin::Timeline-->
           <div class="timeline">

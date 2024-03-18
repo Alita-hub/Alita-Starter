@@ -3,7 +3,7 @@
   <div
     class="modal fade"
     ref="newCardModalRef"
-    id="kt_modal_new_card"
+    id="alita_modal_new_card"
     tabindex="-1"
     aria-hidden="true"
   >
@@ -32,7 +32,7 @@
         <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
           <!--begin::Form-->
           <VForm
-            id="kt_modal_new_card_form"
+            id="alita_modal_new_card_form"
             class="form"
             @submit="submit"
             :validation-schema="validationSchema"
@@ -269,7 +269,7 @@
             <div class="text-center pt-15">
               <button
                 type="reset"
-                id="kt_modal_new_card_cancel"
+                id="alita_modal_new_card_cancel"
                 class="btn btn-light me-3"
               >
                 Discard
@@ -278,7 +278,7 @@
               <button
                 ref="submitButtonRef"
                 type="submit"
-                id="kt_modal_new_card_submit"
+                id="alita_modal_new_card_submit"
                 class="btn btn-primary"
               >
                 <span class="indicator-label"> Submit </span>

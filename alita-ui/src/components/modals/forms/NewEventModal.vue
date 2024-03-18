@@ -1,7 +1,7 @@
 <template>
   <div
     class="modal fade show"
-    id="kt_modal_add_event"
+    id="alita_modal_add_event"
     aria-modal="true"
     role="dialog"
     ref="newTargetModalRef"
@@ -10,7 +10,7 @@
       <div class="modal-content">
         <el-form
           class="form fv-plugins-bootstrap5 fv-plugins-framework"
-          id="kt_modal_add_event_form"
+          id="alita_modal_add_event_form"
           @submit.prevent="submit()"
           :model="targetData"
           :rules="rules"
@@ -20,7 +20,7 @@
             <h2 class="fw-bold">Add a New Event</h2>
             <div
               class="btn btn-icon btn-sm btn-active-icon-primary"
-              id="kt_modal_add_event_close"
+              id="alita_modal_add_event_close"
               data-bs-dismiss="modal"
             >
               <AlitaIcon icon-name="cross" icon-class="fs-1" />
@@ -146,7 +146,7 @@
             <button
               data-bs-dismiss="modal"
               type="reset"
-              id="kt_modal_add_event_cancel"
+              id="alita_modal_add_event_cancel"
               class="btn btn-light me-3"
             >
               Cancel

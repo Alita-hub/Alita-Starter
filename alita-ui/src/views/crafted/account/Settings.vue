@@ -6,9 +6,9 @@
       class="card-header border-0 cursor-pointer"
       role="button"
       data-bs-toggle="collapse"
-      data-bs-target="#kt_account_profile_details"
+      data-bs-target="#alita_account_profile_details"
       aria-expanded="true"
-      aria-controls="kt_account_profile_details"
+      aria-controls="alita_account_profile_details"
     >
       <!--begin::Card title-->
       <div class="card-title m-0">
@@ -19,10 +19,10 @@
     <!--begin::Card header-->
 
     <!--begin::Content-->
-    <div id="kt_account_profile_details" class="collapse show">
+    <div id="alita_account_profile_details" class="collapse show">
       <!--begin::Form-->
       <VForm
-        id="kt_account_profile_details_form"
+        id="alita_account_profile_details_form"
         class="form"
         novalidate
         @submit="saveChanges1()"
@@ -1193,7 +1193,7 @@
 
           <button
             type="submit"
-            id="kt_account_profile_details_submit"
+            id="alita_account_profile_details_submit"
             ref="submitButton1"
             class="btn btn-primary"
           >
@@ -1221,7 +1221,7 @@
       class="card-header border-0 cursor-pointer"
       role="button"
       data-bs-toggle="collapse"
-      data-bs-target="#kt_account_signin_method"
+      data-bs-target="#alita_account_signin_method"
     >
       <div class="card-title m-0">
         <h3 class="fw-bolder m-0">Sign-in Method</h3>
@@ -1230,12 +1230,12 @@
     <!--end::Card header-->
 
     <!--begin::Content-->
-    <div id="kt_account_signin_method" class="collapse show">
+    <div id="alita_account_signin_method" class="collapse show">
       <!--begin::Card body-->
       <div class="card-body border-top p-9">
         <!--begin::Email Address-->
         <div class="d-flex flex-wrap align-items-center mb-8">
-          <div id="kt_signin_email" :class="{ 'd-none': emailFormDisplay }">
+          <div id="alita_signin_email" :class="{ 'd-none': emailFormDisplay }">
             <div class="fs-4 fw-bolder mb-1">Email Address</div>
             <div class="fs-6 fw-semibold text-gray-600">
               support@keenthemes.com
@@ -1243,13 +1243,13 @@
           </div>
 
           <div
-            id="kt_signin_email_edit"
+            id="alita_signin_email_edit"
             :class="{ 'd-none': !emailFormDisplay }"
             class="flex-row-fluid"
           >
             <!--begin::Form-->
             <VForm
-              id="kt_signin_change_email"
+              id="alita_signin_change_email"
               class="form"
               novalidate
               @submit="updateEmail()"
@@ -1301,7 +1301,7 @@
               </div>
               <div class="d-flex">
                 <button
-                  id="kt_signin_submit"
+                  id="alita_signin_submit"
                   type="submit"
                   ref="updateEmailButton"
                   class="btn btn-primary me-2 px-6"
@@ -1315,7 +1315,7 @@
                   </span>
                 </button>
                 <button
-                  id="kt_signin_cancel"
+                  id="alita_signin_cancel"
                   type="button"
                   class="btn btn-color-gray-500 btn-active-light-primary px-6"
                   @click="emailFormDisplay = !emailFormDisplay"
@@ -1327,7 +1327,7 @@
             <!--end::Form-->
           </div>
           <div
-            id="kt_signin_email_button"
+            id="alita_signin_email_button"
             :class="{ 'd-none': emailFormDisplay }"
             class="ms-auto"
           >
@@ -1344,14 +1344,14 @@
         <!--begin::Password-->
         <div class="d-flex flex-wrap align-items-center mb-8">
           <div
-            id="kt_signin_password"
+            id="alita_signin_password"
             :class="{ 'd-none': passwordFormDisplay }"
           >
             <div class="fs-4 fw-bolder mb-1">Password</div>
             <div class="fs-6 fw-semibold text-gray-600">************</div>
           </div>
           <div
-            id="kt_signin_password_edit"
+            id="alita_signin_password_edit"
             class="flex-row-fluid"
             :class="{ 'd-none': !passwordFormDisplay }"
           >
@@ -1361,7 +1361,7 @@
 
             <!--begin::Form-->
             <VForm
-              id="kt_signin_change_password"
+              id="alita_signin_change_password"
               class="form"
               novalidate
               @submit="updatePassword()"
@@ -1431,7 +1431,7 @@
               </div>
               <div class="d-flex">
                 <button
-                  id="kt_password_submit"
+                  id="alita_password_submit"
                   type="submit"
                   ref="updatePasswordButton"
                   class="btn btn-primary me-2 px-6"
@@ -1445,7 +1445,7 @@
                   </span>
                 </button>
                 <button
-                  id="kt_password_cancel"
+                  id="alita_password_cancel"
                   type="button"
                   @click="passwordFormDisplay = !passwordFormDisplay"
                   class="btn btn-color-gray-500 btn-active-light-primary px-6"
@@ -1457,7 +1457,7 @@
             <!--end::Form-->
           </div>
           <div
-            id="kt_signin_password_button"
+            id="alita_signin_password_button"
             class="ms-auto"
             :class="{ 'd-none': passwordFormDisplay }"
           >
@@ -1484,9 +1484,9 @@
       class="card-header border-0 cursor-pointer"
       role="button"
       data-bs-toggle="collapse"
-      data-bs-target="#kt_account_connected_accounts"
+      data-bs-target="#alita_account_connected_accounts"
       aria-expanded="true"
-      aria-controls="kt_account_connected_accounts"
+      aria-controls="alita_account_connected_accounts"
     >
       <div class="card-title m-0">
         <h3 class="fw-bold m-0">Connected Accounts</h3>
@@ -1495,7 +1495,7 @@
     <!--end::Card header-->
 
     <!--begin::Content-->
-    <div id="kt_account_connected_accounts" class="collapse show">
+    <div id="alita_account_connected_accounts" class="collapse show">
       <!--begin::Card body-->
       <div class="card-body border-top p-9">
         <div
@@ -1664,9 +1664,9 @@
       class="card-header border-0 cursor-pointer"
       role="button"
       data-bs-toggle="collapse"
-      data-bs-target="#kt_account_email_preferences"
+      data-bs-target="#alita_account_email_preferences"
       aria-expanded="true"
-      aria-controls="kt_account_email_preferences"
+      aria-controls="alita_account_email_preferences"
     >
       <div class="card-title m-0">
         <h3 class="fw-bold m-0">Email Preferences</h3>
@@ -1675,7 +1675,7 @@
     <!--begin::Card header-->
 
     <!--begin::Content-->
-    <div id="kt_account_email_preferences" class="collapse show">
+    <div id="alita_account_email_preferences" class="collapse show">
       <!--begin::Form-->
       <form class="form" @submit.prevent="saveChanges3()">
         <!--begin::Card body-->
@@ -1913,9 +1913,9 @@
       class="card-header border-0 cursor-pointer"
       role="button"
       data-bs-toggle="collapse"
-      data-bs-target="#kt_account_notifications"
+      data-bs-target="#alita_account_notifications"
       aria-expanded="true"
-      aria-controls="kt_account_notifications"
+      aria-controls="alita_account_notifications"
     >
       <div class="card-title m-0">
         <h3 class="fw-bold m-0">Notifications</h3>
@@ -1924,7 +1924,7 @@
     <!--begin::Card header-->
 
     <!--begin::Content-->
-    <div id="kt_account_notifications" class="collapse show">
+    <div id="alita_account_notifications" class="collapse show">
       <!--begin::Form-->
       <form class="form" @submit.prevent="saveChanges4()">
         <!--begin::Card body-->
@@ -1944,14 +1944,14 @@
                         class="form-check-input"
                         type="checkbox"
                         value=""
-                        id="kt_settings_notification_email"
+                        id="alita_settings_notification_email"
                         checked
                         data-alita-check="true"
                         data-alita-check-target="[data-alita-settings-notification=email]"
                       />
                       <label
                         class="form-check-label ps-2"
-                        for="kt_settings_notification_email"
+                        for="alita_settings_notification_email"
                       >
                         Email
                       </label>
@@ -1963,14 +1963,14 @@
                         class="form-check-input"
                         type="checkbox"
                         value=""
-                        id="kt_settings_notification_phone"
+                        id="alita_settings_notification_phone"
                         checked
                         data-alita-check="true"
                         data-alita-check-target="[data-alita-settings-notification=phone]"
                       />
                       <label
                         class="form-check-label ps-2"
-                        for="kt_settings_notification_phone"
+                        for="alita_settings_notification_phone"
                       >
                         Phone
                       </label>
@@ -2161,9 +2161,9 @@
       class="card-header border-0 cursor-pointer"
       role="button"
       data-bs-toggle="collapse"
-      data-bs-target="#kt_account_deactivate"
+      data-bs-target="#alita_account_deactivate"
       aria-expanded="true"
-      aria-controls="kt_account_deactivate"
+      aria-controls="alita_account_deactivate"
     >
       <div class="card-title m-0">
         <h3 class="fw-bolder m-0">Deactivate Account</h3>
@@ -2172,10 +2172,10 @@
     <!--end::Card header-->
 
     <!--begin::Content-->
-    <div id="kt_account_deactivate" class="collapse show">
+    <div id="alita_account_deactivate" class="collapse show">
       <!--begin::Form-->
       <form
-        id="kt_account_deactivate_form"
+        id="alita_account_deactivate_form"
         class="form"
         @submit.prevent="deactivateAccount()"
       >
@@ -2232,7 +2232,7 @@
         <!--begin::Card footer-->
         <div class="card-footer d-flex justify-content-end py-6 px-9">
           <button
-            id="kt_account_deactivate_account_submit"
+            id="alita_account_deactivate_account_submit"
             ref="submitButton5"
             type="submit"
             class="btn btn-danger fw-semibold"

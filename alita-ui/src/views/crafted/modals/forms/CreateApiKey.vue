@@ -4,7 +4,7 @@
     description="Click on the below buttons to launch <br/>a new API Key creation example."
     :image="getIllustrationsPath('16.png')"
     button-text="Create API Key"
-    modal-id="kt_modal_create_api_key"
+    modal-id="alita_modal_create_api_key"
   ></KTModalCard>
 
   <KTCreateAPIKeyModal></KTCreateAPIKeyModal>

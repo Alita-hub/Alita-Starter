@@ -18,7 +18,7 @@
         />
         <input
           type="text"
-          id="kt_filter_search"
+          id="alita_filter_search"
           class="form-control form-control-white form-control-sm w-150px ps-9"
           placeholder="Search"
         />

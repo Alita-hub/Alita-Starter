@@ -2,7 +2,7 @@
   <!--begin::Modal - View Users-->
   <div
     class="modal fade"
-    id="kt_modal_view_users"
+    id="alita_modal_view_users"
     tabindex="-1"
     aria-hidden="true"
   >

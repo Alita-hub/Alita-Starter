@@ -26,7 +26,7 @@
       <!--begin::Table-->
       <table
         class="table align-middle table-row-dashed fs-6 text-gray-600 fw-semibold gy-5"
-        id="kt_table_customers_events"
+        id="alita_table_customers_events"
       >
         <!--begin::Table body-->
         <tbody>

@@ -2,8 +2,8 @@ import { ref } from "vue";
 import { defineStore } from "pinia";
 import { ThemeModeComponent } from "@/assets/ts/layout";
 
-export const THEME_MODE_LS_KEY = "kt_theme_mode_value";
-export const THEME_MENU_MODE_LS_KEY = "kt_theme_mode_menu";
+export const THEME_MODE_LS_KEY = "alita_theme_mode_value";
+export const THEME_MENU_MODE_LS_KEY = "alita_theme_mode_menu";
 
 export const useThemeStore = defineStore("theme", () => {
   const mode = ref<"light" | "dark" | "system">(

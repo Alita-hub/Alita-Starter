@@ -5,7 +5,7 @@
     <VForm
       class="form w-100 fv-plugins-bootstrap5 fv-plugins-framework"
       @submit="onSubmitForgotPassword"
-      id="kt_login_password_reset_form"
+      id="alita_login_password_reset_form"
       :validation-schema="forgotPassword"
     >
       <!--begin::Heading-->
@@ -45,7 +45,7 @@
         <button
           type="submit"
           ref="submitButton"
-          id="kt_password_reset_submit"
+          id="alita_password_reset_submit"
           class="btn btn-lg btn-primary fw-bold me-4"
         >
           <span class="indicator-label"> Submit </span>

@@ -4,7 +4,7 @@
     <!--begin::Content-->
     <div class="flex-lg-row-fluid me-lg-15 order-2 order-lg-1 mb-10 mb-lg-0">
       <!--begin::Form-->
-      <form class="form" action="#" id="kt_subscriptions_create_new">
+      <form class="form" action="#" id="alita_subscriptions_create_new">
         <Customer></Customer>
 
         <Products></Products>

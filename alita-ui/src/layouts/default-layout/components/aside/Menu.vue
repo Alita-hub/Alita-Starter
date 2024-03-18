@@ -1,18 +1,18 @@
 <template>
   <!--begin::Menu wrapper-->
   <div
-    id="kt_aside_menu_wrapper"
+    id="alita_aside_menu_wrapper"
     ref="scrollElRef"
     class="hover-scroll-overlay-y px-2 my-5 my-lg-5"
     data-alita-scroll="true"
     data-alita-scroll-height="auto"
-    data-alita-scroll-dependencies="{default: '#kt_aside_toolbar, #kt_aside_footer', lg: '#kt_header, #kt_aside_toolbar, #kt_aside_footer'}"
-    data-alita-scroll-wrappers="#kt_aside_menu"
+    data-alita-scroll-dependencies="{default: '#alita_aside_toolbar, #alita_aside_footer', lg: '#alita_header, #alita_aside_toolbar, #alita_aside_footer'}"
+    data-alita-scroll-wrappers="#alita_aside_menu"
     data-alita-scroll-offset="5px"
   >
     <!--begin::Menu-->
     <div
-      id="#kt_aside_menu"
+      id="#alita_aside_menu"
       class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500"
       data-alita-menu="true"
     >

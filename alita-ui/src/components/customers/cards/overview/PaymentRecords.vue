@@ -16,7 +16,7 @@
           type="button"
           class="btn btn-sm btn-flex btn-light-primary"
           data-bs-toggle="modal"
-          data-bs-target="#kt_modal_add_payment"
+          data-bs-target="#alita_modal_add_payment"
         >
           <AlitaIcon icon-name="plus-square" icon-class="fs-3" />
           Add payment

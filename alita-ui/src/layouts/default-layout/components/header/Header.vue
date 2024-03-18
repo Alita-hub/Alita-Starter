@@ -1,5 +1,5 @@
 <template>
-  <div id="kt_header" class="header align-items-stretch">
+  <div id="alita_header" class="header align-items-stretch">
     <div class="header-brand">
       <!--begin::Logo-->
       <router-link to="/dashboard">
@@ -14,7 +14,7 @@
       <!--begin::Aside minimize-->
       <div
         v-if="asideDisplay"
-        id="kt_aside_toggle"
+        id="alita_aside_toggle"
         class="btn btn-icon w-auto px-0 btn-active-color-primary aside-minimize"
         :class="{ active: asideMinimized }"
         data-alita-toggle="true"
@@ -41,7 +41,7 @@
       >
         <div
           class="btn btn-icon btn-active-color-primary w-30px h-30px"
-          id="kt_aside_mobile_toggle"
+          id="alita_aside_mobile_toggle"
         >
           <AlitaIcon icon-name="abstract-14" icon-class="fs-1" />
         </div>
@@ -58,7 +58,7 @@
     >
       <div
         class="container-fluid py-6 py-lg-0 d-flex flex-column flex-lg-row align-items-lg-stretch justify-content-lg-between"
-        id="kt_toolbar_container"
+        id="alita_toolbar_container"
       >
         <PageTitle></PageTitle>
         <KTTopbar />

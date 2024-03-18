@@ -13,7 +13,7 @@
           href="#"
           class="btn btn-sm btn-flex btn-light-primary"
           data-bs-toggle="modal"
-          data-bs-target="#kt_modal_new_card"
+          data-bs-target="#alita_modal_new_card"
         >
           <AlitaIcon icon-name="plus-square" icon-class="fs-3" />
           Add new method</a
@@ -23,7 +23,7 @@
     </div>
     <!--end::Card header-->
     <!--begin::Card body-->
-    <div id="kt_customer_view_payment_method" class="card-body pt-0">
+    <div id="alita_customer_view_payment_method" class="card-body pt-0">
       <!--begin::Option-->
       <div class="py-0" data-alita-customer-payment-method="row">
         <!--begin::Header-->
@@ -32,10 +32,10 @@
           <div
             class="d-flex align-items-center collapsible rotate collapsed"
             data-bs-toggle="collapse"
-            href="#kt_customer_view_payment_method_1"
+            href="#alita_customer_view_payment_method_1"
             role="button"
             aria-expanded="false"
-            aria-controls="kt_customer_view_payment_method_1"
+            aria-controls="alita_customer_view_payment_method_1"
           >
             <!--begin::Arrow-->
             <div class="me-3 rotate-90">
@@ -67,7 +67,7 @@
               href="#"
               class="btn btn-icon btn-active-light-primary w-30px h-30px me-3"
               data-bs-toggle="modal"
-              data-bs-target="#kt_modal_new_card"
+              data-bs-target="#alita_modal_new_card"
             >
               <span
                 data-bs-toggle="tooltip"
@@ -127,9 +127,9 @@
         <!--end::Header-->
         <!--begin::Body-->
         <div
-          id="kt_customer_view_payment_method_1"
+          id="alita_customer_view_payment_method_1"
           class="fs-6 ps-10 collapse"
-          data-bs-parent="#kt_customer_view_payment_method"
+          data-bs-parent="#alita_customer_view_payment_method"
           style=""
         >
           <!--begin::Details-->
@@ -226,10 +226,10 @@
           <div
             class="d-flex align-items-center collapsible rotate collapsed"
             data-bs-toggle="collapse"
-            href="#kt_customer_view_payment_method_2"
+            href="#alita_customer_view_payment_method_2"
             role="button"
             aria-expanded="false"
-            aria-controls="kt_customer_view_payment_method_2"
+            aria-controls="alita_customer_view_payment_method_2"
           >
             <!--begin::Arrow-->
             <div class="me-3 rotate-90">
@@ -260,7 +260,7 @@
               href="#"
               class="btn btn-icon btn-active-light-primary w-30px h-30px me-3"
               data-bs-toggle="modal"
-              data-bs-target="#kt_modal_new_card"
+              data-bs-target="#alita_modal_new_card"
             >
               <span
                 data-bs-toggle="tooltip"
@@ -320,9 +320,9 @@
         <!--end::Header-->
         <!--begin::Body-->
         <div
-          id="kt_customer_view_payment_method_2"
+          id="alita_customer_view_payment_method_2"
           class="fs-6 ps-10 collapse"
-          data-bs-parent="#kt_customer_view_payment_method"
+          data-bs-parent="#alita_customer_view_payment_method"
           style=""
         >
           <!--begin::Details-->
@@ -421,10 +421,10 @@
           <div
             class="d-flex align-items-center collapsible collapsed rotate"
             data-bs-toggle="collapse"
-            href="#kt_customer_view_payment_method_3"
+            href="#alita_customer_view_payment_method_3"
             role="button"
             aria-expanded="false"
-            aria-controls="kt_customer_view_payment_method_3"
+            aria-controls="alita_customer_view_payment_method_3"
           >
             <!--begin::Arrow-->
             <div class="me-3 rotate-90">
@@ -456,7 +456,7 @@
               href="#"
               class="btn btn-icon btn-active-light-primary w-30px h-30px me-3"
               data-bs-toggle="modal"
-              data-bs-target="#kt_modal_new_card"
+              data-bs-target="#alita_modal_new_card"
             >
               <span
                 data-bs-toggle="tooltip"
@@ -516,9 +516,9 @@
         <!--end::Header-->
         <!--begin::Body-->
         <div
-          id="kt_customer_view_payment_method_3"
+          id="alita_customer_view_payment_method_3"
           class="collapse fs-6 ps-10"
-          data-bs-parent="#kt_customer_view_payment_method"
+          data-bs-parent="#alita_customer_view_payment_method"
         >
           <!--begin::Details-->
           <div class="d-flex flex-wrap py-5">

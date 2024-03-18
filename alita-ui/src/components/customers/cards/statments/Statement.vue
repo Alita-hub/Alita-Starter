@@ -21,7 +21,7 @@
               class="nav-link text-active-primary active"
               data-bs-toggle="tab"
               role="tab"
-              href="#kt_customer_view_statement_1"
+              href="#alita_customer_view_statement_1"
             >
               This Year
             </a>
@@ -32,7 +32,7 @@
               class="nav-link text-active-primary ms-3"
               data-bs-toggle="tab"
               role="tab"
-              href="#kt_customer_view_statement_2"
+              href="#alita_customer_view_statement_2"
             >
               2020
             </a>
@@ -43,7 +43,7 @@
               class="nav-link text-active-primary ms-3"
               data-bs-toggle="tab"
               role="tab"
-              href="#kt_customer_view_statement_3"
+              href="#alita_customer_view_statement_3"
             >
               2019
             </a>
@@ -54,7 +54,7 @@
               class="nav-link text-active-primary ms-3"
               data-bs-toggle="tab"
               role="tab"
-              href="#kt_customer_view_statement_4"
+              href="#alita_customer_view_statement_4"
             >
               2018
             </a>
@@ -69,9 +69,9 @@
     <!--begin::Card body-->
     <div class="card-body pb-5">
       <!--begin::Tab Content-->
-      <div id="kt_customer_view_statement_tab_content" class="tab-content">
+      <div id="alita_customer_view_statement_tab_content" class="tab-content">
         <div
-          id="kt_customer_view_statement_1"
+          id="alita_customer_view_statement_1"
           class="py-0 tab-pane fade active show"
           role="tabpanel"
         >
@@ -103,7 +103,7 @@
           </Datatable>
         </div>
         <div
-          id="kt_customer_view_statement_2"
+          id="alita_customer_view_statement_2"
           class="py-0 tab-pane fade"
           role="tabpanel"
         >
@@ -135,7 +135,7 @@
           </Datatable>
         </div>
         <div
-          id="kt_customer_view_statement_3"
+          id="alita_customer_view_statement_3"
           class="py-0 tab-pane fade"
           role="tabpanel"
         >
@@ -167,7 +167,7 @@
           </Datatable>
         </div>
         <div
-          id="kt_customer_view_statement_4"
+          id="alita_customer_view_statement_4"
           class="py-0 tab-pane fade"
           role="tabpanel"
         >

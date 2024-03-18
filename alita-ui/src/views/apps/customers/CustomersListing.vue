@@ -33,7 +33,7 @@
             type="button"
             class="btn btn-light-primary me-3"
             data-bs-toggle="modal"
-            data-bs-target="#kt_customers_export_modal"
+            data-bs-target="#alita_customers_export_modal"
           >
             <AlitaIcon icon-name="exit-up" icon-class="fs-2" />
             Export
@@ -44,7 +44,7 @@
             type="button"
             class="btn btn-primary"
             data-bs-toggle="modal"
-            data-bs-target="#kt_modal_add_customer"
+            data-bs-target="#alita_modal_add_customer"
           >
             <AlitaIcon icon-name="plus" icon-class="fs-2" />
             Add Customer

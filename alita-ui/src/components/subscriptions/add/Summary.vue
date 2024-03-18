@@ -2,7 +2,7 @@
   <!--begin::Card-->
   <div
     class="card card-flush pt-3 mb-0"
-    id="kt_add_summary"
+    id="alita_add_summary"
     data-alita-sticky="true"
     data-alita-sticky-name="add-subscription-summary"
     data-alita-sticky-offset="{default: false, lg: '200px'}"
@@ -115,7 +115,7 @@
         <button
           type="submit"
           class="btn btn-primary"
-          id="kt_subscriptions_create_button"
+          id="alita_subscriptions_create_button"
         >
           <!--begin::Indicator-->
           <span class="indicator-label">Create Subscription</span>

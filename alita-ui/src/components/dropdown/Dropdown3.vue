@@ -79,11 +79,11 @@
                 value=""
                 name="notifications"
                 checked
-                id="kt_user_menu_notifications"
+                id="alita_user_menu_notifications"
               />
               <span
                 class="form-check-label text-muted fs-6"
-                for="kt_user_menu_notifications"
+                for="alita_user_menu_notifications"
               >
                 Notifications
               </span>

@@ -55,11 +55,11 @@ class ScrollTopComponent {
     const pos = getScrollTop(); // current vertical position
     if (pos > offset) {
       if (!document.body.hasAttribute("data-alita-scrolltop")) {
-        document.body.setAttribute("data-alitaita-scrolltop", "on");
+        document.body.setAttribute("data-alita-scrolltop", "on");
       }
     } else {
-      if (document.body.hasAttribute("data-alitaita-scrolltop")) {
-        document.body.removeAttribute("data-alitaita-scrolltop");
+      if (document.body.hasAttribute("data-alita-scrolltop")) {
+        document.body.removeAttribute("data-alita-scrolltop");
       }
     }
   };
@@ -70,7 +70,7 @@ class ScrollTopComponent {
   };
 
   private _getOption = (name: string) => {
-    const attr = this.element.getAttribute(`data-alitaita-scrolltop-${name}`);
+    const attr = this.element.getAttribute(`data-alita-scrolltop-${name}`);
     if (attr) {
       const value = getAttributeValueByBreakpoint(attr);
       return value !== null && String(value) === "true";
@@ -136,11 +136,11 @@ class ScrollTopComponent {
   };
 
   public static bootstrap = () => {
-    ScrollTopComponent.createInstances('[data-alitaita-scrolltop="true"]');
+    ScrollTopComponent.createInstances('[data-alita-scrolltop="true"]');
   };
 
   public static reinitialization = () => {
-    ScrollTopComponent.createInstances('[data-alitaita-scrolltop="true"]');
+    ScrollTopComponent.createInstances('[data-alita-scrolltop="true"]');
   };
 
   public static goTop = () => {

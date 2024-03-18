@@ -3,7 +3,7 @@
   <form
     class="mx-auto mw-600px w-100 pt-15 pb-10"
     novalidate
-    id="kt_create_account_form"
+    id="alita_create_account_form"
     @submit="handleStep"
   >
     <CreateAccountStep1></CreateAccountStep1>

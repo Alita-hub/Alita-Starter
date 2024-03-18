@@ -4,7 +4,7 @@
     description="Click on the below buttons to launch <br/>a new address example."
     :image="getIllustrationsPath('19.png')"
     button-text="Add New Address"
-    modal-id="kt_modal_new_address"
+    modal-id="alita_modal_new_address"
   ></KTModalCard>
 
   <KTNewAddressModal></KTNewAddressModal>

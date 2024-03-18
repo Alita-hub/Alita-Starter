@@ -1,7 +1,7 @@
 <template>
   <!--begin::Help drawer-->
   <div
-    id="kt_help"
+    id="alita_help"
     class="bg-body"
     data-alita-drawer="true"
     data-alita-drawer-name="help"
@@ -9,13 +9,13 @@
     data-alita-drawer-overlay="true"
     data-alita-drawer-width="{default:'350px', 'md': '525px'}"
     data-alita-drawer-direction="end"
-    data-alita-drawer-toggle="#kt_help_toggle"
-    data-alita-drawer-close="#kt_help_close"
+    data-alita-drawer-toggle="#alita_help_toggle"
+    data-alita-drawer-close="#alita_help_close"
   >
     <!--begin::Card-->
     <div class="card shadow-none rounded-0 w-100">
       <!--begin::Header-->
-      <div class="card-header" id="kt_help_header">
+      <div class="card-header" id="alita_help_header">
         <h5 class="card-title fw-semibold text-gray-600">
           Learn & Get Inspired
         </h5>
@@ -24,7 +24,7 @@
           <button
             type="button"
             class="btn btn-sm btn-icon explore-btn-dismiss me-n5"
-            id="kt_help_close"
+            id="alita_help_close"
           >
             <AlitaIcon icon-name="cross" icon-class="fs-2" />
           </button>
@@ -33,15 +33,15 @@
       <!--end::Header-->
 
       <!--begin::Body-->
-      <div class="card-body" id="kt_help_body">
+      <div class="card-body" id="alita_help_body">
         <!--begin::Content-->
         <div
-          id="kt_help_scroll"
+          id="alita_help_scroll"
           class="hover-scroll-overlay-y"
           data-alita-scroll="true"
           data-alita-scroll-height="auto"
-          data-alita-scroll-wrappers="#kt_help_body"
-          data-alita-scroll-dependencies="#kt_help_header"
+          data-alita-scroll-wrappers="#alita_help_body"
+          data-alita-scroll-dependencies="#alita_help_header"
           data-alita-scroll-offset="5px"
         >
           <!--begin::Support-->

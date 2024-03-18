@@ -1,6 +1,6 @@
 <template>
   <!--begin::Form-->
-  <form class="form" id="kt_create_app_form" @submit="handleStep">
+  <form class="form" id="alita_create_app_form" @submit="handleStep">
     <CreateAppStep1></CreateAppStep1>
     <CreateAppStep2></CreateAppStep2>
     <CreateAppStep3></CreateAppStep3>

@@ -13,20 +13,20 @@
           href="#"
           class="btn btn-light-primary"
           data-bs-toggle="modal"
-          data-bs-target="#kt_modal_new_card"
+          data-bs-target="#alita_modal_new_card"
           >New Method</a
         >
       </div>
     </div>
 
     <div class="card-body pt-0">
-      <div id="kt_create_new_payment_method">
+      <div id="alita_create_new_payment_method">
         <div class="py-1">
           <div class="py-3 d-flex flex-stack flex-wrap">
             <div
               class="d-flex align-items-center collapsible toggle collapsed"
               data-bs-toggle="collapse"
-              data-bs-target="#kt_create_new_payment_method_1"
+              data-bs-target="#alita_create_new_payment_method_1"
               aria-expanded="false"
             >
               <div
@@ -70,7 +70,7 @@
           </div>
 
           <div
-            id="kt_create_new_payment_method_1"
+            id="alita_create_new_payment_method_1"
             class="fs-6 ps-10 collapse"
             style=""
           >
@@ -162,7 +162,7 @@
             <div
               class="d-flex align-items-center collapsible toggle collapsed"
               data-bs-toggle="collapse"
-              data-bs-target="#kt_create_new_payment_method_2"
+              data-bs-target="#alita_create_new_payment_method_2"
             >
               <div
                 class="btn btn-sm btn-icon btn-active-color-primary ms-n3 me-2"
@@ -201,7 +201,10 @@
             </div>
           </div>
 
-          <div id="kt_create_new_payment_method_2" class="collapse fs-6 ps-10">
+          <div
+            id="alita_create_new_payment_method_2"
+            class="collapse fs-6 ps-10"
+          >
             <div class="d-flex flex-wrap py-5">
               <div class="flex-equal me-5">
                 <table class="table table-flush fw-semibold gy-1">
@@ -292,7 +295,7 @@
             <div
               class="d-flex align-items-center collapsible toggle collapsed"
               data-bs-toggle="collapse"
-              data-bs-target="#kt_create_new_payment_method_3"
+              data-bs-target="#alita_create_new_payment_method_3"
             >
               <div
                 class="btn btn-sm btn-icon btn-active-color-primary ms-n3 me-2"
@@ -333,7 +336,10 @@
             </div>
           </div>
 
-          <div id="kt_create_new_payment_method_3" class="collapse fs-6 ps-10">
+          <div
+            id="alita_create_new_payment_method_3"
+            class="collapse fs-6 ps-10"
+          >
             <div class="d-flex flex-wrap py-5">
               <div class="flex-equal me-5">
                 <table class="table table-flush fw-semibold gy-1">

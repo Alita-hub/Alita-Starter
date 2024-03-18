@@ -48,13 +48,13 @@ class StepperComponent {
       '[data-alita-stepper-element="nav"]'
     );
     this.btnNext = this.element.querySelector(
-      '[data-alitaita-stepper-action="next"]'
+      '[data-alita-stepper-action="next"]'
     );
     this.btnPrev = this.element.querySelector(
-      '[data-alitaita-stepper-action="previous"]'
+      '[data-alita-stepper-action="previous"]'
     );
     this.btnSubmit = this.element.querySelector(
-      '[data-alitaita-stepper-action="submit"]'
+      '[data-alita-stepper-action="submit"]'
     );
 
     // Variables
@@ -112,7 +112,7 @@ class StepperComponent {
 
     DOMEventHandlerUtil.on(
       this.element,
-      '[data-alitaita-stepper-action="step"]',
+      '[data-alita-stepper-action="step"]',
       "click",
       (e: Event) => {
         e.preventDefault();
@@ -142,7 +142,7 @@ class StepperComponent {
 
   private getStepContent = (index: number) => {
     const content = this.element.querySelectorAll(
-      '[data-alitaita-stepper-element="content"]'
+      '[data-alita-stepper-element="content"]'
     );
     if (!content) {
       return false;
@@ -183,7 +183,7 @@ class StepperComponent {
 
     // Step Items
     const elements = this.element.querySelectorAll(
-      '[data-alitaita-stepper-element="nav"]data-alita-alita-stepper-element="contendata-alitaata-alita-stepper-element="info"]'
+      '[data-alita-stepper-element="nav"]data-alita-alita-stepper-element="contendata-alitaata-alita-stepper-element="info"]'
     );
 
     if (!elements || elements.length <= 0) {
@@ -203,7 +203,7 @@ class StepperComponent {
 
         if (
           this.options.animation !== false &&
-          element.getAttribute("data-alitaita-stepper-element") === "content"
+          element.getAttribute("data-alita-stepper-element") === "content"
         ) {
           ElementStyleUtil.set(
             element,
@@ -353,7 +353,7 @@ class StepperComponent {
     return stepper;
   };
 
-  public static bootstrap(attr: string = "[data-alitaita-stepper]") {
+  public static bootstrap(attr: string = "[data-alita-stepper]") {
     StepperComponent.createInstances(attr);
   }
 }

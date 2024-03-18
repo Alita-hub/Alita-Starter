@@ -51,7 +51,7 @@
           href="#"
           class="btn btn-primary"
           data-bs-toggle="modal"
-          data-bs-target="#kt_modal_customer_search"
+          data-bs-target="#alita_modal_customer_search"
           >Select Customer</a
         >
 
@@ -61,7 +61,7 @@
           to="/customers/list"
           class="btn btn-light-primary"
           data-bs-toggle="modal"
-          data-bs-target="#kt_modal_users_search"
+          data-bs-target="#alita_modal_users_search"
           >Add New Customer</router-link
         >
       </div>
@@ -73,7 +73,7 @@
           href="#"
           class="btn btn-light-primary"
           data-bs-toggle="modal"
-          data-bs-target="#kt_modal_customer_search"
+          data-bs-target="#alita_modal_customer_search"
           >Change Customer</a
         >
       </div>

@@ -14,7 +14,7 @@
             <a
               class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bold px-4 me-1 active"
               data-bs-toggle="tab"
-              href="#kt_table_widget_5_tab_1"
+              href="#alita_table_widget_5_tab_1"
               >Month</a
             >
           </li>
@@ -22,7 +22,7 @@
             <a
               class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bold px-4 me-1"
               data-bs-toggle="tab"
-              href="#kt_table_widget_5_tab_2"
+              href="#alita_table_widget_5_tab_2"
               >Week</a
             >
           </li>
@@ -30,7 +30,7 @@
             <a
               class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bold px-4"
               data-bs-toggle="tab"
-              href="#kt_table_widget_5_tab_3"
+              href="#alita_table_widget_5_tab_3"
               >Day</a
             >
           </li>
@@ -42,7 +42,7 @@
     <div class="card-body py-3">
       <div class="tab-content">
         <!--begin::Tap pane-->
-        <div class="tab-pane fade active show" id="kt_table_widget_5_tab_1">
+        <div class="tab-pane fade active show" id="alita_table_widget_5_tab_1">
           <!--begin::Table container-->
           <div class="table-responsive">
             <!--begin::Table-->
@@ -259,7 +259,7 @@
         </div>
         <!--end::Tap pane-->
         <!--begin::Tap pane-->
-        <div class="tab-pane fade" id="kt_table_widget_5_tab_2">
+        <div class="tab-pane fade" id="alita_table_widget_5_tab_2">
           <!--begin::Table container-->
           <div class="table-responsive">
             <!--begin::Table-->
@@ -396,7 +396,7 @@
         </div>
         <!--end::Tap pane-->
         <!--begin::Tap pane-->
-        <div class="tab-pane fade" id="kt_table_widget_5_tab_3">
+        <div class="tab-pane fade" id="alita_table_widget_5_tab_3">
           <!--begin::Table container-->
           <div class="table-responsive">
             <!--begin::Table-->

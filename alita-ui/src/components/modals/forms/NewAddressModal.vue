@@ -3,7 +3,7 @@
   <div
     class="modal fade"
     ref="newAddressModalRef"
-    id="kt_modal_new_address"
+    id="alita_modal_new_address"
     tabindex="-1"
     aria-hidden="true"
   >
@@ -14,13 +14,13 @@
         <!--begin::Form-->
         <VForm
           class="form"
-          id="kt_modal_new_address_form"
+          id="alita_modal_new_address_form"
           @submit="submit"
           :validation-schema="validationSchema"
           v-slot="{ errors }"
         >
           <!--begin::Modal header-->
-          <div class="modal-header" id="kt_modal_new_address_header">
+          <div class="modal-header" id="alita_modal_new_address_header">
             <!--begin::Modal title-->
             <h2>Add New Address</h2>
             <!--end::Modal title-->
@@ -41,12 +41,12 @@
             <!--begin::Scroll-->
             <div
               class="scroll-y me-n7 pe-7"
-              id="kt_modal_new_address_scroll"
+              id="alita_modal_new_address_scroll"
               data-alita-scroll="true"
               data-alita-scroll-activate="{default: false, lg: true}"
               data-alita-scroll-max-height="auto"
-              data-alita-scroll-dependencies="#kt_modal_new_address_header"
-              data-alita-scroll-wrappers="#kt_modal_new_address_scroll"
+              data-alita-scroll-dependencies="#alita_modal_new_address_header"
+              data-alita-scroll-wrappers="#alita_modal_new_address_scroll"
               data-alita-scroll-offset="300px"
             >
               <!--begin::Notice-->
@@ -317,7 +317,7 @@
             <!--begin::Button-->
             <button
               type="reset"
-              id="kt_modal_new_address_cancel"
+              id="alita_modal_new_address_cancel"
               class="btn btn-light me-3"
             >
               Discard
@@ -328,7 +328,7 @@
             <button
               ref="submitButtonRef"
               type="submit"
-              id="kt_modal_new_address_submit"
+              id="alita_modal_new_address_submit"
               class="btn btn-primary"
             >
               <span class="indicator-label"> Submit </span>

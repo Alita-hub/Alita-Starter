@@ -33,7 +33,7 @@
         <div class="table-responsive">
           <!--begin::Table-->
           <table
-            id="kt_create_new_custom_fields"
+            id="alita_create_new_custom_fields"
             class="table align-middle table-row-dashed fw-semibold fs-6 gy-5"
           >
             <!--begin::Table head-->
@@ -88,7 +88,7 @@
         <button
           type="button"
           class="btn btn-light-primary me-auto"
-          id="kt_create_new_custom_fields_add"
+          id="alita_create_new_custom_fields_add"
         >
           Add custom field
         </button>

@@ -15,7 +15,7 @@
           type="button"
           class="btn btn-light-primary"
           data-bs-toggle="modal"
-          data-bs-target="#kt_modal_add_product"
+          data-bs-target="#alita_modal_add_product"
         >
           Add Product
         </button>
@@ -31,7 +31,7 @@
         <!--begin::Table-->
         <table
           class="table align-middle table-row-dashed fs-6 fw-semibold gy-4"
-          id="kt_subscription_products_table"
+          id="alita_subscription_products_table"
         >
           <!--begin::Table head-->
           <thead>

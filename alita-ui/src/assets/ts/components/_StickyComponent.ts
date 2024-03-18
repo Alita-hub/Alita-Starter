@@ -43,8 +43,8 @@ class StickyComponent {
     this.options = Object.assign(defaultStickyOptions, options);
     this.instanceUid = getUniqueIdWithPrefix("sticky");
     this.instanceName = this.element.getAttribute("data-alita-sticky-name");
-    this.attributeName = "data-alitaita-sticky-" + this.instanceName;
-    this.attributeName2 = "data-alitaita-" + this.instanceName;
+    this.attributeName = "data-alita-sticky-" + this.instanceName;
+    this.attributeName2 = "data-alita-" + this.instanceName;
     this.eventTriggerState = true;
     this.lastScrollTop = 0;
 
@@ -139,7 +139,7 @@ class StickyComponent {
   };
 
   private getOption = (name: string) => {
-    const dataStickyAttr = "data-alitaita-sticky-" + name;
+    const dataStickyAttr = "data-alita-sticky-" + name;
     if (this.element.hasAttribute(dataStickyAttr) === true) {
       const attrValueInStr = this.element.getAttribute(dataStickyAttr);
       const attrValue = getAttributeValueByBreakpoint(attrValueInStr || "");
@@ -292,11 +292,11 @@ class StickyComponent {
     return sticky;
   };
 
-  public static bootstrap(attr: string = '[data-alitaita-sticky="true"]') {
+  public static bootstrap(attr: string = '[data-alita-sticky="true"]') {
     StickyComponent.createInstances(attr);
   }
 
-  public static reInitialization(attr: string = '[data-alitaita-sticky="true"]') {
+  public static reInitialization(attr: string = '[data-alita-sticky="true"]') {
     StickyComponent.createInstances(attr);
   }
 }

@@ -27,7 +27,7 @@
               href="#"
               class="btn btn-primary fs-6 px-6"
               data-bs-toggle="modal"
-              data-bs-target="#kt_modal_create_app"
+              data-bs-target="#alita_modal_create_app"
               >Get Started</a
             >
           </div>

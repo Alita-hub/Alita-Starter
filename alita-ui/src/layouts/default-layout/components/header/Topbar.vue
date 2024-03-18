@@ -35,14 +35,14 @@
       <!--end::Label-->
 
       <!--begin::NoUiSlider-->
-      <div class="d-flex align-items-center ps-4" id="kt_toolbar">
+      <div class="d-flex align-items-center ps-4" id="alita_toolbar">
         <div
-          id="kt_toolbar_slider"
+          id="alita_toolbar_slider"
           class="noUi-target noUi-target-primary w-75px w-xxl-150px noUi-sm"
         ></div>
 
         <span
-          id="kt_toolbar_slider_value"
+          id="alita_toolbar_slider_value"
           class="d-flex flex-center bg-light-primary rounded-circle w-35px h-35px ms-4 fs-7 fw-bold text-primary"
           data-bs-toggle="tooltip"
           data-bs-placement="top"
@@ -73,7 +73,7 @@
           href="#"
           class="btn btn-sm btn-icon btn-icon-muted btn-active-icon-primary"
           data-bs-toggle="modal"
-          data-bs-target="#kt_modal_invite_friends"
+          data-bs-target="#alita_modal_invite_friends"
         >
           <AlitaIcon icon-name="delete-files" icon-class="fs-2" />
         </a>
@@ -99,7 +99,7 @@
             href="#"
             class="btn btn-sm btn-icon btn-icon-muted btn-active-icon-primary"
             data-bs-toggle="modal"
-            data-bs-target="#kt_modal_create_app"
+            data-bs-target="#alita_modal_create_app"
           >
             <AlitaIcon icon-name="file-up" icon-class="fs-2" />
           </a>
@@ -146,10 +146,10 @@ export default defineComponent({
   setup() {
     const initSlider = (): void => {
       const slider: target = document.querySelector(
-        "#kt_toolbar_slider"
+        "#alita_toolbar_slider"
       ) as target;
       const rangeSliderValueElement: Element | null = document.querySelector(
-        "#kt_toolbar_slider_value"
+        "#alita_toolbar_slider_value"
       );
 
       if (!slider) {

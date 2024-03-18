@@ -4,7 +4,7 @@
     description="Click on the below buttons to launch <br/>a new target example."
     :image="getIllustrationsPath('17.png')"
     button-text="Add New Target"
-    modal-id="kt_modal_new_target"
+    modal-id="alita_modal_new_target"
   ></KTModalCard>
 
   <KTNewTargetModal></KTNewTargetModal>

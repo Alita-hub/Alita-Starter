@@ -2,7 +2,7 @@
   <!--begin::Modal - Share & Earn-->
   <div
     class="modal fade"
-    id="kt_modal_share_earn"
+    id="alita_modal_share_earn"
     tabindex="-1"
     aria-hidden="true"
   >
@@ -54,7 +54,7 @@
               <div class="d-flex">
                 <input
                   ref="inputRef"
-                  id="kt_share_earn_link_input"
+                  id="alita_share_earn_link_input"
                   type="text"
                   class="form-control form-control-solid me-3 flex-grow-1"
                   name="search"
@@ -63,9 +63,9 @@
 
                 <button
                   ref="copyButtonRef"
-                  id="kt_share_earn_link_copy_button"
+                  id="alita_share_earn_link_copy_button"
                   class="btn btn-light fw-bold flex-shrink-0"
-                  data-clipboard-target="#kt_share_earn_link_input"
+                  data-clipboard-target="#alita_share_earn_link_input"
                 >
                   Copy Link
                 </button>

@@ -4,7 +4,7 @@
     description="Click on the below buttons to launch <br/>create account modal example."
     :image="getIllustrationsPath('3.png')"
     button-text="Create Account"
-    modal-id="kt_modal_create_account"
+    modal-id="alita_modal_create_account"
   ></KTModalCard>
 
   <KTCreateAccountModal></KTCreateAccountModal>

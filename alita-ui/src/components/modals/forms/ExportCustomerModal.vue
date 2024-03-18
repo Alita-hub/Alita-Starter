@@ -1,7 +1,7 @@
 <template>
   <div
     class="modal fade"
-    id="kt_customers_export_modal"
+    id="alita_customers_export_modal"
     tabindex="-1"
     aria-hidden="true"
   >
@@ -17,7 +17,7 @@
 
           <!--begin::Close-->
           <div
-            id="kt_customers_export_close"
+            id="alita_customers_export_close"
             data-bs-dismiss="modal"
             class="btn btn-icon btn-sm btn-active-icon-primary"
           >
@@ -110,7 +110,7 @@
             <div class="text-center">
               <button
                 type="reset"
-                id="kt_customers_export_cancel"
+                id="alita_customers_export_cancel"
                 class="btn btn-light me-3"
               >
                 Discard

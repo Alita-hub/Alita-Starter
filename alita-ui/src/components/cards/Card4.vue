@@ -61,7 +61,7 @@
         <button
           class="btn btn-sm btn-light-primary fw-bold"
           data-alita-drawer-toggle="true"
-          data-alita-drawer-target="#kt_drawer_chat"
+          data-alita-drawer-target="#alita_drawer_chat"
           @click="openDrawer()"
         >
           Send Message
@@ -103,7 +103,7 @@ export default defineComponent({
   },
   setup() {
     const openDrawer = () => {
-      DrawerComponent?.getInstance("kt_drawer_chat")?.toggle();
+      DrawerComponent?.getInstance("alita_drawer_chat")?.toggle();
     };
 
     return {

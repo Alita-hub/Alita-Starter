@@ -2,7 +2,7 @@
   <!--begin::Card-->
   <div
     class="card card-flush mb-0"
-    id="kt_view_summary"
+    id="alita_view_summary"
     data-alita-sticky="true"
     data-alita-sticky-name="view-subscription-summary"
     data-alita-sticky-offset="{default: false, lg: '200px'}"
@@ -177,7 +177,7 @@
         <router-link
           to="/subscriptions/add"
           class="btn btn-primary"
-          id="kt_subscriptions_create_button"
+          id="alita_subscriptions_create_button"
         >
           Edit Subscription
         </router-link>

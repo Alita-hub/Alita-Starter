@@ -37,7 +37,7 @@
             type="button"
             class="btn btn-light-primary me-3"
             data-bs-toggle="modal"
-            data-bs-target="#kt_subscriptions_export_modal"
+            data-bs-target="#alita_subscriptions_export_modal"
           >
             <AlitaIcon icon-name="exit-up" icon-class="fs-2" />
             Export

@@ -6,7 +6,7 @@
   a friend invitation example."
     :image="getIllustrationsPath('1.png')"
     button-text="Invite Friends"
-    modal-id="kt_modal_invite_friends"
+    modal-id="alita_modal_invite_friends"
   ></KTModalCard>
 
   <KTInviteFriendsModal></KTInviteFriendsModal>

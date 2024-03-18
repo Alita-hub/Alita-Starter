@@ -48,9 +48,9 @@
             <a
               class="nav-link btn btn-outline btn-flex btn-color-muted btn-active-color-primary flex-column overflow-hidden w-80px h-85px pt-5 pb-2"
               :class="[i === 0 && 'active']"
-              :id="`kt_stats_widget_16_tab_link_${i}`"
+              :id="`alita_stats_widget_16_tab_link_${i}`"
               data-bs-toggle="pill"
-              :href="`#kt_stats_widget_16_tab_${i}`"
+              :href="`#alita_stats_widget_16_tab_${i}`"
             >
               <!--begin::Icon-->
               <div class="nav-icon mb-3">
@@ -84,7 +84,7 @@
           <div
             class="tab-pane fade"
             :class="[i === 0 && 'active show']"
-            :id="`kt_stats_widget_16_tab_${i}`"
+            :id="`alita_stats_widget_16_tab_${i}`"
           >
             <!--begin::Table container-->
             <div class="table-responsive">

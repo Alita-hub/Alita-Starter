@@ -3,6 +3,8 @@ import { defineStore } from "pinia";
 import ApiService from "@/core/services/ApiService";
 import JwtService from "@/core/services/JwtService";
 import { HttpStatusCode } from "axios";
+import Swal from "sweetalert2/dist/sweetalert2.js";
+
 
 export interface User {
   username: string;
@@ -34,8 +36,13 @@ export const useAuthStore = defineStore("auth", () => {
           msg.value = data.msg;
         }
       })
-      .catch(({ response }) => {
-        msg.value = response.msg;
+      .catch(({ error }) => {
+        if (!error) {
+          // network error
+          msg.value = '网络连接异常';
+        } else {
+          msg.value = error.response.data.message;
+        }
       });
   }
 

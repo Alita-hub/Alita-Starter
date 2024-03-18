@@ -2,7 +2,7 @@
   <!--begin::Modal - Upgrade plan-->
   <div
     class="modal fade"
-    id="kt_modal_upgrade_plan"
+    id="alita_modal_upgrade_plan"
     tabindex="-1"
     aria-hidden="true"
   >
@@ -77,7 +77,7 @@
                         !plan.custom && 'btn-active btn-active-primary',
                       ]"
                       data-bs-toggle="tab"
-                      :data-bs-target="`#kt_upgrade_plan_${index}`"
+                      :data-bs-target="`#alita_upgrade_plan_${index}`"
                     >
                       <!--end::Description-->
                       <div class="d-flex align-items-center me-2">
@@ -160,7 +160,7 @@
                       v-if="!plan.custom"
                       :class="[plan.default && 'show active']"
                       class="tab-pane fade"
-                      :id="`kt_upgrade_plan_${index}`"
+                      :id="`alita_upgrade_plan_${index}`"
                     >
                       <!--begin::Heading-->
                       <div class="pb-5">

@@ -37,11 +37,11 @@
               class="btn-check"
               name="accountType"
               value="personal"
-              id="kt_create_account_form_account_type_personal"
+              id="alita_create_account_form_account_type_personal"
             />
             <label
               class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center mb-10"
-              for="kt_create_account_form_account_type_personal"
+              for="alita_create_account_form_account_type_personal"
             >
               <AlitaIcon icon-name="address-book" icon-class="fs-3x me-5" />
 
@@ -68,11 +68,11 @@
               class="btn-check"
               name="accountType"
               value="corporate"
-              id="kt_create_account_form_account_type_corporate"
+              id="alita_create_account_form_account_type_corporate"
             />
             <label
               class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center"
-              for="kt_create_account_form_account_type_corporate"
+              for="alita_create_account_form_account_type_corporate"
             >
               <AlitaIcon icon-name="briefcase" icon-class="fs-3x me-5" />
 

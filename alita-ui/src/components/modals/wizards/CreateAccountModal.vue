@@ -2,7 +2,7 @@
   <!--begin::Modal - Create account-->
   <div
     class="modal fade"
-    id="kt_modal_create_account"
+    id="alita_modal_create_account"
     ref="modalRef"
     tabindex="-1"
     aria-hidden="true"

@@ -4,7 +4,7 @@
     description="Click on the below buttons to launch <br/>user lists example."
     :image="getIllustrationsPath('10.png')"
     button-text="View Users"
-    modal-id="kt_modal_view_users"
+    modal-id="alita_modal_view_users"
   ></KTModalCard>
 
   <KTViewUsersModal></KTViewUsersModal>
