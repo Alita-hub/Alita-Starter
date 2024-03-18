@@ -104,7 +104,7 @@ public class WebSecurityConfig {
                 .authenticated()
                 .and();
 
-        //未登录异常处理，执行重定向到登录页面
+        //未登录异常处理，引导去登录页面
         http = http
                 .exceptionHandling()
                 .authenticationEntryPoint(authEntryPoint)

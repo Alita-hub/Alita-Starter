@@ -3,6 +3,7 @@ package com.alita.admin.authentication.core;
 import com.alita.common.domain.model.Login;
 import com.alita.common.enums.LoginType;
 import com.alita.common.exception.core.BadRequestException;
+import com.alita.framework.security.context.AuthenticationContextHolder;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -36,6 +37,9 @@ public class LoginStrategyContext {
 
         //登录验证
         String token = loginStrategy.login(login);
+
+        //清除临时保存的认证信息
+        AuthenticationContextHolder.clearContext();
 
         return token;
     }
