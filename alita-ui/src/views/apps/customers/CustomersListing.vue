@@ -169,8 +169,8 @@
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent, onMounted, ref } from "vue";
-import Datatable from "@/components/alita-datatable/KTDataTable.vue";
-import type { Sort } from "@/components/alita-datatable//table-partials/models";
+import Datatable from "@/components/datatable/DataTable.vue";
+import type { Sort } from "@/components/datatable//table-partials/models";
 import ExportCustomerModal from "@/components/modals/forms/ExportCustomerModal.vue";
 import AddCustomerModal from "@/components/modals/forms/AddCustomerModal.vue";
 import type { ICustomer } from "@/core/data/customers";

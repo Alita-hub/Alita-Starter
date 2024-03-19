@@ -1,4 +1,4 @@
-import { illustrationsSet } from "@/layouts/default-layout/config/helper";
+import { illustrationsSet } from "@/layouts/config/helper";
 import { useThemeStore } from "@/stores/theme";
 
 export const getIllustrationsPath = (illustrationName: string): string => {
@@ -9,9 +9,9 @@ export const getIllustrationsPath = (illustrationName: string): string => {
   const illustration =
     useThemeStore().mode == "dark"
       ? `${illustrationName.substring(
-          0,
-          illustrationName.lastIndexOf(".")
-        )}-dark`
+        0,
+        illustrationName.lastIndexOf(".")
+      )}-dark`
       : illustrationName.substring(0, illustrationName.lastIndexOf("."));
   return (
     import.meta.env.BASE_URL +

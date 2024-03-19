@@ -9,20 +9,20 @@
     modal-id="alita_modal_invite_friends"
   ></KTModalCard>
 
-  <KTInviteFriendsModal></KTInviteFriendsModal>
+  <InviteFriendsModal></InviteFriendsModal>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import KTModalCard from "@/components/cards/Card.vue";
-import KTInviteFriendsModal from "@/components/modals/general/InviteFriendsModal.vue";
+import InviteFriendsModal from "@/components/modals/general/InviteFriendsModal.vue";
 import { getIllustrationsPath } from "@/core/helpers/assets";
 
 export default defineComponent({
   name: "invite-friends",
   components: {
     KTModalCard,
-    KTInviteFriendsModal,
+    InviteFriendsModal,
   },
   setup() {
     return {

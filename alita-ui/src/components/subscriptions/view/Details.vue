@@ -213,7 +213,7 @@
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
-import UserMenu from "@/layouts/default-layout/components/menus/UserAccountMenu.vue";
+import UserMenu from "@/layouts/components/menus/UserAccountMenu.vue";
 
 export default defineComponent({
   name: "alita-details",

@@ -584,7 +584,7 @@
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent, onMounted, ref } from "vue";
-import { config } from "@/layouts/default-layout/config/helper";
+import { config } from "@/layouts/config/helper";
 import CodeHighlighter from "@/components/highlighters/CodeHighlighter.vue";
 import { themeName } from "@/core/helpers/system";
 import { LS_CONFIG_NAME_KEY } from "@/stores/config";
@@ -651,3 +651,4 @@ export default defineComponent({
   },
 });
 </script>
+@/layouts/config/helper

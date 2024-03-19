@@ -8,7 +8,7 @@ import { RouterView } from "vue-router";
 import { useConfigStore } from "@/stores/config";
 import { useThemeStore } from "@/stores/theme";
 import { useBodyStore } from "@/stores/body";
-import { themeConfigValue } from "@/layouts/default-layout/config/helper";
+import { themeConfigValue } from "@/layouts/config/helper";
 import { initializeComponents } from "@/core/plugins/keenthemes";
 
 export default defineComponent({
@@ -24,7 +24,7 @@ export default defineComponent({
     onBeforeMount(() => {
       /**
        * Overrides the layout config using saved data from localStorage
-       * remove this to use static config (@/layouts/default-layout/config/DefaultLayoutConfig.ts)
+       * remove this to use static config (@/layouts/config/DefaultLayoutConfig.ts)
        */
       configStore.overrideLayoutConfig();
 
@@ -72,3 +72,4 @@ export default defineComponent({
   display: contents;
 }
 </style>
+@/layouts/config/helper

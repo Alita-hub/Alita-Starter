@@ -155,8 +155,8 @@
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent, onMounted, ref } from "vue";
-import KTDatatable from "@/components/alita-datatable/KTDataTable.vue";
-import type { Sort } from "@/components/alita-datatable/table-partials/models";
+import KTDatatable from "@/components/datatable/DataTable.vue";
+import type { Sort } from "@/components/datatable/table-partials/models";
 import arraySort from "array-sort";
 import { MenuComponent } from "@/assets/ts/components";
 

@@ -10,7 +10,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     redirect: "/dashboard",
-    component: () => import("@/layouts/default-layout/DefaultLayout.vue"),
+    component: () => import("@/layouts/MainLayout.vue"),
     meta: {
       middleware: "auth",
     },
@@ -503,7 +503,7 @@ router.beforeEach((to, from, next) => {
 
   // before page access check if page requires authentication
   if (to.meta.middleware == "auth") {
-    if (authStore.isAuthenticated && to.name !== 'sign-in' ) {
+    if (authStore.isAuthenticated && to.name !== 'sign-in') {
       next();
     } else {
       next({ name: "sign-in" });

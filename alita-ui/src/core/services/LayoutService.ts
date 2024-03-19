@@ -1,5 +1,5 @@
 import objectPath from "object-path";
-import { config } from "@/layouts/default-layout/config/helper";
+import { config } from "@/layouts/config/helper";
 import { useBodyStore } from "@/stores/body";
 import { useConfigStore } from "@/stores/config";
 
@@ -8,7 +8,7 @@ class LayoutService {
   public static configStore: any;
 
   /**
-   * @description initialize default layout
+   * @description 初始化页面布局
    */
   public static init(): void {
     this.bodyStore = useBodyStore();

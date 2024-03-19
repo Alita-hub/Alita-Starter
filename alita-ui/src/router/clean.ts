@@ -10,7 +10,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     redirect: "/dashboard",
-    component: () => import("@/layouts/default-layout/DefaultLayout.vue"),
+    component: () => import("@/layouts/MainLayout.vue"),
     meta: {
       middleware: "auth",
     },
@@ -118,9 +118,6 @@ router.beforeEach((to, from, next) => {
 
   // reset config to initial state
   configStore.resetLayoutConfig();
-
-  // verify auth token before each page change
-  authStore.verifyAuth();
 
   // before page access check if page requires authentication
   if (to.meta.middleware == "auth") {

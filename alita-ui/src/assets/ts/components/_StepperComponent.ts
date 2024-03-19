@@ -183,7 +183,7 @@ class StepperComponent {
 
     // Step Items
     const elements = this.element.querySelectorAll(
-      '[data-alita-stepper-element="nav"]data-alita-alita-stepper-element="contendata-alitaata-alita-stepper-element="info"]'
+      '[data-alita-stepper-element="nav"], [data-alita-stepper-element="content"], [data-alita-stepper-element="info"]'
     );
 
     if (!elements || elements.length <= 0) {

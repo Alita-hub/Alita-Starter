@@ -93,7 +93,7 @@
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent, ref } from "vue";
-import Datatable from "@/components/alita-datatable/KTDataTable.vue";
+import Datatable from "@/components/datatable/DataTable.vue";
 
 export default defineComponent({
   name: "payment-records",
