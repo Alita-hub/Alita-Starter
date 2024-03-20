@@ -1,6 +1,6 @@
 <template>
   <!--begin::Step 2-->
-  <div data-alita-stepper-element="content">
+  <div data-stepper-element="content">
     <!--begin::Wrapper-->
     <div class="w-100">
       <!--begin::Heading-->
@@ -32,7 +32,7 @@
         <!--end::Label-->
 
         <!--begin::Row-->
-        <div class="row mb-2" data-alita-buttons="true">
+        <div class="row mb-2" data-buttons="true">
           <!--begin::Col-->
           <div class="col">
             <!--begin::Option-->
@@ -166,7 +166,7 @@
               <!--begin::Icon-->
               <span class="symbol symbol-50px me-6">
                 <span class="symbol-label">
-                  <AlitaIcon icon-name="bank" icon-class="fs-1 text-gray-600" />
+                  <Icon icon-name="bank" icon-class="fs-1 text-gray-600" />
                 </span>
               </span>
               <!--end::Icon-->
@@ -204,10 +204,7 @@
               <!--begin::Icon-->
               <span class="symbol symbol-50px me-6">
                 <span class="symbol-label">
-                  <AlitaIcon
-                    icon-name="chart"
-                    icon-class="fs-1 text-gray-600"
-                  />
+                  <Icon icon-name="chart" icon-class="fs-1 text-gray-600" />
                 </span>
               </span>
               <!--end::Icon-->
@@ -246,7 +243,7 @@
               <!--begin::Icon-->
               <span class="symbol symbol-50px me-6">
                 <span class="symbol-label">
-                  <AlitaIcon
+                  <Icon
                     icon-name="chart-pie-4"
                     icon-class="fs-1 text-gray-600"
                   />

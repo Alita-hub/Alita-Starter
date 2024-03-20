@@ -1,4 +1,6 @@
-body.page-loading {margin: 0; height: 100%; overflow: hidden; }
+body.page-loading {
+    margin: 0; height: 100%; overflow: hidden; 
+}
 
 .splash-screen {
     display: none;

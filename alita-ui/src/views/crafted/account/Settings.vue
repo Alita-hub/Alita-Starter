@@ -6,9 +6,9 @@
       class="card-header border-0 cursor-pointer"
       role="button"
       data-bs-toggle="collapse"
-      data-bs-target="#alita_account_profile_details"
+      data-bs-target="#account_profile_details"
       aria-expanded="true"
-      aria-controls="alita_account_profile_details"
+      aria-controls="account_profile_details"
     >
       <!--begin::Card title-->
       <div class="card-title m-0">
@@ -19,10 +19,10 @@
     <!--begin::Card header-->
 
     <!--begin::Content-->
-    <div id="alita_account_profile_details" class="collapse show">
+    <div id="account_profile_details" class="collapse show">
       <!--begin::Form-->
       <VForm
-        id="alita_account_profile_details_form"
+        id="account_profile_details_form"
         class="form"
         novalidate
         @submit="saveChanges1()"
@@ -43,7 +43,7 @@
               <!--begin::Image input-->
               <div
                 class="image-input image-input-outline"
-                data-alita-image-input="true"
+                data-image-input="true"
                 :style="{
                   backgroundImage: `url(${getAssetPath(
                     '/media/avatars/blank.png'
@@ -60,7 +60,7 @@
                 <!--begin::Label-->
                 <label
                   class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                  data-alita-image-input-action="change"
+                  data-image-input-action="change"
                   data-bs-toggle="tooltip"
                   title="Change avatar"
                 >
@@ -76,7 +76,7 @@
                 <!--begin::Remove-->
                 <span
                   class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                  data-alita-image-input-action="remove"
+                  data-image-input-action="remove"
                   data-bs-toggle="tooltip"
                   @click="removeImage()"
                   title="Remove avatar"
@@ -1193,7 +1193,7 @@
 
           <button
             type="submit"
-            id="alita_account_profile_details_submit"
+            id="account_profile_details_submit"
             ref="submitButton1"
             class="btn btn-primary"
           >
@@ -1221,7 +1221,7 @@
       class="card-header border-0 cursor-pointer"
       role="button"
       data-bs-toggle="collapse"
-      data-bs-target="#alita_account_signin_method"
+      data-bs-target="#account_signin_method"
     >
       <div class="card-title m-0">
         <h3 class="fw-bolder m-0">Sign-in Method</h3>
@@ -1230,12 +1230,12 @@
     <!--end::Card header-->
 
     <!--begin::Content-->
-    <div id="alita_account_signin_method" class="collapse show">
+    <div id="account_signin_method" class="collapse show">
       <!--begin::Card body-->
       <div class="card-body border-top p-9">
         <!--begin::Email Address-->
         <div class="d-flex flex-wrap align-items-center mb-8">
-          <div id="alita_signin_email" :class="{ 'd-none': emailFormDisplay }">
+          <div id="signin_email" :class="{ 'd-none': emailFormDisplay }">
             <div class="fs-4 fw-bolder mb-1">Email Address</div>
             <div class="fs-6 fw-semibold text-gray-600">
               support@keenthemes.com
@@ -1243,13 +1243,13 @@
           </div>
 
           <div
-            id="alita_signin_email_edit"
+            id="signin_email_edit"
             :class="{ 'd-none': !emailFormDisplay }"
             class="flex-row-fluid"
           >
             <!--begin::Form-->
             <VForm
-              id="alita_signin_change_email"
+              id="signin_change_email"
               class="form"
               novalidate
               @submit="updateEmail()"
@@ -1301,7 +1301,7 @@
               </div>
               <div class="d-flex">
                 <button
-                  id="alita_signin_submit"
+                  id="signin_submit"
                   type="submit"
                   ref="updateEmailButton"
                   class="btn btn-primary me-2 px-6"
@@ -1315,7 +1315,7 @@
                   </span>
                 </button>
                 <button
-                  id="alita_signin_cancel"
+                  id="signin_cancel"
                   type="button"
                   class="btn btn-color-gray-500 btn-active-light-primary px-6"
                   @click="emailFormDisplay = !emailFormDisplay"
@@ -1327,7 +1327,7 @@
             <!--end::Form-->
           </div>
           <div
-            id="alita_signin_email_button"
+            id="signin_email_button"
             :class="{ 'd-none': emailFormDisplay }"
             class="ms-auto"
           >
@@ -1343,15 +1343,12 @@
 
         <!--begin::Password-->
         <div class="d-flex flex-wrap align-items-center mb-8">
-          <div
-            id="alita_signin_password"
-            :class="{ 'd-none': passwordFormDisplay }"
-          >
+          <div id="signin_password" :class="{ 'd-none': passwordFormDisplay }">
             <div class="fs-4 fw-bolder mb-1">Password</div>
             <div class="fs-6 fw-semibold text-gray-600">************</div>
           </div>
           <div
-            id="alita_signin_password_edit"
+            id="signin_password_edit"
             class="flex-row-fluid"
             :class="{ 'd-none': !passwordFormDisplay }"
           >
@@ -1361,7 +1358,7 @@
 
             <!--begin::Form-->
             <VForm
-              id="alita_signin_change_password"
+              id="signin_change_password"
               class="form"
               novalidate
               @submit="updatePassword()"
@@ -1431,7 +1428,7 @@
               </div>
               <div class="d-flex">
                 <button
-                  id="alita_password_submit"
+                  id="password_submit"
                   type="submit"
                   ref="updatePasswordButton"
                   class="btn btn-primary me-2 px-6"
@@ -1445,7 +1442,7 @@
                   </span>
                 </button>
                 <button
-                  id="alita_password_cancel"
+                  id="password_cancel"
                   type="button"
                   @click="passwordFormDisplay = !passwordFormDisplay"
                   class="btn btn-color-gray-500 btn-active-light-primary px-6"
@@ -1457,7 +1454,7 @@
             <!--end::Form-->
           </div>
           <div
-            id="alita_signin_password_button"
+            id="signin_password_button"
             class="ms-auto"
             :class="{ 'd-none': passwordFormDisplay }"
           >
@@ -1484,9 +1481,9 @@
       class="card-header border-0 cursor-pointer"
       role="button"
       data-bs-toggle="collapse"
-      data-bs-target="#alita_account_connected_accounts"
+      data-bs-target="#account_connected_accounts"
       aria-expanded="true"
-      aria-controls="alita_account_connected_accounts"
+      aria-controls="account_connected_accounts"
     >
       <div class="card-title m-0">
         <h3 class="fw-bold m-0">Connected Accounts</h3>
@@ -1495,13 +1492,13 @@
     <!--end::Card header-->
 
     <!--begin::Content-->
-    <div id="alita_account_connected_accounts" class="collapse show">
+    <div id="account_connected_accounts" class="collapse show">
       <!--begin::Card body-->
       <div class="card-body border-top p-9">
         <div
           class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6"
         >
-          <AlitaIcon
+          <Icon
             icon-name="design-frame"
             icon-class="fs-2tx text-primary me-4"
           />
@@ -1664,9 +1661,9 @@
       class="card-header border-0 cursor-pointer"
       role="button"
       data-bs-toggle="collapse"
-      data-bs-target="#alita_account_email_preferences"
+      data-bs-target="#account_email_preferences"
       aria-expanded="true"
-      aria-controls="alita_account_email_preferences"
+      aria-controls="account_email_preferences"
     >
       <div class="card-title m-0">
         <h3 class="fw-bold m-0">Email Preferences</h3>
@@ -1675,7 +1672,7 @@
     <!--begin::Card header-->
 
     <!--begin::Content-->
-    <div id="alita_account_email_preferences" class="collapse show">
+    <div id="account_email_preferences" class="collapse show">
       <!--begin::Form-->
       <form class="form" @submit.prevent="saveChanges3()">
         <!--begin::Card body-->
@@ -1913,9 +1910,9 @@
       class="card-header border-0 cursor-pointer"
       role="button"
       data-bs-toggle="collapse"
-      data-bs-target="#alita_account_notifications"
+      data-bs-target="#account_notifications"
       aria-expanded="true"
-      aria-controls="alita_account_notifications"
+      aria-controls="account_notifications"
     >
       <div class="card-title m-0">
         <h3 class="fw-bold m-0">Notifications</h3>
@@ -1924,7 +1921,7 @@
     <!--begin::Card header-->
 
     <!--begin::Content-->
-    <div id="alita_account_notifications" class="collapse show">
+    <div id="account_notifications" class="collapse show">
       <!--begin::Form-->
       <form class="form" @submit.prevent="saveChanges4()">
         <!--begin::Card body-->
@@ -1944,14 +1941,14 @@
                         class="form-check-input"
                         type="checkbox"
                         value=""
-                        id="alita_settings_notification_email"
+                        id="settings_notification_email"
                         checked
-                        data-alita-check="true"
-                        data-alita-check-target="[data-alita-settings-notification=email]"
+                        data-check="true"
+                        data-check-target="[data-settings-notification=email]"
                       />
                       <label
                         class="form-check-label ps-2"
-                        for="alita_settings_notification_email"
+                        for="settings_notification_email"
                       >
                         Email
                       </label>
@@ -1963,14 +1960,14 @@
                         class="form-check-input"
                         type="checkbox"
                         value=""
-                        id="alita_settings_notification_phone"
+                        id="settings_notification_phone"
                         checked
-                        data-alita-check="true"
-                        data-alita-check-target="[data-alita-settings-notification=phone]"
+                        data-check="true"
+                        data-check-target="[data-settings-notification=phone]"
                       />
                       <label
                         class="form-check-label ps-2"
-                        for="alita_settings_notification_phone"
+                        for="settings_notification_phone"
                       >
                         Phone
                       </label>
@@ -1990,7 +1987,7 @@
                         value="1"
                         id="billing1"
                         checked
-                        data-alita-settings-notification="email"
+                        data-settings-notification="email"
                       />
                       <label
                         class="form-check-label ps-2"
@@ -2006,7 +2003,7 @@
                         value=""
                         id="billing2"
                         checked
-                        data-alita-settings-notification="phone"
+                        data-settings-notification="phone"
                       />
                       <label
                         class="form-check-label ps-2"
@@ -2028,7 +2025,7 @@
                         value=""
                         id="team1"
                         checked
-                        data-alita-settings-notification="email"
+                        data-settings-notification="email"
                       />
                       <label class="form-check-label ps-2" for="team1"></label>
                     </div>
@@ -2040,7 +2037,7 @@
                         type="checkbox"
                         value=""
                         id="team2"
-                        data-alita-settings-notification="phone"
+                        data-settings-notification="phone"
                       />
                       <label class="form-check-label ps-2" for="team2"></label>
                     </div>
@@ -2058,7 +2055,7 @@
                         type="checkbox"
                         value=""
                         id="project1"
-                        data-alita-settings-notification="email"
+                        data-settings-notification="email"
                       />
                       <label
                         class="form-check-label ps-2"
@@ -2074,7 +2071,7 @@
                         value=""
                         id="project2"
                         checked
-                        data-alita-settings-notification="phone"
+                        data-settings-notification="phone"
                       />
                       <label
                         class="form-check-label ps-2"
@@ -2095,7 +2092,7 @@
                         type="checkbox"
                         value=""
                         id="newsletter1"
-                        data-alita-settings-notification="email"
+                        data-settings-notification="email"
                       />
                       <label
                         class="form-check-label ps-2"
@@ -2110,7 +2107,7 @@
                         type="checkbox"
                         value=""
                         id="newsletter2"
-                        data-alita-settings-notification="phone"
+                        data-settings-notification="phone"
                       />
                       <label
                         class="form-check-label ps-2"
@@ -2161,9 +2158,9 @@
       class="card-header border-0 cursor-pointer"
       role="button"
       data-bs-toggle="collapse"
-      data-bs-target="#alita_account_deactivate"
+      data-bs-target="#account_deactivate"
       aria-expanded="true"
-      aria-controls="alita_account_deactivate"
+      aria-controls="account_deactivate"
     >
       <div class="card-title m-0">
         <h3 class="fw-bolder m-0">Deactivate Account</h3>
@@ -2172,10 +2169,10 @@
     <!--end::Card header-->
 
     <!--begin::Content-->
-    <div id="alita_account_deactivate" class="collapse show">
+    <div id="account_deactivate" class="collapse show">
       <!--begin::Form-->
       <form
-        id="alita_account_deactivate_form"
+        id="account_deactivate_form"
         class="form"
         @submit.prevent="deactivateAccount()"
       >
@@ -2184,7 +2181,7 @@
           <div
             class="notice d-flex bg-light-warning rounded border-warning border border-dashed mb-9 p-6"
           >
-            <AlitaIcon
+            <Icon
               icon-name="information-5"
               icon-class="fs-2tx text-warning me-4"
             />
@@ -2232,7 +2229,7 @@
         <!--begin::Card footer-->
         <div class="card-footer d-flex justify-content-end py-6 px-9">
           <button
-            id="alita_account_deactivate_account_submit"
+            id="account_deactivate_account_submit"
             ref="submitButton5"
             type="submit"
             class="btn btn-danger fw-semibold"
@@ -2347,10 +2344,10 @@ export default defineComponent({
     const saveChanges1 = () => {
       if (submitButton1.value) {
         // Activate indicator
-        submitButton1.value.setAttribute("data-alita-indicator", "on");
+        submitButton1.value.setAttribute("data-indicator", "on");
 
         setTimeout(() => {
-          submitButton1.value?.removeAttribute("data-alita-indicator");
+          submitButton1.value?.removeAttribute("data-indicator");
         }, 2000);
       }
     };
@@ -2358,10 +2355,10 @@ export default defineComponent({
     const saveChanges2 = () => {
       if (submitButton2.value) {
         // Activate indicator
-        submitButton2.value.setAttribute("data-alita-indicator", "on");
+        submitButton2.value.setAttribute("data-indicator", "on");
 
         setTimeout(() => {
-          submitButton2.value?.removeAttribute("data-alita-indicator");
+          submitButton2.value?.removeAttribute("data-indicator");
         }, 2000);
       }
     };
@@ -2369,10 +2366,10 @@ export default defineComponent({
     const saveChanges3 = () => {
       if (submitButton3.value) {
         // Activate indicator
-        submitButton3.value.setAttribute("data-alita-indicator", "on");
+        submitButton3.value.setAttribute("data-indicator", "on");
 
         setTimeout(() => {
-          submitButton3.value?.removeAttribute("data-alita-indicator");
+          submitButton3.value?.removeAttribute("data-indicator");
         }, 2000);
       }
     };
@@ -2380,10 +2377,10 @@ export default defineComponent({
     const saveChanges4 = () => {
       if (submitButton4.value) {
         // Activate indicator
-        submitButton4.value.setAttribute("data-alita-indicator", "on");
+        submitButton4.value.setAttribute("data-indicator", "on");
 
         setTimeout(() => {
-          submitButton4.value?.removeAttribute("data-alita-indicator");
+          submitButton4.value?.removeAttribute("data-indicator");
         }, 2000);
       }
     };
@@ -2391,10 +2388,10 @@ export default defineComponent({
     const deactivateAccount = () => {
       if (submitButton5.value) {
         // Activate indicator
-        submitButton5.value.setAttribute("data-alita-indicator", "on");
+        submitButton5.value.setAttribute("data-indicator", "on");
 
         setTimeout(() => {
-          submitButton5.value?.removeAttribute("data-alita-indicator");
+          submitButton5.value?.removeAttribute("data-indicator");
 
           Swal.fire({
             text: "Email is successfully changed!",
@@ -2415,10 +2412,10 @@ export default defineComponent({
     const updateEmail = () => {
       if (updateEmailButton.value) {
         // Activate indicator
-        updateEmailButton.value.setAttribute("data-alita-indicator", "on");
+        updateEmailButton.value.setAttribute("data-indicator", "on");
 
         setTimeout(() => {
-          updateEmailButton.value?.removeAttribute("data-alita-indicator");
+          updateEmailButton.value?.removeAttribute("data-indicator");
 
           emailFormDisplay.value = false;
         }, 2000);
@@ -2428,10 +2425,10 @@ export default defineComponent({
     const updatePassword = () => {
       if (updatePasswordButton.value) {
         // Activate indicator
-        updatePasswordButton.value.setAttribute("data-alita-indicator", "on");
+        updatePasswordButton.value.setAttribute("data-indicator", "on");
 
         setTimeout(() => {
-          updatePasswordButton.value?.removeAttribute("data-alita-indicator");
+          updatePasswordButton.value?.removeAttribute("data-indicator");
 
           Swal.fire({
             text: "Password is successfully changed!",

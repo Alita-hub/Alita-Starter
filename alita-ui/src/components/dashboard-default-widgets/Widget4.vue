@@ -10,14 +10,11 @@
         <!--begin::Menu-->
         <button
           class="btn btn-icon btn-color-gray-500 btn-active-color-primary justify-content-end"
-          data-alita-menu-trigger="click"
-          data-alita-menu-placement="bottom-end"
-          data-alita-menu-overflow="true"
+          data-menu-trigger="click"
+          data-menu-placement="bottom-end"
+          data-menu-overflow="true"
         >
-          <AlitaIcon
-            icon-name="dots-square"
-            icon-class="fs-1 text-gray-300 me-n1"
-          />
+          <Icon icon-name="dots-square" icon-class="fs-1 text-gray-300 me-n1" />
         </button>
         <Dropdown2 />
         <!--end::Menu-->
@@ -40,7 +37,7 @@
             type="button"
             class="btn btn-icon btn-sm h-auto btn-color-gray-500 btn-active-color-primary justify-content-end"
           >
-            <AlitaIcon icon-name="exit-right-corner" icon-class="fs-2" />
+            <Icon icon-name="exit-right-corner" icon-class="fs-2" />
           </button>
           <!--end::Action-->
         </div>

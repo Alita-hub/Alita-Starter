@@ -25,10 +25,7 @@
             <!--begin::Symbol-->
             <div class="symbol symbol-40px me-3">
               <div class="symbol-label bg-body bg-opacity-50">
-                <AlitaIcon
-                  icon-name="abstract-42"
-                  icon-class="fs-1 text-gray-900"
-                />
+                <Icon icon-name="abstract-42" icon-class="fs-1 text-gray-900" />
               </div>
             </div>
             <!--end::Symbol-->
@@ -49,10 +46,7 @@
             <!--begin::Symbol-->
             <div class="symbol symbol-40px me-3">
               <div class="symbol-label bg-body bg-opacity-50">
-                <AlitaIcon
-                  icon-name="abstract-45"
-                  icon-class="fs-1 text-gray-900"
-                />
+                <Icon icon-name="abstract-45" icon-class="fs-1 text-gray-900" />
               </div>
             </div>
             <!--end::Symbol-->
@@ -73,10 +67,7 @@
             <!--begin::Symbol-->
             <div class="symbol symbol-40px me-3">
               <div class="symbol-label bg-body bg-opacity-50">
-                <AlitaIcon
-                  icon-name="abstract-21"
-                  icon-class="fs-1 text-gray-900"
-                />
+                <Icon icon-name="abstract-21" icon-class="fs-1 text-gray-900" />
               </div>
             </div>
             <!--end::Symbol-->
@@ -97,10 +88,7 @@
             <!--begin::Symbol-->
             <div class="symbol symbol-40px me-3">
               <div class="symbol-label bg-body bg-opacity-50">
-                <AlitaIcon
-                  icon-name="abstract-44"
-                  icon-class="fs-1 text-gray-900"
-                />
+                <Icon icon-name="abstract-44" icon-class="fs-1 text-gray-900" />
               </div>
             </div>
             <!--end::Symbol-->

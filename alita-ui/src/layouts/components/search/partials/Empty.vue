@@ -3,7 +3,7 @@
   <div class="text-center">
     <!--begin::Icon-->
     <div class="pt-10 pb-10">
-      <AlitaIcon icon-name="search-list" icon-class="fs-4x opacity-50" />
+      <Icon icon-name="search-list" icon-class="fs-4x opacity-50" />
     </div>
     <!--end::Icon-->
 
@@ -22,7 +22,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "alita-empty",
+  name: "empty",
   components: {},
   setup() {
     return {

@@ -21,11 +21,11 @@ const defaultImageInputOptions = {};
 
 const defaultImageInputQueires: IImageInputQueries = {
   componentName: "image-input",
-  instanseQuery: "[data-alita-image-input]",
+  instanseQuery: "[data-image-input]",
   inputQuery: 'input[type="file"]',
   wrapperQuery: ".image-input-wrapper",
-  cancelQuery: '[data-alita-image-input-action="cancel"]',
-  removeQuery: '[data-alita-image-input-action="remove"]',
+  cancelQuery: '[data-image-input-action="cancel"]',
+  removeQuery: '[data-image-input-action="remove"]',
   hiddenQuery: 'input[type="hidden"]',
 };
 
@@ -91,7 +91,7 @@ class ImageInputComponent {
     ) {
       // Fire change event
       if (
-        EventHandlerUtil.trigger(this.element, "alita.imageinput.change", e) ===
+        EventHandlerUtil.trigger(this.element, "imageinput.change", e) ===
         false
       ) {
         return;
@@ -113,7 +113,7 @@ class ImageInputComponent {
       this.element.classList.remove("image-input-empty");
 
       // Fire removed event
-      EventHandlerUtil.trigger(this.element, "alita.imageinput.changed", e);
+      EventHandlerUtil.trigger(this.element, "imageinput.changed", e);
     }
   };
 
@@ -122,7 +122,7 @@ class ImageInputComponent {
 
     // Fire cancel event
     if (
-      EventHandlerUtil.trigger(this.element, "alita.imageinput.cancel", e) ===
+      EventHandlerUtil.trigger(this.element, "imageinput.cancel", e) ===
       false
     ) {
       return;
@@ -140,7 +140,7 @@ class ImageInputComponent {
     }
 
     // Fire canceled event
-    EventHandlerUtil.trigger(this.element, "alita.imageinput.canceled", e);
+    EventHandlerUtil.trigger(this.element, "imageinput.canceled", e);
   };
 
   private _remove = (e: Event) => {
@@ -148,7 +148,7 @@ class ImageInputComponent {
 
     // Fire remove event
     if (
-      EventHandlerUtil.trigger(this.element, "alita.imageinput.remove", e) ===
+      EventHandlerUtil.trigger(this.element, "imageinput.remove", e) ===
       false
     ) {
       return;
@@ -169,7 +169,7 @@ class ImageInputComponent {
     }
 
     // Fire removed event
-    EventHandlerUtil.trigger(this.element, "alita.imageinput.removed", e);
+    EventHandlerUtil.trigger(this.element, "imageinput.removed", e);
   };
 
   ///////////////////////

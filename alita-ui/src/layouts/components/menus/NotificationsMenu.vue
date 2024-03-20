@@ -2,7 +2,7 @@
   <!--begin::Menu-->
   <div
     class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px"
-    data-alita-menu="true"
+    data-menu="true"
   >
     <!--begin::Heading-->
     <div
@@ -25,7 +25,7 @@
           <a
             class="nav-link text-white opacity-75 opacity-state-100 pb-4"
             data-bs-toggle="tab"
-            href="#alita_topbar_notifications_1"
+            href="#topbar_notifications_1"
             >Alerts</a
           >
         </li>
@@ -34,7 +34,7 @@
           <a
             class="nav-link text-white opacity-75 opacity-state-100 pb-4 active"
             data-bs-toggle="tab"
-            href="#alita_topbar_notifications_2"
+            href="#topbar_notifications_2"
             >Updates</a
           >
         </li>
@@ -43,7 +43,7 @@
           <a
             class="nav-link text-white opacity-75 opacity-state-100 pb-4"
             data-bs-toggle="tab"
-            href="#alita_topbar_notifications_3"
+            href="#topbar_notifications_3"
             >Logs</a
           >
         </li>
@@ -55,11 +55,7 @@
     <!--begin::Tab content-->
     <div class="tab-content">
       <!--begin::Tab panel-->
-      <div
-        class="tab-pane fade"
-        id="alita_topbar_notifications_1"
-        role="tabpanel"
-      >
+      <div class="tab-pane fade" id="topbar_notifications_1" role="tabpanel">
         <!--begin::Items-->
         <div class="scroll-y mh-325px my-5 px-8">
           <template v-for="(item, index) in data1" :key="index">
@@ -70,7 +66,7 @@
                 <!--begin::Symbol-->
                 <div class="symbol symbol-35px me-4">
                   <span :class="`bg-light-${item.state}`" class="symbol-label">
-                    <AlitaIcon
+                    <Icon
                       :icon-name="item.icon"
                       :icon-class="`text-${item.state}`"
                     />
@@ -106,7 +102,7 @@
         <div class="py-3 text-center border-top">
           <a href="#" class="btn btn-color-gray-600 btn-active-color-primary">
             View All
-            <AlitaIcon icon-name="arrow-right" icon-class="fs-5" />
+            <Icon icon-name="arrow-right" icon-class="fs-5" />
           </a>
         </div>
         <!--end::View more-->
@@ -116,7 +112,7 @@
       <!--begin::Tab panel-->
       <div
         class="tab-pane fade show active"
-        id="alita_topbar_notifications_2"
+        id="topbar_notifications_2"
         role="tabpanel"
       >
         <!--begin::Wrapper-->
@@ -140,7 +136,7 @@
                 href="#"
                 class="btn btn-sm btn-primary px-6"
                 data-bs-toggle="modal"
-                data-bs-target="#alita_modal_upgrade_plan"
+                data-bs-target="#modal_upgrade_plan"
                 >Upgrade</a
               >
             </div>
@@ -161,11 +157,7 @@
       <!--end::Tab panel-->
 
       <!--begin::Tab panel-->
-      <div
-        class="tab-pane fade"
-        id="alita_topbar_notifications_3"
-        role="tabpanel"
-      >
+      <div class="tab-pane fade" id="topbar_notifications_3" role="tabpanel">
         <!--begin::Items-->
         <div class="scroll-y mh-325px my-5 px-8">
           <template v-for="(item, index) in data2" :key="index">
@@ -204,7 +196,7 @@
         <div class="py-3 text-center border-top">
           <a href="#" class="btn btn-color-gray-600 btn-active-color-primary">
             View All
-            <AlitaIcon icon-name="arrow-right" icon-class="fs-5" />
+            <Icon icon-name="arrow-right" icon-class="fs-5" />
           </a>
         </div>
         <!--end::View more-->

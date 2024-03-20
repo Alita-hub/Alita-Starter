@@ -1,7 +1,7 @@
 <template>
   <div
     class="modal fade show"
-    id="alita_modal_add_event"
+    id="modal_add_event"
     aria-modal="true"
     role="dialog"
     ref="newTargetModalRef"
@@ -10,7 +10,7 @@
       <div class="modal-content">
         <el-form
           class="form fv-plugins-bootstrap5 fv-plugins-framework"
-          id="alita_modal_add_event_form"
+          id="modal_add_event_form"
           @submit.prevent="submit()"
           :model="targetData"
           :rules="rules"
@@ -20,10 +20,10 @@
             <h2 class="fw-bold">Add a New Event</h2>
             <div
               class="btn btn-icon btn-sm btn-active-icon-primary"
-              id="alita_modal_add_event_close"
+              id="modal_add_event_close"
               data-bs-dismiss="modal"
             >
-              <AlitaIcon icon-name="cross" icon-class="fs-1" />
+              <Icon icon-name="cross" icon-class="fs-1" />
             </div>
           </div>
           <!--end::Modal header-->
@@ -146,7 +146,7 @@
             <button
               data-bs-dismiss="modal"
               type="reset"
-              id="alita_modal_add_event_cancel"
+              id="modal_add_event_cancel"
               class="btn btn-light me-3"
             >
               Cancel
@@ -154,16 +154,13 @@
             <!--end::Button-->
             <!--begin::Button-->
             <button
-              :data-alita-indicator="loading ? 'on' : null"
+              :data-indicator="loading ? 'on' : null"
               class="btn btn-lg btn-primary"
               type="submit"
             >
               <span v-if="!loading" class="indicator-label">
                 Submit
-                <AlitaIcon
-                  icon-name="arrow-right"
-                  icon-class="fs-3 ms-2 me-0"
-                />
+                <Icon icon-name="arrow-right" icon-class="fs-3 ms-2 me-0" />
               </span>
               <span v-if="loading" class="indicator-progress">
                 Please wait...

@@ -14,7 +14,7 @@
       <div class="card-toolbar">
         <div class="btn btn-sm btn-light d-flex align-items-center px-4">
           <div class="text-gray-600 fw-bold">1 Jul 2022 - 31 Jul 2022</div>
-          <AlitaIcon icon-name="calendar-8" icon-class="fs-1 ms-2 me-0" />
+          <Icon icon-name="calendar-8" icon-class="fs-1 ms-2 me-0" />
         </div>
       </div>
       <!--end::Toolbar-->

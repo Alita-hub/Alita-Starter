@@ -15,7 +15,7 @@ import ApiService from "@/core/services/ApiService";
 import { initApexCharts } from "@/core/plugins/apexcharts";
 import { initInlineSvg } from "@/core/plugins/inline-svg";
 import { initVeeValidate } from "@/core/plugins/vee-validate";
-import { initKtIcon } from "@/core/plugins/keenthemes";
+import { initIcon } from "@/core/plugins/keenthemes";
 
 import "@/core/plugins/prismjs";
 
@@ -28,7 +28,7 @@ app.use(ElementPlus);
 ApiService.init();
 initApexCharts(app);
 initInlineSvg(app);
-initKtIcon(app);
+initIcon(app);
 initVeeValidate();
 
 app.use(i18n);

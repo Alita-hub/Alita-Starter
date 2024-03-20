@@ -2,7 +2,7 @@
   <!--begin::Menu 2-->
   <div
     class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold w-200px"
-    data-alita-menu="true"
+    data-menu="true"
   >
     <!--begin::Menu item-->
     <div class="menu-item px-3">
@@ -31,9 +31,9 @@
     <!--begin::Menu item-->
     <div
       class="menu-item px-3"
-      data-alita-menu-trigger="hover"
-      data-alita-menu-placement="right-start"
-      data-alita-menu-flip="left-start, top"
+      data-menu-trigger="hover"
+      data-menu-placement="right-start"
+      data-menu-flip="left-start, top"
     >
       <!--begin::Menu item-->
       <a href="#" class="menu-link px-3">

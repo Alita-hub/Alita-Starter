@@ -4,7 +4,7 @@
     <!--begin::Form-->
     <VForm
       class="form w-100"
-      id="alita_login_signin_form"
+      id="login_signin_form"
       @submit="onSubmitLogin"
       :validation-schema="login"
       :initial-values="{
@@ -103,7 +103,7 @@
           tabindex="3"
           type="submit"
           ref="submitButton"
-          id="alita_sign_in_submit"
+          id="sign_in_submit"
           class="btn btn-lg btn-primary w-100 mb-5"
         >
           <span class="indicator-label"> Continue </span>
@@ -205,7 +205,7 @@ export default defineComponent({
         // eslint-disable-next-line
         submitButton.value!.disabled = true;
         // Activate indicator
-        submitButton.value.setAttribute("data-alita-indicator", "on");
+        submitButton.value.setAttribute("data-indicator", "on");
       }
 
       // Send login request
@@ -244,7 +244,7 @@ export default defineComponent({
       }
 
       //Deactivate indicator
-      submitButton.value?.removeAttribute("data-alita-indicator");
+      submitButton.value?.removeAttribute("data-indicator");
       // eslint-disable-next-line
       submitButton.value!.disabled = false;
     };

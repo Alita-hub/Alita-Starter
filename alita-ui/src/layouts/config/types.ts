@@ -1,3 +1,4 @@
+
 export interface MenuItem {
   heading?: string;
   sectionTitle?: string;
@@ -8,18 +9,13 @@ export interface MenuItem {
   sub?: Array<MenuItem>;
 }
 
+
 interface General {
   mode: "dark" | "light" | "system";
+  primaryColor: "#50CD89";
+  pageWidth: string;
+  layout: "dark-sidebar" | "light-sidebar" | "light-header" | "dark-header";
   iconsType: "duotone" | "solid" | "outline";
-}
-
-interface Main {
-  type: "default";
-  primaryColor: string;
-  logo: {
-    dark: string;
-    light: string;
-  };
 }
 
 interface Illustrations {
@@ -30,16 +26,19 @@ interface ScrollTop {
   display: boolean;
 }
 
-interface Fixed {
-  desktop: boolean;
-  tabletAndMobile: boolean;
-}
-
 interface Header {
   display: boolean;
-  width: "fixed" | "fluid";
-  menuIcon: "keenthemes" | "bootstrap";
-  fixed: Fixed;
+  default: {
+    container: "fixed" | "fluid";
+    fixed: {
+      desktop: boolean;
+      mobile: boolean;
+    };
+    menu: {
+      display: boolean;
+      iconType: "keenthemes" | "bootstrap";
+    };
+  };
 }
 
 interface PageTitle {
@@ -48,39 +47,52 @@ interface PageTitle {
   direction: string;
 }
 
-interface Aside {
+interface Sidebar {
   display: boolean;
-  theme: "dark" | "light";
-  fixed: boolean;
-  menuIcon: "keenthemes" | "bootstrap";
-  minimized: boolean;
-  minimize: boolean;
-  hoverable: boolean;
+  default: {
+    minimize: {
+      desktop: {
+        enabled: boolean;
+        default: boolean;
+        hoverable: boolean;
+      };
+    };
+    menu: {
+      iconType: "keenthemes" | "bootstrap";
+    };
+  };
 }
 
 interface Content {
-  width: "fixed" | "fluid";
+  container: "fixed" | "fluid";
 }
 
 interface Toolbar {
   display: boolean;
-  width: "fixed" | "fluid";
-  fixed: Fixed;
+  container: "fixed" | "fluid";
+  fixed: {
+    desktop: boolean;
+    mobile: boolean;
+  };
 }
 
 interface Footer {
-  width: "fixed" | "fluid";
+  display: boolean;
+  container: "fixed" | "fluid";
+  fixed: {
+    desktop: boolean;
+    mobile: boolean;
+  };
 }
 
 interface LayoutConfig {
   general: General;
-  main: Main;
   illustrations: Illustrations;
-  scrollTop: ScrollTop;
+  scrolltop: ScrollTop;
   header: Header;
   toolbar: Toolbar;
   pageTitle: PageTitle;
-  aside: Aside;
+  sidebar: Sidebar;
   content: Content;
   footer: Footer;
 }
@@ -88,14 +100,14 @@ interface LayoutConfig {
 export default LayoutConfig;
 
 export type {
-  Main,
+  General,
   Illustrations,
   ScrollTop,
-  Fixed,
   Header,
-  Aside,
+  Sidebar,
   Content,
   Toolbar,
+  PageTitle,
   Footer,
   LayoutConfig,
 };

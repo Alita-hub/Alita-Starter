@@ -2,8 +2,8 @@
   <!--begin::Menu-->
   <div
     class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-title-gray-700 menu-icon-muted menu-active-bg menu-state-primary fw-semibold py-4 fs-base w-175px"
-    data-alita-menu="true"
-    data-alita-element="theme-mode-menu"
+    data-menu="true"
+    data-element="theme-mode-menu"
   >
     <!--begin::Menu item-->
     <div class="menu-item px-3 my-0">
@@ -13,8 +13,8 @@
         class="menu-link px-3 py-2"
         @click="setMode('light')"
       >
-        <span class="menu-icon" data-alita-element="icon">
-          <AlitaIcon icon-name="night-day" icon-class="fs-2" />
+        <span class="menu-icon" data-element="icon">
+          <Icon icon-name="night-day" icon-class="fs-2" />
         </span>
         <span class="menu-title">Light</span>
       </router-link>
@@ -28,8 +28,8 @@
         class="menu-link px-3 py-2"
         @click="setMode('dark')"
       >
-        <span class="menu-icon" data-alita-element="icon">
-          <AlitaIcon icon-name="moon" icon-class="fs-2" />
+        <span class="menu-icon" data-element="icon">
+          <Icon icon-name="moon" icon-class="fs-2" />
         </span>
         <span class="menu-title">Dark</span>
       </router-link>
@@ -43,8 +43,8 @@
         class="menu-link px-3 py-2"
         @click="setMode('system')"
       >
-        <span class="menu-icon" data-alita-element="icon">
-          <AlitaIcon icon-name="screen" icon-class="fs-2" />
+        <span class="menu-icon" data-element="icon">
+          <Icon icon-name="screen" icon-class="fs-2" />
         </span>
         <span class="menu-title">System</span>
       </router-link>
@@ -62,7 +62,7 @@ import { useConfigStore } from "@/stores/config";
 import { useRoute } from "vue-router";
 
 export default defineComponent({
-  name: "alita-theme-switcher",
+  name: "theme-switcher",
   component: {},
   setup() {
     const storeTheme = useThemeStore();

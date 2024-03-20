@@ -46,7 +46,7 @@ import { defineComponent } from "vue";
 import { getIllustrationsPath } from "@/core/helpers/assets";
 
 export default defineComponent({
-  name: "alita-getting-started",
+  name: "getting-started",
   components: {},
   setup() {
     return {

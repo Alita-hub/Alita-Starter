@@ -2,7 +2,7 @@
   <!--begin::Menu-->
   <div
     class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold py-4 w-250px fs-6"
-    data-alita-menu="true"
+    data-menu="true"
   >
     <!--begin::Menu item-->
     <div class="menu-item px-5">
@@ -35,8 +35,8 @@
     <!--begin::Menu item-->
     <div
       class="menu-item px-5"
-      data-alita-menu-trigger="hover"
-      data-alita-menu-placement="left-start"
+      data-menu-trigger="hover"
+      data-menu-placement="left-start"
     >
       <a href="#" class="menu-link px-5">
         <span class="menu-title">Subscription</span>
@@ -79,11 +79,11 @@
                 value=""
                 name="notifications"
                 checked
-                id="alita_user_menu_notifications"
+                id="user_menu_notifications"
               />
               <span
                 class="form-check-label text-muted fs-6"
-                for="alita_user_menu_notifications"
+                for="user_menu_notifications"
               >
                 Notifications
               </span>

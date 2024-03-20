@@ -1,6 +1,6 @@
 <template>
   <!--begin::Step 4-->
-  <div data-alita-stepper-element="content">
+  <div data-stepper-element="content">
     <!--begin::Wrapper-->
     <div class="w-100">
       <!--begin::Heading-->
@@ -190,7 +190,7 @@
               <div
                 class="position-absolute translate-middle-y top-50 end-0 me-3"
               >
-                <AlitaIcon icon-name="credit-cart" icon-class="fs-2hx" />
+                <Icon icon-name="credit-cart" icon-class="fs-2hx" />
               </div>
               <!--end::CVV icon-->
             </div>

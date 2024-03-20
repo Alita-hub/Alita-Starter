@@ -2,7 +2,7 @@
   <!--begin::Modal - Create account-->
   <div
     class="modal fade"
-    id="alita_modal_create_account"
+    id="modal_create_account"
     ref="modalRef"
     tabindex="-1"
     aria-hidden="true"
@@ -22,7 +22,7 @@
             class="btn btn-sm btn-icon btn-active-color-primary"
             data-bs-dismiss="modal"
           >
-            <AlitaIcon icon-name="cross" icon-class="fs-1" />
+            <Icon icon-name="cross" icon-class="fs-1" />
           </div>
           <!--end::Close-->
         </div>

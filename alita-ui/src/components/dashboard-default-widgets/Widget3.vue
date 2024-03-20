@@ -20,10 +20,7 @@
 
           <!--begin::Badge-->
           <span class="badge badge-light-success fs-base">
-            <AlitaIcon
-              icon-name="arrow-up"
-              icon-class="fs-5 text-success ms-n1"
-            />
+            <Icon icon-name="arrow-up" icon-class="fs-5 text-success ms-n1" />
             2.2%
           </span>
           <!--end::Badge-->
@@ -45,13 +42,13 @@
       <!--begin::Chart-->
       <div class="d-flex flex-center me-5 pt-2">
         <div
-          id="alita_card_widget_17_chart"
+          id="card_widget_17_chart"
           :style="{
             minWidth: `${chartSize}px`,
             minHeight: `${chartSize}px`,
           }"
-          :data-alita-size="chartSize"
-          :data-alita-line="11"
+          :data-size="chartSize"
+          :data-line="11"
         ></div>
       </div>
       <!--end::Chart-->
@@ -130,23 +127,23 @@ export default defineComponent({
   setup(props, { expose }) {
     const initChart = () => {
       expose();
-      var el = document.getElementById("alita_card_widget_17_chart");
+      var el = document.getElementById("card_widget_17_chart");
 
       if (!el) {
         return;
       }
 
       var options = {
-        size: el.getAttribute("data-alita-size")
-          ? parseInt(el.getAttribute("data-alita-size") as string)
+        size: el.getAttribute("data-size")
+          ? parseInt(el.getAttribute("data-size") as string)
           : 70,
-        lineWidth: el.getAttribute("data-alita-line")
-          ? parseInt(el.getAttribute("data-alita-line") as string)
+        lineWidth: el.getAttribute("data-line")
+          ? parseInt(el.getAttribute("data-line") as string)
           : 11,
-        rotate: el.getAttribute("data-alita-rotate")
-          ? parseInt(el.getAttribute("data-alita-rotate") as string)
+        rotate: el.getAttribute("data-rotate")
+          ? parseInt(el.getAttribute("data-rotate") as string)
           : 145,
-        //percent:  el.getAttribute('data-alita-percent') ,
+        //percent:  el.getAttribute('data-percent') ,
       };
 
       var canvas = document.createElement("canvas");

@@ -1,6 +1,6 @@
 <template>
   <!--begin::Form-->
-  <form class="form" id="alita_create_app_form" @submit="handleStep">
+  <form class="form" id="create_app_form" @submit="handleStep">
     <CreateAppStep1></CreateAppStep1>
     <CreateAppStep2></CreateAppStep2>
     <CreateAppStep3></CreateAppStep3>
@@ -14,10 +14,10 @@
         <button
           type="button"
           class="btn btn-lg btn-light-primary me-3"
-          data-alita-stepper-action="previous"
+          data-stepper-action="previous"
           @click="previousStep()"
         >
-          <AlitaIcon icon-name="arrow-left" icon-class="fs-3 me-1" />
+          <Icon icon-name="arrow-left" icon-class="fs-3 me-1" />
           Back
         </button>
       </div>
@@ -33,7 +33,7 @@
         >
           <span class="indicator-label">
             Submit
-            <AlitaIcon icon-name="arrow-right" icon-class="fs-3 ms-2 me-0" />
+            <Icon icon-name="arrow-right" icon-class="fs-3 ms-2 me-0" />
           </span>
           <span class="indicator-progress">
             Please wait...
@@ -45,7 +45,7 @@
 
         <button v-else type="submit" class="btn btn-lg btn-primary">
           Continue
-          <AlitaIcon icon-name="arrow-right" icon-class="fs-3 ms-1 me-0" />
+          <Icon icon-name="arrow-right" icon-class="fs-3 ms-1 me-0" />
         </button>
       </div>
       <!--end::Wrapper-->

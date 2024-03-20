@@ -109,15 +109,6 @@ export class EventHandlerUtil {
     delete EventHandlerUtil.store[name][handerId];
   }
 
-
-  /**
-   * 触发指定元素上的自定义事件处理程序。
-   * @param element 要触发事件的元素。
-   * @param name 事件名称。
-   * @param target 事件的目标对象（可选）。
-   * @param e 事件对象（可选）。
-   * @returns 如果事件处理程序执行成功，则返回 true；否则返回 false。
-   */
   public static trigger(
     element: HTMLElement,
     name: string,
@@ -125,8 +116,6 @@ export class EventHandlerUtil {
     e?: Event
   ): boolean {
     let returnValue = true;
-
-    // 检查元素是否具有指定名称的事件数据
     if (!DataUtil.has(element, name)) {
       return returnValue;
     }
@@ -135,8 +124,6 @@ export class EventHandlerUtil {
     let handlerId;
     const data = DataUtil.get(element, name);
     const handlersIds = data ? (data as string[]) : [];
-
-    // 遍历事件处理程序，并依次执行
     for (let i = 0; i < handlersIds.length; i++) {
       handlerId = handlersIds[i];
       if (
@@ -145,7 +132,6 @@ export class EventHandlerUtil {
       ) {
         const handler = EventHandlerUtil.store[name][handlerId];
         if (handler.name === name) {
-          // 如果事件处理程序仅执行一次，则检查是否已执行过，如果已执行则跳过
           if (handler.one) {
             if (handler.fired) {
               EventHandlerUtil.store[name][handlerId].fired = true;
@@ -155,7 +141,6 @@ export class EventHandlerUtil {
             eventValue = handler.callback.call(this, target);
           }
 
-          // 如果事件处理程序返回 false，则将返回值置为 false
           if (eventValue === false) {
             returnValue = false;
           }
@@ -164,7 +149,6 @@ export class EventHandlerUtil {
     }
     return returnValue;
   }
-
 
   public static on = function (
     element: HTMLElement,

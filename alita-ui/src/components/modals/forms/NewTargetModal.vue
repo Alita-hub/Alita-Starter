@@ -2,7 +2,7 @@
   <!--begin::Modal - New Target-->
   <div
     class="modal fade"
-    id="alita_modal_new_target"
+    id="modal_new_target"
     ref="newTargetModalRef"
     tabindex="-1"
     aria-hidden="true"
@@ -18,7 +18,7 @@
             class="btn btn-sm btn-icon btn-active-color-primary"
             data-bs-dismiss="modal"
           >
-            <AlitaIcon icon-name="cross" icon-class="fs-1" />
+            <Icon icon-name="cross" icon-class="fs-1" />
           </div>
           <!--end::Close-->
         </div>
@@ -28,7 +28,7 @@
         <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
           <!--begin:Form-->
           <el-form
-            id="alita_modal_new_target_form"
+            id="modal_new_target_form"
             @submit.prevent="submit()"
             :model="targetData"
             :rules="rules"
@@ -263,7 +263,7 @@
             <div class="text-center">
               <button
                 type="reset"
-                id="alita_modal_new_target_cancel"
+                id="modal_new_target_cancel"
                 class="btn btn-light me-3"
               >
                 Cancel
@@ -271,16 +271,13 @@
 
               <!--begin::Button-->
               <button
-                :data-alita-indicator="loading ? 'on' : null"
+                :data-indicator="loading ? 'on' : null"
                 class="btn btn-lg btn-primary"
                 type="submit"
               >
                 <span v-if="!loading" class="indicator-label">
                   Submit
-                  <AlitaIcon
-                    icon-name="arrow-right"
-                    icon-class="fs-3 ms-2 me-0"
-                  />
+                  <Icon icon-name="arrow-right" icon-class="fs-3 ms-2 me-0" />
                 </span>
                 <span v-if="loading" class="indicator-progress">
                   Please wait...

@@ -12,16 +12,16 @@
       </h3>
 
       <!--begin::Toolbar-->
-      <div class="card-toolbar" data-alita-buttons="true">
+      <div class="card-toolbar" data-buttons="true">
         <a
           class="btn btn-sm btn-color-muted btn-active btn-active-primary active px-4 me-1"
-          id="alita_charts_widget_6_sales_btn"
+          id="charts_widget_6_sales_btn"
           >Sales</a
         >
 
         <a
           class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4 me-1"
-          id="alita_charts_widget_6_expenses_btn"
+          id="charts_widget_6_expenses_btn"
           >Expenses</a
         >
       </div>

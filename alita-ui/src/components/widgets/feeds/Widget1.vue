@@ -32,11 +32,11 @@
           <button
             type="button"
             class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
-            data-alita-menu-trigger="click"
-            data-alita-menu-placement="bottom-end"
-            data-alita-menu-flip="top-end"
+            data-menu-trigger="click"
+            data-menu-placement="bottom-end"
+            data-menu-flip="top-end"
           >
-            <AlitaIcon icon-name="category" icon-class="fs-2" />
+            <Icon icon-name="category" icon-class="fs-2" />
           </button>
           <Dropdown2></Dropdown2>
         </div>
@@ -45,16 +45,16 @@
       <!--end::Header-->
 
       <!--begin::Form-->
-      <form id="alita_forms_widget_1_form" class="ql-quil ql-quil-plain pb-3">
+      <form id="forms_widget_1_form" class="ql-quil ql-quil-plain pb-3">
         <!--begin::Editor-->
-        <div id="alita_forms_widget_1_editor" class="py-6"></div>
+        <div id="forms_widget_1_editor" class="py-6"></div>
         <!--end::Editor-->
 
         <div class="separator"></div>
 
         <!--begin::Toolbar-->
         <div
-          id="alita_forms_widget_1_editor_toolbar"
+          id="forms_widget_1_editor_toolbar"
           class="ql-toolbar d-flex flex-stack py-2"
         >
           <div class="me-2">
@@ -108,13 +108,13 @@ export default defineComponent({
   },
   setup() {
     onMounted(() => {
-      const editorId = "alita_forms_widget_1_editor";
+      const editorId = "forms_widget_1_editor";
 
       // init editor
       const options = {
         modules: {
           toolbar: {
-            container: "#alita_forms_widget_1_editor_toolbar",
+            container: "#forms_widget_1_editor_toolbar",
           },
         },
         theme: "snow",

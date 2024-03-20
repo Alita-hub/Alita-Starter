@@ -15,7 +15,7 @@
             <a
               class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary active fw-bold px-4 me-1"
               data-bs-toggle="tab"
-              href="#alita_table_widget_6_tab_1"
+              href="#table_widget_6_tab_1"
               >Month</a
             >
           </li>
@@ -24,7 +24,7 @@
             <a
               class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bold px-4 me-1"
               data-bs-toggle="tab"
-              href="#alita_table_widget_6_tab_2"
+              href="#table_widget_6_tab_2"
               >Week</a
             >
           </li>
@@ -33,7 +33,7 @@
             <a
               class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bold px-4"
               data-bs-toggle="tab"
-              href="#alita_table_widget_6_tab_3"
+              href="#table_widget_6_tab_3"
               >Day</a
             >
           </li>
@@ -50,7 +50,7 @@
           <div
             :class="[index === 0 && 'active show']"
             class="tab-pane fade"
-            :id="`alita_table_widget_6_tab_${index + 1}`"
+            :id="`table_widget_6_tab_${index + 1}`"
           >
             <!--begin::Table container-->
             <div class="table-responsive">
@@ -112,10 +112,7 @@
                           href="#"
                           class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                         >
-                          <AlitaIcon
-                            icon-name="arrow-right"
-                            icon-class="fs-2"
-                          />
+                          <Icon icon-name="arrow-right" icon-class="fs-2" />
                         </a>
                       </td>
                     </tr>
@@ -140,7 +137,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "alita-widget-6",
+  name: "widget-6",
   components: {},
   props: {
     widgetClasses: String,

@@ -2,7 +2,7 @@
   <!--begin::Modal - Create Api Key-->
   <div
     class="modal fade"
-    id="alita_modal_create_api_key"
+    id="modal_create_api_key"
     ref="createAPIKeyModalRef"
     tabindex="-1"
     aria-hidden="true"
@@ -12,7 +12,7 @@
       <!--begin::Modal content-->
       <div class="modal-content">
         <!--begin::Modal header-->
-        <div class="modal-header" id="alita_modal_create_api_key_header">
+        <div class="modal-header" id="modal_create_api_key_header">
           <!--begin::Modal title-->
           <h2>Create API Key</h2>
           <!--end::Modal title-->
@@ -22,7 +22,7 @@
             class="btn btn-sm btn-icon btn-active-color-primary"
             data-bs-dismiss="modal"
           >
-            <AlitaIcon icon-name="cross" icon-class="fs-1" />
+            <Icon icon-name="cross" icon-class="fs-1" />
           </div>
           <!--end::Close-->
         </div>
@@ -30,7 +30,7 @@
 
         <!--begin::Form-->
         <VForm
-          id="alita_modal_create_api_key_form"
+          id="modal_create_api_key_form"
           class="form"
           @submit="submit"
           :validation-schema="validationSchema"
@@ -40,18 +40,18 @@
             <!--begin::Scroll-->
             <div
               class="scroll-y me-n7 pe-7"
-              id="alita_modal_create_api_key_scroll"
-              data-alita-scroll="true"
-              data-alita-scroll-activate="{default: false, lg: true}"
-              data-alita-scroll-max-height="auto"
-              data-alita-scroll-dependencies="#alita_modal_create_api_key_header"
-              data-alita-scroll-wrappers="#alita_modal_create_api_key_scroll"
-              data-alita-scroll-offset="300px"
+              id="modal_create_api_key_scroll"
+              data-scroll="true"
+              data-scroll-activate="{default: false, lg: true}"
+              data-scroll-max-height="auto"
+              data-scroll-dependencies="#modal_create_api_key_header"
+              data-scroll-wrappers="#modal_create_api_key_scroll"
+              data-scroll-offset="300px"
             >
               <div
                 class="notice d-flex bg-light-warning rounded border-warning border border-dashed mb-10 p-6"
               >
-                <AlitaIcon
+                <Icon
                   icon-name="information-5"
                   icon-class="fs-2tx text-warning me-4"
                 />
@@ -212,7 +212,7 @@
             <!--begin::Button-->
             <button
               type="reset"
-              id="alita_modal_create_api_key_cancel"
+              id="modal_create_api_key_cancel"
               class="btn btn-light me-3"
             >
               Discard
@@ -223,7 +223,7 @@
             <button
               ref="submitButtonRef"
               type="submit"
-              id="alita_modal_create_api_key_submit"
+              id="modal_create_api_key_submit"
               class="btn btn-primary"
             >
               <span class="indicator-label"> Submit </span>
@@ -296,13 +296,13 @@ export default defineComponent({
       //Disable button
       submitButtonRef.value.disabled = true;
       // Activate indicator
-      submitButtonRef.value.setAttribute("data-alita-indicator", "on");
+      submitButtonRef.value.setAttribute("data-indicator", "on");
 
       setTimeout(() => {
         if (submitButtonRef.value) {
           submitButtonRef.value.disabled = false;
 
-          submitButtonRef.value?.removeAttribute("data-alita-indicator");
+          submitButtonRef.value?.removeAttribute("data-indicator");
         }
 
         Swal.fire({

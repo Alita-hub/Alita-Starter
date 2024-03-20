@@ -7,9 +7,9 @@ class ThemeMode {
   element: HTMLElement | null = null;
 
   private getParamName = (postfix: string): string => {
-    const ktName = document.body.hasAttribute("data-alita-name");
+    const ktName = document.body.hasAttribute("data-name");
     const name = ktName ? ktName + "_" : "";
-    return "alita_" + name + "theme_mode_" + postfix;
+    return "" + name + "theme_mode_" + postfix;
   };
 
   public getMode = (): Mode => {
@@ -66,11 +66,11 @@ class ThemeMode {
     // Read active menu mode value
     const activeMenuItem: HTMLElement | null =
       this.menu?.querySelector(
-        '[data-alita-element="modedata-alita-alita-value="' + menuMode + '"]'
+        '[data-element="mode"][data-value="' + menuMode + '"]'
       ) || null;
 
     // Enable switching state
-    this.element?.setAttribute("data-alita-theme-mode-switching", "true");
+    this.element?.setAttribute("data-theme-mode-switching", "true");
 
     // Set mode to the target element
     this.element?.setAttribute("data-bs-theme", mode);
@@ -78,7 +78,7 @@ class ThemeMode {
     // Disable switching state
     const self = this;
     setTimeout(function () {
-      self.element?.removeAttribute("data-alita-theme-mode-switching");
+      self.element?.removeAttribute("data-theme-mode-switching");
     }, 300);
 
     // Store mode value in storage
@@ -99,11 +99,11 @@ class ThemeMode {
   public getMenuMode = (): Mode | "" => {
     const menuModeParam = this.getParamName("menu");
     const menuItem = this.menu?.querySelector(
-      '.active[data-alita-element="mode"]'
+      '.active[data-element="mode"]'
     );
-    const dataKTValue = menuItem?.getAttribute("data-alita-value");
-    if (dataKTValue) {
-      return dataKTValue as Mode;
+    const dataValue = menuItem?.getAttribute("data-value");
+    if (dataValue) {
+      return dataValue as Mode;
     }
 
     if (!menuModeParam) {
@@ -123,23 +123,23 @@ class ThemeMode {
   private initMode = (): void => {
     this.setMode(this.getMode(), this.getMenuMode());
     if (this.element) {
-      EventHandlerUtil.trigger(this.element, "alita.thememode.init");
+      EventHandlerUtil.trigger(this.element, "thememode.init");
     }
   };
 
   private getActiveMenuItem = (): HTMLElement | null => {
     return (
       this.menu?.querySelector(
-        '[data-alita-element="modedata-alita-alita-value="' + this.getMenuMode() + '"]'
+        '[data-element="mode"][data-value="' + this.getMenuMode() + '"]'
       ) || null
     );
   };
 
   private setActiveMenuItem = (item: HTMLElement): void => {
     const menuModeParam = this.getParamName("menu");
-    const menuMode = item.getAttribute("data-alita-value");
+    const menuMode = item.getAttribute("data-value");
     const activeItem = this.menu?.querySelector(
-      '.active[data-alita-element="mode"]'
+      '.active[data-element="mode"]'
     );
     if (activeItem) {
       activeItem.classList.remove("active");
@@ -153,12 +153,12 @@ class ThemeMode {
 
   private handleMenu = (): void => {
     this.menu
-      ?.querySelectorAll<HTMLElement>('[data-alita-element="mode"]')
+      ?.querySelectorAll<HTMLElement>('[data-element="mode"]')
       ?.forEach((item: HTMLElement) => {
         item.addEventListener("click", (e) => {
           e.preventDefault();
 
-          const menuMode: string | null = item.getAttribute("data-alita-value");
+          const menuMode: string | null = item.getAttribute("data-value");
           const mode = menuMode === "system" ? this.getSystemMode() : menuMode;
 
           if (mode) {
@@ -170,55 +170,55 @@ class ThemeMode {
 
   public flipImages = () => {
     document
-      .querySelectorAll<HTMLElement>("[data-alita-img-dark]")
+      .querySelectorAll<HTMLElement>("[data-img-dark]")
       ?.forEach((item: HTMLElement) => {
         if (item.tagName === "IMG") {
           if (
             this.getMode() === "dark" &&
-            item.hasAttribute("data-alita-img-dark")
+            item.hasAttribute("data-img-dark")
           ) {
             item.setAttribute(
-              "data-alita-img-light",
+              "data-img-light",
               item.getAttribute("src") || ""
             );
             item.setAttribute(
               "src",
-              item.getAttribute("data-alita-img-dark") || ""
+              item.getAttribute("data-img-dark") || ""
             );
           } else if (
             this.getMode() === "light" &&
-            item.hasAttribute("data-alita-img-light")
+            item.hasAttribute("data-img-light")
           ) {
             item.setAttribute(
-              "data-alita-img-dark",
+              "data-img-dark",
               item.getAttribute("src") || ""
             );
             item.setAttribute(
               "src",
-              item.getAttribute("data-alita-img-light") || ""
+              item.getAttribute("data-img-light") || ""
             );
           }
         } else {
           if (
             this.getMode() === "dark" &&
-            item.hasAttribute("data-alita-img-dark")
+            item.hasAttribute("data-img-dark")
           ) {
             item.setAttribute(
-              "data-alita-img-light",
+              "data-img-light",
               item.getAttribute("src") || ""
             );
             item.style.backgroundImage =
-              "url('" + item.getAttribute("data-alita-img-dark") + "')";
+              "url('" + item.getAttribute("data-img-dark") + "')";
           } else if (
             this.getMode() === "light" &&
-            item.hasAttribute("data-alita-img-light")
+            item.hasAttribute("data-img-light")
           ) {
             item.setAttribute(
-              "data-alita-img-dark",
+              "data-img-dark",
               item.getAttribute("src") || ""
             );
             item.style.backgroundImage =
-              "url('" + item.getAttribute("data-alita-img-light") + "')";
+              "url('" + item.getAttribute("data-img-light") + "')";
           }
         }
       });
@@ -238,7 +238,7 @@ class ThemeMode {
 
   public init = () => {
     this.menu = document.querySelector<HTMLElement>(
-      '[data-alita-element="theme-mode-menu"]'
+      '[data-element="theme-mode-menu"]'
     );
     this.element = document.documentElement;
 

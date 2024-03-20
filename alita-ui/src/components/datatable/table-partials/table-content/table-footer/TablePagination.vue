@@ -10,7 +10,7 @@
           :style="{ cursor: !isInFirstPage ? 'pointer' : 'auto' }"
         >
           <a class="page-link" @click="onClickFirstPage">
-            <AlitaIcon icon-name="double-left" icon-class="fs-2" />
+            <Icon icon-name="double-left" icon-class="fs-2" />
           </a>
         </li>
 
@@ -20,7 +20,7 @@
           :style="{ cursor: !isInFirstPage ? 'pointer' : 'auto' }"
         >
           <a class="page-link" @click="onClickPreviousPage">
-            <AlitaIcon icon-name="left" icon-class="fs-2" />
+            <Icon icon-name="left" icon-class="fs-2" />
           </a>
         </li>
 
@@ -44,7 +44,7 @@
           :style="{ cursor: !isInLastPage ? 'pointer' : 'auto' }"
         >
           <a class="paginate_button page-link" @click="onClickNextPage">
-            <AlitaIcon icon-name="right" icon-class="fs-2" />
+            <Icon icon-name="right" icon-class="fs-2" />
           </a>
         </li>
 
@@ -54,7 +54,7 @@
           :style="{ cursor: !isInLastPage ? 'pointer' : 'auto' }"
         >
           <a class="paginate_button page-link" @click="onClickLastPage">
-            <AlitaIcon icon-name="double-right" icon-class="fs-2" />
+            <Icon icon-name="double-right" icon-class="fs-2" />
           </a>
         </li>
       </ul>

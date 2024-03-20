@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import icons from "@/core/helpers/alita-icon/icons.json";
+import icons from "@/core/helpers/icon/icons.json";
 import { useConfigStore } from "@/stores/config";
 
 const store = useConfigStore();

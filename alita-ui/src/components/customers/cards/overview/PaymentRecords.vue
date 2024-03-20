@@ -16,9 +16,9 @@
           type="button"
           class="btn btn-sm btn-flex btn-light-primary"
           data-bs-toggle="modal"
-          data-bs-target="#alita_modal_add_payment"
+          data-bs-target="#modal_add_payment"
         >
-          <AlitaIcon icon-name="plus-square" icon-class="fs-3" />
+          <Icon icon-name="plus-square" icon-class="fs-3" />
           Add payment
         </button>
         <!--end::Filter-->
@@ -53,16 +53,16 @@
           <a
             href="#"
             class="btn btn-sm btn-light btn-active-light-primary"
-            data-alita-menu-trigger="click"
-            data-alita-menu-placement="bottom-end"
-            data-alita-menu-flip="top-end"
+            data-menu-trigger="click"
+            data-menu-placement="bottom-end"
+            data-menu-flip="top-end"
             >Actions
-            <AlitaIcon icon-name="down" icon-class="fs-5 m-0" />
+            <Icon icon-name="down" icon-class="fs-5 m-0" />
           </a>
           <!--begin::Menu-->
           <div
             class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-            data-alita-menu="true"
+            data-menu="true"
           >
             <!--begin::Menu item-->
             <div class="menu-item px-3">

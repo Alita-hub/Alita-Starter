@@ -11,10 +11,10 @@
           type="button"
           :class="`btn-active-color-${widgetColor}`"
           class="btn btn-sm btn-icon btn-color-white btn-active-white border-0 me-n3"
-          data-alita-menu-trigger="click"
-          data-alita-menu-placement="bottom-end"
+          data-menu-trigger="click"
+          data-menu-placement="bottom-end"
         >
-          <AlitaIcon icon-name="category" icon-class="fs-2" />
+          <Icon icon-name="category" icon-class="fs-2" />
         </button>
         <Dropdown3></Dropdown3>
         <!--end::Menu-->

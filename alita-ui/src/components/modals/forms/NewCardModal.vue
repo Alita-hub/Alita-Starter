@@ -3,7 +3,7 @@
   <div
     class="modal fade"
     ref="newCardModalRef"
-    id="alita_modal_new_card"
+    id="modal_new_card"
     tabindex="-1"
     aria-hidden="true"
   >
@@ -22,7 +22,7 @@
             class="btn btn-sm btn-icon btn-active-color-primary"
             data-bs-dismiss="modal"
           >
-            <AlitaIcon icon-name="cross" icon-class="fs-1" />
+            <Icon icon-name="cross" icon-class="fs-1" />
           </div>
           <!--end::Close-->
         </div>
@@ -32,7 +32,7 @@
         <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
           <!--begin::Form-->
           <VForm
-            id="alita_modal_new_card_form"
+            id="modal_new_card_form"
             class="form"
             @submit="submit"
             :validation-schema="validationSchema"
@@ -219,7 +219,7 @@
                   <div
                     class="position-absolute translate-middle-y top-50 end-0 me-3"
                   >
-                    <AlitaIcon icon-name="credit-cart" icon-class="fs-2hx" />
+                    <Icon icon-name="credit-cart" icon-class="fs-2hx" />
                   </div>
                   <!--end::CVV icon-->
                 </div>
@@ -269,7 +269,7 @@
             <div class="text-center pt-15">
               <button
                 type="reset"
-                id="alita_modal_new_card_cancel"
+                id="modal_new_card_cancel"
                 class="btn btn-light me-3"
               >
                 Discard
@@ -278,7 +278,7 @@
               <button
                 ref="submitButtonRef"
                 type="submit"
-                id="alita_modal_new_card_submit"
+                id="modal_new_card_submit"
                 class="btn btn-primary"
               >
                 <span class="indicator-label"> Submit </span>
@@ -354,13 +354,13 @@ export default defineComponent({
       //Disable button
       submitButtonRef.value.disabled = true;
       // Activate indicator
-      submitButtonRef.value.setAttribute("data-alita-indicator", "on");
+      submitButtonRef.value.setAttribute("data-indicator", "on");
 
       setTimeout(() => {
         if (submitButtonRef.value) {
           submitButtonRef.value.disabled = false;
 
-          submitButtonRef.value?.removeAttribute("data-alita-indicator");
+          submitButtonRef.value?.removeAttribute("data-indicator");
         }
 
         Swal.fire({

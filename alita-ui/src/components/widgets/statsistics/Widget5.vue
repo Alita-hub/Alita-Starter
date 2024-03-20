@@ -3,7 +3,7 @@
   <a href="#" :class="[widgetClasses, `bg-${color}`]" class="card hoverable">
     <!--begin::Body-->
     <div class="card-body">
-      <AlitaIcon
+      <Icon
         :icon-name="iconName"
         :icon-class="`text-${iconColor} fs-3x mx-n1`"
       />
@@ -26,7 +26,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "alita-widget-5",
+  name: "widget-5",
   props: {
     widgetClasses: String,
     color: String,

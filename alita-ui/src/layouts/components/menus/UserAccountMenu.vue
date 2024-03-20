@@ -2,14 +2,14 @@
   <!--begin::Menu-->
   <div
     class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold py-4 fs-6 w-275px"
-    data-alita-menu="true"
+    data-menu="true"
   >
     <!--begin::Menu item-->
     <div class="menu-item px-3">
       <div class="menu-content d-flex align-items-center px-3">
         <!--begin::Avatar-->
         <div class="symbol symbol-50px me-5">
-          <img alt="Logo" :src="getAssetPath('media/avatars/300-1.jpg')" />
+          <img alt="Logo" :src="getAssetPath('media/avatars/300-3.jpg')" />
         </div>
         <!--end::Avatar-->
 
@@ -36,7 +36,7 @@
 
     <!--begin::Menu item-->
     <div class="menu-item px-5">
-      <router-link to="/crafted/account/overview" class="menu-link px-5">
+      <router-link to="/pages/profile/overview" class="menu-link px-5">
         My Profile
       </router-link>
     </div>
@@ -58,9 +58,9 @@
     <!--begin::Menu item-->
     <div
       class="menu-item px-5"
-      data-alita-menu-trigger="hover"
-      data-alita-menu-placement="left-start"
-      data-alita-menu-flip="center, top"
+      data-menu-trigger="hover"
+      data-menu-placement="left-start"
+      data-menu-flip="center, top"
     >
       <router-link to="/pages/profile/overview" class="menu-link px-5">
         <span class="menu-title">My Subscription</span>
@@ -154,9 +154,9 @@
     <!--begin::Menu item-->
     <div
       class="menu-item px-5"
-      data-alita-menu-trigger="hover"
-      data-alita-menu-placement="left-start"
-      data-alita-menu-flip="center, top"
+      data-menu-trigger="hover"
+      data-menu-placement="left-start"
+      data-menu-flip="center, top"
     >
       <router-link to="/pages/profile/overview" class="menu-link px-5">
         <span class="menu-title position-relative">
@@ -305,7 +305,7 @@ import { useAuthStore } from "@/stores/auth";
 import { useRouter } from "vue-router";
 
 export default defineComponent({
-  name: "alita-user-menu",
+  name: "user-menu",
   components: {},
   setup() {
     const router = useRouter();

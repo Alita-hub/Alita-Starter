@@ -3,37 +3,46 @@ import type LayoutConfigTypes from "@/layouts/config/types";
 const config: LayoutConfigTypes = {
   general: {
     mode: "system",
+    primaryColor: "#50CD89",
+    pageWidth: "default",
+    layout: "dark-sidebar",
     iconsType: "duotone",
-  },
-  main: {
-    type: "default",
-    primaryColor: "#009EF7",
-    logo: {
-      dark: "media/logos/default-dark.svg",
-      light: "media/logos/default.svg",
-    },
-  },
-  illustrations: {
-    set: "sketchy-1",
-  },
-  scrollTop: {
-    display: true,
   },
   header: {
     display: true,
-    menuIcon: "keenthemes",
-    width: "fluid",
-    fixed: {
-      desktop: true,
-      tabletAndMobile: true,
+    default: {
+      container: "fluid",
+      fixed: {
+        desktop: true,
+        mobile: false,
+      },
+      menu: {
+        display: true,
+        iconType: "keenthemes",
+      },
+    },
+  },
+  sidebar: {
+    display: true,
+    default: {
+      minimize: {
+        desktop: {
+          enabled: true,
+          default: false,
+          hoverable: true,
+        },
+      },
+      menu: {
+        iconType: "keenthemes",
+      },
     },
   },
   toolbar: {
     display: true,
-    width: "fluid",
+    container: "fluid",
     fixed: {
-      desktop: true,
-      tabletAndMobile: true,
+      desktop: false,
+      mobile: false,
     },
   },
   pageTitle: {
@@ -41,20 +50,22 @@ const config: LayoutConfigTypes = {
     breadcrumb: true,
     direction: "column",
   },
-  aside: {
-    display: true,
-    theme: "dark",
-    fixed: true,
-    menuIcon: "keenthemes",
-    minimized: false,
-    minimize: true,
-    hoverable: true,
-  },
   content: {
-    width: "fixed",
+    container: "fixed",
   },
   footer: {
-    width: "fluid",
+    display: true,
+    container: "fluid",
+    fixed: {
+      desktop: false,
+      mobile: false,
+    },
+  },
+  illustrations: {
+    set: "sketchy-1",
+  },
+  scrolltop: {
+    display: true,
   },
 };
 

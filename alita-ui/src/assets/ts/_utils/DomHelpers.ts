@@ -34,7 +34,7 @@ function getCSSVariableValue(variableName: string) {
 function getElementActualCss(el: HTMLElement, prop: any, cache: boolean) {
   let css = "";
 
-  if (!el.getAttribute("alita-hidden-" + prop) || cache === false) {
+  if (!el.getAttribute("hidden-" + prop) || cache === false) {
     let value;
 
     // the element is hidden so:
@@ -53,13 +53,13 @@ function getElementActualCss(el: HTMLElement, prop: any, cache: boolean) {
 
     // store it in cache
     if (value !== undefined) {
-      el.setAttribute("alita-hidden-" + prop, value.toString());
+      el.setAttribute("hidden-" + prop, value.toString());
       return parseFloat(value.toString());
     }
     return 0;
   } else {
     // store it in cache
-    const attributeValue = el.getAttribute("alita-hidden-" + prop);
+    const attributeValue = el.getAttribute("hidden-" + prop);
     if (attributeValue || attributeValue === "0") {
       return parseFloat(attributeValue);
     }
@@ -429,7 +429,6 @@ function getBreakpoint(breakpoint: string) {
   return value;
 }
 
-//根据当前视口的宽度，在不同的断点上获取对应的属性值，以适应不同的屏幕尺寸
 function getAttributeValueByBreakpoint(incomingAttr: string): string | JSON {
   const value = toJSON(incomingAttr);
   if (typeof value !== "object") {

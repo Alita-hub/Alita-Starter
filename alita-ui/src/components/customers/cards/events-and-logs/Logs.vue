@@ -13,7 +13,7 @@
       <div class="card-toolbar">
         <!--begin::Button-->
         <button type="button" class="btn btn-sm btn-light-primary">
-          <AlitaIcon icon-name="cloud-change" icon-class="fs-3" />
+          <Icon icon-name="cloud-change" icon-class="fs-3" />
           Download Report
         </button>
         <!--end::Button-->
@@ -29,7 +29,7 @@
         <!--begin::Table-->
         <table
           class="table align-middle table-row-dashed fw-semibold text-gray-600 fs-6 gy-5"
-          id="alita_table_customers_logs"
+          id="table_customers_logs"
         >
           <!--begin::Table body-->
           <tbody>

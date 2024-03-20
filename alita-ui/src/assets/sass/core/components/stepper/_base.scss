@@ -4,103 +4,103 @@
 
 // Base
 .stepper {
-  // Content
-  [data-alita-stepper-element="info"],
-  [data-alita-stepper-element="content"] {
-    display: none;
+	// Content
+	[data-stepper-element="info"],
+	[data-stepper-element="content"] {
+		display: none;
 
-    &.current {
-      display: flex;
-    }
-  }
+		&.current {
+			display: flex;
+		}
+	}
 
-  // Enable cursor pointer on clickable steppers
-  .stepper-item[data-alita-stepper-action="step"] {
-    cursor: pointer;
-  }
+	// Enable cursor pointer on clickable steppers
+	.stepper-item[data-stepper-action="step"] {
+		cursor: pointer;
+	}
 
-  // States
-  & {
-    [data-alita-stepper-action="final"] {
-      display: none;
-    }
+	// States
+	& {
+		[data-stepper-action="final"] {
+			display: none;
+		}
 
-    [data-alita-stepper-action="previous"] {
-      display: none;
-    }
+		[data-stepper-action="previous"] {
+			display: none;
+		}
 
-    [data-alita-stepper-action="next"] {
-      display: inline-block;
-    }
+		[data-stepper-action="next"] {
+			display: inline-block;
+		}
 
-    [data-alita-stepper-action="submit"] {
-      display: none;
-    }
-  }
+		[data-stepper-action="submit"] {
+			display: none;
+		}
+	}
 
-  &.first {
-    [data-alita-stepper-action="previous"] {
-      display: none;
-    }
+	&.first {
+		[data-stepper-action="previous"] {
+			display: none;
+		}
 
-    [data-alita-stepper-action="next"] {
-      display: inline-block;
-    }
+		[data-stepper-action="next"] {
+			display: inline-block;
+		}
 
-    [data-alita-stepper-action="submit"] {
-      display: none;
-    }
-  }
+		[data-stepper-action="submit"] {
+			display: none;
+		}
+	}
 
-  &.between {
-    [data-alita-stepper-action="previous"] {
-      display: inline-block;
-    }
+	&.between {
+		[data-stepper-action="previous"] {
+			display: inline-block;
+		}
 
-    [data-alita-stepper-action="next"] {
-      display: inline-block;
-    }
+		[data-stepper-action="next"] {
+			display: inline-block;
+		}
 
-    [data-alita-stepper-action="submit"] {
-      display: none;
-    }
-  }
+		[data-stepper-action="submit"] {
+			display: none;
+		}
+	}
 
-  &.last {
-    [data-alita-stepper-action="final"] {
-      display: inline-block;
-    }
+	&.last {
+		[data-stepper-action="final"] {
+			display: inline-block;
+		}
 
-    [data-alita-stepper-action="final"].btn-flex {
-      display: flex;
-    }
+		[data-stepper-action="final"].btn-flex {
+			display: flex;
+		}
 
-    [data-alita-stepper-action="previous"] {
-      display: inline-block;
-    }
+		[data-stepper-action="previous"] {
+			display: inline-block;
+		}
 
-    [data-alita-stepper-action="previous"].btn-flex {
-      display: flex;
-    }
+		[data-stepper-action="previous"].btn-flex {
+			display: flex;
+		}
 
-    [data-alita-stepper-action="previous"][data-alita-stepper-state="hide-on-last-step"] {
-      display: none !important;
-    }
+		[data-stepper-action="previous"][data-stepper-state="hide-on-last-step"] {
+			display: none !important;
+		}
 
-    [data-alita-stepper-action="next"] {
-      display: none;
-    }
+		[data-stepper-action="next"] {
+			display: none;
+		}
 
-    [data-alita-stepper-action="next"].btn-flex {
-      display: flex;
-    }
+		[data-stepper-action="next"].btn-flex {
+			display: flex;
+		}
 
-    [data-alita-stepper-action="submit"] {
-      display: inline-block;
-    }
+		[data-stepper-action="submit"] {
+			display: inline-block;
+		}
 
-    [data-alita-stepper-action="submit"].btn-flex {
-      display: flex;
-    }
-  }
+		[data-stepper-action="submit"].btn-flex {
+			display: flex;
+		}
+	}
 }

@@ -29,11 +29,11 @@
           <button
             type="button"
             class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
-            data-alita-menu-trigger="click"
-            data-alita-menu-placement="bottom-end"
-            data-alita-menu-flip="top-end"
+            data-menu-trigger="click"
+            data-menu-placement="bottom-end"
+            data-menu-flip="top-end"
           >
-            <AlitaIcon icon-name="category" icon-class="fs-2" />
+            <Icon icon-name="category" icon-class="fs-2" />
           </button>
           <Dropdown3></Dropdown3>
         </div>
@@ -57,7 +57,7 @@
             href="#"
             class="btn btn-sm btn-light btn-color-muted btn-active-light-success px-4 py-2 me-4"
           >
-            <AlitaIcon icon-name="message-text-2" icon-class="fs-3" />
+            <Icon icon-name="message-text-2" icon-class="fs-3" />
             22
           </a>
 
@@ -65,7 +65,7 @@
             href="#"
             class="btn btn-sm btn-light btn-color-muted btn-active-light-danger px-4 py-2"
           >
-            <AlitaIcon icon-name="heart" icon-class="fs-2" />
+            <Icon icon-name="heart" icon-class="fs-2" />
             59
           </a>
         </div>
@@ -81,18 +81,18 @@
       <form class="position-relative mb-6">
         <textarea
           class="form-control border-0 p-0 pe-10 resize-none min-h-25px"
-          data-alita-autosize="true"
+          data-autosize="true"
           rows="1"
           placeholder="Reply.."
         ></textarea>
 
         <div class="position-absolute top-0 end-0 me-n5">
           <span class="btn btn-icon btn-sm btn-active-color-primary pe-0 me-2">
-            <AlitaIcon icon-name="paper-clip" icon-class="fs-3 mb-3" />
+            <Icon icon-name="paper-clip" icon-class="fs-3 mb-3" />
           </span>
 
           <span class="btn btn-icon btn-sm btn-active-color-primary ps-0">
-            <AlitaIcon icon-name="geolocation" icon-class="fs-2 mb-3" />
+            <Icon icon-name="geolocation" icon-class="fs-2 mb-3" />
           </span>
         </div>
       </form>

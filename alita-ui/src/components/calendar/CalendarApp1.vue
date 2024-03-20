@@ -1,60 +1,42 @@
 <template>
-  <!--begin::Card-->
-  <div class="card">
-    <!--begin::Card header-->
-    <div class="card-header">
-      <h2 class="card-title fw-bold">Calendar</h2>
-
-      <div class="card-toolbar">
-        <button class="btn btn-flex btn-primary" @click="newEvent()">
-          <AlitaIcon icon-name="plus" icon-class="fs-2" />
-          Add Event
-        </button>
-      </div>
-    </div>
-    <!--end::Card header-->
-
-    <!--begin::Card body-->
-    <div class="card-body">
-      <!--begin::Calendar-->
-      <FullCalendar
-        class="demo-app-calendar"
-        :options="calendarOptions"
-      ></FullCalendar>
-      <!--end::Calendar-->
-    </div>
-    <!--end::Card body-->
-  </div>
-  <!--end::Card-->
-
-  <NewEventModal></NewEventModal>
+  <FullCalendar
+    ref="calendarRef"
+    class="demo-app-calendar"
+    :options="calendarOptions"
+  ></FullCalendar>
 </template>
 
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
-import { defineComponent } from "vue";
+import { defineComponent, nextTick, onMounted, ref, type Ref } from "vue";
 import FullCalendar from "@fullcalendar/vue3";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import listPlugin from "@fullcalendar/list";
 import interactionPlugin from "@fullcalendar/interaction";
 import events, { TODAY } from "@/core/data/events";
-import NewEventModal from "@/components/modals/forms/NewEventModal.vue";
 import { Modal } from "bootstrap";
 
 export default defineComponent({
   name: "calendar-app-1",
   components: {
     FullCalendar,
-    NewEventModal,
   },
   setup() {
+    const calendarRef: Ref<null | typeof FullCalendar> = ref(null);
+
     const newEvent = () => {
       const modal = new Modal(
-        document.getElementById("alita_modal_add_event") as Element
+        document.getElementById("kt_modal_add_event") as Element
       );
       modal.show();
     };
+
+    onMounted(() => {
+      nextTick(function () {
+        window.dispatchEvent(new Event("resize"));
+      });
+    });
 
     const calendarOptions = {
       plugins: [dayGridPlugin, timeGridPlugin, listPlugin, interactionPlugin],
@@ -85,6 +67,7 @@ export default defineComponent({
       calendarOptions,
       newEvent,
       getAssetPath,
+      calendarRef,
     };
   },
 });

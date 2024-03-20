@@ -13,9 +13,9 @@
           href="#"
           class="btn btn-sm btn-flex btn-light-primary"
           data-bs-toggle="modal"
-          data-bs-target="#alita_modal_new_card"
+          data-bs-target="#modal_new_card"
         >
-          <AlitaIcon icon-name="plus-square" icon-class="fs-3" />
+          <Icon icon-name="plus-square" icon-class="fs-3" />
           Add new method</a
         >
       </div>
@@ -23,23 +23,23 @@
     </div>
     <!--end::Card header-->
     <!--begin::Card body-->
-    <div id="alita_customer_view_payment_method" class="card-body pt-0">
+    <div id="customer_view_payment_method" class="card-body pt-0">
       <!--begin::Option-->
-      <div class="py-0" data-alita-customer-payment-method="row">
+      <div class="py-0" data-customer-payment-method="row">
         <!--begin::Header-->
         <div class="py-3 d-flex flex-stack flex-wrap">
           <!--begin::Toggle-->
           <div
             class="d-flex align-items-center collapsible rotate collapsed"
             data-bs-toggle="collapse"
-            href="#alita_customer_view_payment_method_1"
+            href="#customer_view_payment_method_1"
             role="button"
             aria-expanded="false"
-            aria-controls="alita_customer_view_payment_method_1"
+            aria-controls="customer_view_payment_method_1"
           >
             <!--begin::Arrow-->
             <div class="me-3 rotate-90">
-              <AlitaIcon icon-name="right" icon-class="fs-3" />
+              <Icon icon-name="right" icon-class="fs-3" />
             </div>
             <!--end::Arrow-->
             <!--begin::Logo-->
@@ -67,7 +67,7 @@
               href="#"
               class="btn btn-icon btn-active-light-primary w-30px h-30px me-3"
               data-bs-toggle="modal"
-              data-bs-target="#alita_modal_new_card"
+              data-bs-target="#modal_new_card"
             >
               <span
                 data-bs-toggle="tooltip"
@@ -75,7 +75,7 @@
                 title=""
                 data-bs-original-title="Edit"
               >
-                <AlitaIcon icon-name="pencil" icon-class="fs-3" />
+                <Icon icon-name="pencil" icon-class="fs-3" />
               </span>
             </a>
             <!--end::Edit-->
@@ -85,10 +85,10 @@
               class="btn btn-icon btn-active-light-primary w-30px h-30px me-3"
               data-bs-toggle="tooltip"
               title=""
-              data-alita-customer-payment-method="delete"
+              data-customer-payment-method="delete"
               data-bs-original-title="Delete"
             >
-              <AlitaIcon icon-name="trash" icon-class="fs-3" />
+              <Icon icon-name="trash" icon-class="fs-3" />
             </a>
             <!--end::Delete-->
             <!--begin::More-->
@@ -97,23 +97,23 @@
               class="btn btn-icon btn-active-light-primary w-30px h-30px"
               data-bs-toggle="tooltip"
               title=""
-              data-alita-menu-trigger="click"
-              data-alita-menu-placement="bottom-end"
+              data-menu-trigger="click"
+              data-menu-placement="bottom-end"
               data-bs-original-title="More Options"
             >
-              <AlitaIcon icon-name="switch" icon-class="fs-3" />
+              <Icon icon-name="switch" icon-class="fs-3" />
             </a>
             <!--begin::Menu-->
             <div
               class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold w-150px py-3"
-              data-alita-menu="true"
+              data-menu="true"
             >
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a
                   href="#"
                   class="menu-link px-3"
-                  data-alita-payment-mehtod-action="set_as_primary"
+                  data-payment-mehtod-action="set_as_primary"
                   >Set as Primary</a
                 >
               </div>
@@ -127,9 +127,9 @@
         <!--end::Header-->
         <!--begin::Body-->
         <div
-          id="alita_customer_view_payment_method_1"
+          id="customer_view_payment_method_1"
           class="fs-6 ps-10 collapse"
-          data-bs-parent="#alita_customer_view_payment_method"
+          data-bs-parent="#customer_view_payment_method"
           style=""
         >
           <!--begin::Details-->
@@ -201,7 +201,7 @@
                     <td class="text-muted min-w-125px w-125px">CVC check</td>
                     <td class="text-gray-800">
                       Passed
-                      <AlitaIcon
+                      <Icon
                         icon-name="check-circle"
                         icon-class="fs-2 text-success"
                       />
@@ -219,21 +219,21 @@
       <!--end::Option-->
       <div class="separator separator-dashed"></div>
       <!--begin::Option-->
-      <div class="py-0" data-alita-customer-payment-method="row">
+      <div class="py-0" data-customer-payment-method="row">
         <!--begin::Header-->
         <div class="py-3 d-flex flex-stack flex-wrap">
           <!--begin::Toggle-->
           <div
             class="d-flex align-items-center collapsible rotate collapsed"
             data-bs-toggle="collapse"
-            href="#alita_customer_view_payment_method_2"
+            href="#customer_view_payment_method_2"
             role="button"
             aria-expanded="false"
-            aria-controls="alita_customer_view_payment_method_2"
+            aria-controls="customer_view_payment_method_2"
           >
             <!--begin::Arrow-->
             <div class="me-3 rotate-90">
-              <AlitaIcon icon-name="right" icon-class="fs-3" />
+              <Icon icon-name="right" icon-class="fs-3" />
             </div>
             <!--end::Arrow-->
             <!--begin::Logo-->
@@ -260,7 +260,7 @@
               href="#"
               class="btn btn-icon btn-active-light-primary w-30px h-30px me-3"
               data-bs-toggle="modal"
-              data-bs-target="#alita_modal_new_card"
+              data-bs-target="#modal_new_card"
             >
               <span
                 data-bs-toggle="tooltip"
@@ -268,7 +268,7 @@
                 title=""
                 data-bs-original-title="Edit"
               >
-                <AlitaIcon icon-name="pencil" icon-class="fs-3" />
+                <Icon icon-name="pencil" icon-class="fs-3" />
               </span>
             </a>
             <!--end::Edit-->
@@ -278,10 +278,10 @@
               class="btn btn-icon btn-active-light-primary w-30px h-30px me-3"
               data-bs-toggle="tooltip"
               title=""
-              data-alita-customer-payment-method="delete"
+              data-customer-payment-method="delete"
               data-bs-original-title="Delete"
             >
-              <AlitaIcon icon-name="trash" icon-class="fs-3" />
+              <Icon icon-name="trash" icon-class="fs-3" />
             </a>
             <!--end::Delete-->
             <!--begin::More-->
@@ -290,23 +290,23 @@
               class="btn btn-icon btn-active-light-primary w-30px h-30px"
               data-bs-toggle="tooltip"
               title=""
-              data-alita-menu-trigger="click"
-              data-alita-menu-placement="bottom-end"
+              data-menu-trigger="click"
+              data-menu-placement="bottom-end"
               data-bs-original-title="More Options"
             >
-              <AlitaIcon icon-name="switch" icon-class="fs-3" />
+              <Icon icon-name="switch" icon-class="fs-3" />
             </a>
             <!--begin::Menu-->
             <div
               class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold w-150px py-3"
-              data-alita-menu="true"
+              data-menu="true"
             >
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a
                   href="#"
                   class="menu-link px-3"
-                  data-alita-payment-mehtod-action="set_as_primary"
+                  data-payment-mehtod-action="set_as_primary"
                   >Set as Primary</a
                 >
               </div>
@@ -320,9 +320,9 @@
         <!--end::Header-->
         <!--begin::Body-->
         <div
-          id="alita_customer_view_payment_method_2"
+          id="customer_view_payment_method_2"
           class="fs-6 ps-10 collapse"
-          data-bs-parent="#alita_customer_view_payment_method"
+          data-bs-parent="#customer_view_payment_method"
           style=""
         >
           <!--begin::Details-->
@@ -396,10 +396,7 @@
                     <td class="text-muted min-w-125px w-125px">CVC check</td>
                     <td class="text-gray-800">
                       Passed
-                      <AlitaIcon
-                        icon-name="check"
-                        icon-class="fs-2 text-success"
-                      />
+                      <Icon icon-name="check" icon-class="fs-2 text-success" />
                     </td>
                   </tr>
                 </tbody>
@@ -414,21 +411,21 @@
       <!--end::Option-->
       <div class="separator separator-dashed"></div>
       <!--begin::Option-->
-      <div class="py-0" data-alita-customer-payment-method="row">
+      <div class="py-0" data-customer-payment-method="row">
         <!--begin::Header-->
         <div class="py-3 d-flex flex-stack flex-wrap">
           <!--begin::Toggle-->
           <div
             class="d-flex align-items-center collapsible collapsed rotate"
             data-bs-toggle="collapse"
-            href="#alita_customer_view_payment_method_3"
+            href="#customer_view_payment_method_3"
             role="button"
             aria-expanded="false"
-            aria-controls="alita_customer_view_payment_method_3"
+            aria-controls="customer_view_payment_method_3"
           >
             <!--begin::Arrow-->
             <div class="me-3 rotate-90">
-              <AlitaIcon icon-name="right" icon-class="fs-3" />
+              <Icon icon-name="right" icon-class="fs-3" />
             </div>
             <!--end::Arrow-->
             <!--begin::Logo-->
@@ -456,7 +453,7 @@
               href="#"
               class="btn btn-icon btn-active-light-primary w-30px h-30px me-3"
               data-bs-toggle="modal"
-              data-bs-target="#alita_modal_new_card"
+              data-bs-target="#modal_new_card"
             >
               <span
                 data-bs-toggle="tooltip"
@@ -464,7 +461,7 @@
                 title=""
                 data-bs-original-title="Edit"
               >
-                <AlitaIcon icon-name="pencil" icon-class="fs-3" />
+                <Icon icon-name="pencil" icon-class="fs-3" />
               </span>
             </a>
             <!--end::Edit-->
@@ -474,10 +471,10 @@
               class="btn btn-icon btn-active-light-primary w-30px h-30px me-3"
               data-bs-toggle="tooltip"
               title=""
-              data-alita-customer-payment-method="delete"
+              data-customer-payment-method="delete"
               data-bs-original-title="Delete"
             >
-              <AlitaIcon icon-name="trash" icon-class="fs-3" />
+              <Icon icon-name="trash" icon-class="fs-3" />
             </a>
             <!--end::Delete-->
             <!--begin::More-->
@@ -486,23 +483,23 @@
               class="btn btn-icon btn-active-light-primary w-30px h-30px"
               data-bs-toggle="tooltip"
               title=""
-              data-alita-menu-trigger="click"
-              data-alita-menu-placement="bottom-end"
+              data-menu-trigger="click"
+              data-menu-placement="bottom-end"
               data-bs-original-title="More Options"
             >
-              <AlitaIcon icon-name="switch" icon-class="fs-3" />
+              <Icon icon-name="switch" icon-class="fs-3" />
             </a>
             <!--begin::Menu-->
             <div
               class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold w-150px py-3"
-              data-alita-menu="true"
+              data-menu="true"
             >
               <!--begin::Menu item-->
               <div class="menu-item px-3">
                 <a
                   href="#"
                   class="menu-link px-3"
-                  data-alita-payment-mehtod-action="set_as_primary"
+                  data-payment-mehtod-action="set_as_primary"
                   >Set as Primary</a
                 >
               </div>
@@ -516,9 +513,9 @@
         <!--end::Header-->
         <!--begin::Body-->
         <div
-          id="alita_customer_view_payment_method_3"
+          id="customer_view_payment_method_3"
           class="collapse fs-6 ps-10"
-          data-bs-parent="#alita_customer_view_payment_method"
+          data-bs-parent="#customer_view_payment_method"
         >
           <!--begin::Details-->
           <div class="d-flex flex-wrap py-5">
@@ -592,10 +589,7 @@
                     <td class="text-gray-800">
                       Failed
 
-                      <AlitaIcon
-                        icon-name="cross"
-                        icon-class="fs-2 text-danger"
-                      />
+                      <Icon icon-name="cross" icon-class="fs-2 text-danger" />
                     </td>
                   </tr>
                 </tbody>

@@ -21,7 +21,7 @@
         <!--begin::Table-->
         <table
           class="table align-middle table-row-dashed fs-6 text-gray-600 fw-semibold gy-5"
-          id="alita_table_customers_events"
+          id="table_customers_events"
         >
           <!--begin::Table body-->
           <tbody>
@@ -144,7 +144,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "alita-events",
+  name: "events",
   components: {},
   setup() {
     return {

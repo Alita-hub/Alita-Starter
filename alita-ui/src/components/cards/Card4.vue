@@ -60,8 +60,8 @@
         <!--begin::Link-->
         <button
           class="btn btn-sm btn-light-primary fw-bold"
-          data-alita-drawer-toggle="true"
-          data-alita-drawer-target="#alita_drawer_chat"
+          data-drawer-toggle="true"
+          data-drawer-target="#drawer_chat"
           @click="openDrawer()"
         >
           Send Message
@@ -103,7 +103,7 @@ export default defineComponent({
   },
   setup() {
     const openDrawer = () => {
-      DrawerComponent?.getInstance("alita_drawer_chat")?.toggle();
+      DrawerComponent?.getInstance("drawer_chat")?.toggle();
     };
 
     return {

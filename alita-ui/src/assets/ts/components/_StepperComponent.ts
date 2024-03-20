@@ -45,16 +45,16 @@ class StepperComponent {
 
     // Elements
     this.steps = this.element.querySelectorAll(
-      '[data-alita-stepper-element="nav"]'
+      '[data-stepper-element="nav"]'
     );
     this.btnNext = this.element.querySelector(
-      '[data-alita-stepper-action="next"]'
+      '[data-stepper-action="next"]'
     );
     this.btnPrev = this.element.querySelector(
-      '[data-alita-stepper-action="previous"]'
+      '[data-stepper-action="previous"]'
     );
     this.btnSubmit = this.element.querySelector(
-      '[data-alita-stepper-action="submit"]'
+      '[data-stepper-action="submit"]'
     );
 
     // Variables
@@ -75,7 +75,7 @@ class StepperComponent {
   }
 
   private _goTo = (index: number) => {
-    EventHandlerUtil.trigger(this.element, "alita.stepper.change");
+    EventHandlerUtil.trigger(this.element, "stepper.change");
     // Skip if this step is already shown
     if (
       index === this.currentStepIndex ||
@@ -94,25 +94,25 @@ class StepperComponent {
     // Refresh elements
     this.refreshUI();
 
-    EventHandlerUtil.trigger(this.element, "alita.stepper.changed");
+    EventHandlerUtil.trigger(this.element, "stepper.changed");
   };
 
   private initHandlers = () => {
     this.btnNext?.addEventListener("click", (e: Event) => {
       e.preventDefault();
 
-      EventHandlerUtil.trigger(this.element, "alita.stepper.next", e);
+      EventHandlerUtil.trigger(this.element, "stepper.next", e);
     });
 
     this.btnPrev?.addEventListener("click", (e: Event) => {
       e.preventDefault();
 
-      EventHandlerUtil.trigger(this.element, "alita.stepper.previous", e);
+      EventHandlerUtil.trigger(this.element, "stepper.previous", e);
     });
 
     DOMEventHandlerUtil.on(
       this.element,
-      '[data-alita-stepper-action="step"]',
+      '[data-stepper-action="step"]',
       "click",
       (e: Event) => {
         e.preventDefault();
@@ -142,7 +142,7 @@ class StepperComponent {
 
   private getStepContent = (index: number) => {
     const content = this.element.querySelectorAll(
-      '[data-alita-stepper-element="content"]'
+      '[data-stepper-element="content"]'
     );
     if (!content) {
       return false;
@@ -183,7 +183,7 @@ class StepperComponent {
 
     // Step Items
     const elements = this.element.querySelectorAll(
-      '[data-alita-stepper-element="nav"], [data-alita-stepper-element="content"], [data-alita-stepper-element="info"]'
+      '[data-stepper-element="nav"], [data-stepper-element="content"], [data-stepper-element="info"]'
     );
 
     if (!elements || elements.length <= 0) {
@@ -203,7 +203,7 @@ class StepperComponent {
 
         if (
           this.options.animation !== false &&
-          element.getAttribute("data-alita-stepper-element") === "content"
+          element.getAttribute("data-stepper-element") === "content"
         ) {
           ElementStyleUtil.set(
             element,
@@ -353,7 +353,7 @@ class StepperComponent {
     return stepper;
   };
 
-  public static bootstrap(attr: string = "[data-alita-stepper]") {
+  public static bootstrap(attr: string = "[data-stepper]") {
     StepperComponent.createInstances(attr);
   }
 }

@@ -16,7 +16,7 @@
             <a
               class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary active fw-bold px-4 me-1"
               data-bs-toggle="tab"
-              href="#alita_table_widget_4_tab_1"
+              href="#table_widget_4_tab_1"
               >Month</a
             >
           </li>
@@ -25,7 +25,7 @@
             <a
               class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bold px-4 me-1"
               data-bs-toggle="tab"
-              href="#alita_table_widget_4_tab_2"
+              href="#table_widget_4_tab_2"
               >Week</a
             >
           </li>
@@ -34,7 +34,7 @@
             <a
               class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bold px-4"
               data-bs-toggle="tab"
-              href="#alita_table_widget_4_tab_3"
+              href="#table_widget_4_tab_3"
               >Day</a
             >
           </li>
@@ -51,7 +51,7 @@
           <div
             :class="[index === 0 && 'show active']"
             class="tab-pane fade"
-            :id="`alita_table_widget_4_tab_${index + 1}`"
+            :id="`table_widget_4_tab_${index + 1}`"
           >
             <!--begin::Table container-->
             <div class="table-responsive">
@@ -139,7 +139,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "alita-widget-4",
+  name: "widget-4",
   components: {},
   props: {
     widgetClasses: String,

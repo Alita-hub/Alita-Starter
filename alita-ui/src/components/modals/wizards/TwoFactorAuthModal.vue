@@ -2,7 +2,7 @@
   <!--begin::Modal - Two-factor authentication-->
   <div
     class="modal fade"
-    id="alita_modal_two_factor_authentication"
+    id="modal_two_factor_authentication"
     tabindex="-1"
     aria-hidden="true"
   >
@@ -21,7 +21,7 @@
             class="btn btn-sm btn-icon btn-active-color-primary"
             data-bs-dismiss="modal"
           >
-            <AlitaIcon icon-name="cross" icon-class="fs-1" />
+            <Icon icon-name="cross" icon-class="fs-1" />
           </div>
           <!--end::Close-->
         </div>
@@ -47,14 +47,14 @@
                 name="auth_option"
                 value="apps"
                 checked
-                id="alita_modal_two_factor_authentication_option_1"
+                id="modal_two_factor_authentication_option_1"
                 v-model="value"
               />
               <label
                 class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center mb-5"
-                for="alita_modal_two_factor_authentication_option_1"
+                for="modal_two_factor_authentication_option_1"
               >
-                <AlitaIcon icon-name="setting-2" icon-class="fs-4x me-4" />
+                <Icon icon-name="setting-2" icon-class="fs-4x me-4" />
 
                 <span class="d-block fw-semibold text-start">
                   <span class="text-gray-900 fw-bold d-block fs-3"
@@ -74,14 +74,14 @@
                 class="btn-check"
                 name="auth_option"
                 value="sms"
-                id="alita_modal_two_factor_authentication_option_2"
+                id="modal_two_factor_authentication_option_2"
                 v-model="value"
               />
               <label
                 class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center"
-                for="alita_modal_two_factor_authentication_option_2"
+                for="modal_two_factor_authentication_option_2"
               >
-                <AlitaIcon icon-name="message-text-2" icon-class="fs-4x me-4" />
+                <Icon icon-name="message-text-2" icon-class="fs-4x me-4" />
 
                 <span class="d-block fw-semibold text-start">
                   <span class="text-gray-900 fw-bold d-block fs-3">SMS</span>
@@ -104,10 +104,7 @@
           <!--end::Options-->
 
           <!--begin::Apps-->
-          <div
-            :class="[state !== 'apps' && 'd-none']"
-            data-alita-element="apps"
-          >
+          <div :class="[state !== 'apps' && 'd-none']" data-element="apps">
             <!--begin::Heading-->
             <h3 class="text-gray-900 fw-bold mb-7">Authenticator Apps</h3>
             <!--end::Heading-->
@@ -149,7 +146,7 @@
             <div
               class="notice d-flex bg-light-warning rounded border-warning border border-dashed mb-10 p-6"
             >
-              <AlitaIcon
+              <Icon
                 icon-name="formation-5"
                 icon-class="fs-2tx text-warning me-4"
               />
@@ -205,7 +202,7 @@
                 <button
                   ref="submitAuthCodeButtonRef"
                   type="submit"
-                  data-alita-element="apps-submit"
+                  data-element="apps-submit"
                   class="btn btn-primary"
                 >
                   <span class="indicator-label"> Submit </span>
@@ -224,7 +221,7 @@
           <!--end::Options-->
 
           <!--begin::SMS-->
-          <div :class="[state !== 'sms' && 'd-none']" data-alita-element="sms">
+          <div :class="[state !== 'sms' && 'd-none']" data-element="sms">
             <!--begin::Heading-->
             <h3 class="text-gray-900 fw-bold fs-3 mb-5">
               SMS: Verify Your Mobile Number
@@ -269,7 +266,7 @@
                 <button
                   ref="submitMobileButtonRef"
                   type="submit"
-                  data-alita-element="sms-submit"
+                  data-element="sms-submit"
                   class="btn btn-primary"
                 >
                   <span class="indicator-label"> Submit </span>
@@ -329,15 +326,10 @@ export default defineComponent({
     const submitAuthCodeForm = () => {
       if (submitAuthCodeButtonRef.value) {
         // Activate indicator
-        submitAuthCodeButtonRef.value.setAttribute(
-          "data-alita-indicator",
-          "on"
-        );
+        submitAuthCodeButtonRef.value.setAttribute("data-indicator", "on");
 
         setTimeout(() => {
-          submitAuthCodeButtonRef.value?.removeAttribute(
-            "data-alita-indicator"
-          );
+          submitAuthCodeButtonRef.value?.removeAttribute("data-indicator");
 
           Swal.fire({
             text: "Form has been successfully submitted!",
@@ -363,13 +355,13 @@ export default defineComponent({
       //Disable button
       submitMobileButtonRef.value.disabled = true;
       // Activate indicator
-      submitMobileButtonRef.value.setAttribute("data-alita-indicator", "on");
+      submitMobileButtonRef.value.setAttribute("data-indicator", "on");
 
       setTimeout(() => {
         if (submitMobileButtonRef.value) {
           submitMobileButtonRef.value.disabled = false;
 
-          submitMobileButtonRef.value?.removeAttribute("data-alita-indicator");
+          submitMobileButtonRef.value?.removeAttribute("data-indicator");
         }
 
         Swal.fire({

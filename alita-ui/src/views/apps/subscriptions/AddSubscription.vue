@@ -4,7 +4,7 @@
     <!--begin::Content-->
     <div class="flex-lg-row-fluid me-lg-15 order-2 order-lg-1 mb-10 mb-lg-0">
       <!--begin::Form-->
-      <form class="form" action="#" id="alita_subscriptions_create_new">
+      <form class="form" action="#" id="subscriptions_create_new">
         <Customer></Customer>
 
         <Products></Products>
@@ -43,7 +43,7 @@ import NewCardModal from "@/components/modals/forms/NewCardModal.vue";
 import CreateAccountModal from "@/components/modals/wizards/CreateAccountModal.vue";
 
 export default defineComponent({
-  name: "alita-add-subscription",
+  name: "add-subscription",
   components: {
     AddSummary,
     Customer,

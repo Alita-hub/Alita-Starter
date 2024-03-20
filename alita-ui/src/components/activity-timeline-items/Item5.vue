@@ -8,7 +8,7 @@
     <!--begin::Timeline icon-->
     <div class="timeline-icon symbol symbol-circle symbol-40px">
       <div class="symbol-label bg-light">
-        <AlitaIcon icon-name="pencil" icon-class="fs-2 text-gray-500" />
+        <Icon icon-name="pencil" icon-class="fs-2 text-gray-500" />
       </div>
     </div>
     <!--end::Timeline icon-->

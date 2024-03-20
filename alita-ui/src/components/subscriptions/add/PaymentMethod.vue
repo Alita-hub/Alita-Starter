@@ -1,7 +1,7 @@
 <template>
   <div
     class="card card-flush pt-3 mb-5 mb-lg-10"
-    data-alita-subscriptions-form="pricing"
+    data-subscriptions-form="pricing"
   >
     <div class="card-header">
       <div class="card-title">
@@ -13,33 +13,30 @@
           href="#"
           class="btn btn-light-primary"
           data-bs-toggle="modal"
-          data-bs-target="#alita_modal_new_card"
+          data-bs-target="#modal_new_card"
           >New Method</a
         >
       </div>
     </div>
 
     <div class="card-body pt-0">
-      <div id="alita_create_new_payment_method">
+      <div id="create_new_payment_method">
         <div class="py-1">
           <div class="py-3 d-flex flex-stack flex-wrap">
             <div
               class="d-flex align-items-center collapsible toggle collapsed"
               data-bs-toggle="collapse"
-              data-bs-target="#alita_create_new_payment_method_1"
+              data-bs-target="#create_new_payment_method_1"
               aria-expanded="false"
             >
               <div
                 class="btn btn-sm btn-icon btn-active-color-primary ms-n3 me-2"
               >
-                <AlitaIcon
+                <Icon
                   icon-name="minus-square"
                   icon-class="toggle-on text-primary fs-2"
                 />
-                <AlitaIcon
-                  icon-name="plus-square"
-                  icon-class="toggle-off fs-2"
-                />
+                <Icon icon-name="plus-square" icon-class="toggle-off fs-2" />
               </div>
 
               <img
@@ -70,7 +67,7 @@
           </div>
 
           <div
-            id="alita_create_new_payment_method_1"
+            id="create_new_payment_method_1"
             class="fs-6 ps-10 collapse"
             style=""
           >
@@ -142,7 +139,7 @@
                       <td class="text-muted min-w-125px w-125px">CVC check</td>
                       <td class="text-gray-800">
                         Passed
-                        <AlitaIcon
+                        <Icon
                           icon-name="check-circle"
                           icon-class="fs-2 text-success"
                         />
@@ -162,20 +159,17 @@
             <div
               class="d-flex align-items-center collapsible toggle collapsed"
               data-bs-toggle="collapse"
-              data-bs-target="#alita_create_new_payment_method_2"
+              data-bs-target="#create_new_payment_method_2"
             >
               <div
                 class="btn btn-sm btn-icon btn-active-color-primary ms-n3 me-2"
               >
-                <AlitaIcon
+                <Icon
                   icon-name="minus-square"
                   icon-class="toggle-on text-primary fs-2"
                 />
 
-                <AlitaIcon
-                  icon-name="plus-square"
-                  icon-class="toggle-off fs-2"
-                />
+                <Icon icon-name="plus-square" icon-class="toggle-off fs-2" />
               </div>
 
               <img
@@ -201,10 +195,7 @@
             </div>
           </div>
 
-          <div
-            id="alita_create_new_payment_method_2"
-            class="collapse fs-6 ps-10"
-          >
+          <div id="create_new_payment_method_2" class="collapse fs-6 ps-10">
             <div class="d-flex flex-wrap py-5">
               <div class="flex-equal me-5">
                 <table class="table table-flush fw-semibold gy-1">
@@ -275,7 +266,7 @@
                       <td class="text-muted min-w-125px w-125px">CVC check</td>
                       <td class="text-gray-800">
                         Passed
-                        <AlitaIcon
+                        <Icon
                           icon-name="check"
                           icon-class="fs-2 text-success"
                         />
@@ -295,19 +286,16 @@
             <div
               class="d-flex align-items-center collapsible toggle collapsed"
               data-bs-toggle="collapse"
-              data-bs-target="#alita_create_new_payment_method_3"
+              data-bs-target="#create_new_payment_method_3"
             >
               <div
                 class="btn btn-sm btn-icon btn-active-color-primary ms-n3 me-2"
               >
-                <AlitaIcon
+                <Icon
                   icon-name="minus-square"
                   icon-class="toggle-on text-primary fs-2"
                 />
-                <AlitaIcon
-                  icon-name="plus-square"
-                  icon-class="toggle-off fs-2"
-                />
+                <Icon icon-name="plus-square" icon-class="toggle-off fs-2" />
               </div>
 
               <img
@@ -336,10 +324,7 @@
             </div>
           </div>
 
-          <div
-            id="alita_create_new_payment_method_3"
-            class="collapse fs-6 ps-10"
-          >
+          <div id="create_new_payment_method_3" class="collapse fs-6 ps-10">
             <div class="d-flex flex-wrap py-5">
               <div class="flex-equal me-5">
                 <table class="table table-flush fw-semibold gy-1">
@@ -411,10 +396,7 @@
                       <td class="text-gray-800">
                         Failed
 
-                        <AlitaIcon
-                          icon-name="cross"
-                          icon-class="fs-2 text-danger"
-                        />
+                        <Icon icon-name="cross" icon-class="fs-2 text-danger" />
                       </td>
                     </tr>
                   </tbody>
@@ -433,7 +415,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "alita-payment-method",
+  name: "payment-method",
   components: {},
   setup() {
     return {

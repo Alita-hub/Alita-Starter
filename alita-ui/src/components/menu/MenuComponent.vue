@@ -8,7 +8,7 @@ import { defineComponent, nextTick, onMounted } from "vue";
 import { MenuComponent } from "@/assets/ts/components";
 
 export default defineComponent({
-  name: "alita-menu-component",
+  name: "menu-component",
   components: {},
   props: {
     menuSelector: { type: String, required: true },

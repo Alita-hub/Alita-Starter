@@ -30,13 +30,13 @@ class ScrollComponent {
     this.options = Object.assign(defaultScrollOptions, options);
     this.id = this.element.getAttribute("id") || "";
     this.update();
-    // this.element.setAttribute('data-alita-scrolltop', 'true')
+    // this.element.setAttribute('data-scrolltop', 'true')
     DataUtil.set(this.element, "scroll", this);
   }
 
   private getOption = (name: string) => {
-    if (this.element.hasAttribute("data-alita-scroll-" + name) === true) {
-      const attr = this.element.getAttribute("data-alita-scroll-" + name) || "";
+    if (this.element.hasAttribute("data-scroll-" + name) === true) {
+      const attr = this.element.getAttribute("data-scroll-" + name) || "";
       let value: string | JSON | boolean = getAttributeValueByBreakpoint(attr);
       if (value !== null && String(value) === "true") {
         value = true;
@@ -209,7 +209,7 @@ class ScrollComponent {
     // Activate/deactivate
     if (
       this.getOption("activate") === true ||
-      !this.element.hasAttribute("data-alita-scroll-activate")
+      !this.element.hasAttribute("data-scroll-activate")
     ) {
       this.setupHeight();
       this.setupScrollHandler();
@@ -266,9 +266,9 @@ class ScrollComponent {
     });
   }
 
-  public static destroyAll(attr: string = '[data-alita-scroll="true"]') { }
+  public static destroyAll(attr: string = '[data-scroll="true"]') { }
 
-  public static bootstrap(attr: string = '[data-alita-scroll="true"]') {
+  public static bootstrap(attr: string = '[data-scroll="true"]') {
     ScrollComponent.createInstances(attr);
     ScrollComponent.resize();
   }
@@ -284,12 +284,12 @@ class ScrollComponent {
     return scroll;
   };
 
-  public static reinitialization(attr: string = '[data-alita-scroll="true"]') {
+  public static reinitialization(attr: string = '[data-scroll="true"]') {
     ScrollComponent.createInstances(attr);
   }
 
   public static updateAll() {
-    const elements = document.body.querySelectorAll('[data-alita-scroll="true"]');
+    const elements = document.body.querySelectorAll('[data-scroll="true"]');
     elements.forEach((element: Element) => {
       const instance = ScrollComponent.getInstance(element as HTMLElement);
       if (instance) {

@@ -14,11 +14,11 @@
         <button
           type="button"
           class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
-          data-alita-menu-trigger="click"
-          data-alita-menu-placement="bottom-end"
-          data-alita-menu-flip="top-end"
+          data-menu-trigger="click"
+          data-menu-placement="bottom-end"
+          data-menu-flip="top-end"
         >
-          <AlitaIcon icon-name="category" icon-class="fs-2" />
+          <Icon icon-name="category" icon-class="fs-2" />
         </button>
         <Dropdown3></Dropdown3>
         <!--end::Menu-->
@@ -72,10 +72,7 @@
               </div>
 
               <a href="#" class="btn btn-icon btn-light btn-sm border-0">
-                <AlitaIcon
-                  icon-name="arrow-right"
-                  icon-class="fs-2 text-primary"
-                />
+                <Icon icon-name="arrow-right" icon-class="fs-2 text-primary" />
               </a>
             </div>
             <!--end::Section-->
@@ -96,7 +93,7 @@ import { defineComponent, ref } from "vue";
 import Dropdown3 from "@/components/dropdown/Dropdown3.vue";
 
 export default defineComponent({
-  name: "alita-widget-6",
+  name: "widget-6",
   components: {
     Dropdown3,
   },

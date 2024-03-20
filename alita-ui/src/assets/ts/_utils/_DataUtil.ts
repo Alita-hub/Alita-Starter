@@ -75,5 +75,4 @@ export class DataUtil {
     });
     return result;
   }
-  
 }

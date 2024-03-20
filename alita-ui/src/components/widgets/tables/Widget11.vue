@@ -12,7 +12,7 @@
       </h3>
       <div class="card-toolbar">
         <a href="#" class="btn btn-sm btn-light-primary">
-          <AlitaIcon icon-name="plus" icon-class="fs-2" />
+          <Icon icon-name="plus" icon-class="fs-2" />
           New Member
         </a>
       </div>
@@ -112,21 +112,21 @@
                     href="#"
                     class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
                   >
-                    <AlitaIcon icon-name="switch" icon-class="fs-3" />
+                    <Icon icon-name="switch" icon-class="fs-3" />
                   </a>
 
                   <a
                     href="#"
                     class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
                   >
-                    <AlitaIcon icon-name="pencil" icon-class="fs-3" />
+                    <Icon icon-name="pencil" icon-class="fs-3" />
                   </a>
 
                   <a
                     href="#"
                     class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"
                   >
-                    <AlitaIcon icon-name="trash" icon-class="fs-3" />
+                    <Icon icon-name="trash" icon-class="fs-3" />
                   </a>
                 </td>
               </tr>
@@ -148,7 +148,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "alita-widget-11",
+  name: "widget-11",
   components: {},
   props: {
     widgetClasses: String,

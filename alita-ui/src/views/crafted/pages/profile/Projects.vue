@@ -36,18 +36,18 @@
   <div class="row g-6 g-xl-9">
     <!--begin::Col-->
     <div class="col-md-6 col-xl-4">
-      <KTCard
+      <Card
         :progress="50"
         title="Fitnes App"
         :icon="getAssetPath('media/svg/brand-logos/plurk.svg')"
         :users="users1"
-      ></KTCard>
+      ></Card>
     </div>
     <!--end::Col-->
 
     <!--begin::Col-->
     <div class="col-md-6 col-xl-4">
-      <KTCard
+      <Card
         status="Pending"
         status-data-badge-color="badge-light"
         :progress="30"
@@ -56,13 +56,13 @@
         date="May 10, 2021"
         budget="$36,400.00"
         :users="users2"
-      ></KTCard>
+      ></Card>
     </div>
     <!--end::Col-->
 
     <!--begin::Col-->
     <div class="col-md-6 col-xl-4">
-      <KTCard
+      <Card
         status="Completed"
         status-data-badge-color="badge-light-success"
         :progress="100"
@@ -71,13 +71,13 @@
         date="Mar 14, 2021"
         budget="$605,100.00"
         :users="users3"
-      ></KTCard>
+      ></Card>
     </div>
     <!--end::Col-->
 
     <!--begin::Col-->
     <div class="col-md-6 col-xl-4">
-      <KTCard
+      <Card
         status="Pending"
         :progress="60"
         status-data-badge-color="badge-light"
@@ -85,13 +85,13 @@
         title="Finance Dispatch"
         budget="$36,400.00"
         :users="users4"
-      ></KTCard>
+      ></Card>
     </div>
     <!--end::Col-->
 
     <!--begin::Col-->
     <div class="col-md-6 col-xl-4">
-      <KTCard
+      <Card
         status="In Progress"
         :progress="40"
         :icon="getAssetPath('media/svg/brand-logos/xing-icon.svg')"
@@ -99,13 +99,13 @@
         date="May 10, 2021"
         budget="$36,400.00"
         :users="users5"
-      ></KTCard>
+      ></Card>
     </div>
     <!--end::Col-->
 
     <!--begin::Col-->
     <div class="col-md-6 col-xl-4">
-      <KTCard
+      <Card
         status="In Progress"
         :progress="70"
         :icon="getAssetPath('media/svg/brand-logos/tvit.svg')"
@@ -113,13 +113,13 @@
         date="May 10, 2021"
         budget="$36,400.00"
         :users="users6"
-      ></KTCard>
+      ></Card>
     </div>
     <!--end::Col-->
 
     <!--begin::Col-->
     <div class="col-md-6 col-xl-4">
-      <KTCard
+      <Card
         status="In Progress"
         :progress="30"
         :icon="getAssetPath('media/svg/brand-logos/aven.svg')"
@@ -127,13 +127,13 @@
         date="May 10, 2021"
         budget="$36,400.00"
         :users="users7"
-      ></KTCard>
+      ></Card>
     </div>
     <!--end::Col-->
 
     <!--begin::Col-->
     <div class="col-md-6 col-xl-4">
-      <KTCard
+      <Card
         status="Overdue"
         :progress="10"
         status-data-badge-color="badge-light-danger"
@@ -142,13 +142,13 @@
         date="May 10, 2021"
         budget="$36,400.00"
         :users="users8"
-      ></KTCard>
+      ></Card>
     </div>
     <!--end::Col-->
 
     <!--begin::Col-->
     <div class="col-md-6 col-xl-4">
-      <KTCard
+      <Card
         status="Completed"
         :progress="100"
         status-data-badge-color="badge-light-success"
@@ -157,7 +157,7 @@
         date="May 10, 2021"
         budget="$36,400.00"
         :users="users9"
-      ></KTCard>
+      ></Card>
     </div>
     <!--end::Row-->
 
@@ -210,12 +210,12 @@
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
-import KTCard from "@/components/cards/Card1.vue";
+import Card from "@/components/cards/Card1.vue";
 
 export default defineComponent({
   name: "profile-projects",
   components: {
-    KTCard,
+    Card,
   },
   setup() {
     const users1 = [

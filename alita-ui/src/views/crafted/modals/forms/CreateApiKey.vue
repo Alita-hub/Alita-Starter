@@ -1,26 +1,26 @@
 <template>
-  <KTModalCard
+  <ModalCard
     title="Create API Key Modal Example"
     description="Click on the below buttons to launch <br/>a new API Key creation example."
     :image="getIllustrationsPath('16.png')"
     button-text="Create API Key"
-    modal-id="alita_modal_create_api_key"
-  ></KTModalCard>
+    modal-id="modal_create_api_key"
+  ></ModalCard>
 
-  <KTCreateAPIKeyModal></KTCreateAPIKeyModal>
+  <CreateAPIKeyModal></CreateAPIKeyModal>
 </template>
 
 <script lang="ts">
 import { getAssetPath, getIllustrationsPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
-import KTModalCard from "@/components/cards/Card.vue";
-import KTCreateAPIKeyModal from "@/components/modals/forms/CreateAPIKeyModal.vue";
+import ModalCard from "@/components/cards/Card.vue";
+import CreateAPIKeyModal from "@/components/modals/forms/CreateAPIKeyModal.vue";
 
 export default defineComponent({
   name: "create-api-key",
   components: {
-    KTModalCard,
-    KTCreateAPIKeyModal,
+    ModalCard,
+    CreateAPIKeyModal,
   },
   setup() {
     return {

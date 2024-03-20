@@ -1,21 +1,21 @@
 <template>
   <!--begin::Chat drawer-->
   <div
-    id="alita_drawer_chat"
+    id="drawer_chat"
     class="bg-body"
-    data-alita-drawer="true"
-    data-alita-drawer-name="chat"
-    data-alita-drawer-activate="true"
-    data-alita-drawer-overlay="true"
-    data-alita-drawer-width="{default:'300px', 'md': '500px'}"
-    data-alita-drawer-direction="end"
-    data-alita-drawer-toggle="#alita_drawer_chat_toggle"
-    data-alita-drawer-close="#alita_drawer_chat_close"
+    data-drawer="true"
+    data-drawer-name="chat"
+    data-drawer-activate="true"
+    data-drawer-overlay="true"
+    data-drawer-width="{default:'300px', 'md': '500px'}"
+    data-drawer-direction="end"
+    data-drawer-toggle="#drawer_chat_toggle"
+    data-drawer-close="#drawer_chat_close"
   >
     <!--begin::Messenger-->
-    <div class="card w-100" id="alita_drawer_chat_messenger">
+    <div class="card w-100" id="drawer_chat_messenger">
       <!--begin::Card header-->
-      <div class="card-header pe-5" id="alita_drawer_chat_messenger_header">
+      <div class="card-header pe-5" id="drawer_chat_messenger_header">
         <!--begin::Title-->
         <div class="card-title">
           <!--begin::User-->
@@ -45,9 +45,9 @@
           <div class="me-2">
             <button
               class="btn btn-sm btn-icon btn-active-icon-primary"
-              data-alita-menu-trigger="click"
-              data-alita-menu-placement="bottom-end"
-              data-alita-menu-flip="top-end"
+              data-menu-trigger="click"
+              data-menu-placement="bottom-end"
+              data-menu-flip="top-end"
             >
               <i class="bi bi-three-dots fs-3"></i>
             </button>
@@ -58,9 +58,9 @@
           <!--begin::Close-->
           <div
             class="btn btn-sm btn-icon btn-active-icon-primary"
-            id="alita_drawer_chat_close"
+            id="drawer_chat_close"
           >
-            <AlitaIcon icon-name="cross" icon-class="fs-2x" />
+            <Icon icon-name="cross" icon-class="fs-2x" />
           </div>
           <!--end::Close-->
         </div>
@@ -69,18 +69,18 @@
       <!--end::Card header-->
 
       <!--begin::Card body-->
-      <div class="card-body" id="alita_drawer_chat_messenger_body">
+      <div class="card-body" id="drawer_chat_messenger_body">
         <!--begin::Messages-->
         <div
           class="scroll-y me-n5 pe-5"
           ref="messagesRef"
-          data-alita-element="messages"
-          data-alita-scroll="true"
-          data-alita-scroll-activate="true"
-          data-alita-scroll-height="auto"
-          data-alita-scroll-dependencies="#alita_drawer_chat_messenger_header, #alita_drawer_chat_messenger_footer"
-          data-alita-scroll-wrappers="#alita_drawer_chat_messenger_body"
-          data-alita-scroll-offset="0px"
+          data-element="messages"
+          data-scroll="true"
+          data-scroll-activate="true"
+          data-scroll-height="auto"
+          data-scroll-dependencies="#drawer_chat_messenger_header, #drawer_chat_messenger_footer"
+          data-scroll-wrappers="#drawer_chat_messenger_body"
+          data-scroll-offset="0px"
         >
           <template v-for="(item, index) in messages" :key="index">
             <MessageIn
@@ -105,11 +105,11 @@
       <!--end::Card body-->
 
       <!--begin::Card footer-->
-      <div class="card-footer pt-4" id="alita_drawer_chat_messenger_footer">
+      <div class="card-footer pt-4" id="drawer_chat_messenger_footer">
         <!--begin::Input-->
         <input
           class="form-control form-control-flush mb-3"
-          data-alita-element="input"
+          data-element="input"
           placeholder="Type a message"
           v-model="newMessageText"
           @keydown.enter="addNewMessage"
@@ -144,7 +144,7 @@
             @click="addNewMessage"
             class="btn btn-primary"
             type="button"
-            data-alita-element="send"
+            data-element="send"
           >
             Send
           </button>
@@ -166,7 +166,7 @@ import MessageIn from "@/components/messenger-parts/MessageIn.vue";
 import MessageOut from "@/components/messenger-parts/MessageOut.vue";
 import Dropdown4 from "@/components/dropdown/Dropdown4.vue";
 
-interface KTMessage {
+interface Message {
   type: string;
   name?: string;
   image: string;
@@ -186,7 +186,7 @@ export default defineComponent({
     const messagesInRef = ref<null | HTMLElement>(null);
     const messagesOutRef = ref<null | HTMLElement>(null);
 
-    const messages = ref<Array<KTMessage>>([
+    const messages = ref<Array<Message>>([
       {
         type: "in",
         name: "Brian Cox",

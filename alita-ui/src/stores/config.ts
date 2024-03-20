@@ -4,7 +4,7 @@ import objectPath from "object-path";
 import type LayoutConfigTypes from "@/layouts/config/types";
 import layoutConfig from "@/layouts/config/LayoutConfig";
 
-export const LS_CONFIG_NAME_KEY = "config_" + import.meta.env.VITE_APP_DEMO;
+export const LS_CONFIG_NAME_KEY = "layout_config";
 
 export const useConfigStore = defineStore("config", () => {
   const config = ref<LayoutConfigTypes>(layoutConfig);

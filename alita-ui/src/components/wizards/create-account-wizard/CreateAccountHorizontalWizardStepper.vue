@@ -2,37 +2,37 @@
   <!--begin::Stepper-->
   <div
     class="stepper stepper-links d-flex flex-column"
-    id="alita_create_account_stepper"
+    id="create_account_stepper"
     ref="createAccountStepperRef"
   >
     <!--begin::Nav-->
     <div class="stepper-nav py-5 mt-5">
       <!--begin::Step 1-->
-      <div class="stepper-item current" data-alita-stepper-element="nav">
+      <div class="stepper-item current" data-stepper-element="nav">
         <h3 class="stepper-title">Account Type</h3>
       </div>
       <!--end::Step 1-->
 
       <!--begin::Step 2-->
-      <div class="stepper-item" data-alita-stepper-element="nav">
+      <div class="stepper-item" data-stepper-element="nav">
         <h3 class="stepper-title">Account Info</h3>
       </div>
       <!--end::Step 2-->
 
       <!--begin::Step 3-->
-      <div class="stepper-item" data-alita-stepper-element="nav">
+      <div class="stepper-item" data-stepper-element="nav">
         <h3 class="stepper-title">Business Info</h3>
       </div>
       <!--end::Step 3-->
 
       <!--begin::Step 4-->
-      <div class="stepper-item" data-alita-stepper-element="nav">
+      <div class="stepper-item" data-stepper-element="nav">
         <h3 class="stepper-title">Billing Details</h3>
       </div>
       <!--end::Step 4-->
 
       <!--begin::Step 5-->
-      <div class="stepper-item" data-alita-stepper-element="nav">
+      <div class="stepper-item" data-stepper-element="nav">
         <h3 class="stepper-title">Completed</h3>
       </div>
       <!--end::Step 5-->

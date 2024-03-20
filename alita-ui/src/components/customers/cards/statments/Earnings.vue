@@ -26,12 +26,12 @@
           >
             <span class="fs-1 fw-bold text-gray-800 lh-1">
               <span
-                data-alita-countup="true"
-                data-alita-countup-value="6,840"
-                data-alita-countup-prefix="$"
+                data-countup="true"
+                data-countup-value="6,840"
+                data-countup-prefix="$"
                 >6,840$</span
               >
-              <AlitaIcon icon-name="arrow-up" icon-class="fs-1 text-success" />
+              <Icon icon-name="arrow-up" icon-class="fs-1 text-success" />
             </span>
             <span class="fs-6 fw-semibold text-muted d-block lh-1 pt-2"
               >Net Earnings</span
@@ -44,13 +44,10 @@
             class="border border-dashed border-gray-300 w-125px rounded my-3 p-4 me-6"
           >
             <span class="fs-1 fw-bold text-gray-800 lh-1">
-              <span
-                class=""
-                data-alita-countup="true"
-                data-alita-countup-value="16"
+              <span class="" data-countup="true" data-countup-value="16"
                 >16</span
               >%
-              <AlitaIcon icon-name="arrow-down" icon-class="fs-1 text-danger" />
+              <Icon icon-name="arrow-down" icon-class="fs-1 text-danger" />
             </span>
             <span class="fs-6 fw-semibold text-muted d-block lh-1 pt-2"
               >Change</span
@@ -64,9 +61,9 @@
           >
             <span class="fs-1 fw-bold text-gray-800 lh-1">
               <span
-                data-alita-countup="true"
-                data-alita-countup-value="1,240"
-                data-alita-countup-prefix="$"
+                data-countup="true"
+                data-countup-value="1,240"
+                data-countup-prefix="$"
                 >1,240$</span
               >
               <span class="text-primary">--</span>

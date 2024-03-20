@@ -20,9 +20,9 @@
           href="#"
           class="btn btn-sm btn-light-primary"
           data-bs-toggle="modal"
-          data-bs-target="#alita_modal_invite_friends"
+          data-bs-target="#modal_invite_friends"
         >
-          <AlitaIcon icon-name="plus" icon-class="fs-3" />
+          <Icon icon-name="plus" icon-class="fs-3" />
           New Member
         </a>
       </div>
@@ -139,21 +139,21 @@
                     href="#"
                     class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
                   >
-                    <AlitaIcon icon-name="switch" icon-class="fs-3" />
+                    <Icon icon-name="switch" icon-class="fs-3" />
                   </a>
 
                   <a
                     href="#"
                     class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
                   >
-                    <AlitaIcon icon-name="pencil" icon-class="fs-3" />
+                    <Icon icon-name="pencil" icon-class="fs-3" />
                   </a>
 
                   <a
                     href="#"
                     class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"
                   >
-                    <AlitaIcon icon-name="trash" icon-class="fs-3" />
+                    <Icon icon-name="trash" icon-class="fs-3" />
                   </a>
                 </td>
               </tr>
@@ -175,7 +175,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent, ref } from "vue";
 
 export default defineComponent({
-  name: "alita-widget-9",
+  name: "widget-9",
   components: {},
   props: {
     widgetClasses: String,

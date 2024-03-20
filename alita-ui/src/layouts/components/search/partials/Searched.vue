@@ -14,7 +14,7 @@
         <!--begin::Symbol-->
         <div class="symbol symbol-40px symbol-circle me-4">
           <span class="symbol-label bg-light">
-            <AlitaIcon icon-name="phone" icon-class="fs-2 text-primary" />
+            <Icon icon-name="phone" icon-class="fs-2 text-primary" />
           </span>
         </div>
         <!--end::Symbol-->
@@ -33,10 +33,7 @@
         <!--begin::Symbol-->
         <div class="symbol symbol-40px symbol-circle me-4">
           <span class="symbol-label bg-light">
-            <AlitaIcon
-              icon-name="chart-simple"
-              icon-class="fs-2 text-primary"
-            />
+            <Icon icon-name="chart-simple" icon-class="fs-2 text-primary" />
           </span>
         </div>
         <!--end::Symbol-->
@@ -55,7 +52,7 @@
         <!--begin::Symbol-->
         <div class="symbol symbol-40px symbol-circle me-4">
           <span class="symbol-label bg-light">
-            <AlitaIcon icon-name="chart" icon-class="fs-2 text-primary" />
+            <Icon icon-name="chart" icon-class="fs-2 text-primary" />
           </span>
         </div>
         <!--end::Symbol-->
@@ -74,7 +71,7 @@
         <!--begin::Symbol-->
         <div class="symbol symbol-40px symbol-circle me-4">
           <span class="symbol-label bg-light">
-            <AlitaIcon icon-name="chart-pie-4" icon-class="fs-2 text-primary" />
+            <Icon icon-name="chart-pie-4" icon-class="fs-2 text-primary" />
           </span>
         </div>
         <!--end::Symbol-->
@@ -93,7 +90,7 @@
         <!--begin::Symbol-->
         <div class="symbol symbol-40px symbol-circle me-4">
           <span class="symbol-label bg-light">
-            <AlitaIcon icon-name="sms" icon-class="fs-2 text-primary" />
+            <Icon icon-name="sms" icon-class="fs-2 text-primary" />
           </span>
         </div>
         <!--end::Symbol-->
@@ -112,7 +109,7 @@
         <!--begin::Symbol-->
         <div class="symbol symbol-40px symbol-circle me-4">
           <span class="symbol-label bg-light">
-            <AlitaIcon icon-name="bank" icon-class="fs-2 text-primary" />
+            <Icon icon-name="bank" icon-class="fs-2 text-primary" />
           </span>
         </div>
         <!--end::Symbol-->
@@ -131,7 +128,7 @@
         <!--begin::Symbol-->
         <div class="symbol symbol-40px symbol-circle me-4">
           <span class="symbol-label bg-light">
-            <AlitaIcon icon-name="chart" icon-class="fs-2 text-primary" />
+            <Icon icon-name="chart" icon-class="fs-2 text-primary" />
           </span>
         </div>
         <!--end::Symbol-->
@@ -155,7 +152,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "alita-main",
+  name: "searched",
   components: {},
   setup() {
     return {

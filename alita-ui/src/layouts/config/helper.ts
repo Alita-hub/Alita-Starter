@@ -4,7 +4,6 @@ import { ThemeModeComponent } from "@/assets/ts/layout";
 
 /**
  * Returns layout config
- * @returns {object}
  */
 export const config = computed(() => {
   return useConfigStore().config;
@@ -12,7 +11,6 @@ export const config = computed(() => {
 
 /**
  * Returns theme mode
- * @returns {string}
  */
 export const themeMode = computed(() => {
   if (useConfigStore().getLayoutConfig("general.mode") === "system") {
@@ -23,9 +21,8 @@ export const themeMode = computed(() => {
 
 /**
  * Returns the actual theme configuration mode
- * @returns {string}
  */
-export const themeConfigValue = computed<"system" | "dark" | "light">(() => {
+export const themeConfigValue = computed(() => {
   return useConfigStore().getLayoutConfig("general.mode")
     ? (useConfigStore().getLayoutConfig("general.mode") as
         | "system"
@@ -36,153 +33,136 @@ export const themeConfigValue = computed<"system" | "dark" | "light">(() => {
 
 /**
  * Set the sidebar display
- * @returns {boolean}
  */
 export const displaySidebar = computed(() => {
   return useConfigStore().getLayoutConfig("sidebar.display");
 });
 
 /**
+ * Sidebar toggle
+ */
+export const sidebarToggleDisplay = computed(() => {
+  return useConfigStore().getLayoutConfig(
+    "sidebar.default.minimize.desktop.enabled"
+  );
+});
+
+/**
  * Check if footer container is fluid
- * @returns {boolean}
  */
 export const footerWidthFluid = computed(() => {
-  return useConfigStore().getLayoutConfig("footer.width") === "fluid";
+  return useConfigStore().getLayoutConfig("footer.container") === "fluid";
+});
+
+/**
+ * Footer display
+ */
+export const footerDisplay = computed(() => {
+  return useConfigStore().getLayoutConfig("footer.display");
 });
 
 /**
  * Check if header container is fluid
- * @returns {boolean}
  */
 export const headerWidthFluid = computed(() => {
-  return useConfigStore().getLayoutConfig("header.width") === "fluid";
+  return (
+    useConfigStore().getLayoutConfig("header.default.container") === "fluid"
+  );
+});
+
+/**
+ * Header display
+ */
+export const headerDisplay = computed(() => {
+  return useConfigStore().getLayoutConfig("header.display");
 });
 
 /**
  * Returns header left part type
- * @returns {string}
  */
 export const headerLeft = computed(() => {
   return useConfigStore().getLayoutConfig("header.left");
 });
 
 /**
- * Set the aside display
- * @returns {boolean}
+ * Returns header desktop fixed
  */
-export const asideDisplay = computed(() => {
-  return useConfigStore().getLayoutConfig("aside.display");
+export const headerDesktopFixed = computed(() => {
+  return useConfigStore().getLayoutConfig("header.default.fixed.desktop");
 });
 
 /**
- * Aside minimized
- * @returns {boolean}
+ * Returns header mobile fixed
  */
-export const asideMinimized = computed(() => {
-  return useConfigStore().getLayoutConfig("aside.minimized");
+export const headerMobileFixed = computed(() => {
+  return useConfigStore().getLayoutConfig("header.default.fixed.mobile");
+});
+
+/**
+ * Sidebar display
+ */
+export const sidebarDisplay = computed(() => {
+  return useConfigStore().getLayoutConfig("sidebar.display");
+});
+
+/**
+ * Layout type
+ */
+export const layout = computed(() => {
+  return useConfigStore().getLayoutConfig("general.layout");
 });
 
 /**
  * Check if toolbar width is fluid
- * @returns {boolean}
  */
 export const toolbarWidthFluid = computed(() => {
-  return useConfigStore().getLayoutConfig("toolbar.width") === "fluid";
+  return useConfigStore().getLayoutConfig("toolbar.container") === "fluid";
 });
 
 /**
  * Set the toolbar display
- * @returns {boolean}
  */
 export const toolbarDisplay = computed(() => {
   return useConfigStore().getLayoutConfig("toolbar.display");
 });
 
 /**
- * Page title display
- * @returns {boolean}
- */
-export const pageTitleDisplay = computed(() => {
-  return useConfigStore().getLayoutConfig("pageTitle.display");
-});
-
-/**
- * Page title breadcrumb display
- * @returns {boolean}
- */
-export const pageTitleBreadcrumbDisplay = computed(() => {
-  return useConfigStore().getLayoutConfig("pageTitle.breadcrumb");
-});
-
-/**
- * Page title direction display
- * @returns { "row" | "column" }
- */
-export const pageTitleDirection = computed(() => {
-  return useConfigStore().getLayoutConfig("pageTitle.direction");
-});
-
-/**
- * Check if the page loader is enabled
- * @returns {boolean}
- */
-export const loaderEnabled = computed(() => {
-  return useConfigStore().getLayoutConfig("loader.display");
-});
-
-/**
  * Check if container width is fluid
- * @returns {boolean}
  */
 export const contentWidthFluid = computed(() => {
-  return useConfigStore().getLayoutConfig("content.width") === "fluid";
+  return useConfigStore().getLayoutConfig("content.container") === "fluid";
 });
 
 /**
- * Page loader logo image
- * @returns {string}
+ * Check if the sidebar menu is enabled
  */
-export const loaderLogo = computed(() => {
-  return (
-    import.meta.env.BASE_URL + useConfigStore().getLayoutConfig("loader.logo")
-  );
-});
-
-/**
- * Check if the aside menu is enabled
- * @returns {boolean}
- */
-export const asideEnabled = computed(() => {
+export const sidebarEnabled = computed(() => {
   return !!useConfigStore().getLayoutConfig("aside.display");
 });
 
 /**
- * Set the aside theme
- * @returns {string}
+ * Set the sidebar theme
  */
-export const asideTheme = computed(() => {
+export const sidebarTheme = computed(() => {
   return useConfigStore().getLayoutConfig("aside.theme");
 });
 
 /**
  * Set the subheader display
- * @returns {boolean}
  */
 export const subheaderDisplay = computed(() => {
   return useConfigStore().getLayoutConfig("toolbar.display");
 });
 
 /**
- * Set the aside menu icon type
- * @returns {string}
+ * Set the sidebar menu icon type
  */
-export const asideMenuIcons = computed(() => {
-  return useConfigStore().getLayoutConfig("aside.menuIcon");
+export const sidebarMenuIcons = computed(() => {
+  return useConfigStore().getLayoutConfig("sidebar.default.menu.iconType");
 });
 
 /**
  * Light theme logo image
- * @returns {string}
  */
 export const themeLightLogo = computed(() => {
   return useConfigStore().getLayoutConfig("main.logo.light");
@@ -190,7 +170,6 @@ export const themeLightLogo = computed(() => {
 
 /**
  * Dark theme logo image
- * @returns {string}
  */
 export const themeDarkLogo = computed(() => {
   return useConfigStore().getLayoutConfig("main.logo.dark");
@@ -198,24 +177,49 @@ export const themeDarkLogo = computed(() => {
 
 /**
  * Set the header menu icon type
- * @returns {string}
  */
 export const headerMenuIcons = computed(() => {
-  return useConfigStore().getLayoutConfig("header.menuIcon");
+  return useConfigStore().getLayoutConfig("header.default.menu.iconType");
 });
 
 /**
- * Illustrations set
- * @returns {string}
+ * Set the header menu display
  */
-export const illustrationsSet = computed(() => {
-  return useConfigStore().getLayoutConfig("illustrations.set");
+export const headerMenuDisplay = computed(() => {
+  return useConfigStore().getLayoutConfig("header.default.menu.display");
+});
+
+/**
+ * Page title display
+ */
+export const pageTitleDisplay = computed(() => {
+  return useConfigStore().getLayoutConfig("pageTitle.display");
+});
+
+/**
+ * Page title breadcrumb display
+ */
+export const pageTitleBreadcrumbDisplay = computed(() => {
+  return useConfigStore().getLayoutConfig("pageTitle.breadcrumb");
+});
+
+/**
+ * Page title direction display
+ */
+export const pageTitleDirection = computed(() => {
+  return useConfigStore().getLayoutConfig("pageTitle.direction");
 });
 
 /**
  * Scrolltop display
- * @returns {boolean}
  */
 export const scrolltopDispaly = computed(() => {
   return useConfigStore().getLayoutConfig("scrolltop.display");
+});
+
+/**
+ * Illustrations set
+ */
+export const illustrationsSet = computed(() => {
+  return useConfigStore().getLayoutConfig("illustrations.set");
 });

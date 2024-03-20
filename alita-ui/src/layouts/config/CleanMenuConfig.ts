@@ -1,6 +1,6 @@
 import type { MenuItem } from "@/layouts/config/types";
 
-const MainMenuConfig: Array<MenuItem> = [
+const MenuConfig: Array<MenuItem> = [
   {
     pages: [
       {
@@ -13,4 +13,4 @@ const MainMenuConfig: Array<MenuItem> = [
   },
 ];
 
-export default MainMenuConfig;
+export default MenuConfig;

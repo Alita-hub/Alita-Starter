@@ -33,7 +33,7 @@
         <div class="table-responsive">
           <!--begin::Table-->
           <table
-            id="alita_create_new_custom_fields"
+            id="create_new_custom_fields"
             class="table align-middle table-row-dashed fw-semibold fs-6 gy-5"
           >
             <!--begin::Table head-->
@@ -71,9 +71,9 @@
                   <button
                     type="button"
                     class="btn btn-icon btn-flex btn-active-light-primary w-30px h-30px me-3"
-                    data-alita-action="field_remove"
+                    data-action="field_remove"
                   >
-                    <AlitaIcon icon-name="trash" icon-class="fs-3" />
+                    <Icon icon-name="trash" icon-class="fs-3" />
                   </button>
                 </td>
               </tr>
@@ -88,7 +88,7 @@
         <button
           type="button"
           class="btn btn-light-primary me-auto"
-          id="alita_create_new_custom_fields_add"
+          id="create_new_custom_fields_add"
         >
           Add custom field
         </button>
@@ -196,7 +196,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "alita-advanced",
+  name: "advanced",
   components: {},
   setup() {
     return {

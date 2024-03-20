@@ -1,72 +1,18 @@
 <template>
   <!--begin::Activities drawer-->
   <div
-    id="alita_activities"
+    id="activities"
     class="bg-body"
-    data-alita-drawer="true"
-    data-alita-drawer-name="activities"
-    data-alita-drawer-activate="true"
-    data-alita-drawer-overlay="true"
-    data-alita-drawer-width="{default:'300px', 'lg': '900px'}"
-    data-alita-drawer-direction="end"
-    data-alita-drawer-toggle="#alita_activities_toggle"
-    data-alita-drawer-close="#alita_activities_close"
+    data-drawer="true"
+    data-drawer-name="activities"
+    data-drawer-activate="true"
+    data-drawer-overlay="true"
+    data-drawer-width="{default:'300px', 'lg': '900px'}"
+    data-drawer-direction="end"
+    data-drawer-toggle="#activities_toggle"
+    data-drawer-close="#activities_close"
   >
-    <div class="card shadow-none">
-      <!--begin::Header-->
-      <div class="card-header" id="alita_activities_header">
-        <h3 class="card-title fw-bold text-gray-900">Activity Logs</h3>
-
-        <div class="card-toolbar">
-          <button
-            type="button"
-            class="btn btn-sm btn-icon btn-active-light-primary me-n5"
-            id="alita_activities_close"
-          >
-            <AlitaIcon icon-name="cross" icon-class="fs-1" />
-          </button>
-        </div>
-      </div>
-      <!--end::Header-->
-
-      <!--begin::Body-->
-      <div class="card-body position-relative" id="alita_activities_body">
-        <!--begin::Content-->
-        <div
-          id="alita_activities_scroll"
-          class="position-relative scroll-y me-n5 pe-5"
-          data-alita-scroll="true"
-          data-alita-scroll-height="auto"
-          data-alita-scroll-wrappers="#alita_activities_body"
-          data-alita-scroll-dependencies="#alita_activities_header, #alita_activities_footer"
-          data-alita-scroll-offset="5px"
-        >
-          <!--begin::Timeline items-->
-          <div class="timeline">
-            <Item1></Item1>
-            <Item2></Item2>
-            <Item3></Item3>
-            <Item4></Item4>
-            <Item5></Item5>
-            <Item6></Item6>
-            <Item7></Item7>
-            <Item8></Item8>
-          </div>
-          <!--end::Timeline items-->
-        </div>
-        <!--end::Content-->
-      </div>
-      <!--end::Body-->
-
-      <!--begin::Footer-->
-      <div class="card-footer py-5 text-center" id="alita_activities_footer">
-        <a href="#" class="btn btn-bg-body text-primary">
-          View All Activities
-          <AlitaIcon icon-name="arrow-right" icon-class="fs-3 text-primary" />
-        </a>
-      </div>
-      <!--end::Footer-->
-    </div>
+    <CalendarApp1 />
   </div>
   <!--end::Activities drawer-->
 </template>
@@ -74,26 +20,12 @@
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
-import Item1 from "@/components/activity-timeline-items/Item1.vue";
-import Item2 from "@/components/activity-timeline-items/Item2.vue";
-import Item3 from "@/components/activity-timeline-items/Item3.vue";
-import Item4 from "@/components/activity-timeline-items/Item4.vue";
-import Item5 from "@/components/activity-timeline-items/Item5.vue";
-import Item6 from "@/components/activity-timeline-items/Item6.vue";
-import Item7 from "@/components/activity-timeline-items/Item7.vue";
-import Item8 from "@/components/activity-timeline-items/Item8.vue";
+import CalendarApp1 from "@/components/calendar/CalendarApp1.vue";
 
 export default defineComponent({
-  name: "alita-activity-drawer",
+  name: "activity-drawer",
   components: {
-    Item1,
-    Item2,
-    Item3,
-    Item4,
-    Item5,
-    Item6,
-    Item7,
-    Item8,
+    CalendarApp1,
   },
   setup() {
     return {

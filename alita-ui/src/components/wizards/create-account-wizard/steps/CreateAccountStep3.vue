@@ -1,6 +1,6 @@
 <template>
   <!--begin::Step 3-->
-  <div data-alita-stepper-element="content">
+  <div data-stepper-element="content">
     <!--begin::Wrapper-->
     <div class="w-100">
       <!--begin::Heading-->

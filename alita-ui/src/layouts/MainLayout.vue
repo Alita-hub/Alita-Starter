@@ -1,49 +1,36 @@
 <template>
-  <!-- begin:: Body -->
-  <div class="page d-flex flex-row flex-column-fluid">
-    <!-- begin:: Aside Left -->
-    <Aside
-      v-if="asideEnabled"
-      :lightLogo="themeLightLogo"
-      :darkLogo="themeDarkLogo"
-    />
-    <!-- end:: Aside Left -->
-
-    <div id="alita_wrapper" class="d-flex flex-column flex-row-fluid wrapper">
+  <!--begin::App-->
+  <div class="d-flex flex-column flex-root app-root" id="app_root">
+    <!--begin::Page-->
+    <div class="app-page flex-column flex-column-fluid" id="app_page">
       <Header />
-
-      <!-- begin:: Content -->
-      <div
-        id="alita_content"
-        class="content d-flex flex-column flex-column-fluid"
-      >
-        <!-- begin:: Content Body -->
-        <div class="post d-flex flex-column-fluid">
-          <div
-            id="alita_content_container"
-            :class="{
-              'container-fluid': contentWidthFluid,
-              'container-xxl': !contentWidthFluid,
-            }"
-          >
-            <router-view />
+      <!--begin::Wrapper-->
+      <div class="app-wrapper flex-column flex-row-fluid" id="app_wrapper">
+        <Sidebar />
+        <!--begin::Main-->
+        <div class="app-main flex-column flex-row-fluid" id="app_main">
+          <!--begin::Content wrapper-->
+          <div class="d-flex flex-column flex-column-fluid">
+            <Toolbar />
+            <div id="app_content" class="app-content flex-column-fluid">
+              <Content></Content>
+            </div>
           </div>
+          <!--end::Content wrapper-->
+          <Footer />
         </div>
-        <!-- end:: Content Body -->
+        <!--end:::Main-->
       </div>
-      <!-- end:: Content -->
-      <Footer />
+      <!--end::Wrapper-->
     </div>
+    <!--end::Page-->
   </div>
-  <!-- end:: Body -->
-  <ScrollTop />
-  <DrawerMessenger />
-  <ActivivityDrawer />
-  <CreateApp />
-  <InviteFriendsModal />
+  <!--end::App-->
 
-  <ToolButtons />
-  <HelpDrawer />
+  <Drawers />
+  <ScrollTop />
+  <Modals />
+  <Customize />
 </template>
 
 <script lang="ts">
@@ -54,43 +41,31 @@ import {
   onMounted,
   watch,
 } from "vue";
-import { useRoute } from "vue-router";
-import Aside from "@/layouts/components/aside/Aside.vue";
 import Header from "@/layouts/components/header/Header.vue";
+import Sidebar from "@/layouts/components/sidebar/Sidebar.vue";
+import Content from "@/layouts/components/content/Content.vue";
+import Toolbar from "@/layouts/components/toolbar/Toolbar.vue";
 import Footer from "@/layouts/components/footer/Footer.vue";
+import Drawers from "@/layouts/components/drawers/Drawers.vue";
+import Modals from "@/layouts/components/modals/Modals.vue";
 import ScrollTop from "@/layouts/components/extras/ScrollTop.vue";
-import ActivivityDrawer from "@/layouts/components/drawers/ActivityDrawer.vue";
-import CreateApp from "@/components/modals/wizards/CreateAppModal.vue";
-import InviteFriendsModal from "@/components/modals/general/InviteFriendsModal.vue";
-import HelpDrawer from "@/layouts/components/extras/HelpDrawer.vue";
-import ToolButtons from "@/layouts/components/extras/ToolButtons.vue";
-import DrawerMessenger from "@/layouts/components/extras/MessengerDrawer.vue";
+import Customize from "@/layouts/components/extras/Customize.vue";
+import { useRoute } from "vue-router";
 import { reinitializeComponents } from "@/core/plugins/keenthemes";
-import {
-  asideEnabled,
-  contentWidthFluid,
-  loaderEnabled,
-  loaderLogo,
-  subheaderDisplay,
-  themeDarkLogo,
-  themeLightLogo,
-  toolbarDisplay,
-} from "@/layouts/config/helper";
 import LayoutService from "@/core/services/LayoutService";
 
 export default defineComponent({
   name: "default-layout",
   components: {
-    Aside,
     Header,
+    Sidebar,
+    Content,
+    Toolbar,
     Footer,
+    Drawers,
     ScrollTop,
-    CreateApp,
-    InviteFriendsModal,
-    ActivivityDrawer,
-    HelpDrawer,
-    ToolButtons,
-    DrawerMessenger,
+    Modals,
+    Customize,
   },
   setup() {
     const route = useRoute();
@@ -113,18 +88,6 @@ export default defineComponent({
         });
       }
     );
-
-    return {
-      toolbarDisplay,
-      loaderEnabled,
-      contentWidthFluid,
-      loaderLogo,
-      asideEnabled,
-      subheaderDisplay,
-      themeLightLogo,
-      themeDarkLogo,
-    };
   },
 });
 </script>
-@/layouts/config/helper

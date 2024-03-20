@@ -13,7 +13,7 @@
           <a
             class="nav-link active"
             data-bs-toggle="tab"
-            :href="`#alita_highlight_${htmlId}`"
+            :href="`#highlight_${htmlId}`"
             role="tab"
             aria-selected="true"
             >HTML</a
@@ -23,7 +23,7 @@
           <a
             class="nav-link"
             data-bs-toggle="tab"
-            :href="`#alita_highlight_${jsId}`"
+            :href="`#highlight_${jsId}`"
             role="tab"
             aria-selected="false"
             >JAVASCRIPT</a
@@ -33,7 +33,7 @@
       <div class="tab-content">
         <div
           class="tab-pane fade active show"
-          :id="`alita_highlight_${htmlId}`"
+          :id="`highlight_${htmlId}`"
           role="tabpanel"
         >
           <div class="highlight-code">
@@ -42,11 +42,7 @@
             ><code class="language-html"><slot name="html"></slot></code></pre>
           </div>
         </div>
-        <div
-          class="tab-pane fade"
-          :id="`alita_highlight_${jsId}`"
-          role="tabpanel"
-        >
+        <div class="tab-pane fade" :id="`highlight_${jsId}`" role="tabpanel">
           <div class="highlight-code">
             <pre
               class="language-js"

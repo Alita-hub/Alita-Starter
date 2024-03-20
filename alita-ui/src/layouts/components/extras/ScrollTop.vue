@@ -2,12 +2,12 @@
   <!-- begin::Scrolltop -->
   <div
     v-if="scrolltopDispaly"
-    id="alita_scrolltop"
-    ref="alita_scrolltop"
+    id="scrolltop"
+    ref="scrolltop"
     class="scrolltop"
-    data-alita-scrolltop="true"
+    data-scrolltop="true"
   >
-    <AlitaIcon icon-name="arrow-up" icon-class="fs-2x" />
+    <Icon icon-name="arrow-up" icon-class="fs-2x" />
   </div>
   <!-- end::Scrolltop -->
 </template>
@@ -33,4 +33,3 @@ export default defineComponent({
   },
 });
 </script>
-@/layouts/config/helper

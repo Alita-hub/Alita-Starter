@@ -18,11 +18,11 @@
               type="button"
               :class="`btn-active-color-${widgetColor}`"
               class="btn btn-sm btn-icon btn-color-white btn-active-white border-0 me-n3"
-              data-alita-menu-trigger="click"
-              data-alita-menu-placement="bottom-end"
-              data-alita-menu-flip="top-end"
+              data-menu-trigger="click"
+              data-menu-placement="bottom-end"
+              data-menu-flip="top-end"
             >
-              <AlitaIcon icon-name="category" icon-class="fs-2" />
+              <Icon icon-name="category" icon-class="fs-2" />
             </button>
             <Dropdown3></Dropdown3>
             <!--end::Menu-->
@@ -53,7 +53,7 @@
             <!--begin::Symbol-->
             <div class="symbol symbol-45px w-40px me-5">
               <span class="symbol-label bg-lighten">
-                <AlitaIcon :icon-name="item.icon" icon-class="fs-1" />
+                <Icon :icon-name="item.icon" icon-class="fs-1" />
               </span>
             </div>
             <!--end::Symbol-->
@@ -79,13 +79,13 @@
                   {{ item.stats }}
                 </div>
 
-                <AlitaIcon
+                <Icon
                   v-if="item.arrow === 'up'"
                   icon-name="arrow-up"
                   icon-class="fs-5 text-success ms-1"
                 />
 
-                <AlitaIcon
+                <Icon
                   v-else-if="item.arrow === 'down'"
                   icon-name="arrow-down"
                   icon-class="fs-5 text-danger ms-1"

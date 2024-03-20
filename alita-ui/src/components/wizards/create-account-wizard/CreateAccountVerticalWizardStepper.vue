@@ -2,7 +2,7 @@
   <!--begin::Stepper-->
   <div
     class="stepper stepper-pills stepper-column d-flex flex-column flex-xl-row flex-row-fluid"
-    id="alita_create_account_stepper"
+    id="create_account_stepper"
     ref="createAccountStepperRef"
   >
     <!--begin::Aside-->
@@ -14,7 +14,7 @@
         <!--begin::Nav-->
         <div class="stepper-nav">
           <!--begin::Step 1-->
-          <div class="stepper-item current" data-alita-stepper-element="nav">
+          <div class="stepper-item current" data-stepper-element="nav">
             <div class="stepper-wrapper">
               <!--begin::Icon-->
               <div class="stepper-icon w-40px h-40px">
@@ -41,7 +41,7 @@
           <!--end::Step 1-->
 
           <!--begin::Step 2-->
-          <div class="stepper-item" data-alita-stepper-element="nav">
+          <div class="stepper-item" data-stepper-element="nav">
             <div class="stepper-wrapper">
               <!--begin::Icon-->
               <div class="stepper-icon w-40px h-40px">
@@ -66,7 +66,7 @@
           <!--end::Step 2-->
 
           <!--begin::Step 3-->
-          <div class="stepper-item" data-alita-stepper-element="nav">
+          <div class="stepper-item" data-stepper-element="nav">
             <div class="stepper-wrapper">
               <!--begin::Icon-->
               <div class="stepper-icon w-40px h-40px">
@@ -92,7 +92,7 @@
           <!--end::Step 3-->
 
           <!--begin::Step 4-->
-          <div class="stepper-item" data-alita-stepper-element="nav">
+          <div class="stepper-item" data-stepper-element="nav">
             <div class="stepper-wrapper">
               <!--begin::Icon-->
               <div class="stepper-icon w-40px h-40px">
@@ -118,7 +118,7 @@
           <!--end::Step 4-->
 
           <!--begin::Step 5-->
-          <div class="stepper-item" data-alita-stepper-element="nav">
+          <div class="stepper-item" data-stepper-element="nav">
             <div class="stepper-wrapper">
               <!--begin::Icon-->
               <div class="stepper-icon w-40px h-40px">

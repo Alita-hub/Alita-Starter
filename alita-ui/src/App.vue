@@ -72,4 +72,3 @@ export default defineComponent({
   display: contents;
 }
 </style>
-@/layouts/config/helper

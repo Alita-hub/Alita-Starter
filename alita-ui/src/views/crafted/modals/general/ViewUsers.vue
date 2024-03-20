@@ -1,26 +1,26 @@
 <template>
-  <KTModalCard
+  <ModalCard
     title="View Users Modal Example"
     description="Click on the below buttons to launch <br/>user lists example."
     :image="getIllustrationsPath('10.png')"
     button-text="View Users"
-    modal-id="alita_modal_view_users"
-  ></KTModalCard>
+    modal-id="modal_view_users"
+  ></ModalCard>
 
-  <KTViewUsersModal></KTViewUsersModal>
+  <ViewUsersModal></ViewUsersModal>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import KTModalCard from "@/components/cards/Card.vue";
-import KTViewUsersModal from "@/components/modals/general/ViewUsersModal.vue";
+import ModalCard from "@/components/cards/Card.vue";
+import ViewUsersModal from "@/components/modals/general/ViewUsersModal.vue";
 import { getIllustrationsPath } from "@/core/helpers/assets";
 
 export default defineComponent({
   name: "view-users",
   components: {
-    KTModalCard,
-    KTViewUsersModal,
+    ModalCard,
+    ViewUsersModal,
   },
   setup() {
     return {

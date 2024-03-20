@@ -5,10 +5,7 @@
     <div class="card-header card-header-stretch">
       <!--begin::Title-->
       <div class="card-title d-flex align-items-center">
-        <AlitaIcon
-          icon-name="calendar-8"
-          icon-class="fs-1 text-primary me-3 lh-0"
-        />
+        <Icon icon-name="calendar-8" icon-class="fs-1 text-primary me-3 lh-0" />
 
         <h3 class="fw-bold m-0 text-gray-800">Jan 23, 2021</h3>
       </div>
@@ -23,44 +20,44 @@
         >
           <li class="nav-item" role="presentation">
             <a
-              id="alita_activity_today_tab"
+              id="activity_today_tab"
               class="nav-link justify-content-center text-active-gray-800 active"
               data-bs-toggle="tab"
               role="tab"
-              href="#alita_activity_today"
+              href="#activity_today"
             >
               Today
             </a>
           </li>
           <li class="nav-item" role="presentation">
             <a
-              id="alita_activity_week_tab"
+              id="activity_week_tab"
               class="nav-link justify-content-center text-active-gray-800"
               data-bs-toggle="tab"
               role="tab"
-              href="#alita_activity_week"
+              href="#activity_week"
             >
               Week
             </a>
           </li>
           <li class="nav-item" role="presentation">
             <a
-              id="alita_activity_month_tab"
+              id="activity_month_tab"
               class="nav-link justify-content-center text-active-gray-800"
               data-bs-toggle="tab"
               role="tab"
-              href="#alita_activity_month"
+              href="#activity_month"
             >
               Month
             </a>
           </li>
           <li class="nav-item" role="presentation">
             <a
-              id="alita_activity_year_tab"
+              id="activity_year_tab"
               class="nav-link justify-content-center text-active-gray-800 text-hover-gray-800"
               data-bs-toggle="tab"
               role="tab"
-              href="#alita_activity_year"
+              href="#activity_year"
             >
               2021
             </a>
@@ -78,21 +75,21 @@
       <div class="tab-content">
         <!--begin::Tab panel-->
         <div
-          id="alita_activity_today"
+          id="activity_today"
           class="card-body p-0 tab-pane fade show active"
           role="tabpanel"
-          aria-labelledby="alita_activity_today_tab"
+          aria-labelledby="activity_today_tab"
         >
           <!--begin::Timeline-->
           <div class="timeline">
-            <KTActivityItem1></KTActivityItem1>
-            <KTActivityItem2></KTActivityItem2>
-            <KTActivityItem3></KTActivityItem3>
-            <KTActivityItem4></KTActivityItem4>
-            <KTActivityItem5></KTActivityItem5>
-            <KTActivityItem6></KTActivityItem6>
-            <KTActivityItem7></KTActivityItem7>
-            <KTActivityItem8></KTActivityItem8>
+            <ActivityItem1></ActivityItem1>
+            <ActivityItem2></ActivityItem2>
+            <ActivityItem3></ActivityItem3>
+            <ActivityItem4></ActivityItem4>
+            <ActivityItem5></ActivityItem5>
+            <ActivityItem6></ActivityItem6>
+            <ActivityItem7></ActivityItem7>
+            <ActivityItem8></ActivityItem8>
           </div>
           <!--end::Timeline-->
         </div>
@@ -100,18 +97,18 @@
 
         <!--begin::Tab panel-->
         <div
-          id="alita_activity_week"
+          id="activity_week"
           class="card-body p-0 tab-pane fade show"
           role="tabpanel"
-          aria-labelledby="alita_activity_week_tab"
+          aria-labelledby="activity_week_tab"
         >
           <!--begin::Timeline-->
           <div class="timeline">
-            <KTActivityItem2></KTActivityItem2>
-            <KTActivityItem3></KTActivityItem3>
-            <KTActivityItem4></KTActivityItem4>
-            <KTActivityItem5></KTActivityItem5>
-            <KTActivityItem6></KTActivityItem6>
+            <ActivityItem2></ActivityItem2>
+            <ActivityItem3></ActivityItem3>
+            <ActivityItem4></ActivityItem4>
+            <ActivityItem5></ActivityItem5>
+            <ActivityItem6></ActivityItem6>
           </div>
           <!--end::Timeline-->
         </div>
@@ -119,19 +116,19 @@
 
         <!--begin::Tab panel-->
         <div
-          id="alita_activity_month"
+          id="activity_month"
           class="card-body p-0 tab-pane fade show"
           role="tabpanel"
-          aria-labelledby="alita_activity_month_tab"
+          aria-labelledby="activity_month_tab"
         >
           <!--begin::Timeline-->
           <div class="timeline">
-            <KTActivityItem5></KTActivityItem5>
-            <KTActivityItem6></KTActivityItem6>
-            <KTActivityItem8></KTActivityItem8>
-            <KTActivityItem2></KTActivityItem2>
-            <KTActivityItem3></KTActivityItem3>
-            <KTActivityItem4></KTActivityItem4>
+            <ActivityItem5></ActivityItem5>
+            <ActivityItem6></ActivityItem6>
+            <ActivityItem8></ActivityItem8>
+            <ActivityItem2></ActivityItem2>
+            <ActivityItem3></ActivityItem3>
+            <ActivityItem4></ActivityItem4>
           </div>
           <!--end::Timeline-->
         </div>
@@ -139,17 +136,17 @@
 
         <!--begin::Tab panel-->
         <div
-          id="alita_activity_year"
+          id="activity_year"
           class="card-body p-0 tab-pane fade show"
           role="tabpanel"
-          aria-labelledby="alita_activity_year_tab"
+          aria-labelledby="activity_year_tab"
         >
           <!--begin::Timeline-->
           <div class="timeline">
-            <KTActivityItem3></KTActivityItem3>
-            <KTActivityItem4></KTActivityItem4>
-            <KTActivityItem5></KTActivityItem5>
-            <KTActivityItem6></KTActivityItem6>
+            <ActivityItem3></ActivityItem3>
+            <ActivityItem4></ActivityItem4>
+            <ActivityItem5></ActivityItem5>
+            <ActivityItem6></ActivityItem6>
           </div>
           <!--end::Timeline-->
         </div>
@@ -165,26 +162,26 @@
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
-import KTActivityItem1 from "@/components/activity-timeline-items/Item1.vue";
-import KTActivityItem2 from "@/components/activity-timeline-items/Item2.vue";
-import KTActivityItem3 from "@/components/activity-timeline-items/Item3.vue";
-import KTActivityItem4 from "@/components/activity-timeline-items/Item4.vue";
-import KTActivityItem5 from "@/components/activity-timeline-items/Item5.vue";
-import KTActivityItem6 from "@/components/activity-timeline-items/Item6.vue";
-import KTActivityItem7 from "@/components/activity-timeline-items/Item7.vue";
-import KTActivityItem8 from "@/components/activity-timeline-items/Item8.vue";
+import ActivityItem1 from "@/components/activity-timeline-items/Item1.vue";
+import ActivityItem2 from "@/components/activity-timeline-items/Item2.vue";
+import ActivityItem3 from "@/components/activity-timeline-items/Item3.vue";
+import ActivityItem4 from "@/components/activity-timeline-items/Item4.vue";
+import ActivityItem5 from "@/components/activity-timeline-items/Item5.vue";
+import ActivityItem6 from "@/components/activity-timeline-items/Item6.vue";
+import ActivityItem7 from "@/components/activity-timeline-items/Item7.vue";
+import ActivityItem8 from "@/components/activity-timeline-items/Item8.vue";
 
 export default defineComponent({
   name: "profile-activity",
   components: {
-    KTActivityItem1,
-    KTActivityItem2,
-    KTActivityItem3,
-    KTActivityItem4,
-    KTActivityItem5,
-    KTActivityItem6,
-    KTActivityItem7,
-    KTActivityItem8,
+    ActivityItem1,
+    ActivityItem2,
+    ActivityItem3,
+    ActivityItem4,
+    ActivityItem5,
+    ActivityItem6,
+    ActivityItem7,
+    ActivityItem8,
   },
   setup() {
     return {

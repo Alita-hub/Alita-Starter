@@ -1,6 +1,6 @@
 <template>
   <!--begin::Step 1-->
-  <div class="current" data-alita-stepper-element="content">
+  <div class="current" data-stepper-element="content">
     <!--begin::Wrapper-->
     <div class="w-100">
       <!--begin::Heading-->
@@ -37,13 +37,13 @@
               class="btn-check"
               name="accountType"
               value="personal"
-              id="alita_create_account_form_account_type_personal"
+              id="create_account_form_account_type_personal"
             />
             <label
               class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center mb-10"
-              for="alita_create_account_form_account_type_personal"
+              for="create_account_form_account_type_personal"
             >
-              <AlitaIcon icon-name="address-book" icon-class="fs-3x me-5" />
+              <Icon icon-name="address-book" icon-class="fs-3x me-5" />
 
               <!--begin::Info-->
               <span class="d-block fw-semibold text-start">
@@ -68,13 +68,13 @@
               class="btn-check"
               name="accountType"
               value="corporate"
-              id="alita_create_account_form_account_type_corporate"
+              id="create_account_form_account_type_corporate"
             />
             <label
               class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center"
-              for="alita_create_account_form_account_type_corporate"
+              for="create_account_form_account_type_corporate"
             >
-              <AlitaIcon icon-name="briefcase" icon-class="fs-3x me-5" />
+              <Icon icon-name="briefcase" icon-class="fs-3x me-5" />
 
               <!--begin::Info-->
               <span class="d-block fw-semibold text-start">

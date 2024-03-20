@@ -8,11 +8,11 @@
       <!--begin::Contacts-->
       <div class="card card-flush">
         <!--begin::Card header-->
-        <div class="card-header pt-7" id="alita_chat_contacts_header">
+        <div class="card-header pt-7" id="chat_contacts_header">
           <!--begin::Form-->
           <form class="w-100 position-relative" autocomplete="off">
             <!--begin::Icon-->
-            <AlitaIcon
+            <Icon
               icon-name="magnifier"
               icon-class="fs-2 fs-lg-1 text-gray-500 position-absolute top-50 ms-5 translate-middle-y"
             />
@@ -33,16 +33,16 @@
         <!--end::Card header-->
 
         <!--begin::Card body-->
-        <div class="card-body pt-5" id="alita_chat_contacts_body">
+        <div class="card-body pt-5" id="chat_contacts_body">
           <!--begin::List-->
           <div
             class="scroll-y me-n5 pe-5 h-200px h-lg-auto"
-            data-alita-scroll="true"
-            data-alita-scroll-activate="{default: false, lg: true}"
-            data-alita-scroll-max-height="auto"
-            data-alita-scroll-dependencies="#alita_header, #alita_toolbar, #alita_footer, #alita_chat_contacts_header"
-            data-alita-scroll-wrappers="#alita_content, #alita_chat_contacts_body"
-            data-alita-scroll-offset="0px"
+            data-scroll="true"
+            data-scroll-activate="{default: false, lg: true}"
+            data-scroll-max-height="auto"
+            data-scroll-dependencies="#header, #toolbar, #footer, #chat_contacts_header"
+            data-scroll-wrappers="#content, #chat_contacts_body"
+            data-scroll-offset="0px"
           >
             <template v-for="(item, index) in contacts" :key="index">
               <div class="d-flex flex-stack py-4">
@@ -97,9 +97,9 @@
     <!--begin::Content-->
     <div class="flex-lg-row-fluid ms-lg-7 ms-xl-10">
       <!--begin::Messenger-->
-      <div class="card" id="alita_chat_messenger">
+      <div class="card" id="chat_messenger">
         <!--begin::Card header-->
-        <div class="card-header" id="alita_chat_messenger_header">
+        <div class="card-header" id="chat_messenger_header">
           <!--begin::Title-->
           <div class="card-title">
             <!--begin::User-->
@@ -148,7 +148,7 @@
                   href="#"
                   class="symbol symbol-35px symbol-circle"
                   data-bs-toggle="modal"
-                  data-bs-target="#alita_modal_view_users"
+                  data-bs-target="#modal_view_users"
                 >
                   <span
                     class="symbol-label fs-8 fw-bold"
@@ -188,9 +188,9 @@
             <div class="me-n3">
               <button
                 class="btn btn-sm btn-icon btn-active-light-primary"
-                data-alita-menu-trigger="click"
-                data-alita-menu-placement="bottom-end"
-                data-alita-menu-flip="top-end"
+                data-menu-trigger="click"
+                data-menu-placement="bottom-end"
+                data-menu-flip="top-end"
               >
                 <i class="bi bi-three-dots fs-2"></i>
               </button>
@@ -203,18 +203,18 @@
         <!--end::Card header-->
 
         <!--begin::Card body-->
-        <div class="card-body" id="alita_chat_messenger_body">
+        <div class="card-body" id="chat_messenger_body">
           <!--begin::Messages-->
           <div
             class="scroll-y me-n5 pe-5 h-300px h-lg-auto"
             ref="messagesRef"
-            data-alita-element="messages"
-            data-alita-scroll="true"
-            data-alita-scroll-activate="{default: false, lg: true}"
-            data-alita-scroll-max-height="auto"
-            data-alita-scroll-dependencies="#alita_header, #alita_app_header, #alita_app_toolbar, #alita_toolbar, #alita_footer, #alita_app_footer, #alita_chat_messenger_header, #alita_chat_messenger_footer"
-            data-alita-scroll-wrappers="#alita_content, #alita_app_content, #alita_chat_messenger_body"
-            data-alita-scroll-offset="5px"
+            data-element="messages"
+            data-scroll="true"
+            data-scroll-activate="{default: false, lg: true}"
+            data-scroll-max-height="auto"
+            data-scroll-dependencies="#header, #app_header, #app_toolbar, #toolbar, #footer, #app_footer, #chat_messenger_header, #chat_messenger_footer"
+            data-scroll-wrappers="#content, #app_content, #chat_messenger_body"
+            data-scroll-offset="5px"
           >
             <template v-for="(item, index) in messages" :key="index">
               <MessageIn
@@ -239,13 +239,13 @@
         <!--end::Card body-->
 
         <!--begin::Card footer-->
-        <div class="card-footer pt-4" id="alita_chat_messenger_footer">
+        <div class="card-footer pt-4" id="chat_messenger_footer">
           <!--begin::Input-->
           <input
             v-model="newMessageText"
             @keydown.enter="addNewMessage"
             class="form-control form-control-flush mb-3"
-            data-alita-element="input"
+            data-element="input"
             placeholder="Type a message"
           />
           <!--end::Input-->
@@ -278,7 +278,7 @@
               @click="addNewMessage"
               class="btn btn-primary"
               type="button"
-              data-alita-element="send"
+              data-element="send"
             >
               Send
             </button>
@@ -304,7 +304,7 @@ import contacts from "@/core/data/contacts";
 import MessageIn from "@/components/messenger-parts/MessageIn.vue";
 import MessageOut from "@/components/messenger-parts/MessageOut.vue";
 
-interface KTMessage {
+interface Message {
   type: string;
   name?: string;
   image: string;
@@ -326,7 +326,7 @@ export default defineComponent({
 
     const route = useRoute();
 
-    const messages = ref<Array<KTMessage>>([
+    const messages = ref<Array<Message>>([
       {
         type: "in",
         name: "Brian Cox",

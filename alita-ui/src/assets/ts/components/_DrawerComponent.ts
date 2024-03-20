@@ -78,7 +78,7 @@ class DrawerComponent {
     this.options = Object.assign(defaultDrawerOptions, options);
     this.instanceUid = getUniqueIdWithPrefix("drawer");
     this.overlayElement = null;
-    this.name = this.element.getAttribute("data-alita-drawer-name") || "";
+    this.name = this.element.getAttribute("data-drawer-name") || "";
     this.shown = false;
     this.toggleElement = null;
     // Event Handlers
@@ -120,7 +120,7 @@ class DrawerComponent {
       `${this.options.baseClass}-on`
     );
     const bodyCanvasAttr = String(
-      document.body.getAttribute(`data-alita-drawer-${this.name}-`)
+      document.body.getAttribute(`data-drawer-${this.name}-`)
     );
 
     if (hasBaseClass === true && bodyCanvasAttr === "on") {
@@ -145,7 +145,7 @@ class DrawerComponent {
   };
 
   private _getOption = (name: string) => {
-    const attr = this.element.getAttribute(`data-alita-drawer-${name}`);
+    const attr = this.element.getAttribute(`data-drawer-${name}`);
     if (attr) {
       const value = getAttributeValueByBreakpoint(attr);
       if (value !== null && String(value) === "true") {
@@ -169,7 +169,7 @@ class DrawerComponent {
   };
 
   private _toggle = () => {
-    if (EventHandlerUtil.trigger(this.element, "alita.drawer.toggle") === false) {
+    if (EventHandlerUtil.trigger(this.element, "drawer.toggle") === false) {
       return;
     }
 
@@ -179,41 +179,41 @@ class DrawerComponent {
       this._show();
     }
 
-    EventHandlerUtil.trigger(this.element, "alita.drawer.toggled");
+    EventHandlerUtil.trigger(this.element, "drawer.toggled");
   };
 
   private _hide = () => {
-    if (EventHandlerUtil.trigger(this.element, "alita.drawer.hide") === false) {
+    if (EventHandlerUtil.trigger(this.element, "drawer.hide") === false) {
       return;
     }
 
     this.shown = false;
     this._deleteOverlay();
-    document.body.removeAttribute(`data-alita-drawer-${this.name}`);
-    document.body.removeAttribute(`data-alita-drawer`);
+    document.body.removeAttribute(`data-drawer-${this.name}`);
+    document.body.removeAttribute(`data-drawer`);
     this.element.classList.remove(`${this.options.baseClass}-on`);
     if (this.toggleElement != null) {
       this.toggleElement.classList.remove("active");
     }
 
-    EventHandlerUtil.trigger(this.element, "alita.drawer.after.hidden");
+    EventHandlerUtil.trigger(this.element, "drawer.after.hidden");
   };
 
   private _show = () => {
-    if (EventHandlerUtil.trigger(this.element, "alita.drawer.show") === false) {
+    if (EventHandlerUtil.trigger(this.element, "drawer.show") === false) {
       return;
     }
 
     this.shown = true;
     this._createOverlay();
-    document.body.setAttribute(`data-alita-drawer-${this.name}`, "on");
-    document.body.setAttribute("data-alita-drawer", "on");
+    document.body.setAttribute(`data-drawer-${this.name}`, "on");
+    document.body.setAttribute("data-drawer", "on");
     this.element.classList.add(`${this.options.baseClass}-on`);
     if (this.toggleElement !== null) {
       this.toggleElement.classList.add("active");
     }
 
-    EventHandlerUtil.trigger(this.element, "alita.drawer.shown");
+    EventHandlerUtil.trigger(this.element, "drawer.shown");
   };
 
   private _createOverlay = () => {
@@ -344,11 +344,11 @@ class DrawerComponent {
     // External drawer toggle handler
     DOMEventHandlerUtil.on(
       document.body,
-      '[data-alita-drawer-dismiss="true"]',
+      '[data-drawer-dismiss="true"]',
       "click",
       () => {
         /* @ts-ignore */
-        const element = this.closest('[data-alita-drawer="true"]');
+        const element = this.closest('[data-drawer="true"]');
         if (element) {
           const drawer = DrawerComponent.getInstance(element);
           if (drawer && drawer.isShown()) {
@@ -369,7 +369,7 @@ class DrawerComponent {
         () => {
           // Locate and update Drawer instances on window resize
           const elements = document.body.querySelectorAll(
-            '[data-alita-drawer="true"]'
+            '[data-drawer="true"]'
           );
           elements.forEach((el) => {
             const item = el as HTMLElement;
@@ -386,13 +386,13 @@ class DrawerComponent {
   }
 
   public static bootstrap = () => {
-    DrawerComponent.createInstances('[data-alita-drawer="true"]');
+    DrawerComponent.createInstances('[data-drawer="true"]');
     DrawerComponent.initGlobalHandlers();
     DrawerComponent.handleDismiss();
   };
 
   public static reinitialization = () => {
-    DrawerComponent.createInstances('[data-alita-drawer="true"]');
+    DrawerComponent.createInstances('[data-drawer="true"]');
     DrawerComponent.hideAll();
     DrawerComponent.updateAll();
     DrawerComponent.handleDismiss();

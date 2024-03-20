@@ -1,20 +1,22 @@
 <template>
-  <MenuComponent menu-selector="#alita-search-menu">
+  <MenuComponent menu-selector="#search-menu">
     <template v-slot:toggle>
       <!--begin::Search-->
       <div
-        id="alita_header_search"
+        id="header_search"
         class="header-search d-flex align-items-stretch"
-        data-alita-menu-target="#alita-search-menu"
-        data-alita-menu-trigger="click"
-        data-alita-menu-attach="parent"
-        data-alita-menu-placement="bottom-end"
-        data-alita-menu-flip="bottom"
+        data-menu-target="#search-menu"
+        data-menu-trigger="click"
+        data-menu-attach="parent"
+        data-menu-placement="bottom-end"
+        data-menu-flip="bottom"
       >
         <!--begin::Search toggle-->
-        <div class="d-flex align-items-center" id="alita_header_search_toggle">
-          <div class="btn btn-icon btn-active-light-primary">
-            <AlitaIcon icon-name="magnifier" icon-class="fs-2 fs-md-1" />
+        <div class="d-flex align-items-center" id="header_search_toggle">
+          <div
+            class="btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-35px h-35px"
+          >
+            <Icon icon-name="magnifier" icon-class="fs-2" />
           </div>
         </div>
         <!--end::Search toggle-->
@@ -25,15 +27,15 @@
       <!--begin::Menu-->
       <div
         class="menu menu-sub menu-sub-dropdown menu-column p-7 w-325px w-md-375px"
-        data-alita-menu="true"
-        id="alita-search-menu"
+        data-menu="true"
+        id="search-menu"
       >
         <!--begin::Wrapper-->
         <div>
           <!--begin::Form-->
           <form class="w-100 position-relative mb-3" autocomplete="off">
             <!--begin::Icon-->
-            <AlitaIcon
+            <Icon
               icon-name="magnifier"
               icon-class="fs-2 fs-lg-1 text-gray-500 position-absolute top-50 translate-middle-y ms-0"
             />
@@ -68,7 +70,7 @@
               @click="reset()"
               class="btn btn-flush btn-active-color-primary position-absolute top-50 end-0 translate-middle-y lh-0"
             >
-              <AlitaIcon icon-name="cross" icon-class="fs-2 fs-lg-1 me-0" />
+              <Icon icon-name="cross" icon-class="fs-2 fs-lg-1 me-0" />
             </span>
             <!--end::Reset-->
 
@@ -82,7 +84,7 @@
                 data-bs-toggle="tooltip"
                 title="Show search preferences"
               >
-                <AlitaIcon icon-name="setting-2" icon-class="fs-1" />
+                <Icon icon-name="setting-2" icon-class="fs-1" />
               </div>
               <!--end::Preferences toggle-->
 
@@ -94,7 +96,7 @@
                 data-bs-toggle="tooltip"
                 title="Show more search options"
               >
-                <AlitaIcon icon-name="down" icon-class="fs-2" />
+                <Icon icon-name="down" icon-class="fs-2" />
               </div>
               <!--end::Advanced search toggle-->
             </div>
@@ -113,7 +115,7 @@
 
         <form v-if="state === 'advanced-options'" class="pt-1">
           <!--begin::Heading-->
-          <h3 class="fw-semobold text-gray-900 mb-7">Advanced Search</h3>
+          <h3 class="fw-semibold text-dark mb-7">Advanced Search</h3>
           <!--end::Heading-->
 
           <!--begin::Input group-->
@@ -331,7 +333,7 @@
 
         <form v-if="state === 'preferences'" class="pt-1">
           <!--begin::Heading-->
-          <h3 class="fw-semobold text-gray-900 mb-7">Search Preferences</h3>
+          <h3 class="fw-semibold text-dark mb-7">Search Preferences</h3>
           <!--end::Heading-->
 
           <!--begin::Input group-->
@@ -447,12 +449,12 @@
 import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent, ref } from "vue";
 import Results from "@/layouts/components/search/partials/Results.vue";
-import PartialMain from "@/layouts/components/search/partials/Main.vue";
+import PartialMain from "@/layouts/components/search/partials/Searched.vue";
 import Empty from "@/layouts/components/search/partials/Empty.vue";
 import MenuComponent from "@/components/menu/MenuComponent.vue";
 
 export default defineComponent({
-  name: "alita-search",
+  name: "search",
   components: {
     Results,
     PartialMain,

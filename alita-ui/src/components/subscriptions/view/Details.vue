@@ -163,10 +163,10 @@
                   <a
                     href="#"
                     class="btn btn-icon btn-active-light-primary w-30px h-30px"
-                    data-alita-menu-trigger="click"
-                    data-alita-menu-placement="bottom-end"
+                    data-menu-trigger="click"
+                    data-menu-placement="bottom-end"
                   >
-                    <AlitaIcon icon-name="switch" icon-class="fs-3" />
+                    <Icon icon-name="switch" icon-class="fs-3" />
                   </a>
                   <UserMenu></UserMenu>
                   <!--end::Action-->
@@ -187,10 +187,10 @@
                   <a
                     href="#"
                     class="btn btn-icon btn-active-light-primary w-30px h-30px"
-                    data-alita-menu-trigger="click"
-                    data-alita-menu-placement="bottom-end"
+                    data-menu-trigger="click"
+                    data-menu-placement="bottom-end"
                   >
-                    <AlitaIcon icon-name="switch" icon-class="fs-3" />
+                    <Icon icon-name="switch" icon-class="fs-3" />
                   </a>
                   <UserMenu></UserMenu>
                   <!--end::Action-->
@@ -216,7 +216,7 @@ import { defineComponent } from "vue";
 import UserMenu from "@/layouts/components/menus/UserAccountMenu.vue";
 
 export default defineComponent({
-  name: "alita-details",
+  name: "details",
   components: {
     UserMenu,
   },

@@ -1,21 +1,21 @@
 <template>
   <!--begin::Help drawer-->
   <div
-    id="alita_help"
+    id="help"
     class="bg-body"
-    data-alita-drawer="true"
-    data-alita-drawer-name="help"
-    data-alita-drawer-activate="true"
-    data-alita-drawer-overlay="true"
-    data-alita-drawer-width="{default:'350px', 'md': '525px'}"
-    data-alita-drawer-direction="end"
-    data-alita-drawer-toggle="#alita_help_toggle"
-    data-alita-drawer-close="#alita_help_close"
+    data-drawer="true"
+    data-drawer-name="help"
+    data-drawer-activate="true"
+    data-drawer-overlay="true"
+    data-drawer-width="{default:'350px', 'md': '525px'}"
+    data-drawer-direction="end"
+    data-drawer-toggle="#help_toggle"
+    data-drawer-close="#help_close"
   >
     <!--begin::Card-->
     <div class="card shadow-none rounded-0 w-100">
       <!--begin::Header-->
-      <div class="card-header" id="alita_help_header">
+      <div class="card-header" id="help_header">
         <h5 class="card-title fw-semibold text-gray-600">
           Learn & Get Inspired
         </h5>
@@ -24,25 +24,25 @@
           <button
             type="button"
             class="btn btn-sm btn-icon explore-btn-dismiss me-n5"
-            id="alita_help_close"
+            id="help_close"
           >
-            <AlitaIcon icon-name="cross" icon-class="fs-2" />
+            <Icon icon-name="cross" icon-class="fs-2" />
           </button>
         </div>
       </div>
       <!--end::Header-->
 
       <!--begin::Body-->
-      <div class="card-body" id="alita_help_body">
+      <div class="card-body" id="help_body">
         <!--begin::Content-->
         <div
-          id="alita_help_scroll"
+          id="help_scroll"
           class="hover-scroll-overlay-y"
-          data-alita-scroll="true"
-          data-alita-scroll-height="auto"
-          data-alita-scroll-wrappers="#alita_help_body"
-          data-alita-scroll-dependencies="#alita_help_header"
-          data-alita-scroll-offset="5px"
+          data-scroll="true"
+          data-scroll-height="auto"
+          data-scroll-wrappers="#help_body"
+          data-scroll-dependencies="#help_header"
+          data-scroll-offset="5px"
         >
           <!--begin::Support-->
           <div
@@ -84,7 +84,7 @@
             <div
               class="d-flex flex-center w-50px h-50px w-lg-75px h-lg-75px flex-shrink-0 rounded bg-light-warning"
             >
-              <AlitaIcon
+              <Icon
                 icon-name="abstract-26"
                 icon-class="text-warning fs-2x fs-lg-3x"
               />
@@ -96,7 +96,7 @@
               <div class="d-flex flex-column me-2 me-lg-5">
                 <!--begin::Title-->
                 <a
-                  href="https://preview.keenthemes.com/metronic8/vue/docs/getting-started/build"
+                  href="http://alita.com/metronic8/vue/docs/getting-started/build"
                   class="text-gray-900 text-hover-primary fw-bold fs-6 fs-lg-4 mb-1"
                   >Documentation &amp; Videos</a
                 >
@@ -109,10 +109,7 @@
                 <!--end::Description-->
               </div>
               <!--end::Wrapper-->
-              <AlitaIcon
-                icon-name="arrow-right"
-                icon-class="text-gray-500 fs-2"
-              />
+              <Icon icon-name="arrow-right" icon-class="text-gray-500 fs-2" />
             </div>
             <!--end::Info-->
           </div>
@@ -123,10 +120,7 @@
             <div
               class="d-flex flex-center w-50px h-50px w-lg-75px h-lg-75px flex-shrink-0 rounded bg-light-primary"
             >
-              <AlitaIcon
-                icon-name="gift"
-                icon-class="text-primary fs-2x fs-lg-3x"
-              />
+              <Icon icon-name="gift" icon-class="text-primary fs-2x fs-lg-3x" />
             </div>
             <!--end::Icon-->
             <!--begin::Info-->
@@ -135,7 +129,7 @@
               <div class="d-flex flex-column me-2 me-lg-5">
                 <!--begin::Title-->
                 <a
-                  href="https://preview.keenthemes.com/metronic8/vue/docs/base/utilities"
+                  href="http://alita.com/metronic8/vue/docs/base/utilities"
                   class="text-gray-900 text-hover-primary fw-bold fs-6 fs-lg-4 mb-1"
                   >Plugins &amp; Components</a
                 >
@@ -148,10 +142,7 @@
                 <!--end::Description-->
               </div>
               <!--end::Wrapper-->
-              <AlitaIcon
-                icon-name="arrow-right"
-                icon-class="text-gray-500 fs-2"
-              />
+              <Icon icon-name="arrow-right" icon-class="text-gray-500 fs-2" />
             </div>
             <!--end::Info-->
           </div>
@@ -162,7 +153,7 @@
             <div
               class="d-flex flex-center w-50px h-50px w-lg-75px h-lg-75px flex-shrink-0 rounded bg-light-info"
             >
-              <AlitaIcon
+              <Icon
                 icon-name="design-frame"
                 icon-class="text-info fs-2x fs-lg-3x"
               />
@@ -186,7 +177,7 @@
                 <!--end::Description-->
               </div>
               <!--end::Wrapper-->
-              <AlitaIcon icon-name="phone" icon-class="text-gray-500 fs-2" />
+              <Icon icon-name="phone" icon-class="text-gray-500 fs-2" />
             </div>
             <!--end::Info-->
           </div>
@@ -197,10 +188,7 @@
             <div
               class="d-flex flex-center w-50px h-50px w-lg-75px h-lg-75px flex-shrink-0 rounded bg-light-danger"
             >
-              <AlitaIcon
-                icon-name="wifi"
-                icon-class="text-danger fs-2x fs-lg-3x"
-              />
+              <Icon icon-name="wifi" icon-class="text-danger fs-2x fs-lg-3x" />
             </div>
             <!--end::Icon-->
             <!--begin::Info-->
@@ -209,7 +197,7 @@
               <div class="d-flex flex-column me-2 me-lg-5">
                 <!--begin::Title-->
                 <a
-                  href="https://preview.keenthemes.com/metronic8/vue/docs/getting-started/changelog"
+                  href="http://alita.com/metronic8/vue/docs/getting-started/changelog"
                   class="text-gray-900 text-hover-primary fw-bold fs-6 fs-lg-4 mb-1"
                   >What's New</a
                 >
@@ -222,10 +210,7 @@
                 <!--end::Description-->
               </div>
               <!--end::Wrapper-->
-              <AlitaIcon
-                icon-name="arrow-right"
-                icon-class="text-gray-500 fs-2"
-              />
+              <Icon icon-name="arrow-right" icon-class="text-gray-500 fs-2" />
             </div>
             <!--end::Info-->
           </div>
@@ -245,7 +230,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "alita-help-drawer",
+  name: "help-drawer",
   components: {},
   setup() {
     return {

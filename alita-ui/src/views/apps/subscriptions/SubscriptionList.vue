@@ -7,7 +7,7 @@
       <div class="card-title">
         <!--begin::Search-->
         <div class="d-flex align-items-center position-relative my-1">
-          <AlitaIcon
+          <Icon
             icon-name="magnifier"
             icon-class="fs-1 position-absolute ms-6"
           />
@@ -15,7 +15,7 @@
             v-model="search"
             @input="searchItems()"
             type="text"
-            data-alita-subscription-table-filter="search"
+            data-subscription-table-filter="search"
             class="form-control form-control-solid w-250px ps-14"
             placeholder="Search Subscriptions"
           />
@@ -30,16 +30,16 @@
         <div
           v-if="selectedIds.length === 0"
           class="d-flex justify-content-end"
-          data-alita-subscription-table-toolbar="base"
+          data-subscription-table-toolbar="base"
         >
           <!--begin::Export-->
           <button
             type="button"
             class="btn btn-light-primary me-3"
             data-bs-toggle="modal"
-            data-bs-target="#alita_subscriptions_export_modal"
+            data-bs-target="#subscriptions_export_modal"
           >
-            <AlitaIcon icon-name="exit-up" icon-class="fs-2" />
+            <Icon icon-name="exit-up" icon-class="fs-2" />
             Export
           </button>
           <!--end::Export-->
@@ -49,7 +49,7 @@
             to="/apps/subscriptions/add-subscription"
             class="btn btn-primary"
           >
-            <AlitaIcon icon-name="plus" icon-class="fs-2" />
+            <Icon icon-name="plus" icon-class="fs-2" />
             Add Subscription
           </router-link>
           <!--end::Add subscription-->
@@ -78,7 +78,7 @@
 
     <!--begin::Card body-->
     <div class="card-body pt-0">
-      <KTDatatable
+      <Datatable
         @on-sort="sort"
         @on-items-select="onItemSelect"
         @on-items-per-page-change="onItemsPerPageChange"
@@ -115,16 +115,16 @@
           <a
             href="#"
             class="btn btn-sm btn-light btn-active-light-primary"
-            data-alita-menu-trigger="click"
-            data-alita-menu-placement="bottom-end"
-            data-alita-menu-flip="top-end"
+            data-menu-trigger="click"
+            data-menu-placement="bottom-end"
+            data-menu-flip="top-end"
             >Actions
-            <AlitaIcon icon-name="down" icon-class="fs-5 m-0" />
+            <Icon icon-name="down" icon-class="fs-5 m-0" />
           </a>
           <!--begin::Menu-->
           <div
             class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-            data-alita-menu="true"
+            data-menu="true"
           >
             <!--begin::Menu item-->
             <div class="menu-item px-3">
@@ -145,7 +145,7 @@
           </div>
           <!--end::Menu-->
         </template>
-      </KTDatatable>
+      </Datatable>
     </div>
     <!--end::Card body-->
   </div>
@@ -155,7 +155,7 @@
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent, onMounted, ref } from "vue";
-import KTDatatable from "@/components/datatable/DataTable.vue";
+import Datatable from "@/components/datatable/DataTable.vue";
 import type { Sort } from "@/components/datatable/table-partials/models";
 import arraySort from "array-sort";
 import { MenuComponent } from "@/assets/ts/components";
@@ -171,9 +171,9 @@ interface ISubscription {
 }
 
 export default defineComponent({
-  name: "alita-subscription-list",
+  name: "subscription-list",
   components: {
-    KTDatatable,
+    Datatable,
   },
   setup() {
     const data = ref<Array<ISubscription>>([

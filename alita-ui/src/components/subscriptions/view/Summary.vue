@@ -2,15 +2,15 @@
   <!--begin::Card-->
   <div
     class="card card-flush mb-0"
-    id="alita_view_summary"
-    data-alita-sticky="true"
-    data-alita-sticky-name="view-subscription-summary"
-    data-alita-sticky-offset="{default: false, lg: '200px'}"
-    data-alita-sticky-width="{lg: '250px', xl: '300px'}"
-    data-alita-sticky-left="auto"
-    data-alita-sticky-top="150px"
-    data-alita-sticky-animation="false"
-    data-alita-sticky-zindex="95"
+    id="view_summary"
+    data-sticky="true"
+    data-sticky-name="view-subscription-summary"
+    data-sticky-offset="{default: false, lg: '200px'}"
+    data-sticky-width="{lg: '250px', xl: '300px'}"
+    data-sticky-left="auto"
+    data-sticky-top="150px"
+    data-sticky-animation="false"
+    data-sticky-zindex="95"
   >
     <!--begin::Card header-->
     <div class="card-header">
@@ -26,10 +26,10 @@
         <a
           href="#"
           class="btn btn-sm btn-light btn-icon"
-          data-alita-menu-trigger="click"
-          data-alita-menu-placement="bottom-end"
+          data-menu-trigger="click"
+          data-menu-placement="bottom-end"
         >
-          <AlitaIcon icon-name="dots-horizontal" icon-class="fs-3" />
+          <Icon icon-name="dots-horizontal" icon-class="fs-3" />
         </a>
         <UserMenu></UserMenu>
         <!--end::More options-->
@@ -177,7 +177,7 @@
         <router-link
           to="/subscriptions/add"
           class="btn btn-primary"
-          id="alita_subscriptions_create_button"
+          id="subscriptions_create_button"
         >
           Edit Subscription
         </router-link>
@@ -195,7 +195,7 @@ import { defineComponent } from "vue";
 import UserMenu from "@/layouts/components/menus/UserAccountMenu.vue";
 
 export default defineComponent({
-  name: "alita-summary",
+  name: "summary",
   components: {
     UserMenu,
   },

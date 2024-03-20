@@ -1,25 +1,25 @@
 <template>
-  <KTModalCard
+  <ModalCard
     title="Upgrade Plan Modal Example"
     description="Click on the below buttons to launch <br/>a upgrade plan example."
     :image="getIllustrationsPath('8.png')"
     button-text="Upgrade Plan"
-    modal-id="alita_modal_upgrade_plan"
-  ></KTModalCard>
-  <KTUpgradePlanModal></KTUpgradePlanModal>
+    modal-id="modal_upgrade_plan"
+  ></ModalCard>
+  <UpgradePlanModal></UpgradePlanModal>
 </template>
 
 <script lang="ts">
 import { getAssetPath, getIllustrationsPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
-import KTModalCard from "@/components/cards/Card.vue";
-import KTUpgradePlanModal from "@/components/modals/general/UpgradePlanModal.vue";
+import ModalCard from "@/components/cards/Card.vue";
+import UpgradePlanModal from "@/components/modals/general/UpgradePlanModal.vue";
 
 export default defineComponent({
   name: "upgrade-plan",
   components: {
-    KTModalCard,
-    KTUpgradePlanModal,
+    ModalCard,
+    UpgradePlanModal,
   },
   setup() {
     return {

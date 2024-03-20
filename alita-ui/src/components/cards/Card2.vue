@@ -28,11 +28,11 @@
         <button
           type="button"
           class="btn btn-clean btn-sm btn-icon btn-icon-primary btn-active-light-primary me-n3"
-          data-alita-menu-trigger="click"
-          data-alita-menu-placement="bottom-end"
-          data-alita-menu-flip="top-end"
+          data-menu-trigger="click"
+          data-menu-placement="bottom-end"
+          data-menu-flip="top-end"
         >
-          <AlitaIcon icon-name="category" icon-class="fs-3 text-primary" />
+          <Icon icon-name="category" icon-class="fs-3 text-primary" />
         </button>
 
         <Dropdown3></Dropdown3>
@@ -52,7 +52,7 @@
 
       <!--begin::Stats-->
       <div class="d-flex align-items-center flex-wrap mb-5 mt-auto fs-6">
-        <AlitaIcon :icon-name="arrow" :icon-class="`fs-3 me-1 text-${color}`" />
+        <Icon :icon-name="arrow" :icon-class="`fs-3 me-1 text-${color}`" />
 
         <!--begin::Number-->
         <div :class="`text-${color}`" class="fw-bold me-2">

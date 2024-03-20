@@ -2,15 +2,15 @@
   <!--begin::Card-->
   <div
     class="card card-flush pt-3 mb-0"
-    id="alita_add_summary"
-    data-alita-sticky="true"
-    data-alita-sticky-name="add-subscription-summary"
-    data-alita-sticky-offset="{default: false, lg: '200px'}"
-    data-alita-sticky-width="{lg: '250px', xl: '300px'}"
-    data-alita-sticky-left="auto"
-    data-alita-sticky-top="150px"
-    data-alita-sticky-animation="false"
-    data-alita-sticky-zindex="95"
+    id="add_summary"
+    data-sticky="true"
+    data-sticky-name="add-subscription-summary"
+    data-sticky-offset="{default: false, lg: '200px'}"
+    data-sticky-width="{lg: '250px', xl: '300px'}"
+    data-sticky-left="auto"
+    data-sticky-top="150px"
+    data-sticky-animation="false"
+    data-sticky-zindex="95"
   >
     <!--begin::Card header-->
     <div class="card-header">
@@ -115,7 +115,7 @@
         <button
           type="submit"
           class="btn btn-primary"
-          id="alita_subscriptions_create_button"
+          id="subscriptions_create_button"
         >
           <!--begin::Indicator-->
           <span class="indicator-label">Create Subscription</span>
@@ -140,7 +140,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "alita-summary",
+  name: "summary",
   components: {},
   setup() {
     return {

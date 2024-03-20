@@ -1,6 +1,6 @@
 <template>
   <!--begin::details View-->
-  <div class="card mb-5 mb-xl-10" id="alita_profile_details_view">
+  <div class="card mb-5 mb-xl-10" id="profile_details_view">
     <!--begin::Card header-->
     <div class="card-header cursor-pointer">
       <!--begin::Card title-->
@@ -140,10 +140,7 @@
       <div
         class="notice d-flex bg-light-warning rounded border-warning border border-dashed p-6"
       >
-        <AlitaIcon
-          icon-name="information-5"
-          icon-class="fs-2tx text-warning me-4"
-        />
+        <Icon icon-name="information-5" icon-class="fs-2tx text-warning me-4" />
         <!--begin::Wrapper-->
         <div class="d-flex flex-stack flex-grow-1">
           <!--begin::Content-->
@@ -168,17 +165,17 @@
   <div class="row gy-10 gx-xl-10">
     <!--begin::Col-->
     <div class="col-xl-6">
-      <KTChartWidget1
+      <ChartWidget1
         widget-classes="card-xxl-stretch mb-5 mb-xl-10"
-      ></KTChartWidget1>
+      ></ChartWidget1>
     </div>
     <!--end::Col-->
 
     <!--begin::Col-->
     <div class="col-xl-6">
-      <KTListWidget1
+      <ListWidget1
         widget-classes="card-xxl-stretch mb-5 mb-xl-10'"
-      ></KTListWidget1>
+      ></ListWidget1>
     </div>
     <!--end::Col-->
   </div>
@@ -188,17 +185,17 @@
   <div class="row gy-10 gx-xl-10">
     <!--begin::Col-->
     <div class="col-xl-6">
-      <KTListWidget5
+      <ListWidget5
         widget-classes="card-xxl-stretch mb-5 mb-xl-10"
-      ></KTListWidget5>
+      ></ListWidget5>
     </div>
     <!--end::Col-->
 
     <!--begin::Col-->
     <div class="col-xl-6">
-      <KTTableWidget5
+      <TableWidget5
         widget-classes="card-xxl-stretch mb-5 mb-xl-10"
-      ></KTTableWidget5>
+      ></TableWidget5>
     </div>
     <!--end::Col-->
   </div>
@@ -208,18 +205,18 @@
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
-import KTChartWidget1 from "@/components/widgets/charts/Widget1.vue";
-import KTListWidget5 from "@/components/widgets/lists/Widget5.vue";
-import KTTableWidget5 from "@/components/widgets/tables/Widget5.vue";
-import KTListWidget1 from "@/components/widgets/lists/Widget1.vue";
+import ChartWidget1 from "@/components/widgets/charts/Widget1.vue";
+import ListWidget5 from "@/components/widgets/lists/Widget5.vue";
+import TableWidget5 from "@/components/widgets/tables/Widget5.vue";
+import ListWidget1 from "@/components/widgets/lists/Widget1.vue";
 
 export default defineComponent({
   name: "account-overview",
   components: {
-    KTChartWidget1,
-    KTListWidget5,
-    KTTableWidget5,
-    KTListWidget1,
+    ChartWidget1,
+    ListWidget5,
+    TableWidget5,
+    ListWidget1,
   },
   setup() {
     return {

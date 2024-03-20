@@ -15,7 +15,7 @@
             <a
               class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary active fw-bold px-4 me-1"
               data-bs-toggle="tab"
-              href="#alita_table_widget_8_tab_1"
+              href="#table_widget_8_tab_1"
               >Month</a
             >
           </li>
@@ -24,7 +24,7 @@
             <a
               class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bold px-4 me-1"
               data-bs-toggle="tab"
-              href="#alita_table_widget_8_tab_2"
+              href="#table_widget_8_tab_2"
               >Week</a
             >
           </li>
@@ -33,7 +33,7 @@
             <a
               class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bold px-4"
               data-bs-toggle="tab"
-              href="#alita_table_widget_8_tab_3"
+              href="#table_widget_8_tab_3"
               >Day</a
             >
           </li>
@@ -50,7 +50,7 @@
           <div
             :class="[index === 0 && 'active show']"
             class="tab-pane fade"
-            :id="`alita_table_widget_8_tab_${index + 1}`"
+            :id="`table_widget_8_tab_${index + 1}`"
           >
             <!--begin::Table container-->
             <div class="table-responsive">
@@ -76,7 +76,7 @@
                             :class="`bg-light-${item1.icon.color}`"
                             class="symbol-label"
                           >
-                            <AlitaIcon
+                            <Icon
                               :icon-name="item1.icon.file"
                               :icon-class="`text-${item1.icon.color} fs-2x`"
                             />
@@ -131,7 +131,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "alita-widget-8",
+  name: "widget-8",
   components: {},
   props: {
     widgetClasses: String,

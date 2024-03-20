@@ -14,11 +14,11 @@
         <button
           type="button"
           class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
-          data-alita-menu-trigger="click"
-          data-alita-menu-placement="bottom-end"
-          data-alita-menu-flip="top-end"
+          data-menu-trigger="click"
+          data-menu-placement="bottom-end"
+          data-menu-flip="top-end"
         >
-          <AlitaIcon icon-name="category" icon-class="fs-2" />
+          <Icon icon-name="category" icon-class="fs-2" />
         </button>
         <Dropdown1></Dropdown1>
         <!--end::Menu-->
@@ -38,7 +38,7 @@
               <!--begin::Symbol-->
               <div class="symbol symbol-50px me-3">
                 <div class="symbol-label bg-light-info">
-                  <AlitaIcon icon-name="bucket" icon-class="fs-1 text-info" />
+                  <Icon icon-name="bucket" icon-class="fs-1 text-info" />
                 </div>
               </div>
               <!--end::Symbol-->
@@ -59,10 +59,7 @@
               <!--begin::Symbol-->
               <div class="symbol symbol-50px me-3">
                 <div class="symbol-label bg-light-danger">
-                  <AlitaIcon
-                    icon-name="abstract-26"
-                    icon-class="fs-1 text-danger"
-                  />
+                  <Icon icon-name="abstract-26" icon-class="fs-1 text-danger" />
                 </div>
               </div>
               <!--end::Symbol-->
@@ -87,10 +84,7 @@
               <!--begin::Symbol-->
               <div class="symbol symbol-50px me-3">
                 <div class="symbol-label bg-light-success">
-                  <AlitaIcon
-                    icon-name="basket"
-                    icon-class="fs-1 text-success"
-                  />
+                  <Icon icon-name="basket" icon-class="fs-1 text-success" />
                 </div>
               </div>
               <!--end::Symbol-->
@@ -111,10 +105,7 @@
               <!--begin::Symbol-->
               <div class="symbol symbol-50px me-3">
                 <div class="symbol-label bg-light-primary">
-                  <AlitaIcon
-                    icon-name="package"
-                    icon-class="fs-1 text-primary"
-                  />
+                  <Icon icon-name="package" icon-class="fs-1 text-primary" />
                 </div>
               </div>
               <!--end::Symbol-->

@@ -18,11 +18,11 @@
         >
           <li class="nav-item" role="presentation">
             <a
-              id="alita_referrals_year_tab"
+              id="referrals_year_tab"
               class="nav-link text-active-primary active"
               data-bs-toggle="tab"
               role="tab"
-              href="#alita_customer_details_invoices_1"
+              href="#customer_details_invoices_1"
             >
               This Year
             </a>
@@ -30,11 +30,11 @@
 
           <li class="nav-item" role="presentation">
             <a
-              id="alita_referrals_2019_tab"
+              id="referrals_2019_tab"
               class="nav-link text-active-primary ms-3"
               data-bs-toggle="tab"
               role="tab"
-              href="#alita_customer_details_invoices_2"
+              href="#customer_details_invoices_2"
             >
               2020
             </a>
@@ -42,11 +42,11 @@
 
           <li class="nav-item" role="presentation">
             <a
-              id="alita_referrals_2018_tab"
+              id="referrals_2018_tab"
               class="nav-link text-active-primary ms-3"
               data-bs-toggle="tab"
               role="tab"
-              href="#alita_customer_details_invoices_3"
+              href="#customer_details_invoices_3"
             >
               2019
             </a>
@@ -54,11 +54,11 @@
 
           <li class="nav-item" role="presentation">
             <a
-              id="alita_referrals_2017_tab"
+              id="referrals_2017_tab"
               class="nav-link text-active-primary ms-3"
               data-bs-toggle="tab"
               role="tab"
-              href="#alita_customer_details_invoices_4"
+              href="#customer_details_invoices_4"
             >
               2018
             </a>
@@ -73,9 +73,9 @@
     <!--begin::Card body-->
     <div class="card-body pt-0">
       <!--begin::Tab Content-->
-      <div id="alita_referred_users_tab_content" class="tab-content">
+      <div id="referred_users_tab_content" class="tab-content">
         <div
-          id="alita_customer_details_invoices_1"
+          id="customer_details_invoices_1"
           class="py-0 tab-pane fade active show"
           role="tabpanel"
         >
@@ -109,7 +109,7 @@
           </Datatable>
         </div>
         <div
-          id="alita_customer_details_invoices_2"
+          id="customer_details_invoices_2"
           class="py-0 tab-pane fade"
           role="tabpanel"
         >
@@ -143,7 +143,7 @@
           </Datatable>
         </div>
         <div
-          id="alita_customer_details_invoices_3"
+          id="customer_details_invoices_3"
           class="py-0 tab-pane fade"
           role="tabpanel"
         >
@@ -177,7 +177,7 @@
           </Datatable>
         </div>
         <div
-          id="alita_customer_details_invoices_4"
+          id="customer_details_invoices_4"
           class="py-0 tab-pane fade"
           role="tabpanel"
         >
@@ -223,7 +223,7 @@ import { defineComponent, ref } from "vue";
 import Datatable from "@/components/datatable/DataTable.vue";
 
 export default defineComponent({
-  name: "alita-invoices",
+  name: "invoices",
   props: {
     cardClasses: String,
   },

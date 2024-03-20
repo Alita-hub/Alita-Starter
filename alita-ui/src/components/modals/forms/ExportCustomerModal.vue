@@ -1,7 +1,7 @@
 <template>
   <div
     class="modal fade"
-    id="alita_customers_export_modal"
+    id="customers_export_modal"
     tabindex="-1"
     aria-hidden="true"
   >
@@ -17,11 +17,11 @@
 
           <!--begin::Close-->
           <div
-            id="alita_customers_export_close"
+            id="customers_export_close"
             data-bs-dismiss="modal"
             class="btn btn-icon btn-sm btn-active-icon-primary"
           >
-            <AlitaIcon icon-name="cross" icon-class="fs-1" />
+            <Icon icon-name="cross" icon-class="fs-1" />
           </div>
           <!--end::Close-->
         </div>
@@ -110,7 +110,7 @@
             <div class="text-center">
               <button
                 type="reset"
-                id="alita_customers_export_cancel"
+                id="customers_export_cancel"
                 class="btn btn-light me-3"
               >
                 Discard
@@ -118,16 +118,13 @@
 
               <!--begin::Button-->
               <button
-                :data-alita-indicator="loading ? 'on' : null"
+                :data-indicator="loading ? 'on' : null"
                 type="submit"
                 class="btn btn-lg btn-primary"
               >
                 <span v-if="!loading" class="indicator-label">
                   Submit
-                  <AlitaIcon
-                    icon-name="arrow-right"
-                    icon-class="fs-3 ms-2 me-0"
-                  />
+                  <Icon icon-name="arrow-right" icon-class="fs-3 ms-2 me-0" />
                 </span>
                 <span v-if="loading" class="indicator-progress">
                   Please wait...

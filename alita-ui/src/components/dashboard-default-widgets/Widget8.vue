@@ -78,7 +78,7 @@
                   <!--begin::Symbol-->
                   <div class="symbol symbol-30px symbol-circle me-3">
                     <span class="symbol-label bg-success">
-                      <AlitaIcon
+                      <Icon
                         icon-name="abstract-41"
                         icon-class="fs-5 text-white"
                       />
@@ -179,10 +179,7 @@
                 class="d-flex align-items-center text-primary opacity-75-hover fs-6 fw-semibold"
               >
                 View Project
-                <AlitaIcon
-                  icon-name="exit-right-corner"
-                  icon-class="fs-4 ms-1"
-                />
+                <Icon icon-name="exit-right-corner" icon-class="fs-4 ms-1" />
               </a>
               <!--end::Actions-->
             </div>

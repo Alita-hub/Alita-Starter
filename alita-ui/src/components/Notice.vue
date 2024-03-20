@@ -12,7 +12,7 @@
      ${padding}`"
   >
     <!--begin::Icon-->
-    <AlitaIcon
+    <Icon
       v-if="icon"
       :icon-name="icon"
       :icon-class="`fs-2tx text-${color} me-4 ms-15 ms-lg-15`"
@@ -50,7 +50,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "alita-notify",
+  name: "notify",
   props: {
     classes: { type: String },
     icon: { type: String },

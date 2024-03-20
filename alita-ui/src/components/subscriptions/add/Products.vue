@@ -15,7 +15,7 @@
           type="button"
           class="btn btn-light-primary"
           data-bs-toggle="modal"
-          data-bs-target="#alita_modal_add_product"
+          data-bs-target="#modal_add_product"
         >
           Add Product
         </button>
@@ -31,7 +31,7 @@
         <!--begin::Table-->
         <table
           class="table align-middle table-row-dashed fs-6 fw-semibold gy-4"
-          id="alita_subscription_products_table"
+          id="subscription_products_table"
         >
           <!--begin::Table head-->
           <thead>
@@ -57,10 +57,10 @@
                   class="btn btn-icon btn-flex btn-active-light-primary w-30px h-30px me-3"
                   data-bs-toggle="tooltip"
                   title=""
-                  data-alita-action="product_remove"
+                  data-action="product_remove"
                   data-bs-original-title="Delete"
                 >
-                  <AlitaIcon icon-name="trash" icon-class="fs-3" />
+                  <Icon icon-name="trash" icon-class="fs-3" />
                 </a>
                 <!--end::Delete-->
               </td>
@@ -76,10 +76,10 @@
                   class="btn btn-icon btn-flex btn-active-light-primary w-30px h-30px me-3"
                   data-bs-toggle="tooltip"
                   title=""
-                  data-alita-action="product_remove"
+                  data-action="product_remove"
                   data-bs-original-title="Delete"
                 >
-                  <AlitaIcon icon-name="trash" icon-class="fs-3" />
+                  <Icon icon-name="trash" icon-class="fs-3" />
                 </a>
                 <!--end::Delete-->
               </td>
@@ -95,10 +95,10 @@
                   class="btn btn-icon btn-flex btn-active-light-primary w-30px h-30px me-3"
                   data-bs-toggle="tooltip"
                   title=""
-                  data-alita-action="product_remove"
+                  data-action="product_remove"
                   data-bs-original-title="Delete"
                 >
-                  <AlitaIcon icon-name="trash" icon-class="fs-3" />
+                  <Icon icon-name="trash" icon-class="fs-3" />
                 </a>
                 <!--end::Delete-->
               </td>
@@ -120,7 +120,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "alita-products",
+  name: "products",
   components: {},
   setup() {
     return {

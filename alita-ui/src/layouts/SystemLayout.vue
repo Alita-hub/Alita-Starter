@@ -1,6 +1,6 @@
 <template>
   <!--begin::System Layout-->
-  <div class="d-flex flex-column flex-root" id="alita_app_root">
+  <div class="d-flex flex-column flex-root" id="app_root">
     <router-view></router-view>
   </div>
   <!--end::System Layout-->

@@ -3,41 +3,39 @@
 //
 
 @mixin app-layout-minimize($class) {
-  // Desktop mode
-  @include media-breakpoint-up(lg) {
-    [data-alita-#{$class}-minimize="on"]:not(
-        [data-alita-#{$class}-hoverable="true"]
-      ) {
-      .#{$class} {
-        @content;
-      }
-    }
+	// Desktop mode
+	@include media-breakpoint-up(lg) {
+		[data-#{$class}-minimize="on"]:not([data-#{$class}-hoverable="true"]) {
+			.#{$class} {           
+				@content;
+			}
+		}
 
-    [data-alita-#{$class}-minimize="on"][data-alita-#{$class}-hoverable="true"] {
-      .#{$class} {
-        &:not(:hover) {
-          @content;
-        }
-      }
-    }
-  }
+		[data-#{$class}-minimize="on"][data-#{$class}-hoverable="true"] {
+			.#{$class} {           
+				&:not(:hover) {
+					@content;
+				}
+			}
+		}
+	}
 }
 
 @mixin app-layout-minimize-mobile($class) {
-  // Tablet & mobile modes
-  @include media-breakpoint-down(lg) {
-    [data-alita-#{$class}-minimize-mobile="on"]:not[data-alita-#{$class}-hoverable-mobile="true"] {
-      .#{$class} {
-        @content;
-      }
-    }
+	// Tablet & mobile modes
+	@include media-breakpoint-down(lg) {
+		[data-#{$class}-minimize-mobile="on"]:not[data-#{$class}-hoverable-mobile="true"] {
+			.#{$class} {           
+				@content;
+			}
+		}
 
-    [data-alita-#{$class}-minimize-mobile="on"][data-alita-#{$class}-hoverable-mobile="true"] {
-      .#{$class} {
-        &:not(:hover) {
-          @content;
-        }
-      }
-    }
-  }
+		[data-#{$class}-minimize-mobile="on"][data-#{$class}-hoverable-mobile="true"] {
+			.#{$class} {           
+				&:not(:hover) {
+					@content;
+				}
+			}
+		}
+	}
 }

@@ -2,7 +2,7 @@
   <!--begin::Modal - Invite Friends-->
   <div
     class="modal fade"
-    id="alita_modal_invite_friends"
+    id="modal_invite_friends"
     tabindex="-1"
     aria-hidden="true"
   >
@@ -17,7 +17,7 @@
             class="btn btn-sm btn-icon btn-active-color-primary"
             data-bs-dismiss="modal"
           >
-            <AlitaIcon icon-name="cross" icon-class="fs-1" />
+            <Icon icon-name="cross" icon-class="fs-1" />
           </div>
           <!--end::Close-->
         </div>

@@ -6,7 +6,7 @@
       class="form w-100 fv-plugins-bootstrap5 fv-plugins-framework"
       novalidate
       @submit="onSubmitRegister"
-      id="alita_login_signup_form"
+      id="login_signup_form"
       :validation-schema="registration"
     >
       <!--begin::Heading-->
@@ -107,7 +107,7 @@
       <!--end::Input group-->
 
       <!--begin::Input group-->
-      <div class="mb-10 fv-row" data-alita-password-meter="true">
+      <div class="mb-10 fv-row" data-password-meter="true">
         <!--begin::Wrapper-->
         <div class="mb-1">
           <!--begin::Label-->
@@ -135,7 +135,7 @@
           <!--begin::Meter-->
           <div
             class="d-flex align-items-center mb-3"
-            data-alita-password-meter-control="highlight"
+            data-password-meter-control="highlight"
           >
             <div
               class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"
@@ -201,7 +201,7 @@
       <!--begin::Actions-->
       <div class="text-center">
         <button
-          id="alita_sign_up_submit"
+          id="sign_up_submit"
           ref="submitButton"
           type="submit"
           class="btn btn-lg btn-primary"
@@ -272,7 +272,7 @@ export default defineComponent({
       submitButton.value!.disabled = true;
 
       // Activate indicator
-      submitButton.value?.setAttribute("data-alita-indicator", "on");
+      submitButton.value?.setAttribute("data-indicator", "on");
 
       // Send login request
       await store.register(values);
@@ -306,7 +306,7 @@ export default defineComponent({
         });
       }
 
-      submitButton.value?.removeAttribute("data-alita-indicator");
+      submitButton.value?.removeAttribute("data-indicator");
       // eslint-disable-next-line
       submitButton.value!.disabled = false;
     };

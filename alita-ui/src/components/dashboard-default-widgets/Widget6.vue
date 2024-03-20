@@ -15,13 +15,13 @@
 
       <!--begin::Toolbar-->
       <div class="card-toolbar">
-        <ul class="nav" id="alita_chart_widget_8_tabs">
+        <ul class="nav" id="chart_widget_8_tabs">
           <li class="nav-item">
             <a
               class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light fw-bold px-4 me-1"
               data-bs-toggle="tab"
-              id="alita_chart_widget_8_week_toggle"
-              href="#alita_chart_widget_8_week_tab"
+              id="chart_widget_8_week_toggle"
+              href="#chart_widget_8_week_tab"
               >Month</a
             >
           </li>
@@ -30,8 +30,8 @@
             <a
               class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light fw-bold px-4 me-1 active"
               data-bs-toggle="tab"
-              id="alita_chart_widget_8_month_toggle"
-              href="#alita_chart_widget_8_month_tab"
+              id="chart_widget_8_month_toggle"
+              href="#chart_widget_8_month_tab"
               >Week</a
             >
           </li>
@@ -46,11 +46,7 @@
       <!--begin::Tab content-->
       <div class="tab-content">
         <!--begin::Tab pane-->
-        <div
-          class="tab-pane fade"
-          id="alita_chart_widget_8_week_tab"
-          role="tabpanel"
-        >
+        <div class="tab-pane fade" id="chart_widget_8_week_tab" role="tabpanel">
           <!--begin::Statistics-->
           <div class="mb-5">
             <!--begin::Statistics-->
@@ -62,7 +58,7 @@
               >
 
               <span class="badge badge-light-success fs-base">
-                <AlitaIcon
+                <Icon
                   icon-name="arrow-up"
                   icon-class="fs-5 text-success ms-n1"
                 />
@@ -194,7 +190,7 @@
         <!--begin::Tab pane-->
         <div
           class="tab-pane fade active show"
-          id="alita_chart_widget_8_month_tab"
+          id="chart_widget_8_month_tab"
           role="tabpanel"
         >
           <!--begin::Statistics-->
@@ -208,7 +204,7 @@
               >
 
               <span class="badge badge-light-success fs-base">
-                <AlitaIcon
+                <Icon
                   icon-name="arrow-up"
                   icon-class="fs-5 text-success ms-n1"
                 />

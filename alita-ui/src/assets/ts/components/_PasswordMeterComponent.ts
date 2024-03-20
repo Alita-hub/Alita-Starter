@@ -30,10 +30,10 @@ const defaultPasswordMeterOptions = {
 
 const defaultPasswordMeterQueires: IPasswordMeterQueries = {
   componentName: "password-meter",
-  instanseQuery: "[data-alita-password-meter]",
+  instanseQuery: "[data-password-meter]",
   inputQuery: "input[type]",
-  visibilityQuery: '[data-alita-password-meter-control="visibility"]',
-  highlightQuery: '[data-alita-password-meter-control="highlight"]',
+  visibilityQuery: '[data-password-meter-control="visibility"]',
+  highlightQuery: '[data-password-meter-control="highlight"]',
 };
 
 class PasswordMeterComponent {

@@ -2,7 +2,7 @@
   <!--begin::Menu 3-->
   <div
     class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px py-3"
-    data-alita-menu="true"
+    data-menu="true"
   >
     <!--begin::Heading-->
     <div class="menu-item px-3">
@@ -18,7 +18,7 @@
         href="#"
         class="menu-link px-3"
         data-bs-toggle="modal"
-        data-bs-target="#alita_modal_users_search"
+        data-bs-target="#modal_users_search"
       >
         Add Contact
       </a>
@@ -31,7 +31,7 @@
         href="#"
         class="menu-link flex-stack px-3"
         data-bs-toggle="modal"
-        data-bs-target="#alita_modal_invite_friends"
+        data-bs-target="#modal_invite_friends"
       >
         Invite Contacts
 
@@ -47,9 +47,9 @@
     <!--begin::Menu item-->
     <div
       class="menu-item px-3"
-      data-alita-menu-trigger="hover"
-      data-alita-menu-placement="right-start"
-      data-alita-menu-flip="left, center, top"
+      data-menu-trigger="hover"
+      data-menu-placement="right-start"
+      data-menu-flip="left, center, top"
     >
       <a href="#" class="menu-link px-3">
         <span class="menu-title">Groups</span>

@@ -20,14 +20,11 @@
         <!--begin::Menu-->
         <button
           class="btn btn-icon btn-color-gray-500 btn-active-color-primary justify-content-end"
-          data-alita-menu-trigger="click"
-          data-alita-menu-placement="bottom-end"
-          data-alita-menu-overflow="true"
+          data-menu-trigger="click"
+          data-menu-placement="bottom-end"
+          data-menu-overflow="true"
         >
-          <AlitaIcon
-            icon-name="dots-square"
-            icon-class="fs-1 text-gray-300 me-n1"
-          />
+          <Icon icon-name="dots-square" icon-class="fs-1 text-gray-300 me-n1" />
         </button>
 
         <Dropdown2 />
@@ -48,13 +45,13 @@
             <a
               class="nav-link btn btn-outline btn-flex btn-color-muted btn-active-color-primary flex-column overflow-hidden w-80px h-85px pt-5 pb-2"
               :class="[i === 0 && 'active']"
-              :id="`alita_stats_widget_16_tab_link_${i}`"
+              :id="`stats_widget_16_tab_link_${i}`"
               data-bs-toggle="pill"
-              :href="`#alita_stats_widget_16_tab_${i}`"
+              :href="`#stats_widget_16_tab_${i}`"
             >
               <!--begin::Icon-->
               <div class="nav-icon mb-3">
-                <AlitaIcon :icon-name="item.icon" icon-class="fs-1 p-0" />
+                <Icon :icon-name="item.icon" icon-class="fs-1 p-0" />
               </div>
               <!--end::Icon-->
 
@@ -84,7 +81,7 @@
           <div
             class="tab-pane fade"
             :class="[i === 0 && 'active show']"
-            :id="`alita_stats_widget_16_tab_${i}`"
+            :id="`stats_widget_16_tab_${i}`"
           >
             <!--begin::Table container-->
             <div class="table-responsive">
@@ -137,7 +134,7 @@
                           v-if="row.icon"
                           class="badge badge-light-success fs-base"
                         >
-                          <AlitaIcon
+                          <Icon
                             icon-name="arrow-up"
                             icon-class="fs-5 text-success ms-n1"
                           />
@@ -146,7 +143,7 @@
                         <!--end::Label-->
                         <!--begin::Label-->
                         <span v-else class="badge badge-light-danger fs-base">
-                          <AlitaIcon
+                          <Icon
                             icon-name="arrow-down"
                             icon-class="fs-5 text-danger ms-n1"
                           />
@@ -160,7 +157,7 @@
                           href="#"
                           class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px"
                         >
-                          <AlitaIcon
+                          <Icon
                             icon-name="black-right"
                             icon-class="fs-5 text-gray-700"
                           />

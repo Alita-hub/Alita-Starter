@@ -24,7 +24,7 @@
       <!--begin::Text-->
       <div
         class="p-5 rounded bg-light-info text-gray-900 fw-semobold mw-lg-400px text-start"
-        data-alita-element="message-text"
+        data-element="message-text"
       >
         {{ text }}
       </div>

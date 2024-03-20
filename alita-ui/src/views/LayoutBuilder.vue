@@ -16,7 +16,7 @@
             d="M10.2,21.23,4.91,18.17a3.58,3.58,0,0,1-1.8-3.11V8.94a3.58,3.58,0,0,1,1.8-3.11L10.2,2.77a3.62,3.62,0,0,1,3.6,0l5.29,3.06a3.58,3.58,0,0,1,1.8,3.11v6.12a3.58,3.58,0,0,1-1.8,3.11L13.8,21.23A3.62,3.62,0,0,1,10.2,21.23Z"
           ></path>
         </svg>
-        <AlitaIcon
+        <Icon
           icon-name="wrench"
           icon-class="fs-2x fs-lg-3x text-primary position-absolute"
         />
@@ -43,16 +43,16 @@
       <ul
         class="nav nav-stretch nav-line-tabs fw-semibold border-0"
         role="tablist"
-        id="alita_layout_builder_tabs"
-        ref="alita_layout_builder_tabs"
+        id="layout_builder_tabs"
+        ref="layout_builder_tabs"
       >
         <li class="nav-item">
           <a
             class="nav-link cursor-pointer"
-            :class="{ active: tabIndex === 0 }"
+            :class="{ active: tabIndex === 'main' }"
             data-bs-toggle="tab"
             @click="setActiveTab($event)"
-            data-tab-index="0"
+            data-tab-index="main"
             role="tab"
           >
             Main
@@ -61,49 +61,37 @@
         <li class="nav-item">
           <a
             class="nav-link cursor-pointer"
-            :class="{ active: tabIndex === 1 }"
+            :class="{ active: tabIndex === 'layout' }"
             data-bs-toggle="tab"
             @click="setActiveTab($event)"
-            data-tab-index="1"
+            data-tab-index="layout"
+            role="tab"
+          >
+            Layout
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link cursor-pointer"
+            :class="{ active: tabIndex === 'sidebar' }"
+            data-bs-toggle="tab"
+            @click="setActiveTab($event)"
+            data-tab-index="sidebar"
+            role="tab"
+          >
+            Sidebar
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link cursor-pointer"
+            :class="{ active: tabIndex === 'header' }"
+            data-bs-toggle="tab"
+            @click="setActiveTab($event)"
+            data-tab-index="header"
             role="tab"
           >
             Header
-          </a>
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link cursor-pointer"
-            :class="{ active: tabIndex === 3 }"
-            data-bs-toggle="tab"
-            @click="setActiveTab($event)"
-            data-tab-index="3"
-            role="tab"
-          >
-            Aside
-          </a>
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link cursor-pointer"
-            :class="{ active: tabIndex === 4 }"
-            data-bs-toggle="tab"
-            @click="setActiveTab($event)"
-            data-tab-index="4"
-            role="tab"
-          >
-            Content
-          </a>
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link cursor-pointer"
-            :class="{ active: tabIndex === 5 }"
-            data-bs-toggle="tab"
-            @click="setActiveTab($event)"
-            data-tab-index="5"
-            role="tab"
-          >
-            Footer
           </a>
         </li>
       </ul>
@@ -111,15 +99,206 @@
     <!--end::Header-->
 
     <!--begin::Form-->
-    <form class="form" id="alita_layout_builder_form" @submit="submit($event)">
+    <form class="form" id="layout_builder_form" @submit="submit($event)">
       <!--begin::Body-->
       <div class="card-body">
-        <div class="tab-content pt-3" id="alita_tabs">
+        <div class="tab-content pt-3" id="tabs">
           <div
             class="tab-pane"
-            :class="{ active: tabIndex === 0 }"
-            id="alita_builder_main"
+            :class="{ active: tabIndex === 'main' }"
+            id="builder_main"
           >
+            <!--begin::Row-->
+            <div class="row">
+              <!--begin::Col-->
+              <div class="col-lg-6 pe-lg-15">
+                <!--begin::Form group-->
+                <div class="form-group">
+                  <!--begin::Heading-->
+                  <div class="mb-6">
+                    <h4 class="fw-bold text-gray-900">Theme Mode</h4>
+                    <div class="fw-semibold text-muted fs-7 d-block lh-1">
+                      Enjoy Dark &amp; Light modes.
+                    </div>
+                  </div>
+                  <!--end::Heading-->
+                  <!--begin::Options-->
+                  <div
+                    class="row"
+                    data-buttons="true"
+                    data-buttons-target=".form-check-image,.form-check-input"
+                    data-initialized="1"
+                  >
+                    <!--begin::Col-->
+                    <div class="col-6">
+                      <!--begin::Option-->
+                      <label
+                        class="form-check-image form-check-success"
+                        :class="[themeMode === 'light' && 'active']"
+                      >
+                        <!--begin::Image-->
+                        <div class="form-check-wrapper">
+                          <img
+                            :src="
+                              getAssetPath('media/misc/layout/demo1-light.png')
+                            "
+                            class="mw-100"
+                            alt=""
+                          />
+                        </div>
+                        <!--end::Image-->
+                        <!--begin::Check-->
+                        <div
+                          class="form-check form-check-custom form-check-solid form-check-sm form-check-success"
+                        >
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            :checked="themeMode === 'light'"
+                            value="light"
+                            name="theme_mode"
+                            @change="onThemeModeChange"
+                          />
+                          <!--begin::Label-->
+                          <div class="form-check-label text-gray-700">
+                            Light
+                          </div>
+                          <!--end::Label-->
+                        </div>
+                        <!--end::Check-->
+                      </label>
+                      <!--end::Option-->
+                    </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-6">
+                      <!--begin::Option-->
+                      <label
+                        class="form-check-image form-check-success"
+                        :class="[themeMode === 'dark' && 'active']"
+                      >
+                        <!--begin::Image-->
+                        <div class="form-check-wrapper">
+                          <img
+                            :src="
+                              getAssetPath('media/misc/layout/demo1-dark.png')
+                            "
+                            class="mw-100"
+                            alt=""
+                          />
+                        </div>
+                        <!--end::Image-->
+                        <!--begin::Check-->
+                        <div
+                          class="form-check form-check-custom form-check-solid form-check-sm form-check-success"
+                        >
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            :checked="themeMode === 'dark'"
+                            value="dark"
+                            name="theme_mode"
+                            @change="onThemeModeChange"
+                          />
+                          <!--begin::Label-->
+                          <div class="form-check-label text-gray-700">Dark</div>
+                          <!--end::Label-->
+                        </div>
+                        <!--end::Check-->
+                      </label>
+                      <!--end::Option-->
+                    </div>
+                    <!--end::Col-->
+                  </div>
+                  <!--end::Options-->
+                </div>
+                <!--end::Form group-->
+              </div>
+              <!--end::Col-->
+            </div>
+            <!--end::Row-->
+            <!--begin::Separator-->
+            <div class="separator separator-dashed my-6"></div>
+            <!--end::Separator-->
+            <!--begin::Form group-->
+            <div class="form-group">
+              <!--begin::Heading-->
+              <div class="d-flex flex-column mb-4">
+                <h4 class="fw-bold text-gray-900">Width Mode</h4>
+                <div class="fs-7 fw-semibold text-muted">
+                  Page width options
+                </div>
+              </div>
+              <!--end::Heading-->
+              <!--begin::Options-->
+              <div class="d-flex">
+                <!--begin::Check-->
+                <div
+                  class="form-check form-check-custom form-check-success form-check-solid form-check-sm me-7"
+                >
+                  <input
+                    v-model="config.general.pageWidth"
+                    class="form-check-input"
+                    type="radio"
+                    value="default"
+                    id="builder_page_width_default"
+                  />
+                  <!--begin::Label-->
+                  <label
+                    class="form-check-label text-gray-700 fw-bold text-nowrap"
+                    for="builder_page_width_default"
+                    >Default</label
+                  >
+                  <!--end::Label-->
+                </div>
+                <!--end::Check-->
+                <!--begin::Check-->
+                <div
+                  class="form-check form-check-custom form-check-success form-check-solid form-check-sm me-7"
+                >
+                  <input
+                    v-model="config.general.pageWidth"
+                    class="form-check-input"
+                    type="radio"
+                    value="fluid"
+                    id="builder_page_width_fluid"
+                  />
+                  <!--begin::Label-->
+                  <label
+                    class="form-check-label text-gray-700 fw-bold text-nowrap"
+                    for="builder_page_width_fluid"
+                    >Fluid</label
+                  >
+                  <!--end::Label-->
+                </div>
+                <!--end::Check-->
+                <!--begin::Check-->
+                <div
+                  class="form-check form-check-custom form-check-success form-check-solid form-check-sm me-7"
+                >
+                  <input
+                    v-model="config.general.pageWidth"
+                    class="form-check-input"
+                    type="radio"
+                    value="fixed"
+                    id="builder_page_width_fixed"
+                  />
+                  <!--begin::Label-->
+                  <label
+                    class="form-check-label text-gray-700 fw-bold text-nowrap"
+                    for="builder_page_width_fixed"
+                    >Fixed</label
+                  >
+                  <!--end::Label-->
+                </div>
+                <!--end::Check-->
+              </div>
+              <!--end::Options-->
+            </div>
+            <!--end::Form group-->
+            <!--begin::Separator-->
+            <div class="separator separator-dashed my-6"></div>
+            <!--end::Separator-->
             <!--begin::Form group-->
             <div class="form-group d-flex flex-stack">
               <!--begin::Heading-->
@@ -131,7 +310,7 @@
                   >{{ " " }}
                   <a
                     class="fw-semibold"
-                    href="https://preview.keenthemes.com/html/metronic/docs/icons/keenicons"
+                    href="http://alita.com/html/metronic/docs/icons/keenicons"
                     target="_blank"
                     >Learn more</a
                   >
@@ -141,9 +320,9 @@
               <!--begin::Options-->
               <div
                 class="d-flex flex-stack gap-3 mw-lg-600px"
-                data-alita-buttons="true"
-                data-alita-buttons-target=".form-check-image,.form-check-input"
-                data-alita-initialized="1"
+                data-buttons="true"
+                data-buttons-target=".form-check-image,.form-check-input"
+                data-initialized="1"
               >
                 <!--begin::Option-->
                 <label
@@ -154,7 +333,7 @@
                   <div
                     class="form-check-wrapper d-flex flex-center border-gray-200 border-2 mb-0 py-3 px-4"
                   >
-                    <AlitaIcon
+                    <Icon
                       icon-type="duotone"
                       icon-name="picture"
                       icon-class="fs-1 text-gray-500 parent-active-gray-700 parent-hover-gray-700"
@@ -270,248 +449,462 @@
             <!--begin::Separator-->
             <div class="separator separator-dashed my-6"></div>
             <!--end::Separator-->
-            <div class="row mb-10">
-              <label class="col-lg-3 col-form-label text-lg-end"
-                >Illustration Set:</label
-              >
-              <div class="col-lg-8 pe-10">
-                <div class="row g-9 mb-3">
-                  <div class="col-6">
-                    <label
-                      class="btn btn-outline btn-outline-dashed btn-outline-default d-flex flex-column text-start p-6"
-                      for="sketchy-1"
-                    >
-                      <span class="d-flex mb-2">
-                        <span
-                          class="form-check form-check-custom form-check-solid form-check-sm me-5"
-                        >
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            v-model="config.illustrations.set"
-                            value="sketchy-1"
-                            name="illustrations-set"
-                            id="sketchy-1"
-                          />
-                        </span>
-                        <span class="fs-4 fw-bold">Sketchy</span>
-                      </span>
-                      <span
-                        :style="{
-                          backgroundImage: `url(${getAssetPath(
-                            '/media/illustrations/sketchy-1/1.png'
-                          )})`,
-                        }"
-                        class="d-block h-200px w-100 bgi-no-repeat bgi-size-contain bgi-position-center"
-                      ></span>
-                    </label>
-                  </div>
-                  <div class="col-6">
-                    <label
-                      class="btn btn-outline btn-outline-dashed btn-outline-default d-flex flex-column text-start p-6"
-                      for="sigma-1"
-                    >
-                      <span class="d-flex mb-2">
-                        <span
-                          class="form-check form-check-custom form-check-solid form-check-sm me-5"
-                        >
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            v-model="config.illustrations.set"
-                            value="sigma-1"
-                            name="illustrations-set"
-                            id="sigma-1"
-                          />
-                        </span>
-                        <span class="fs-4 fw-bold">Sigma</span>
-                      </span>
-                      <span
-                        :style="{
-                          backgroundImage: `url(${getAssetPath(
-                            '/media/illustrations/sigma-1/1.png'
-                          )})`,
-                        }"
-                        class="d-block h-200px w-100 bgi-no-repeat bgi-size-contain bgi-position-center"
-                      ></span>
-                    </label>
-                  </div>
-                  <div class="col-6">
-                    <label
-                      class="btn btn-outline btn-outline-dashed btn-outline-default d-flex flex-column text-start p-6"
-                      for="dozzy-1"
-                    >
-                      <span class="d-flex mb-2">
-                        <span
-                          class="form-check form-check-custom form-check-solid form-check-sm me-5"
-                        >
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            v-model="config.illustrations.set"
-                            value="dozzy-1"
-                            name="illustrations-set"
-                            id="dozzy-1"
-                          />
-                        </span>
-                        <span class="fs-4 fw-bold">Dozzy</span>
-                      </span>
-                      <span
-                        :style="{
-                          backgroundImage: `url(${getAssetPath(
-                            '/media/illustrations/dozzy-1/1.png'
-                          )})`,
-                        }"
-                        class="d-block h-200px w-100 bgi-no-repeat bgi-size-contain bgi-position-center"
-                      ></span>
-                    </label>
-                  </div>
-                  <div class="col-6">
-                    <label
-                      class="btn btn-outline btn-outline-dashed btn-outline-default d-flex flex-column text-start p-6"
-                      for="unitedpalms-1"
-                    >
-                      <span class="d-flex mb-2">
-                        <span
-                          class="form-check form-check-custom form-check-solid form-check-sm me-5"
-                        >
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            v-model="config.illustrations.set"
-                            value="unitedpalms-1"
-                            name="illustrations-set"
-                            id="unitedpalms-1"
-                          />
-                        </span>
-                        <span class="fs-4 fw-bold">United Palms</span>
-                      </span>
-                      <span
-                        :style="{
-                          backgroundImage: `url(${getAssetPath(
-                            '/media/illustrations/unitedpalms-1/1.png'
-                          )})`,
-                        }"
-                        class="d-block h-200px w-100 bgi-no-repeat bgi-size-contain bgi-position-center"
-                      ></span>
-                    </label>
-                  </div>
-                </div>
-                <div class="form-text text-muted">
-                  Select one of our in-house designed illustration set and apply
-                  globally for all apps and pages
+            <!--begin::Form group-->
+            <div class="form-group d-flex flex-stack">
+              <!--begin::Heading-->
+              <div class="d-flex flex-column">
+                <h4 class="fw-bold text-gray-900">Menu Icon</h4>
+                <div class="fs-7 fw-semibold text-muted">
+                  Sidebar menu icon options
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div
-            class="tab-pane"
-            :class="{ active: tabIndex === 1 }"
-            id="alita_builder_header"
-          >
-            <div class="row mb-10">
-              <label class="col-lg-3 col-form-label text-lg-end">Width:</label>
-              <div class="col-lg-9 col-xl-4">
-                <select
-                  class="form-select form-select-solid"
-                  v-model="config.header.width"
+              <!--end::Heading-->
+              <!--begin::Option-->
+              <div class="d-flex justify-content-end">
+                <!--begin::Check-->
+                <div
+                  class="form-check form-check-custom form-check-success form-check-solid me-7"
+                  data-bs-toggle="tooltip"
+                  data-initialized="1"
                 >
-                  <option value="fluid">Fluid</option>
-                  <option value="fixed">Fixed</option>
-                </select>
-                <div class="form-text text-muted">
-                  Select header width type.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="tab-pane"
-            :class="{ active: tabIndex === 3 }"
-            id="alita_builder_aside"
-          >
-            <div class="row mb-10">
-              <label class="col-lg-3 col-form-label text-lg-end"
-                >Menu Icon:</label
-              >
-              <div class="col-lg-9 col-xl-4">
-                <select
-                  class="form-select form-select-solid"
-                  v-model="config.aside.menuIcon"
-                >
-                  <option value="keenthemes">Keenthemes Font Icons</option>
-                  <option value="bootstrap">Bootstrap Font Icons</option>
-                </select>
-                <div class="form-text text-muted">Select menu icon type.</div>
-              </div>
-            </div>
-            <div class="row mb-10">
-              <label class="col-lg-3 col-form-label text-lg-end"
-                >Minimized:</label
-              >
-              <div class="col-lg-9 col-xl-4">
-                <span class="switch switch-icon">
-                  <input type="hidden" v-model="config.aside.minimized" />
-                  <div
-                    class="form-check form-check-custom form-check-solid form-switch mb-2"
+                  <input
+                    v-model="config.sidebar.default.menu.iconType"
+                    class="form-check-input w-20px h-20px"
+                    type="radio"
+                    value="bootstrap"
+                    id="builder_icon_svg"
+                  />
+                  <!--begin::Label-->
+                  <label
+                    class="form-check-label text-gray-700 fw-bold text-nowrap"
+                    for="builder_icon_svg"
+                    >Bootstrap</label
                   >
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      v-model="config.aside.minimized"
+                  <!--end::Label-->
+                </div>
+                <!--end::Check-->
+                <!--begin::Check-->
+                <div
+                  class="form-check form-check-custom form-check-success form-check-solid me-7"
+                  data-bs-toggle="tooltip"
+                  data-initialized="1"
+                >
+                  <input
+                    v-model="config.sidebar.default.menu.iconType"
+                    class="form-check-input w-20px h-20px"
+                    type="radio"
+                    value="keenthemes"
+                    id="builder_icon_font"
+                  />
+                  <!--begin::Label-->
+                  <label
+                    class="form-check-label text-gray-700 fw-bold text-nowrap"
+                    for="builder_icon_font"
+                    >Keenthemes</label
+                  >
+                  <!--end::Label-->
+                </div>
+                <!--end::Check-->
+              </div>
+              <!--end::Option-->
+            </div>
+            <!--end::Form group-->
+          </div>
+
+          <div
+            class="tab-pane"
+            :class="{ active: tabIndex === 'layout' }"
+            id="builder_layout"
+          >
+            <!--begin::Heading-->
+            <div class="mb-6">
+              <h4 class="fw-bold text-gray-900">Layouts</h4>
+              <span class="fw-semibold text-muted fs-7 lh-1"
+                >4 main layout options.</span
+              >
+            </div>
+            <!--end::Heading-->
+            <!--begin::Options-->
+            <div
+              class="row gy-5"
+              data-buttons="true"
+              data-buttons-target=".form-check-image:not(.disabled),.form-check-input:not([disabled])"
+              data-initialized="1"
+            >
+              <!--begin::Col-->
+              <div class="col-lg-3">
+                <!--begin::Option-->
+                <label
+                  :class="[layoutType === 'dark-sidebar' && 'active']"
+                  class="form-check-image form-check-success"
+                >
+                  <!--begin::Image-->
+                  <div class="form-check-wrapper">
+                    <img
+                      :src="getAssetPath('media/misc/layout/dark-sidebar.png')"
+                      class="mw-100"
+                      alt=""
                     />
                   </div>
-                </span>
-                <div class="form-text text-muted">
-                  Minimize secondary panel by default
-                </div>
+                  <!--end::Image-->
+                  <!--begin::Check-->
+                  <div
+                    class="form-check form-check-custom form-check-success form-check-sm form-check-solid"
+                  >
+                    <input
+                      v-model="layoutType"
+                      class="form-check-input"
+                      type="radio"
+                      value="dark-sidebar"
+                      name="layoutType"
+                    />
+                    <!--begin::Label-->
+                    <div class="form-check-label text-gray-800">
+                      Dark Sidebar
+                    </div>
+                    <!--end::Label-->
+                  </div>
+                  <!--end::Check-->
+                </label>
+                <!--end::Option-->
               </div>
+              <!--end::Col-->
+              <!--begin::Col-->
+              <div class="col-lg-3">
+                <!--begin::Option-->
+                <label
+                  :class="[layoutType === 'light-sidebar' && 'active']"
+                  class="form-check-image form-check-success"
+                >
+                  <!--begin::Image-->
+                  <div class="form-check-wrapper">
+                    <img
+                      :src="getAssetPath('media/misc/layout/light-sidebar.png')"
+                      class="mw-100"
+                      alt=""
+                    />
+                  </div>
+                  <!--end::Image-->
+                  <!--begin::Check-->
+                  <div
+                    class="form-check form-check-custom form-check-success form-check-sm form-check-solid"
+                  >
+                    <input
+                      v-model="layoutType"
+                      class="form-check-input"
+                      type="radio"
+                      value="light-sidebar"
+                      name="layoutType"
+                    />
+                    <!--begin::Label-->
+                    <div class="form-check-label text-gray-800">
+                      Light Sidebar
+                    </div>
+                    <!--end::Label-->
+                  </div>
+                  <!--end::Check-->
+                </label>
+                <!--end::Option-->
+              </div>
+              <!--end::Col-->
+              <!--begin::Col-->
+              <div class="col-lg-3">
+                <!--begin::Option-->
+                <label
+                  :class="[layoutType === 'dark-header' && 'active']"
+                  class="form-check-image form-check-success"
+                >
+                  <!--begin::Image-->
+                  <div class="form-check-wrapper">
+                    <img
+                      :src="getAssetPath('media/misc/layout/dark-header.png')"
+                      class="mw-100"
+                      alt=""
+                    />
+                  </div>
+                  <!--end::Image-->
+                  <!--begin::Check-->
+                  <div
+                    class="form-check form-check-custom form-check-success form-check-sm form-check-solid"
+                  >
+                    <input
+                      v-model="layoutType"
+                      class="form-check-input"
+                      type="radio"
+                      value="dark-header"
+                      name="layoutType"
+                    />
+                    <!--begin::Label-->
+                    <div class="form-check-label text-gray-800">
+                      Dark Header
+                    </div>
+                    <!--end::Label-->
+                  </div>
+                  <!--end::Check-->
+                </label>
+                <!--end::Option-->
+              </div>
+              <!--end::Col-->
+              <!--begin::Col-->
+              <div class="col-lg-3">
+                <!--begin::Option-->
+                <label
+                  :class="[layoutType === 'light-header' && 'active']"
+                  class="form-check-image form-check-success"
+                >
+                  <!--begin::Image-->
+                  <div class="form-check-wrapper">
+                    <img
+                      :src="getAssetPath('media/misc/layout/light-header.png')"
+                      class="mw-100"
+                      alt=""
+                    />
+                  </div>
+                  <!--end::Image-->
+                  <!--begin::Check-->
+                  <div
+                    class="form-check form-check-custom form-check-success form-check-sm form-check-solid"
+                  >
+                    <input
+                      v-model="layoutType"
+                      class="form-check-input"
+                      type="radio"
+                      value="light-header"
+                      name="layoutType"
+                    />
+                    <!--begin::Label-->
+                    <div class="form-check-label text-gray-800">
+                      Light Header
+                    </div>
+                    <!--end::Label-->
+                  </div>
+                  <!--end::Check-->
+                </label>
+                <!--end::Option-->
+              </div>
+              <!--end::Col-->
             </div>
+            <!--end::Options-->
           </div>
 
           <div
             class="tab-pane"
-            :class="{ active: tabIndex === 4 }"
-            id="alita_builder_content"
+            :class="{ active: tabIndex === 'sidebar' }"
+            id="builder_sidebar"
           >
-            <div class="row mb-10">
-              <label class="col-lg-3 col-form-label text-lg-end">Width:</label>
-              <div class="col-lg-9 col-xl-4">
-                <select
-                  class="form-select form-select-solid"
-                  v-model="config.content.width"
-                >
-                  <option value="fluid">Fluid</option>
-                  <option value="fixed">Fixed</option>
-                </select>
-                <div class="form-text text-muted">
-                  Select layout width type.
+            <!--begin::Form group-->
+            <div class="form-group d-flex flex-stack">
+              <!--begin::Heading-->
+              <div class="d-flex flex-column">
+                <h4 class="fw-bold text-gray-900">Minimize</h4>
+                <div class="fs-7 fw-semibold text-muted">
+                  Sidebar minimize mode
                 </div>
               </div>
+              <!--end::Heading-->
+              <!--begin::Option-->
+              <div class="d-flex justify-content-end">
+                <!--begin::Check-->
+                <div
+                  class="form-check form-check-custom form-check-solid form-check-success form-switch"
+                >
+                  <input
+                    v-model="config.sidebar.default.minimize.desktop.enabled"
+                    class="form-check-input w-45px h-30px"
+                    type="checkbox"
+                    value="true"
+                    id="builder_sidebar_minimize_desktop_enabled"
+                  />
+                  <!--begin::Label-->
+                  <label
+                    class="form-check-label text-gray-700 fw-bold"
+                    for="builder_sidebar_minimize_desktop_enabled"
+                    data-bs-toggle="tooltip"
+                    data-initialized="1"
+                    >Minimize Toggle</label
+                  >
+                  <!--end::Label-->
+                </div>
+                <!--end::Check-->
+                <!--begin::Check-->
+                <div
+                  class="form-check form-check-custom form-check-solid form-check-success form-switch ms-10"
+                >
+                  <input
+                    v-model="config.sidebar.default.minimize.desktop.hoverable"
+                    class="form-check-input w-45px h-30px"
+                    type="checkbox"
+                    value="true"
+                    id="builder_sidebar_minimize_desktop_hoverable"
+                  />
+                  <!--begin::Label-->
+                  <label
+                    class="form-check-label text-gray-700 fw-bold"
+                    for="builder_sidebar_minimize_desktop_hoverable"
+                    data-bs-toggle="tooltip"
+                    data-initialized="1"
+                    >Hoverable</label
+                  >
+                  <!--end::Label-->
+                </div>
+                <!--end::Check-->
+                <!--begin::Check-->
+                <div
+                  class="form-check form-check-custom form-check-solid form-check-success form-switch ms-10"
+                >
+                  <input
+                    v-model="config.sidebar.default.minimize.desktop.default"
+                    class="form-check-input w-45px h-30px"
+                    type="checkbox"
+                    value="true"
+                    id="builder_sidebar_minimize_desktop_default"
+                  />
+                  <!--begin::Label-->
+                  <label
+                    class="form-check-label text-gray-700 fw-bold"
+                    for="builder_sidebar_minimize_desktop_default"
+                    data-bs-toggle="tooltip"
+                    data-initialized="1"
+                    >Default Minimized</label
+                  >
+                  <!--end::Label-->
+                </div>
+                <!--end::Check-->
+              </div>
+              <!--end::Option-->
             </div>
+            <!--end::Form group-->
           </div>
 
           <div
             class="tab-pane"
-            :class="{ active: tabIndex === 5 }"
-            id="alita_builder_footer"
+            :class="{ active: tabIndex === 'header' }"
+            id="builder_header"
           >
-            <div class="row mb-10">
-              <label class="col-lg-3 col-form-label text-lg-end">Width:</label>
-              <div class="col-lg-9 col-xl-4">
-                <select
-                  class="form-select form-select-solid"
-                  v-model="config.footer.width"
-                >
-                  <option value="fluid">Fluid</option>
-                  <option value="fixed">Fixed</option>
-                </select>
-                <div class="form-text text-muted">
-                  Select layout width type.
+            <div
+              class="tab-pane active show"
+              id="builder_header"
+              role="tabpanel"
+            >
+              <!--begin::Form group-->
+              <div class="form-group d-flex flex-stack">
+                <!--begin::Heading-->
+                <div class="d-flex flex-column">
+                  <h4 class="fw-bold text-gray-900">Fixed</h4>
+                  <div class="fs-7 fw-semibold text-muted">
+                    Fixed toolbar mode
+                  </div>
                 </div>
+                <!--end::Heading-->
+                <!--begin::Option-->
+                <div class="d-flex justify-content-end">
+                  <!--begin::Check-->
+                  <div
+                    class="form-check form-check-custom form-check-solid form-check-success form-switch me-10"
+                  >
+                    <input
+                      v-model="config.header.default.fixed.desktop"
+                      class="form-check-input w-45px h-30px"
+                      type="checkbox"
+                      value="true"
+                      id="builder_header_fixed_desktop"
+                    />
+                    <!--begin::Label-->
+                    <label
+                      class="form-check-label text-gray-700 fw-bold"
+                      for="builder_header_fixed_desktop"
+                      >Desktop Mode</label
+                    >
+                    <!--end::Label-->
+                  </div>
+                  <!--end::Check-->
+                  <!--begin::Check-->
+                  <div
+                    class="form-check form-check-custom form-check-solid form-check-success form-switch"
+                  >
+                    <input
+                      v-model="config.header.default.fixed.mobile"
+                      class="form-check-input w-45px h-30px"
+                      type="checkbox"
+                      value="true"
+                      id="builder_header_fixed_mobile"
+                    />
+                    <!--begin::Label-->
+                    <label
+                      class="form-check-label text-gray-700 fw-bold"
+                      for="builder_header_fixed_mobile"
+                      >Mobile Mode</label
+                    >
+                    <!--end::Label-->
+                  </div>
+                  <!--end::Check-->
+                </div>
+                <!--end::Option-->
               </div>
+              <!--end::Form group-->
+              <!--begin::Separator-->
+              <div class="separator separator-dashed my-6"></div>
+              <!--end::Separator-->
+              <!--begin::Form group-->
+              <div class="form-group d-flex flex-stack">
+                <!--begin::Heading-->
+                <div class="d-flex flex-column">
+                  <h4 class="fw-bold text-gray-900">Page Title</h4>
+                  <div class="fs-7 fw-semibold text-muted">
+                    Page title layout options
+                  </div>
+                </div>
+                <!--end::Heading-->
+                <!--begin::Option-->
+                <div class="d-flex justify-content-end">
+                  <!--begin::Check-->
+                  <div
+                    class="form-check form-check-custom form-check-solid form-check-success form-check-sm me-10"
+                  >
+                    <input
+                      v-model="config.pageTitle.direction"
+                      class="form-check-input"
+                      type="radio"
+                      value="column"
+                      id="builder_page_title_direction_column"
+                    />
+                    <!--begin::Label-->
+                    <label
+                      class="form-check-label text-gray-700 fw-bold"
+                      for="builder_page_title_direction_column"
+                      data-bs-toggle="tooltip"
+                      data-initialized="1"
+                      >Column</label
+                    >
+                    <!--end::Label-->
+                  </div>
+                  <!--end::Check-->
+                  <!--begin::Check-->
+                  <div
+                    class="form-check form-check-custom form-check-solid form-check-success"
+                  >
+                    <input
+                      v-model="config.pageTitle.direction"
+                      class="form-check-input"
+                      type="radio"
+                      value="row"
+                      id="builder_page_title_direction_row"
+                    />
+                    <!--begin::Label-->
+                    <label
+                      class="form-check-label text-gray-700 fw-bold"
+                      for="builder_page_title_direction_row"
+                      data-bs-toggle="tooltip"
+                      data-initialized="1"
+                      >Row</label
+                    >
+                    <!--end::Label-->
+                  </div>
+                  <!--end::Check-->
+                </div>
+                <!--end::Option-->
+              </div>
+              <!--end::Form group-->
             </div>
           </div>
         </div>
@@ -521,22 +914,10 @@
       <!--begin::Footer-->
       <div class="card-footer py-6">
         <div class="row">
-          <div class="col-lg-3"></div>
           <div class="col-lg-9">
-            <input
-              type="hidden"
-              id="alita_layout_builder_tab"
-              name="layout-builder[tab]"
-            />
-            <input
-              type="hidden"
-              id="alita_layout_builder_action"
-              name="layout-builder[action]"
-            />
-
             <button
               type="submit"
-              id="alita_layout_builder_preview"
+              id="layout_builder_preview"
               class="btn btn-primary me-2"
             >
               <span class="indicator-label"> Preview </span>
@@ -551,7 +932,7 @@
             <button
               @click="reset($event)"
               type="button"
-              id="alita_layout_builder_reset"
+              id="layout_builder_reset"
               class="btn btn-active-light btn-color-muted fw-semibold"
             >
               Reset
@@ -569,12 +950,12 @@
     <!--begin::Card Body-->
     <div class="card-body p-10 p-lg-15">
       <!--begin::Heading-->
-      <h1 class="anchor fw-bold mb-5" id="overview">Generated config</h1>
+      <h1 class="anchor fw-bold mb-5" id="overview">Generated configuration</h1>
       <!--end::Heading-->
       <div class="py-5">
         This config is used as a <b>{{ themeName }}</b> layout config, you can
         update default values inside file
-        <code>metronic/vue/theme/src/core/config/DefaultLayoutConfig.ts</code>
+        <code>src/layouts/default-layout/config/DefaultLayoutConfig.ts</code>
       </div>
       <CodeHighlighter lang="json">{{ config }}</CodeHighlighter>
     </div>
@@ -584,10 +965,15 @@
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent, onMounted, ref } from "vue";
-import { config } from "@/layouts/config/helper";
+import {
+  config,
+  layout,
+  themeMode,
+} from "@/layouts/default-layout/config/helper";
 import CodeHighlighter from "@/components/highlighters/CodeHighlighter.vue";
 import { themeName } from "@/core/helpers/system";
-import { LS_CONFIG_NAME_KEY } from "@/stores/config";
+import { useThemeStore } from "@/stores/theme";
+import { LS_CONFIG_NAME_KEY, useConfigStore } from "@/stores/config";
 
 const LS_BUILDER_TAB_NAME =
   "layoutBuilderTabIndex_" + import.meta.env.VITE_APP_DEMO;
@@ -598,21 +984,22 @@ export default defineComponent({
     CodeHighlighter,
   },
   setup() {
-    const tabIndex = ref(0);
+    const storeTheme = useThemeStore();
+    const storeBody = useConfigStore();
+    const tabIndex = ref<string>("main");
+    const layoutType = ref(layout.value);
 
     onMounted(() => {
       // set the tab from previous
-      tabIndex.value = parseInt(
-        localStorage.getItem(LS_BUILDER_TAB_NAME) || "0"
-      );
+      tabIndex.value = localStorage.getItem(LS_BUILDER_TAB_NAME) || "main";
     });
 
     /**
      * Reset config
-     * @param event
+     * @param e
      */
-    const reset = (event: any) => {
-      event.preventDefault();
+    const reset = (e: Event) => {
+      e.preventDefault();
       // remove existing saved config
       localStorage.removeItem(LS_CONFIG_NAME_KEY);
       window.location.reload();
@@ -620,20 +1007,36 @@ export default defineComponent({
 
     /**
      * Set active tab when the tab get clicked
-     * @param event
+     * @param e
      */
-    const setActiveTab = (event: any) => {
-      tabIndex.value = parseInt(event.target.getAttribute("data-tab-index"));
+    const setActiveTab = (e: Event) => {
+      const target = e.target as HTMLInputElement;
+
+      tabIndex.value = target.getAttribute("data-tab-index") as string;
       // keep active tab
-      localStorage.setItem(LS_BUILDER_TAB_NAME, tabIndex.value.toString());
+      localStorage.setItem(LS_BUILDER_TAB_NAME, tabIndex.value);
+    };
+
+    const onThemeModeChange = (e: Event) => {
+      const target = e.target as HTMLInputElement;
+
+      storeBody.setLayoutConfigProperty("general.mode", target.value);
+
+      storeTheme.setThemeMode(target.value as "light" | "dark" | "system");
+
+      // save new config to localStorage
+      localStorage.setItem(LS_CONFIG_NAME_KEY, JSON.stringify(config.value));
     };
 
     /**
      * Submit form
      * @param event
      */
-    const submit = (event: any) => {
+    const submit = (event: Event) => {
       event.preventDefault();
+
+      storeBody.setLayoutConfigProperty("general.layout", layoutType);
+
       // save new config to localStorage
       localStorage.setItem(LS_CONFIG_NAME_KEY, JSON.stringify(config.value));
       window.location.reload();
@@ -645,10 +1048,13 @@ export default defineComponent({
       reset,
       setActiveTab,
       submit,
+      themeMode,
       themeName,
+      layout,
+      layoutType,
+      onThemeModeChange,
       getAssetPath,
     };
   },
 });
 </script>
-@/layouts/config/helper

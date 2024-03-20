@@ -25,7 +25,7 @@ import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "alita-widget-2",
+  name: "widget-2",
   props: {
     widgetClasses: String,
     title: String,

@@ -1,7 +1,7 @@
 <template>
   <div
     class="modal fade"
-    id="alita_modal_add_customer"
+    id="modal_add_customer"
     ref="addCustomerModalRef"
     tabindex="-1"
     aria-hidden="true"
@@ -11,18 +11,18 @@
       <!--begin::Modal content-->
       <div class="modal-content">
         <!--begin::Modal header-->
-        <div class="modal-header" id="alita_modal_add_customer_header">
+        <div class="modal-header" id="modal_add_customer_header">
           <!--begin::Modal title-->
           <h2 class="fw-bold">Add a Customer</h2>
           <!--end::Modal title-->
 
           <!--begin::Close-->
           <div
-            id="alita_modal_add_customer_close"
+            id="modal_add_customer_close"
             data-bs-dismiss="modal"
             class="btn btn-icon btn-sm btn-active-icon-primary"
           >
-            <AlitaIcon icon-name="cross" icon-class="fs-1" />
+            <Icon icon-name="cross" icon-class="fs-1" />
           </div>
           <!--end::Close-->
         </div>
@@ -39,13 +39,13 @@
             <!--begin::Scroll-->
             <div
               class="scroll-y me-n7 pe-7"
-              id="alita_modal_add_customer_scroll"
-              data-alita-scroll="true"
-              data-alita-scroll-activate="{default: false, lg: true}"
-              data-alita-scroll-max-height="auto"
-              data-alita-scroll-dependencies="#alita_modal_add_customer_header"
-              data-alita-scroll-wrappers="#alita_modal_add_customer_scroll"
-              data-alita-scroll-offset="300px"
+              id="modal_add_customer_scroll"
+              data-scroll="true"
+              data-scroll-activate="{default: false, lg: true}"
+              data-scroll-max-height="auto"
+              data-scroll-dependencies="#modal_add_customer_header"
+              data-scroll-wrappers="#modal_add_customer_scroll"
+              data-scroll-offset="300px"
             >
               <!--begin::Input group-->
               <div class="fv-row mb-7">
@@ -105,23 +105,20 @@
               <div
                 class="fw-bold fs-3 rotate collapsible mb-7"
                 data-bs-toggle="collapse"
-                href="#alita_modal_add_customer_billing_info"
+                href="#modal_add_customer_billing_info"
                 role="button"
                 aria-expanded="false"
-                aria-controls="alita_customer_view_details"
+                aria-controls="customer_view_details"
               >
                 Shipping Information
                 <span class="ms-2 rotate-180">
-                  <AlitaIcon icon-name="down" icon-class="fs-3" />
+                  <Icon icon-name="down" icon-class="fs-3" />
                 </span>
               </div>
               <!--end::Billing toggle-->
 
               <!--begin::Billing form-->
-              <div
-                id="alita_modal_add_customer_billing_info"
-                class="collapse show"
-              >
+              <div id="modal_add_customer_billing_info" class="collapse show">
                 <!--begin::Input group-->
                 <div class="d-flex flex-column mb-7 fv-row">
                   <!--begin::Label-->
@@ -259,7 +256,7 @@
                         name="billing"
                         type="checkbox"
                         value="1"
-                        id="alita_modal_add_customer_billing"
+                        id="modal_add_customer_billing"
                         checked
                       />
                       <!--end::Input-->
@@ -267,7 +264,7 @@
                       <!--begin::Label-->
                       <span
                         class="form-check-label fw-semibold text-muted"
-                        for="alita_modal_add_customer_billing"
+                        for="modal_add_customer_billing"
                       >
                         Yes
                       </span>
@@ -290,7 +287,7 @@
             <!--begin::Button-->
             <button
               type="reset"
-              id="alita_modal_add_customer_cancel"
+              id="modal_add_customer_cancel"
               class="btn btn-light me-3"
             >
               Discard
@@ -299,16 +296,13 @@
 
             <!--begin::Button-->
             <button
-              :data-alita-indicator="loading ? 'on' : null"
+              :data-indicator="loading ? 'on' : null"
               class="btn btn-lg btn-primary"
               type="submit"
             >
               <span v-if="!loading" class="indicator-label">
                 Submit
-                <AlitaIcon
-                  icon-name="arrow-right"
-                  icon-class="fs-2 me-2 me-0"
-                />
+                <Icon icon-name="arrow-right" icon-class="fs-2 me-2 me-0" />
               </span>
               <span v-if="loading" class="indicator-progress">
                 Please wait...

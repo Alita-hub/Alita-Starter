@@ -5,7 +5,7 @@
     <VForm
       class="form w-100 fv-plugins-bootstrap5 fv-plugins-framework"
       @submit="onSubmitForgotPassword"
-      id="alita_login_password_reset_form"
+      id="login_password_reset_form"
       :validation-schema="forgotPassword"
     >
       <!--begin::Heading-->
@@ -45,7 +45,7 @@
         <button
           type="submit"
           ref="submitButton"
-          id="alita_password_reset_submit"
+          id="password_reset_submit"
           class="btn btn-lg btn-primary fw-bold me-4"
         >
           <span class="indicator-label"> Submit </span>
@@ -99,7 +99,7 @@ export default defineComponent({
       // eslint-disable-next-line
       submitButton.value!.disabled = true;
       // Activate loading indicator
-      submitButton.value?.setAttribute("data-alita-indicator", "on");
+      submitButton.value?.setAttribute("data-indicator", "on");
 
       // dummy delay
       // Send login request
@@ -131,7 +131,7 @@ export default defineComponent({
         });
       }
 
-      submitButton.value?.removeAttribute("data-alita-indicator");
+      submitButton.value?.removeAttribute("data-indicator");
       // eslint-disable-next-line
       submitButton.value!.disabled = false;
     };

@@ -1,6 +1,6 @@
 <template>
   <!--begin::Formating info-->
-  <div class="collapse" id="alita_devs_ask_formatting">
+  <div class="collapse" id="devs_ask_formatting">
     <div class="pt-3 mb-5 fs-6">
       Here's a how to add some HTML formatting to your comment:
     </div>

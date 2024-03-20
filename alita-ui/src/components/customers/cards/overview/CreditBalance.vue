@@ -15,9 +15,9 @@
           href="#"
           class="btn btn-sm btn-flex btn-light-primary"
           data-bs-toggle="modal"
-          data-bs-target="#alita_modal_adjust_balance"
+          data-bs-target="#modal_adjust_balance"
         >
-          <AlitaIcon icon-name="pencil" icon-class="fs-3" />
+          <Icon icon-name="pencil" icon-class="fs-3" />
           Adjust Balance
         </a>
       </div>

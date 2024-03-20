@@ -33,10 +33,7 @@
                   >Max Smith</a
                 >
                 <a href="#">
-                  <AlitaIcon
-                    icon-name="verify"
-                    icon-class="fs-1 text-primary"
-                  />
+                  <Icon icon-name="verify" icon-class="fs-1 text-primary" />
                 </a>
               </div>
               <!--end::Name-->
@@ -47,24 +44,21 @@
                   href="#"
                   class="d-flex align-items-center text-gray-500 text-hover-primary me-5 mb-2"
                 >
-                  <AlitaIcon
-                    icon-name="profile-circle"
-                    icon-class="fs-4 me-1"
-                  />
+                  <Icon icon-name="profile-circle" icon-class="fs-4 me-1" />
                   Developer
                 </a>
                 <a
                   href="#"
                   class="d-flex align-items-center text-gray-500 text-hover-primary me-5 mb-2"
                 >
-                  <AlitaIcon icon-name="geolocation" icon-class="fs-4 me-1" />
+                  <Icon icon-name="geolocation" icon-class="fs-4 me-1" />
                   SF, Bay Area
                 </a>
                 <a
                   href="#"
                   class="d-flex align-items-center text-gray-500 text-hover-primary mb-2"
                 >
-                  <AlitaIcon icon-name="sms" icon-class="fs-4 me-1" />
+                  <Icon icon-name="sms" icon-class="fs-4 me-1" />
                   max@alita.com
                 </a>
               </div>
@@ -77,9 +71,9 @@
               <a
                 href="#"
                 class="btn btn-sm btn-light me-2"
-                id="alita_user_follow_button"
+                id="user_follow_button"
               >
-                <AlitaIcon icon-name="check" icon-class="fs-3 d-none" />
+                <Icon icon-name="check" icon-class="fs-3 d-none" />
                 Follow
               </a>
 
@@ -87,7 +81,7 @@
                 href="#"
                 class="btn btn-sm btn-primary me-3"
                 data-bs-toggle="modal"
-                data-bs-target="#alita_modal_offer_a_deal"
+                data-bs-target="#modal_offer_a_deal"
                 >Hire Me</a
               >
 
@@ -95,9 +89,9 @@
               <div class="me-0">
                 <button
                   class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
-                  data-alita-menu-trigger="click"
-                  data-alita-menu-placement="bottom-end"
-                  data-alita-menu-flip="top-end"
+                  data-menu-trigger="click"
+                  data-menu-placement="bottom-end"
+                  data-menu-flip="top-end"
                 >
                   <i class="bi bi-three-dots fs-3"></i>
                 </button>
@@ -121,15 +115,15 @@
                 >
                   <!--begin::Number-->
                   <div class="d-flex align-items-center">
-                    <AlitaIcon
+                    <Icon
                       icon-name="arrow-up"
                       icon-class="fs-3 text-success me-2"
                     />
                     <div
                       class="fs-2 fw-bold"
-                      data-alita-countup="true"
-                      data-alita-countup-value="4500"
-                      data-alita-countup-prefix="$"
+                      data-countup="true"
+                      data-countup-value="4500"
+                      data-countup-prefix="$"
                     >
                       4,500$
                     </div>
@@ -148,14 +142,14 @@
                 >
                   <!--begin::Number-->
                   <div class="d-flex align-items-center">
-                    <AlitaIcon
+                    <Icon
                       icon-name="arrow-down"
                       icon-class="fs-3 text-danger me-2"
                     />
                     <div
                       class="fs-2 fw-bold"
-                      data-alita-countup="true"
-                      data-alita-countup-value="75"
+                      data-countup="true"
+                      data-countup-value="75"
                     >
                       75
                     </div>
@@ -174,15 +168,15 @@
                 >
                   <!--begin::Number-->
                   <div class="d-flex align-items-center">
-                    <AlitaIcon
+                    <Icon
                       icon-name="arrow-up"
                       icon-class="fs-3 text-success me-2"
                     />
                     <div
                       class="fs-2 fw-bold"
-                      data-alita-countup="true"
-                      data-alita-countup-value="60"
-                      data-alita-countup-prefix="%"
+                      data-countup="true"
+                      data-countup-value="60"
+                      data-countup-prefix="%"
                     >
                       60%
                     </div>

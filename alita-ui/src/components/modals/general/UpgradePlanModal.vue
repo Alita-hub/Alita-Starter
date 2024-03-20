@@ -2,7 +2,7 @@
   <!--begin::Modal - Upgrade plan-->
   <div
     class="modal fade"
-    id="alita_modal_upgrade_plan"
+    id="modal_upgrade_plan"
     tabindex="-1"
     aria-hidden="true"
   >
@@ -17,7 +17,7 @@
             class="btn btn-sm btn-icon btn-active-color-primary"
             data-bs-dismiss="modal"
           >
-            <AlitaIcon icon-name="cross" icon-class="fs-1" />
+            <Icon icon-name="cross" icon-class="fs-1" />
           </div>
           <!--end::Close-->
         </div>
@@ -41,7 +41,7 @@
             <!--begin::Nav group-->
             <div
               class="nav-group nav-group-outline mx-auto"
-              data-alita-buttons="true"
+              data-buttons="true"
             >
               <button
                 @click="current = 'month'"
@@ -77,7 +77,7 @@
                         !plan.custom && 'btn-active btn-active-primary',
                       ]"
                       data-bs-toggle="tab"
-                      :data-bs-target="`#alita_upgrade_plan_${index}`"
+                      :data-bs-target="`#upgrade_plan_${index}`"
                     >
                       <!--end::Description-->
                       <div class="d-flex align-items-center me-2">
@@ -137,7 +137,7 @@
 
                           <span class="fs-7 opacity-50"
                             >/
-                            <span data-alita-element="period">Mon</span>
+                            <span data-element="period">Mon</span>
                           </span>
                         </template>
                       </div>
@@ -160,7 +160,7 @@
                       v-if="!plan.custom"
                       :class="[plan.default && 'show active']"
                       class="tab-pane fade"
-                      :id="`alita_upgrade_plan_${index}`"
+                      :id="`upgrade_plan_${index}`"
                     >
                       <!--begin::Heading-->
                       <div class="pb-5">
@@ -195,7 +195,7 @@
                                   {{ feature.title }}
                                 </span>
 
-                                <AlitaIcon
+                                <Icon
                                   icon-name="check-circle"
                                   icon-class="fs-1 text-success"
                                 />
@@ -206,7 +206,7 @@
                                 >
                                   {{ feature.title }}
                                 </span>
-                                <AlitaIcon
+                                <Icon
                                   icon-name="cross-circle"
                                   icon-class="fs-1"
                                 />

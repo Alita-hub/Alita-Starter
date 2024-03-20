@@ -12,13 +12,10 @@
     <div class="d-flex my-2">
       <!--begin::Search-->
       <div class="d-flex align-items-center position-relative me-4">
-        <AlitaIcon
-          icon-name="magnifier"
-          icon-class="fs-3 position-absolute ms-3"
-        />
+        <Icon icon-name="magnifier" icon-class="fs-3 position-absolute ms-3" />
         <input
           type="text"
-          id="alita_filter_search"
+          id="filter_search"
           class="form-control form-control-white form-control-sm w-150px ps-9"
           placeholder="Search"
         />
@@ -39,11 +36,11 @@
   <!--end::Documents toolbar-->
 
   <div class="row g-6 g-xl-9 mb-6 mb-xl-9">
-    <KTFolder folder-name="Finance" files="7"></KTFolder>
+    <Folder folder-name="Finance" files="7"></Folder>
 
-    <KTFolder folder-name="Customers" files="3"></KTFolder>
+    <Folder folder-name="Customers" files="3"></Folder>
 
-    <KTFolder folder-name="CRM Project" files="25"></KTFolder>
+    <Folder folder-name="CRM Project" files="25"></Folder>
 
     <div class="col d-none d-xl-block"></div>
 
@@ -51,49 +48,49 @@
   </div>
 
   <div class="row g-6 g-xl-9 mb-6 mb-xl-9">
-    <KTFile
+    <File
       file-title="Project Reqs.."
       file-type="pdf"
       created-at="3 days ago"
-    ></KTFile>
+    ></File>
 
-    <KTFile
+    <File
       file-title="CRM App Docs.."
       file-type="doc"
       created-at="3 days ago"
-    ></KTFile>
+    ></File>
 
-    <KTFile
+    <File
       file-title="User CRUD Styles"
       file-type="css"
       created-at="4 days ago"
-    ></KTFile>
+    ></File>
 
-    <KTFile
+    <File
       file-title="Metronic Logo"
       file-type="ai"
       created-at="5 days ago"
-    ></KTFile>
+    ></File>
 
-    <KTFile
+    <File
       file-title="Orders backup"
       file-type="sql"
       created-at="1 week ago"
-    ></KTFile>
+    ></File>
   </div>
 
   <div class="row g-6 g-xl-9 mb-6 mb-xl-9">
-    <KTFile
+    <File
       file-title="UTAIR CRM API Co.."
       file-type="xml"
       created-at="2 weeks ago"
-    ></KTFile>
+    ></File>
 
-    <KTFile
+    <File
       file-title="Tower Hill App.."
       file-type="tif"
       created-at="3 weeks ago"
-    ></KTFile>
+    ></File>
 
     <div class="col d-none d-xl-block"></div>
 
@@ -106,14 +103,14 @@
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
 import { defineComponent } from "vue";
-import KTFolder from "@/components/files/Folder.vue";
-import KTFile from "@/components/files/File.vue";
+import Folder from "@/components/files/Folder.vue";
+import File from "@/components/files/File.vue";
 
 export default defineComponent({
   name: "profile-documents",
   components: {
-    KTFolder,
-    KTFile,
+    Folder,
+    File,
   },
   setup() {
     return {

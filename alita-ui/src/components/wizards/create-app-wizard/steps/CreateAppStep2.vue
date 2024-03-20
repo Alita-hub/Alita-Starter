@@ -1,6 +1,6 @@
 <template>
   <!--begin::Step 2-->
-  <div data-alita-stepper-element="content">
+  <div data-stepper-element="content">
     <div class="w-100">
       <!--begin::Input group-->
       <div class="fv-row">

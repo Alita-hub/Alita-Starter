@@ -15,11 +15,11 @@
         <button
           type="button"
           class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
-          data-alita-menu-trigger="click"
-          data-alita-menu-placement="bottom-end"
-          data-alita-menu-flip="top-end"
+          data-menu-trigger="click"
+          data-menu-placement="bottom-end"
+          data-menu-flip="top-end"
         >
-          <AlitaIcon icon-name="category" icon-class="fs-2" />
+          <Icon icon-name="category" icon-class="fs-2" />
         </button>
         <Dropdown1></Dropdown1>
         <!--end::Menu-->

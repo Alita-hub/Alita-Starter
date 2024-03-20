@@ -36,10 +36,7 @@
               >
                 <div class="fs-4 fw-bold text-gray-700">
                   <span class="w-75px">6,900</span>
-                  <AlitaIcon
-                    icon-name="arrow-up"
-                    icon-class="fs-3 text-success"
-                  />
+                  <Icon icon-name="arrow-up" icon-class="fs-3 text-success" />
                 </div>
                 <div class="fw-semibold text-muted">Earnings</div>
               </div>
@@ -51,10 +48,7 @@
               >
                 <div class="fs-4 fw-bold text-gray-700">
                   <span class="w-50px">130</span>
-                  <AlitaIcon
-                    icon-name="arrow-down"
-                    icon-class="fs-3 text-danger"
-                  />
+                  <Icon icon-name="arrow-down" icon-class="fs-3 text-danger" />
                 </div>
                 <div class="fw-semibold text-muted">Tasks</div>
               </div>
@@ -66,10 +60,7 @@
               >
                 <div class="fs-4 fw-bold text-gray-700">
                   <span class="w-50px">500</span>
-                  <AlitaIcon
-                    icon-name="arrow-up"
-                    icon-class="fs-3 text-success"
-                  />
+                  <Icon icon-name="arrow-up" icon-class="fs-3 text-success" />
                 </div>
                 <div class="fw-semibold text-muted">Hours</div>
               </div>
@@ -84,14 +75,14 @@
             <div
               class="fw-bold rotate collapsible"
               data-bs-toggle="collapse"
-              href="#alita_customer_view_details"
+              href="#customer_view_details"
               role="button"
               aria-expanded="false"
-              aria-controls="alita_customer_view_details"
+              aria-controls="customer_view_details"
             >
               Details
               <span class="ms-2 rotate-180">
-                <AlitaIcon icon-name="down" icon-class="fs-3" />
+                <Icon icon-name="down" icon-class="fs-3" />
               </span>
             </div>
 
@@ -104,7 +95,7 @@
                 href="#"
                 class="btn btn-sm btn-light-primary"
                 data-bs-toggle="modal"
-                data-bs-target="#alita_modal_update_customer"
+                data-bs-target="#modal_update_customer"
               >
                 Edit
               </a>
@@ -115,7 +106,7 @@
           <div class="separator separator-dashed my-3"></div>
 
           <!--begin::Details content-->
-          <div id="alita_customer_view_details" class="collapse show">
+          <div id="customer_view_details" class="collapse show">
             <div class="py-5 fs-6">
               <!--begin::Badge-->
               <div class="badge badge-light-info d-inline">Premium user</div>
@@ -173,7 +164,7 @@
           <div
             class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6"
           >
-            <AlitaIcon
+            <Icon
               icon-name="design-frame"
               icon-class="fs-2tx text-primary me-4"
             />
@@ -226,7 +217,7 @@
                     name="google"
                     type="checkbox"
                     value="1"
-                    id="alita_modal_connected_accounts_google"
+                    id="modal_connected_accounts_google"
                     checked
                   />
                   <!--end::Input-->
@@ -234,7 +225,7 @@
                   <!--begin::Label-->
                   <span
                     class="form-check-label fw-semibold text-muted"
-                    for="alita_modal_connected_accounts_google"
+                    for="modal_connected_accounts_google"
                   ></span>
                   <!--end::Label-->
                 </label>
@@ -277,7 +268,7 @@
                     name="github"
                     type="checkbox"
                     value="1"
-                    id="alita_modal_connected_accounts_github"
+                    id="modal_connected_accounts_github"
                     checked
                   />
                   <!--end::Input-->
@@ -285,7 +276,7 @@
                   <!--begin::Label-->
                   <span
                     class="form-check-label fw-semibold text-muted"
-                    for="alita_modal_connected_accounts_github"
+                    for="modal_connected_accounts_github"
                   ></span>
                   <!--end::Label-->
                 </label>
@@ -327,14 +318,14 @@
                     name="slack"
                     type="checkbox"
                     value="1"
-                    id="alita_modal_connected_accounts_slack"
+                    id="modal_connected_accounts_slack"
                   />
                   <!--end::Input-->
 
                   <!--begin::Label-->
                   <span
                     class="form-check-label fw-semibold text-muted"
-                    for="alita_modal_connected_accounts_slack"
+                    for="modal_connected_accounts_slack"
                   ></span>
                   <!--end::Label-->
                 </label>
@@ -368,7 +359,7 @@
           <a
             class="nav-link text-active-primary pb-4 active"
             data-bs-toggle="tab"
-            href="#alita_customer_view_overview_tab"
+            href="#customer_view_overview_tab"
             >Overview</a
           >
         </li>
@@ -379,7 +370,7 @@
           <a
             class="nav-link text-active-primary pb-4"
             data-bs-toggle="tab"
-            href="#alita_customer_view_overview_events_and_logs_tab"
+            href="#customer_view_overview_events_and_logs_tab"
             >Events & Logs</a
           >
         </li>
@@ -389,9 +380,9 @@
         <li class="nav-item">
           <a
             class="nav-link text-active-primary pb-4"
-            data-alita-countup-tabs="true"
+            data-countup-tabs="true"
             data-bs-toggle="tab"
-            href="#alita_customer_view_overview_statements"
+            href="#customer_view_overview_statements"
             >Statements</a
           >
         </li>
@@ -403,12 +394,12 @@
           <a
             href="#"
             class="btn btn-primary ps-7"
-            data-alita-menu-trigger="click"
-            data-alita-menu-attach="parent"
-            data-alita-menu-placement="bottom-end"
+            data-menu-trigger="click"
+            data-menu-attach="parent"
+            data-menu-placement="bottom-end"
           >
             Actions
-            <AlitaIcon icon-name="down" icon-class="fs-2 me-0" />
+            <Icon icon-name="down" icon-class="fs-2 me-0" />
           </a>
           <Dropdown3></Dropdown3>
           <!--end::Menu-->
@@ -422,7 +413,7 @@
         <!--begin:::Tab pane-->
         <div
           class="tab-pane fade show active"
-          id="alita_customer_view_overview_tab"
+          id="customer_view_overview_tab"
           role="tabpanel"
         >
           <PaymentRecords card-classes="mb-6 mb-xl-9"></PaymentRecords>
@@ -438,7 +429,7 @@
         <!--begin:::Tab pane-->
         <div
           class="tab-pane fade"
-          id="alita_customer_view_overview_events_and_logs_tab"
+          id="customer_view_overview_events_and_logs_tab"
           role="tabpanel"
         >
           <Logs card-classes="mb-6 mb-xl-9"></Logs>
@@ -449,7 +440,7 @@
         <!--begin:::Tab pane-->
         <div
           class="tab-pane fade"
-          id="alita_customer_view_overview_statements"
+          id="customer_view_overview_statements"
           role="tabpanel"
         >
           <Earnings card-classes="mb-6 mb-xl-9"></Earnings>
