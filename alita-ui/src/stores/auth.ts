@@ -3,8 +3,6 @@ import { defineStore } from "pinia";
 import ApiService from "@/core/services/ApiService";
 import JwtService from "@/core/services/JwtService";
 import { HttpStatusCode } from "axios";
-import Swal from "sweetalert2/dist/sweetalert2.js";
-
 
 export interface User {
   username: string;

@@ -1,6 +1,7 @@
 package com.alita.common.domain.model;
 
 import com.alita.common.enums.HttpCode;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
 import java.util.Collection;
 
@@ -33,6 +34,22 @@ public class HttpPageResponse {
 
     /**
      * 分页数据响应封装
+     *
+     * @param page
+     * @return {@link HttpPageResponse}
+     */
+    public static HttpPageResponse response(Page<?> page) {
+        HttpPageResponse httpPageResult = new HttpPageResponse();
+        httpPageResult.setCode(HttpCode.SELECT_SUCCESS.getCode());
+        httpPageResult.setMessage(HttpCode.SELECT_SUCCESS.getMsg());
+        httpPageResult.setTotal(page.getTotal());
+        httpPageResult.setData(page.getRecords());
+
+        return httpPageResult;
+    }
+
+    /**
+     * 分页数据自定义封装
      *
      * @param total
      * @param data

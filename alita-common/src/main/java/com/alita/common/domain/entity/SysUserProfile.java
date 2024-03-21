@@ -1,5 +1,6 @@
 package com.alita.common.domain.entity;
 
+import com.alita.common.enums.UserStatus;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -47,19 +48,14 @@ public class SysUserProfile {
     private String phone;
 
     /**
-     * 出生日期
-     */
-    private Date birthDate;
-
-    /**
-     * 城市
-     */
-    private String city;
-
-    /**
      * 自我介绍
      */
     private String introduce;
+
+    /**
+     * 账号状态（0=正常，1=停用，2=锁定）
+     */
+    private UserStatus status;
 
     /**
      * 创建时间
@@ -120,28 +116,20 @@ public class SysUserProfile {
         this.phone = phone;
     }
 
-    public Date getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
     public String getIntroduce() {
         return introduce;
     }
 
     public void setIntroduce(String introduce) {
         this.introduce = introduce;
+    }
+
+    public UserStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(UserStatus status) {
+        this.status = status;
     }
 
     public Date getCreateTime() {

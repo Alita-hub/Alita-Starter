@@ -1,10 +1,7 @@
 package com.alita.framework.security.event;
 
-import com.alita.common.domain.entity.SysUserAccount;
-import com.alita.common.enums.UserType;
 import org.springframework.context.event.EventListener;
 import org.springframework.security.authentication.event.*;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.web.DefaultRedirectStrategy;
 import org.springframework.security.web.RedirectStrategy;
 import org.springframework.stereotype.Component;
@@ -15,8 +12,6 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class AuthenticationEvents {
-
-    private final RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 
     /**
      * 认证成功事件

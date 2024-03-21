@@ -11,7 +11,7 @@
  Target Server Version : 50731
  File Encoding         : 65001
 
- Date: 11/03/2024 17:41:28
+ Date: 21/03/2024 15:33:58
 */
 
 SET NAMES utf8mb4;
@@ -42,10 +42,10 @@ INSERT INTO `sys_config` VALUES (1, '认证', 'jwt密钥', 'jwtSecret', 'sd87d@d
 INSERT INTO `sys_config` VALUES (2, '认证', 'jwt令牌过期时间', 'jwtExpire', '30', '0', '0', '2024-03-01 17:19:30', '2024-03-04 17:01:24');
 
 -- ----------------------------
--- Table structure for sys_user_account
+-- Table structure for sys_user_auth
 -- ----------------------------
-DROP TABLE IF EXISTS `sys_user_account`;
-CREATE TABLE `sys_user_account`  (
+DROP TABLE IF EXISTS `sys_user_auth`;
+CREATE TABLE `sys_user_auth`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NULL DEFAULT NULL COMMENT '用户id',
   `user_type` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '用户类型(admin=管理员，normal=普通用户)',
@@ -58,12 +58,12 @@ CREATE TABLE `sys_user_account`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `FK_user_account_user_profile`(`user_id`) USING BTREE,
   CONSTRAINT `FK_user_account_user_profile` FOREIGN KEY (`user_id`) REFERENCES `sys_user_profile` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户认证表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of sys_user_account
+-- Records of sys_user_auth
 -- ----------------------------
-INSERT INTO `sys_user_account` VALUES (3, 1, 'admin', 'username', 'admin', '$2a$10$CKrz22g/RzNxX.bqlYXhkucssjyjmRU.l03nUh99mcVSZVzIiK6Qa', '0', '2024-02-19 09:24:30', '2024-03-11 16:50:26');
+INSERT INTO `sys_user_auth` VALUES (3, 1, 'admin', 'username', 'admin', '$2a$10$CKrz22g/RzNxX.bqlYXhkucssjyjmRU.l03nUh99mcVSZVzIiK6Qa', '0', '2024-02-19 09:24:30', '2024-03-11 16:50:26');
 
 -- ----------------------------
 -- Table structure for sys_user_profile
@@ -72,21 +72,19 @@ DROP TABLE IF EXISTS `sys_user_profile`;
 CREATE TABLE `sys_user_profile`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nickname` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '用户名称',
-  `avatar` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '头像地址',
+  `avatar` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '头像地址（量少使用base64,量大使用图片地址）',
   `gender` char(1) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '性别（0=女，1=男）',
   `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '邮箱',
   `phone` varchar(11) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '手机号',
-  `birth_date` date NULL DEFAULT NULL COMMENT '出生日期',
-  `city` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '城市',
-  `introduce` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '自我介绍',
+  `introduce` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '自我介绍',
   `create_time` datetime(0) NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime(0) NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '更新时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户信息表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of sys_user_profile
 -- ----------------------------
-INSERT INTO `sys_user_profile` VALUES (1, 'admin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2024-02-19 09:24:30', '2024-02-19 09:24:30');
+INSERT INTO `sys_user_profile` VALUES (1, 'admin', NULL, NULL, NULL, NULL, NULL, '2024-02-19 09:24:30', '2024-02-19 09:24:30');
 
 SET FOREIGN_KEY_CHECKS = 1;

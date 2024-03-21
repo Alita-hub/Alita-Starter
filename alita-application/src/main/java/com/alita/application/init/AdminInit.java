@@ -1,10 +1,9 @@
 package com.alita.application.init;
 
-import com.alita.admin.mapper.ISysUserAccountMapper;
-import com.alita.admin.mapper.ISysUserProfileMapper;
-import com.alita.common.domain.entity.SysUserAccount;
+import com.alita.api.admin.ISysUserAuthService;
+import com.alita.api.admin.ISysUserProfileService;
+import com.alita.common.domain.entity.SysUserAuth;
 import com.alita.common.domain.entity.SysUserProfile;
-import com.alita.common.enums.AccountStatus;
 import com.alita.common.enums.LoginType;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -21,32 +20,31 @@ import java.util.Optional;
 public class AdminInit implements CommandLineRunner {
 
     @Resource
-    private ISysUserProfileMapper sysUserProfileMapper;
+    private ISysUserProfileService sysUserProfileService;
 
     @Resource
-    private ISysUserAccountMapper sysUserAccountMapper;
+    private ISysUserAuthService sysUserAuthService;
 
     @Resource
     private PasswordEncoder passwordEncoder;
 
     @Override
     public void run(String... args) throws Exception {
-        SysUserAccount admin = sysUserAccountMapper.queryUserByUsername("admin");
+        SysUserAuth admin = sysUserAuthService.getUserByUsername("admin");
 
         if (!Optional.ofNullable(admin).isPresent())
         {
             SysUserProfile sysUserProfile = new SysUserProfile();
             sysUserProfile.setNickname("admin");
-            sysUserProfileMapper.insert(sysUserProfile);
+            sysUserProfileService.saveUserProfile(sysUserProfile);
 
-            SysUserAccount sysUserAccount = new SysUserAccount();
+            SysUserAuth sysUserAccount = new SysUserAuth();
             sysUserAccount.setUserId(sysUserProfile.getId());
             sysUserAccount.setPrincipal("admin");
             sysUserAccount.setCredential(passwordEncoder.encode("admin@123456"));
-            sysUserAccount.setStatus(AccountStatus.NORMAL);
             sysUserAccount.setLoginType(LoginType.USERNAME);
 
-            sysUserAccountMapper.insert(sysUserAccount);
+            sysUserAuthService.saveUserAuth(sysUserAccount);
 
             System.out.println("管理员初始化完成！");
         }

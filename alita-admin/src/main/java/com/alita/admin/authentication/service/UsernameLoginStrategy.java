@@ -1,7 +1,7 @@
 package com.alita.admin.authentication.service;
 
 import com.alita.admin.authentication.core.ILoginStrategy;
-import com.alita.common.domain.entity.SysUserAccount;
+import com.alita.common.domain.entity.SysUserAuth;
 import com.alita.common.domain.model.Login;
 import com.alita.common.util.JwtUtil;
 import com.alita.framework.security.context.AuthenticationContextHolder;
@@ -39,7 +39,7 @@ public class UsernameLoginStrategy implements ILoginStrategy {
         //底层调用UserDetailsServiceImpl的loadUserByUsername
         Authentication authenticate = authenticationManager.authenticate(authenticationToken);
 
-        SysUserAccount principal = (SysUserAccount) authenticate.getPrincipal();
+        SysUserAuth principal = (SysUserAuth) authenticate.getPrincipal();
         //生成jwt令牌
         String token = jwtUtil.createToken(principal.getPrincipal());
 

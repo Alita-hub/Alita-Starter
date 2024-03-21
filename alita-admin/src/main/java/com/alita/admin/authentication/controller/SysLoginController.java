@@ -29,22 +29,13 @@ public class SysLoginController {
     private LoginStrategyContext loginStrategyContext;
 
     /**
-     * 登录页
-     * @return {@link String}
-     */
-    @GetMapping("/loginPage")
-    public String loginPage() {
-        return "authentication/login";
-    }
-
-    /**
      * 登录
      * @param login
      * @return {@link HttpResponse}
      */
     @PostMapping("/login")
     @ResponseBody
-    public HttpResponse usernameLogin(@RequestBody Login login)
+    public HttpResponse login(@RequestBody Login login)
     {
         //用户名校验
         usernameCheckout(login.getUsername());

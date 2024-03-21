@@ -1,6 +1,7 @@
 package com.alita.admin.service;
 
 import com.alita.admin.mapper.ISysConfigMapper;
+import com.alita.api.admin.ISysConfigService;
 import com.alita.common.domain.entity.SysConfig;
 import com.alita.common.domain.model.HttpPageRequest;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -18,18 +19,19 @@ import java.util.List;
  * @author: alita
  */
 @Service
-public class SysConfigService {
+public class SysConfigService implements ISysConfigService {
 
     @Resource
     private ISysConfigMapper sysConfigMapper;
 
     /**
-     * 根据条件查询配置列表
+     * 条件分页查询配置列表
      *
      * @param request
      * @return {@link List}<{@link SysConfig}>
      */
-    public Page<SysConfig> listConfig(HttpPageRequest<SysConfig> request) {
+    @Override
+    public Page<SysConfig> getConfigList(HttpPageRequest<SysConfig> request) {
         //实体参数
         SysConfig sysConfig = request.getParams();
         // 创建一个QueryWrapper对象，用于构建查询条件

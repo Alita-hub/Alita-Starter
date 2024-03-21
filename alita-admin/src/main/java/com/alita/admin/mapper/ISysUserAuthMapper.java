@@ -1,6 +1,6 @@
 package com.alita.admin.mapper;
 
-import com.alita.common.domain.entity.SysUserAccount;
+import com.alita.common.domain.entity.SysUserAuth;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -10,15 +10,15 @@ import org.apache.ibatis.annotations.Select;
  *
  * @author alita
  */
-public interface ISysUserAccountMapper extends BaseMapper<SysUserAccount> {
+public interface ISysUserAuthMapper extends BaseMapper<SysUserAuth> {
 
     /**
      * 根据用户名查询账户信息
      * @param username
-     * @return {@link SysUserAccount}
+     * @return {@link SysUserAuth}
      */
     @Select("select * from sys_user_account where principal = #{username}")
-    SysUserAccount queryUserByUsername(@Param("username") String username);
+    SysUserAuth queryUserByUsername(@Param("username") String username);
 
 
 }

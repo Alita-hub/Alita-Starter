@@ -1,15 +1,11 @@
 package com.alita.common.domain.entity;
 
-import com.alita.common.enums.AccountStatus;
 import com.alita.common.enums.LoginType;
 import com.alita.common.enums.UserType;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.Collection;
 import java.util.Date;
 
 /**
@@ -17,8 +13,8 @@ import java.util.Date;
  *
  * @author alita
  */
-@TableName("sys_user_account")
-public class SysUserAccount implements UserDetails {
+@TableName("sys_user_auth")
+public class SysUserAuth {
 
     /**
      * 自增id
@@ -56,11 +52,6 @@ public class SysUserAccount implements UserDetails {
     private String credential;
 
     /**
-     * 账号状态（0=正常，1=停用，2=锁定）
-     */
-    private AccountStatus status;
-
-    /**
      * 创建时间
      */
     private Date createTime;
@@ -70,51 +61,6 @@ public class SysUserAccount implements UserDetails {
      */
     private Date updateTime;
 
-
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
-    }
-
-    @Override
-    public String getPassword() {
-        return this.credential;
-    }
-
-    @Override
-    public String getUsername() {
-        return this.principal;
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        if (status == AccountStatus.LOCKED)
-        {
-            return false;
-        }
-
-        return true;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        if (status == AccountStatus.DISABLE)
-        {
-            return false;
-        }
-
-        return true;
-    }
 
     public Integer getId() {
         return id;
@@ -162,14 +108,6 @@ public class SysUserAccount implements UserDetails {
 
     public void setCredential(String credential) {
         this.credential = credential;
-    }
-
-    public AccountStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(AccountStatus status) {
-        this.status = status;
     }
 
     public Date getCreateTime() {

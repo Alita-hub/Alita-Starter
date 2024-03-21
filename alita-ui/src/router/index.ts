@@ -500,6 +500,7 @@ router.beforeEach((to, from, next) => {
   // reset config to initial state
   configStore.resetLayoutConfig();
 
+  console.log(authStore.isAuthenticated);
 
   // before page access check if page requires authentication
   if (to.meta.middleware == "auth") {

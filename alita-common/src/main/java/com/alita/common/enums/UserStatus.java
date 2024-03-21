@@ -1,6 +1,5 @@
 package com.alita.common.enums;
 
-import com.baomidou.mybatisplus.annotation.EnumValue;
 import com.baomidou.mybatisplus.annotation.IEnum;
 
 
@@ -8,7 +7,7 @@ import com.baomidou.mybatisplus.annotation.IEnum;
  * 用户账号状态枚举类型
  * @author alita
  */
-public enum AccountStatus implements IEnum<String> {
+public enum UserStatus implements IEnum<String> {
 
     NORMAL("0","正常"),
     DISABLE("1","停用"),
@@ -18,7 +17,7 @@ public enum AccountStatus implements IEnum<String> {
     private String value;
     private String desc;
 
-    AccountStatus(String value, String desc) {
+    UserStatus(String value, String desc) {
         this.value = value;
         this.desc = desc;
     }

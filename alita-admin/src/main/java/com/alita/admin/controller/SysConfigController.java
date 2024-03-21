@@ -33,9 +33,9 @@ public class SysConfigController {
     @ResponseBody
     public HttpPageResponse list(@RequestBody HttpPageRequest<SysConfig> request)
     {
-        Page<SysConfig> sysConfigs = sysConfigService.listConfig(request);
+        Page<SysConfig> sysConfigs = sysConfigService.getConfigList(request);
 
-        return HttpPageResponse.response(sysConfigs.getTotal(), sysConfigs.getRecords());
+        return HttpPageResponse.response(sysConfigs);
     }
 
 }
