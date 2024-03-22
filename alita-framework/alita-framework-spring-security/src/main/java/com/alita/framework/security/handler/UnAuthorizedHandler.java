@@ -1,5 +1,8 @@
 package com.alita.framework.security.handler;
 
+import com.alita.common.domain.model.HttpResponse;
+import com.alita.common.enums.HttpCode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.AuthenticationException;
@@ -21,7 +24,7 @@ import java.io.IOException;
  * @author: alita
  */
 @Component
-public class AuthenticationEntryPointImpl implements AuthenticationEntryPoint {
+public class UnAuthorizedHandler implements AuthenticationEntryPoint {
 
     @Resource
     @Qualifier("handlerExceptionResolver")
@@ -29,24 +32,28 @@ public class AuthenticationEntryPointImpl implements AuthenticationEntryPoint {
 
     /**
      * 主要作用：
-     *      1. 处理未认证的用户，引导进入认证流程（直接重定向到登录页面）
+     *      1. 处理未认证的用户，引导进入认证流程（不分离直接重定向到登录页面）
      *      2. 处理认证过程中的异常
      * @param request
      * @param response
      * @param authException
      */
     @Override
-    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException {
-
+    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException
+    {
         /*
         * 这里注入了 DefaultHandlerExceptionResolver，并将 Handler 委托给该 Resolver（spring mvc解析器）。
         * 现在，可以使用 Exception Handler 方法通过 Controller Advice 来处理此 Security 异常。
         * */
         resolver.resolveException(request, response, null, authException);
 
-        //返回401
-        response.sendError(HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED.getReasonPhrase());
+        // 返回401
+        response.setStatus(HttpStatus.UNAUTHORIZED.value());
+        // 设置返回的内容类型为JSON格式
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        // 返回消息，包含异常的详细信息
+        response.getWriter().write(new ObjectMapper().writeValueAsString(HttpResponse.response(HttpCode.UNAUTHORIZED)));
     }
-
 
 }

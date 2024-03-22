@@ -9,6 +9,7 @@ package com.alita.common.enums;
  * 自定义系统编码：
  *     601-620 用户认证
  *     621-630 JWT令牌
+ *     631-650 系统功能
  *
  * @author: alita
  */
@@ -23,6 +24,7 @@ public enum HttpCode {
      * 客户端错误
      */
     BAD_REQUEST(400),
+    UNAUTHORIZED(401, "未经身份认证的请求！"),
 
     /**
      * 服务端错误
@@ -39,10 +41,10 @@ public enum HttpCode {
     */
     AUTHENTICATION_SUCCESS(SUCCESS.code, "认证成功！"),
     AUTHENTICATION_FAIL(BAD_REQUEST.code, "认证失败！"),
-    USER_NOT_FOUND(601, "账号不存在！"),
+    USERNAME_NOT_FOUND(601, "账号不存在！"),
     USER_DISABLE(602, "账号被停用！"),
     USER_LOCKED(603, "账号被锁定！"),
-
+    USER_NOT_FOUND(604, "用户不存在！"),
 
     /**
      * JWT令牌（621 - 630）
@@ -52,6 +54,7 @@ public enum HttpCode {
     JWT_MAL_FORMED(623, "令牌格式错误！"),
     JWT_WRONG_SIGNATURE(624, "令牌签名错误！"),
     JWT_ILLEGAL_ARGUMENT(625, "令牌解析错误！")
+
     ;
 
     private Integer code;

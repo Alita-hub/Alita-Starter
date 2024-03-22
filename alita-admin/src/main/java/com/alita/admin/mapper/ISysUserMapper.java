@@ -1,6 +1,6 @@
 package com.alita.admin.mapper;
 
-import com.alita.common.domain.entity.SysUserProfile;
+import com.alita.common.domain.entity.SysUser;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  *
  * @author alita
  */
-public interface ISysUserProfileMapper extends BaseMapper<SysUserProfile> {
+public interface ISysUserMapper extends BaseMapper<SysUser> {
 
 }
 

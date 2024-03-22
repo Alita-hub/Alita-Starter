@@ -1,10 +1,12 @@
 package com.alita.common.enums;
 
+import com.alita.common.exception.core.UnknownEnumValueException;
 import com.baomidou.mybatisplus.annotation.IEnum;
+import com.fasterxml.jackson.annotation.JsonCreator;
 
 
 /**
- * 用户账号状态枚举类型
+ * 用户状态枚举
  * @author alita
  */
 public enum UserStatus implements IEnum<String> {
@@ -20,6 +22,21 @@ public enum UserStatus implements IEnum<String> {
     UserStatus(String value, String desc) {
         this.value = value;
         this.desc = desc;
+    }
+
+    @JsonCreator
+    public static UserStatus of(Integer value) {
+        if (null == value) {
+            return null;
+        }
+
+        for (UserStatus item : UserStatus.values()) {
+            if (value.equals(item.getValue())) {
+                return item;
+            }
+        }
+
+        throw new UnknownEnumValueException("UserStatus: unknown value: " + value);
     }
 
     @Override

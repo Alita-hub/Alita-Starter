@@ -1,9 +1,9 @@
 package com.alita.application.init;
 
 import com.alita.api.admin.ISysUserAuthService;
-import com.alita.api.admin.ISysUserProfileService;
+import com.alita.api.admin.ISysUserService;
 import com.alita.common.domain.entity.SysUserAuth;
-import com.alita.common.domain.entity.SysUserProfile;
+import com.alita.common.domain.entity.SysUser;
 import com.alita.common.enums.LoginType;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -20,7 +20,7 @@ import java.util.Optional;
 public class AdminInit implements CommandLineRunner {
 
     @Resource
-    private ISysUserProfileService sysUserProfileService;
+    private ISysUserService sysUserProfileService;
 
     @Resource
     private ISysUserAuthService sysUserAuthService;
@@ -34,7 +34,7 @@ public class AdminInit implements CommandLineRunner {
 
         if (!Optional.ofNullable(admin).isPresent())
         {
-            SysUserProfile sysUserProfile = new SysUserProfile();
+            SysUser sysUserProfile = new SysUser();
             sysUserProfile.setNickname("admin");
             sysUserProfileService.saveUserProfile(sysUserProfile);
 

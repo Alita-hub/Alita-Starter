@@ -1,6 +1,6 @@
 package com.alita.api.admin;
 
-import com.alita.common.domain.entity.SysUserProfile;
+import com.alita.common.domain.entity.SysUser;
 import com.alita.common.domain.model.HttpPageRequest;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
@@ -10,23 +10,23 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
  * @author alita
  * @date 2024/03/21
  */
-public interface ISysUserProfileService {
+public interface ISysUserService {
 
     /**
      * 条件分页获取用户列表
      *
      * @param request
-     * @return {@link Page}<{@link SysUserProfile}>
+     * @return {@link Page}<{@link SysUser}>
      */
-    Page<SysUserProfile> getUserList(HttpPageRequest<SysUserProfile> request);
+    Page<SysUser> getUserList(HttpPageRequest<SysUser> request);
 
 
     /**
      * 根据用户id获取用户
      * @param id
-     * @return {@link SysUserProfile}
+     * @return {@link SysUser}
      */
-    SysUserProfile getUserById(int id);
+    SysUser getUserById(int id);
 
 
     /**
@@ -34,6 +34,6 @@ public interface ISysUserProfileService {
      * @param sysUserProfile
      * @return int
      */
-    int saveUserProfile(SysUserProfile sysUserProfile);
+    int saveUserProfile(SysUser sysUserProfile);
 
 }

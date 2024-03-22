@@ -2,6 +2,7 @@ package com.alita.common.exception;
 
 import com.alita.common.domain.model.HttpResponse;
 import com.alita.common.enums.HttpCode;
+import com.alita.common.exception.authentication.CustomAuthenticationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -23,6 +24,17 @@ public class AuthenticationExceptionHandler {
     private static final Logger log = LoggerFactory.getLogger(AuthenticationExceptionHandler.class);
 
     /**
+     * 处理自定义认证异常
+     * @param ex
+     * @return {@link HttpResponse}
+     */
+    @ExceptionHandler
+    public HttpResponse handleUserNotFound(CustomAuthenticationException ex) {
+        log.error(ex.getMessage());
+        return HttpResponse.response(HttpCode.USER_NOT_FOUND);
+    }
+
+    /**
      * 处理账号不存在异常
      * @param ex
      * @return {@link HttpResponse}
@@ -30,7 +42,7 @@ public class AuthenticationExceptionHandler {
     @ExceptionHandler
     public HttpResponse handleUsernameNotFoundException(UsernameNotFoundException ex) {
         log.error(ex.getMessage());
-        return HttpResponse.response(HttpCode.USER_NOT_FOUND);
+        return HttpResponse.response(HttpCode.USERNAME_NOT_FOUND);
     }
 
     /**

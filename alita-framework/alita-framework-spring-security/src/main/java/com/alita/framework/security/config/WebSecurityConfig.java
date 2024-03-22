@@ -34,7 +34,7 @@ public class WebSecurityConfig {
      * 未登录异常处理
      */
     @Resource
-    private AuthenticationEntryPoint authEntryPoint;
+    private AuthenticationEntryPoint unAuthorizedHandler;
 
     /**
      * Jwt令牌过滤器
@@ -107,7 +107,7 @@ public class WebSecurityConfig {
         //未登录异常处理，引导去登录页面
         http = http
                 .exceptionHandling()
-                .authenticationEntryPoint(authEntryPoint)
+                .authenticationEntryPoint(unAuthorizedHandler)
                 .and();
 
         //添加Jwt Token 过滤器

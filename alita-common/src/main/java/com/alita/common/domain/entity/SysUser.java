@@ -13,8 +13,8 @@ import java.util.Date;
  *
  * @author alita
  */
-@TableName("sys_user_profile")
-public class SysUserProfile {
+@TableName("sys_user")
+public class SysUser {
 
     /**
      * 自增id
@@ -53,7 +53,7 @@ public class SysUserProfile {
     private String introduce;
 
     /**
-     * 账号状态（0=正常，1=停用，2=锁定）
+     * 用户状态（0=正常，1=停用，2=锁定）
      */
     private UserStatus status;
 
