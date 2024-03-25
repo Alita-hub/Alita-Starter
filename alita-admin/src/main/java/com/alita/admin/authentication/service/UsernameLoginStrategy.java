@@ -8,6 +8,7 @@ import com.alita.framework.security.context.AuthenticationContextHolder;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -39,9 +40,9 @@ public class UsernameLoginStrategy implements ILoginStrategy {
         //底层调用UserDetailsServiceImpl的loadUserByUsername
         Authentication authenticate = authenticationManager.authenticate(authenticationToken);
 
-        SysUserAuth principal = (SysUserAuth) authenticate.getPrincipal();
+        User principal = (User) authenticate.getPrincipal();
         //生成jwt令牌
-        String token = jwtUtil.createToken(principal.getPrincipal());
+        String token = jwtUtil.createToken(principal.getUsername());
 
         return token;
     }

@@ -26,7 +26,7 @@
         <!--begin::Item-->
         <li class="breadcrumb-item text-muted">
           <router-link to="/" class="text-muted text-hover-primary"
-            >Home</router-link
+            >首页</router-link
           >
         </li>
         <!--end::Item-->

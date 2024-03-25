@@ -2,7 +2,6 @@ package com.alita.common.enums;
 
 import com.alita.common.exception.core.UnknownEnumValueException;
 import com.baomidou.mybatisplus.annotation.IEnum;
-import com.fasterxml.jackson.annotation.JsonCreator;
 
 
 /**
@@ -24,8 +23,12 @@ public enum UserStatus implements IEnum<String> {
         this.desc = desc;
     }
 
-    @JsonCreator
-    public static UserStatus of(Integer value) {
+    @Override
+    public String getValue() {
+        return this.value;
+    }
+
+    public static UserStatus getType(String value) {
         if (null == value) {
             return null;
         }
@@ -37,10 +40,5 @@ public enum UserStatus implements IEnum<String> {
         }
 
         throw new UnknownEnumValueException("UserStatus: unknown value: " + value);
-    }
-
-    @Override
-    public String getValue() {
-        return this.value;
     }
 }

@@ -28,6 +28,11 @@ public class HttpPageRequest<T> {
     private String order;
 
     /**
+     * 搜索内容
+     */
+    private String search;
+
+    /**
      * 实体参数
      */
     private T params;
@@ -62,6 +67,14 @@ public class HttpPageRequest<T> {
 
     public void setOrder(String order) {
         this.order = order;
+    }
+
+    public String getSearch() {
+        return search;
+    }
+
+    public void setSearch(String search) {
+        this.search = search;
     }
 
     public T getParams() {

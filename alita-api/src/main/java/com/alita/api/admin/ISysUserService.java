@@ -31,9 +31,9 @@ public interface ISysUserService {
 
     /**
      * 保存用户基本信息
-     * @param sysUserProfile
+     * @param sysUser
      * @return int
      */
-    int saveUserProfile(SysUser sysUserProfile);
+    int saveUser(SysUser sysUser);
 
 }

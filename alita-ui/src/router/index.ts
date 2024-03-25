@@ -34,6 +34,15 @@ const routes: Array<RouteRecordRaw> = [
         },
       },
       {
+        path: "/system/user",
+        name: "user",
+        component: () => import("@/views/system/User.vue"),
+        meta: {
+          pageTitle: "用户管理",
+          breadcrumbs: ["系统", "用户"],
+        }
+      },
+      {
         path: "/crafted/pages/profile",
         name: "profile",
         component: () => import("@/components/page-layouts/Profile.vue"),
@@ -44,8 +53,7 @@ const routes: Array<RouteRecordRaw> = [
           {
             path: "overview",
             name: "profile-overview",
-            component: () =>
-              import("@/views/crafted/pages/profile/Overview.vue"),
+            component: () => import("@/views/crafted/pages/profile/Overview.vue"),
             meta: {
               pageTitle: "Overview",
             },

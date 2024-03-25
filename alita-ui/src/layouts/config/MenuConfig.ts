@@ -23,7 +23,7 @@ const MenuConfig: Array<MenuItem> = [
     pages: [
       {
         heading: "用户管理",
-        route: "/user",
+        route: "/system/user",
         keenthemesIcon: "people",
         bootstrapIcon: "bi-calendar3-event",
       },

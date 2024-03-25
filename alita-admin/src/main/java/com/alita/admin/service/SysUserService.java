@@ -2,7 +2,6 @@ package com.alita.admin.service;
 
 import com.alita.admin.mapper.ISysUserMapper;
 import com.alita.api.admin.ISysUserService;
-import com.alita.common.domain.entity.SysConfig;
 import com.alita.common.domain.entity.SysUser;
 import com.alita.common.domain.model.HttpPageRequest;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -12,7 +11,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.List;
+import java.util.Optional;
 
 /**
  * 用户管理
@@ -40,13 +39,16 @@ public class SysUserService implements ISysUserService {
         if (!StringUtils.isEmpty(sysUser.getNickname())) {
             queryWrapper.eq("nickname", sysUser.getNickname());
         }
-        if (!StringUtils.isAllBlank(sysUser.getStatus().getValue())) {
+        if (Optional.ofNullable(sysUser.getStatus()).isPresent()) {
             queryWrapper.eq("status", sysUser.getStatus());
         }
 
-        List<SysUser> sysUsers = sysUserMapper.selectList(queryWrapper);
+        //分页构造
+        Page<SysUser> page = new Page(request.getPageNum(), request.getPageSize());
+        //分页结果
+        Page<SysUser> sysUsers = sysUserMapper.selectPage(page, queryWrapper);
 
-        return null;
+        return sysUsers;
     }
 
 
@@ -57,18 +59,18 @@ public class SysUserService implements ISysUserService {
      */
     @Override
     public SysUser getUserById(int id) {
-        SysUser userProfile = sysUserMapper.selectById(id);
-        return userProfile;
+        SysUser sysUser = sysUserMapper.selectById(id);
+        return sysUser;
     }
 
     /**
      * 保存用户基本信息
-     * @param sysUserProfile
+     * @param sysUser
      * @return int
      */
     @Override
-    public int saveUserProfile(SysUser sysUserProfile) {
-        return sysUserMapper.insert(sysUserProfile);
+    public int saveUser(SysUser sysUser) {
+        return sysUserMapper.insert(sysUser);
     }
 
 }

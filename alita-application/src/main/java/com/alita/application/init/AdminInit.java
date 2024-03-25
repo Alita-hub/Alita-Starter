@@ -5,6 +5,7 @@ import com.alita.api.admin.ISysUserService;
 import com.alita.common.domain.entity.SysUserAuth;
 import com.alita.common.domain.entity.SysUser;
 import com.alita.common.enums.LoginType;
+import com.alita.common.enums.UserStatus;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
@@ -34,17 +35,18 @@ public class AdminInit implements CommandLineRunner {
 
         if (!Optional.ofNullable(admin).isPresent())
         {
-            SysUser sysUserProfile = new SysUser();
-            sysUserProfile.setNickname("admin");
-            sysUserProfileService.saveUserProfile(sysUserProfile);
+            SysUser sysUser = new SysUser();
+            sysUser.setNickname("admin");
+            sysUser.setStatus(UserStatus.NORMAL);
+            sysUserProfileService.saveUser(sysUser);
 
-            SysUserAuth sysUserAccount = new SysUserAuth();
-            sysUserAccount.setUserId(sysUserProfile.getId());
-            sysUserAccount.setPrincipal("admin");
-            sysUserAccount.setCredential(passwordEncoder.encode("admin@123456"));
-            sysUserAccount.setLoginType(LoginType.USERNAME);
+            SysUserAuth sysUserAuth = new SysUserAuth();
+            sysUserAuth.setUserId(sysUser.getId());
+            sysUserAuth.setPrincipal("admin");
+            sysUserAuth.setCredential(passwordEncoder.encode("admin@123456"));
+            sysUserAuth.setLoginType(LoginType.USERNAME);
 
-            sysUserAuthService.saveUserAuth(sysUserAccount);
+            sysUserAuthService.saveUserAuth(sysUserAuth);
 
             System.out.println("管理员初始化完成！");
         }

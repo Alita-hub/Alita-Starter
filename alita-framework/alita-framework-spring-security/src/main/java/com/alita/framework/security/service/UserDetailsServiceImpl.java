@@ -6,7 +6,6 @@ import com.alita.common.domain.entity.SysUserAuth;
 import com.alita.common.domain.entity.SysUser;
 import com.alita.common.enums.UserStatus;
 import com.alita.common.exception.authentication.CustomAuthenticationException;
-import com.alita.common.exception.data.DataNotFoundException;
 import com.alita.framework.security.context.AuthenticationContextHolder;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
@@ -19,6 +18,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Arrays;
 import java.util.Optional;
 
 /**
@@ -49,7 +49,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         }
 
         // 查询用户信息
-        SysUser user= userProfileService.getUserById(userAuth.getUserId());
+        SysUser user = userProfileService.getUserById(userAuth.getUserId());
 
         if (!Optional.ofNullable(user).isPresent()) {
             throw new CustomAuthenticationException("用户不存在！");
@@ -59,10 +59,11 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         UserDetails userDetails = User.builder()
                 .username(userAuth.getPrincipal())
                 .password(userAuth.getCredential())
-                .accountExpired(true)
-                .accountLocked(user.getStatus().equals(UserStatus.LOCKED) ? false : true)
-                .credentialsExpired(true)
-                .disabled(user.getStatus().equals(UserStatus.DISABLE) ? false : true)
+                .authorities(Arrays.asList())
+                .accountExpired(false)
+                .accountLocked(user.getStatus().equals(UserStatus.LOCKED) ? true : false)
+                .credentialsExpired(false)
+                .disabled(user.getStatus().equals(UserStatus.DISABLE) ? true : false)
                 .build();
 
         // 账号被停用

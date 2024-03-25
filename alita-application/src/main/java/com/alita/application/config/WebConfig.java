@@ -1,6 +1,8 @@
 package com.alita.application.config;
 
+import com.alita.common.convert.UserStatusConvert;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.*;
 
 
@@ -28,18 +30,13 @@ public class WebConfig implements WebMvcConfigurer {
     }
 
     /**
-     * spring mvc路径的匹配规则
-     * @param configurer
+     * 配置数据转换器，例如将请求参数字符串转为枚举类型
+     * @param registry
      */
     @Override
-    public void configurePathMatch(PathMatchConfigurer configurer) { }
-
-    /**
-     * 异步请求
-     * @param configurer
-     */
-    @Override
-    public void configureAsyncSupport(AsyncSupportConfigurer configurer) { }
+    public void addFormatters(FormatterRegistry registry) {
+        registry.addConverter(new UserStatusConvert());
+    }
 
     /**
      * Spring MVC 生命周期拦截器，对请求进行拦截处理
