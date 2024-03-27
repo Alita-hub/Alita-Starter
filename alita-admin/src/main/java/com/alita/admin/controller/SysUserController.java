@@ -3,8 +3,8 @@ package com.alita.admin.controller;
 import com.alita.api.admin.ISysUserService;
 import com.alita.common.domain.entity.SysUser;
 import com.alita.common.domain.model.HttpPageRequest;
+import com.alita.common.domain.model.HttpPageResponse;
 import com.alita.common.domain.model.HttpResponse;
-import com.alita.common.enums.HttpCode;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,10 +29,10 @@ public class SysUserController {
      * @return {@link HttpResponse}<{@link Page}>
      */
     @PostMapping("/list")
-    public HttpResponse<Page> list(@RequestBody HttpPageRequest<SysUser> request)
+    public HttpPageResponse list(@RequestBody HttpPageRequest<SysUser> request)
     {
-        Page<SysUser> userList = sysUserService.getUserList(request);
-        return HttpResponse.response(HttpCode.SUCCESS, userList);
+        Page<SysUser> page = sysUserService.getUserList(request);
+        return HttpPageResponse.response(page);
     }
 
 }
