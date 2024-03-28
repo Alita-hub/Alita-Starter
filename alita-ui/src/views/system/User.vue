@@ -96,7 +96,7 @@
       <!--end::Card toolbar-->
     </div>
     <div class="card-body pt-0">
-      <Datatable
+      <Datatable 
         @on-sort="sort"
         @on-items-select="onItemSelect"
         :data="tableData"
@@ -164,51 +164,51 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from "vue";
-import DataTable from "@/components/datatable/DataTable.vue";
+import { defineComponent, onMounted, ref, reactive } from "vue";
+import Datatable from "@/components/datatable/DataTable.vue";
 import type { IUser, IPageRequest } from "@/core/model/system";
 import ApiService from "@/core/services/ApiService";
 
 export default defineComponent({
   name: "user-list",
   components: {
-    DataTable,
+    Datatable,
   },
   setup() {
     const tableHeader = ref([
       {
-        columnName: "id",
-        columnLabel: "ID",
+        columnName: "ID",
+        columnLabel: "id",
         sortEnabled: true,
         columnWidth: 175,
       },
       {
-        columnName: "nickname",
-        columnLabel: "用户",
+        columnName: "用户",
+        columnLabel: "nickname",
         sortEnabled: true,
         columnWidth: 175,
       },
       {
-        columnName: "gender",
-        columnLabel: "性别",
+        columnName: "性别",
+        columnLabel: "gender",
         sortEnabled: true,
         columnWidth: 175,
       },
       {
-        columnName: "status",
-        columnLabel: "状态",
+        columnName: "状态",
+        columnLabel: "status",
         sortEnabled: true,
         columnWidth: 175,
       },
       {
-        columnName: "email",
-        columnLabel: "邮箱",
+        columnName: "邮箱",
+        columnLabel: "email",
         sortEnabled: false,
         columnWidth: 175,
       },
       {
-        columnName: "phone",
-        columnLabel: "手机",
+        columnName: "手机号",
+        columnLabel: "phone",
         sortEnabled: false,
         columnWidth: 175,
       },
@@ -227,9 +227,10 @@ export default defineComponent({
     // 动态请求参数
     const params = ref<IPageRequest> (defaultParams);
 
-    onMounted(() => {
-      ApiService.post("/user/list", params).then((response) => {
-        console.log(response);
+    onMounted(() => { 
+      ApiService.post("/user/list", params.value).then((response) => {
+        tableData.value = response.data.data;
+        console.log(tableData.value);
       });
     });
 

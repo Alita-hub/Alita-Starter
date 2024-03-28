@@ -4,6 +4,7 @@ import com.alita.framework.security.filter.JwtAuthenticationFilter;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationEventPublisher;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.DefaultAuthenticationEventPublisher;
@@ -18,6 +19,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsUtils;
 
 import javax.annotation.Resource;
 
@@ -89,10 +91,12 @@ public class WebSecurityConfig {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and();
 
-        //以下URI路径不需要认证
+        //以下不需要认证
         http = http
                 .authorizeRequests(
                         request -> request
+                                // 允许所有预检请求
+                                .antMatchers(HttpMethod.OPTIONS).permitAll()
                                 .antMatchers("/assets/**").permitAll()
                                 .antMatchers("/authentication/**").permitAll()
                 );

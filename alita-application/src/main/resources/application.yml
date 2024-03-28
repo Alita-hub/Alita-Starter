@@ -38,6 +38,6 @@ mybatis-plus:
 jwt:
   header: Authorization                      # header名称
   secretKey: 1a!2b@3c#4d$5e%6f^              # jwt加密密钥
-  expired: 30                                # jwt令牌过期时间
+  expired: 60                                # jwt令牌过期时间(分钟)
 
 

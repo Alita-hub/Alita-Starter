@@ -1,7 +1,9 @@
 import type { AxiosResponse, AxiosInstance } from "axios";
 import axios, { HttpStatusCode } from "axios";
 import { useAuthStore } from "@/stores/auth";
+import router from "@/router";
 import JwtService from "@/core/services/JwtService";
+import Swal from "sweetalert2/dist/sweetalert2.js";
 
 /**
  * @description service to call HTTP request via Axios
@@ -14,6 +16,7 @@ class ApiService {
    * @description 初始化Axios，配置拦截器
    */
   public static init() {
+
     // 创建axios自定义实例
     ApiService.axiosInstance = axios.create({
       baseURL: import.meta.env.VITE_APP_API_URL
@@ -36,12 +39,36 @@ class ApiService {
     // 响应拦截器，统一拦截Unauthorized
     ApiService.axiosInstance.interceptors.response.use(
       response => {
-        if (response.status === HttpStatusCode.Unauthorized) {
-          useAuthStore().isAuthenticated = false;
-        }
+        // 任何在 2xx 范围内的状态代码都会触发该函数
         return response;
+      },
+      error => {
+        console.log(error);
+        // 任何超出 2xx 范围的状态代码都会触发该功能
+        if (error.response.status === HttpStatusCode.Unauthorized) {
+          useAuthStore().isAuthenticated = false;
+
+          Swal.fire({
+            text: error.response.data.message,
+            icon: "error",
+            showConfirmButton: true,
+            showCancelButton: false,
+            buttonsStyling: false,
+            //timer: 1000,
+            confirmButtonText: "Ok, got it!",
+            heightAuto: false,
+            customClass: {
+              confirmButton: "btn fw-semibold btn-light-primary",
+            },
+          }).then(() => {
+            router.push({ name: "sign-in" });
+          });
+        }
+        
+        return Promise.reject(error);
       }
-    )
+    );
+
   }
 
   /**

@@ -36,11 +36,13 @@ public class SysUserService implements ISysUserService {
         // 创建一个QueryWrapper对象，用于构建查询条件
         QueryWrapper<SysUser> queryWrapper = Wrappers.query();
 
-        if (!StringUtils.isEmpty(sysUser.getNickname())) {
-            queryWrapper.eq("nickname", sysUser.getNickname());
-        }
-        if (Optional.ofNullable(sysUser.getStatus()).isPresent()) {
-            queryWrapper.eq("status", sysUser.getStatus());
+        if (Optional.ofNullable(sysUser).isPresent()) {
+            if (!StringUtils.isEmpty(sysUser.getNickname())) {
+                queryWrapper.eq("nickname", sysUser.getNickname());
+            }
+            if (Optional.ofNullable(sysUser.getStatus()).isPresent()) {
+                queryWrapper.eq("status", sysUser.getStatus());
+            }
         }
 
         //分页构造

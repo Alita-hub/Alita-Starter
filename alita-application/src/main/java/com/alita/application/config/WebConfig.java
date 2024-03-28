@@ -1,8 +1,12 @@
 package com.alita.application.config;
 
 import com.alita.common.convert.UserStatusConvert;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
 import org.springframework.web.servlet.config.annotation.*;
 
 
@@ -14,20 +18,6 @@ import org.springframework.web.servlet.config.annotation.*;
  */
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
-
-    /**
-     * CORS跨域配置
-     * @param registry
-     */
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowCredentials(true)
-                .allowedOriginPatterns("*")
-                .allowedMethods("GET", "POST", "PUT", "DELETE")
-                .allowedHeaders("*")
-                .exposedHeaders("*");
-    }
 
     /**
      * 配置数据转换器，例如将请求参数字符串转为枚举类型
