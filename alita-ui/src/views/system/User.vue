@@ -105,26 +105,27 @@
         :checkbox-enabled="true"
         checkbox-label="id"
       >
-        <template v-slot:name="{ row: customer }">
-          {{ customer.name }}
+        <template v-slot:id="{ row: user }">
+          {{ user.id }}
         </template>
-        <template v-slot:email="{ row: customer }">
+        <template v-slot:nickname="{ row: user }">
+          {{ user.nickname }}
+        </template>
+        <template v-slot:gender="{ row: user }">
           <a href="#" class="text-gray-600 text-hover-primary mb-1">
-            {{ customer.email }}
+            {{ user.gender }}
           </a>
         </template>
-        <template v-slot:company="{ row: customer }">
-          {{ customer.company }}
+        <template v-slot:email="{ row: user }">
+          {{ user.email }}
         </template>
-        <template v-slot:paymentMethod="{ row: customer }">
-          <img :src="customer.payment.icon" class="w-35px me-3" alt="" />{{
-            customer.payment.ccnumber
-          }}
+        <template v-slot:phone="{ row: user }">
+          {{ user.phone }}
         </template>
-        <template v-slot:date="{ row: customer }">
-          {{ customer.date }}
+        <template v-slot:status="{ row: user }">
+          {{ user.status }}
         </template>
-        <template v-slot:actions="{ row: customer }">
+        <template v-slot:actions="{ row: user }">
           <a
             href="#"
             class="btn btn-sm btn-light btn-active-light-primary"
@@ -150,9 +151,7 @@
             <!--end::Menu item-->
             <!--begin::Menu item-->
             <div class="menu-item px-3">
-              <a @click="deleteCustomer(customer.id)" class="menu-link px-3"
-                >Delete</a
-              >
+              <a @click="deleteCustomer(user.id)" class="menu-link px-3">Delete</a>
             </div>
             <!--end::Menu item-->
           </div>
@@ -164,8 +163,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref, reactive } from "vue";
+import { defineComponent, onMounted, ref } from "vue";
 import Datatable from "@/components/datatable/DataTable.vue";
+import { MenuComponent } from "@/assets/ts/components";
 import type { IUser, IPageRequest } from "@/core/model/system";
 import ApiService from "@/core/services/ApiService";
 
@@ -180,37 +180,43 @@ export default defineComponent({
         columnName: "ID",
         columnLabel: "id",
         sortEnabled: true,
-        columnWidth: 175,
+        columnWidth: 80,
       },
       {
         columnName: "用户",
         columnLabel: "nickname",
         sortEnabled: true,
-        columnWidth: 175,
+        columnWidth: 120,
       },
       {
         columnName: "性别",
         columnLabel: "gender",
         sortEnabled: true,
-        columnWidth: 175,
+        columnWidth: 90,
       },
       {
         columnName: "状态",
         columnLabel: "status",
         sortEnabled: true,
-        columnWidth: 175,
+        columnWidth: 90,
       },
       {
         columnName: "邮箱",
         columnLabel: "email",
         sortEnabled: false,
-        columnWidth: 175,
+        columnWidth: 150,
       },
       {
         columnName: "手机号",
         columnLabel: "phone",
         sortEnabled: false,
-        columnWidth: 175,
+        columnWidth: 150,
+      },
+      {
+        columnName: "Actions",
+        columnLabel: "actions",
+        sortEnabled: false,
+        columnWidth: 135,
       },
     ]);
 
@@ -230,7 +236,6 @@ export default defineComponent({
     onMounted(() => { 
       ApiService.post("/user/list", params.value).then((response) => {
         tableData.value = response.data.data;
-        console.log(tableData.value);
       });
     });
 
@@ -271,4 +276,4 @@ export default defineComponent({
   },
 });
 </script>
-@/core/model/user
+
