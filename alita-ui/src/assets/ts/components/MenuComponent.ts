@@ -896,7 +896,7 @@ class MenuComponent {
     return EventHandlerUtil.off(this.element, name, handlerId);
   };
 
-  // public static methods
+
   // Get Menu instance by element
   public static getInstance = (element: HTMLElement): MenuComponent | null => {
     // Element has menu DOM reference in it's DATA storage
@@ -973,21 +973,39 @@ class MenuComponent {
     }
   };
 
-  // Global handlers
+
+  /**
+   * 创建并初始化菜单组件实例。
+   * 该方法根据指定的选择器查询文档中的所有菜单元素，并初始化菜单组件实例。
+   * @param selector 用于查询菜单元素的选择器。
+   */
   public static createInstances = (selector: string) => {
-    // Initialize menus
+    // 遍历查询到的所有菜单元素，并初始化菜单组件实例
     document.querySelectorAll(selector).forEach((el) => {
       const menuItem = el as HTMLElement;
+      console.log(menuItem);
       let menuInstance = MenuComponent.getInstance(menuItem);
+      // 如果不存在菜单实例，则创建新的菜单组件实例并进行初始化
       if (!menuInstance) {
         menuInstance = new MenuComponent(el as HTMLElement, defaultMenuOptions);
       }
     });
   };
 
+
+  /**
+   * 初始化全局事件处理
+   * 该方法用于处理下拉菜单的点击事件，当点击文档时隐藏所有显示的下拉菜单，除非菜单元素设置为静态显示。
+   */
   public static initGlobalHandlers = () => {
-    // Dropdown handler
+
+    /**
+     * 将事件处理程序绑定到文档的点击事件上。
+     * 该方法用于处理文档中的点击事件，主要用于隐藏下拉菜单。
+     * 当点击除下拉菜单外的其他区域时，会隐藏所有显示中的下拉菜单项。
+     */
     document.addEventListener("click", (e) => {
+      // 查询所有显示中的下拉菜单项
       const menuItems = document.querySelectorAll(
         '.show.menu-dropdown[data-menu-trigger]:not([data-menu-static="true"])'
       );
@@ -996,64 +1014,84 @@ class MenuComponent {
           const item = menuItems[i] as HTMLElement;
           const menuObj = MenuComponent.getInstance(item) as MenuComponent;
           if (menuObj && menuObj.getItemSubType(item) === "dropdown") {
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+            // 获取菜单和子菜单元素
             const menu = menuObj.getElement();
             const sub = menuObj.getItemSubElement(item) as HTMLElement;
+            // 如果点击的是菜单项或其包含的子元素，则跳过
             if (item === e.target || item.contains(e.target as HTMLElement)) {
               continue;
             }
-
-            if (
-              sub &&
-              (sub === e.target || sub.contains(e.target as HTMLElement))
-            ) {
+            // 如果点击的是子菜单或其包含的子元素，则跳过
+            if (sub && (sub === e.target || sub.contains(e.target as HTMLElement))) {
               continue;
             }
+            // 隐藏下拉菜单
             menuObj.hide(item);
           }
         }
       }
     });
 
-    // Sub toggle handler
+    /**
+     * 将事件处理程序绑定到文档中的指定元素上。
+     * 该方法用于处理菜单项点击事件。
+     * 当菜单项的链接被点击时，会触发相关菜单组件的 click 方法。
+     */
     DOMEventHandlerUtil.on(
       document.body,
       '.menu-item[data-menu-trigger] > .menu-link, [data-menu-trigger]:not(.menu-item):not([data-menu-trigger="auto"])',
       "click",
       function (this: HTMLElement, e: Event) {
+        // 获取与当前元素关联的菜单组件实例
         const menu = MenuComponent.getInstance(this) as MenuComponent;
         if (menu) {
+          // 调用菜单组件的 click 方法处理点击事件
           return menu.click(this, e);
         }
       }
     );
 
-    // // Link handler
+    /**
+     * 将事件处理程序绑定到文档中的指定元素上。
+     * 该方法用于处理菜单项链接的点击事件。
+     * 当菜单项链接被点击时，会调用相关菜单组件的 link 方法进行处理。
+     * 该处理会阻止事件继续冒泡。
+     */
     DOMEventHandlerUtil.on(
       document.body,
       ".menu-item:not([data-menu-trigger]) > .menu-link",
       "click",
       function (this: HTMLElement, e: Event) {
+        // 阻止事件继续冒泡
         e.stopPropagation();
+        // 获取当前元素关联的菜单组件实例
         const menu = MenuComponent.getInstance(this);
         if (menu && menu.link) {
+          // 调用菜单组件的 link 方法处理点击事件
           return menu.link(this, e);
         }
       }
     );
 
-    // Dismiss handler
+    /**
+     * 将事件处理程序绑定到文档中的指定元素上。
+     * 该方法用于处理菜单中具有 data-menu-dismiss="true" 属性的元素的点击事件。
+     * 当这些元素被点击时，会调用相关菜单组件的 dismiss 方法进行处理。
+     */
     DOMEventHandlerUtil.on(
       document.body,
       '[data-menu-dismiss="true"]',
       "click",
       function (this: HTMLElement, e: Event) {
+        // 获取与当前元素关联的菜单组件实例
         const menu = MenuComponent.getInstance(this) as MenuComponent;
         if (menu) {
+          // 调用菜单组件的 dismiss 方法处理点击事件
           return menu.dismiss(this, e);
         }
       }
     );
+
 
     // Mouseover handler
     DOMEventHandlerUtil.on(
@@ -1099,7 +1137,9 @@ class MenuComponent {
         200
       );
     });
+
   };
+
 
   public static bootstrap = () => {
     MenuComponent.initGlobalHandlers();

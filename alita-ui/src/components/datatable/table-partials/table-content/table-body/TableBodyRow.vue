@@ -28,7 +28,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, watch } from "vue";
+import { defineComponent, ref, watch, onMounted } from "vue";
+import { MenuComponent } from "@/assets/ts/components";
+
 
 export default defineComponent({
   name: "table-body-row",
