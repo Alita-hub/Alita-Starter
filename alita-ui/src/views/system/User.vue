@@ -14,7 +14,7 @@
             v-model="search"
             @input="searchItems()"
             class="form-control form-control-solid w-250px ps-15"
-            placeholder="Search Customers"
+            placeholder="搜索用户"
           />
         </div>
         <!--end::Search-->
@@ -28,6 +28,87 @@
           class="d-flex justify-content-end"
           data-customer-table-toolbar="base"
         >
+          <!--begin::Filter-->
+          <button type="button" class="btn btn-light-primary me-3" data-menu-trigger="click" data-menu-placement="bottom-end">
+            <i class="ki-duotone ki-filter fs-2">
+              <span class="path1"></span>
+              <span class="path2"></span>
+          </i>Filter</button>
+          <!--begin::Menu 1-->
+          <div class="menu menu-sub menu-sub-dropdown w-300px w-md-325px" data-menu="true" id="alita-toolbar-filter">
+            <!--begin::Header-->
+            <div class="px-7 py-5">
+              <div class="fs-4 text-gray-900 fw-bold">Filter Options</div>
+            </div>
+            <!--end::Header-->
+            <!--begin::Separator-->
+            <div class="separator border-gray-200"></div>
+            <!--end::Separator-->
+            <!--begin::Content-->
+            <div class="px-7 py-5">
+              <!--begin::Input group-->
+              <div class="mb-10">
+                <!--begin::Label-->
+                <label class="form-label fs-5 fw-semibold mb-3">Month:</label>
+                <!--end::Label-->
+                <!--begin::Input-->
+                <select class="form-select form-select-solid fw-bold" data-select2="true" data-placeholder="Select option" data-allow-clear="true" data-customer-table-filter="month" data-dropdown-parent="#alita-toolbar-filter">
+                  <option></option>
+                  <option value="aug">August</option>
+                  <option value="sep">September</option>
+                  <option value="oct">October</option>
+                  <option value="nov">November</option>
+                  <option value="dec">December</option>
+                </select>
+                <!--end::Input-->
+              </div>
+              <!--end::Input group-->
+              <!--begin::Input group-->
+              <div class="mb-10">
+                <!--begin::Label-->
+                <label class="form-label fs-5 fw-semibold mb-3">Payment Type:</label>
+                <!--end::Label-->
+                <!--begin::Options-->
+                <div class="d-flex flex-column flex-wrap fw-semibold" data-customer-table-filter="payment_type">
+                  <!--begin::Option-->
+                  <label class="form-check form-check-sm form-check-custom form-check-solid mb-3 me-5">
+                    <input class="form-check-input" type="radio" name="payment_type" value="all" checked="checked" />
+                    <span class="form-check-label text-gray-600">All</span>
+                  </label>
+                  <!--end::Option-->
+                  <!--begin::Option-->
+                  <label class="form-check form-check-sm form-check-custom form-check-solid mb-3 me-5">
+                    <input class="form-check-input" type="radio" name="payment_type" value="visa" />
+                    <span class="form-check-label text-gray-600">Visa</span>
+                  </label>
+                  <!--end::Option-->
+                  <!--begin::Option-->
+                  <label class="form-check form-check-sm form-check-custom form-check-solid mb-3">
+                    <input class="form-check-input" type="radio" name="payment_type" value="mastercard" />
+                    <span class="form-check-label text-gray-600">Mastercard</span>
+                  </label>
+                  <!--end::Option-->
+                  <!--begin::Option-->
+                  <label class="form-check form-check-sm form-check-custom form-check-solid">
+                    <input class="form-check-input" type="radio" name="payment_type" value="american_express" />
+                    <span class="form-check-label text-gray-600">American Express</span>
+                  </label>
+                  <!--end::Option-->
+                </div>
+                <!--end::Options-->
+              </div>
+              <!--end::Input group-->
+              <!--begin::Actions-->
+              <div class="d-flex justify-content-end">
+                <button type="reset" class="btn btn-light btn-active-light-primary me-2" data-menu-dismiss="true" data-customer-table-filter="reset">Reset</button>
+                <button type="submit" class="btn btn-primary" data-menu-dismiss="true" data-customer-table-filter="filter">Apply</button>
+              </div>
+              <!--end::Actions-->
+            </div>
+            <!--end::Content-->
+          </div>
+          <!--end::Menu 1-->
+          <!--end::Filter-->
           <!--begin::Export-->
           <button
             type="button"
@@ -241,14 +322,6 @@ export default defineComponent({
       });
     });
 
-    const getData = async () => {
-      try {
-        const response = await ApiService.post("/user/list", params.value);
-        return response.data;
-      } catch (error) {
-        console.error(error);
-      }
-    }
 
     const searchItems = () => {};
 

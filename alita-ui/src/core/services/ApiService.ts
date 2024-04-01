@@ -32,6 +32,22 @@ class ApiService {
         return request;
       },
       error => {
+        if (!error) {
+          // network error
+          Swal.fire({
+            text: '网络连接异常',
+            icon: "error",
+            showConfirmButton: true,
+            showCancelButton: false,
+            buttonsStyling: false,
+            //timer: 1000,
+            confirmButtonText: "Ok, got it!",
+            heightAuto: false,
+            customClass: {
+              confirmButton: "btn fw-semibold btn-light-primary",
+            },
+          })
+        } 
         return Promise.reject(error);
       }
     );

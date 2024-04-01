@@ -201,10 +201,9 @@ export default defineComponent({
       // Clear existing errors
       authStore.logout();
 
+      // 打开按钮状态
       if (submitButton.value) {
-        // eslint-disable-next-line
         submitButton.value!.disabled = true;
-        // Activate indicator
         submitButton.value.setAttribute("data-indicator", "on");
       }
 
@@ -242,10 +241,8 @@ export default defineComponent({
           authStore.msg = "";
         });
       }
-
-      //Deactivate indicator
+      
       submitButton.value?.removeAttribute("data-indicator");
-      // eslint-disable-next-line
       submitButton.value!.disabled = false;
     };
 

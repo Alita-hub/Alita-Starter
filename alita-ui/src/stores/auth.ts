@@ -31,15 +31,7 @@ export const useAuthStore = defineStore("auth", () => {
           isAuthenticated.value = true;
           JwtService.saveToken(data.data);
         } else {
-          msg.value = data.msg;
-        }
-      })
-      .catch(({ error }) => {
-        if (!error) {
-          // network error
-          msg.value = '网络连接异常';
-        } else {
-          msg.value = error.response.data.message;
+          msg.value = data.message;
         }
       });
   }
