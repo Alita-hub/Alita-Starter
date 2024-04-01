@@ -50,6 +50,14 @@ export default defineComponent({
   setup(props, { emit }) {
     const selectedItems = ref<Array<any>>([]);
 
+    onMounted(() => {
+      MenuComponent.reinitialization();
+    }) 
+
+    watch(props.data, () => {
+      MenuComponent.reinitialization();
+    })
+    
     watch(
       () => [...props.currentlySelectedItems],
       (currentValue) => {

@@ -96,7 +96,7 @@
       <!--end::Card toolbar-->
     </div>
     <div class="card-body pt-0">
-      <Datatable 
+      <Datatable
         @on-sort="sort"
         @on-items-select="onItemSelect"
         :data="tableData"
@@ -151,7 +151,9 @@
             <!--end::Menu item-->
             <!--begin::Menu item-->
             <div class="menu-item px-3">
-              <a @click="deleteCustomer(user.id)" class="menu-link px-3">Delete</a>
+              <a @click="deleteCustomer(user.id)" class="menu-link px-3"
+                >Delete</a
+              >
             </div>
             <!--end::Menu item-->
           </div>
@@ -163,7 +165,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from "vue";
+import { defineComponent, onBeforeMount, onMounted, ref } from "vue";
 import Datatable from "@/components/datatable/DataTable.vue";
 import { MenuComponent } from "@/assets/ts/components";
 import type { IUser, IPageRequest } from "@/core/model/system";
@@ -223,21 +225,30 @@ export default defineComponent({
     const search = ref<string>("");
     const selectedIds = ref<Array<number>>([]);
     const tableData = ref<Array<IUser>>([]);
-    
+
     // 默认请求参数
-    const defaultParams : IPageRequest = {
-      "pageSize": 10,
-      "pageNum": 1
+    const defaultParams: IPageRequest = {
+      pageSize: 10,
+      pageNum: 1,
     };
 
     // 动态请求参数
-    const params = ref<IPageRequest> (defaultParams);
+    const params = ref<IPageRequest>(defaultParams);
 
-    onMounted(() => { 
+    onMounted(() => {
       ApiService.post("/user/list", params.value).then((response) => {
         tableData.value = response.data.data;
       });
     });
+
+    const getData = async () => {
+      try {
+        const response = await ApiService.post("/user/list", params.value);
+        return response.data;
+      } catch (error) {
+        console.error(error);
+      }
+    }
 
     const searchItems = () => {};
 
@@ -276,4 +287,3 @@ export default defineComponent({
   },
 });
 </script>
-

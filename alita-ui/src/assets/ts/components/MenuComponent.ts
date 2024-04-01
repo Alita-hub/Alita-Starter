@@ -983,7 +983,6 @@ class MenuComponent {
     // 遍历查询到的所有菜单元素，并初始化菜单组件实例
     document.querySelectorAll(selector).forEach((el) => {
       const menuItem = el as HTMLElement;
-      console.log(menuItem);
       let menuInstance = MenuComponent.getInstance(menuItem);
       // 如果不存在菜单实例，则创建新的菜单组件实例并进行初始化
       if (!menuInstance) {
