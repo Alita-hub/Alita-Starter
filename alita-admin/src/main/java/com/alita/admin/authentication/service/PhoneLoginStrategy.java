@@ -1,7 +1,7 @@
 package com.alita.admin.authentication.service;
 
 import com.alita.admin.authentication.core.ILoginStrategy;
-import com.alita.common.domain.model.Login;
+import com.alita.common.domain.po.LoginPo;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class PhoneLoginStrategy implements ILoginStrategy {
 
     @Override
-    public String login(Login login) {
+    public String login(LoginPo login) {
         return "false";
     }
 }

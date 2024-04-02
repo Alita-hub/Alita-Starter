@@ -1,6 +1,6 @@
 package com.alita.admin.authentication.core;
 
-import com.alita.common.domain.model.Login;
+import com.alita.common.domain.po.LoginPo;
 import com.alita.common.enums.LoginType;
 import com.alita.common.exception.core.BadRequestException;
 import com.alita.framework.security.context.AuthenticationContextHolder;
@@ -25,7 +25,7 @@ public class LoginStrategyContext {
      * @param login
      * @return boolean
      */
-    public String loginHandle(Login login)
+    public String loginHandle(LoginPo login)
     {
         if (!Optional.ofNullable(login.getLoginType()).isPresent() && !LoginType.isContain(login.getLoginType()))
         {

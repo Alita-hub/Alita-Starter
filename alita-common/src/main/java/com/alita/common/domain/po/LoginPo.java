@@ -1,14 +1,12 @@
-package com.alita.common.domain.model;
+package com.alita.common.domain.po;
 
-
-import com.alita.common.enums.LoginType;
 
 /**
  * 用户登录实体
  *
  * @author alita
  */
-public class Login {
+public class LoginPo {
 
     private String loginType;
 

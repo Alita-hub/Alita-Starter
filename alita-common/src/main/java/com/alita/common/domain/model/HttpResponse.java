@@ -5,9 +5,6 @@ import com.alita.common.enums.HttpCode;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
- * 前端统一响应模型
- * JsonInclude: 为Null的字段不进行序列化
- *
  * @author alita
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)

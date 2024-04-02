@@ -40,7 +40,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) {
         // 查询用户认证信息
-        SysUserAuth userAuth = userAccountService.getUserByUsername(username);
+        SysUserAuth userAuth = userAccountService.getUserByprincipal(username);
 
         // 未找到用户
         if (!Optional.ofNullable(userAuth).isPresent())
@@ -49,7 +49,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         }
 
         // 查询用户信息
-        SysUser user = userProfileService.getUserById(userAuth.getUserId());
+        SysUser user = userProfileService.getUserInfo(userAuth.getUserId());
 
         if (!Optional.ofNullable(user).isPresent()) {
             throw new CustomAuthenticationException("用户不存在！");

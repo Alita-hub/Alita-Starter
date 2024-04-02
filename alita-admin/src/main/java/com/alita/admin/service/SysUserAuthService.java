@@ -23,16 +23,16 @@ public class SysUserAuthService implements ISysUserAuthService {
 
     /**
      * 根据用户名查询认证信息
-     * @param username
+     * @param principal
      * @return {@link SysUserAuth}
      */
     @Override
-    public SysUserAuth getUserByUsername(String username) {
+    public SysUserAuth getUserByprincipal(String principal) {
         // 创建一个QueryWrapper对象，用于构建查询条件
         QueryWrapper<SysUserAuth> queryWrapper = Wrappers.query();
 
         // 拼接查询条件
-        queryWrapper.eq("principal", username);
+        queryWrapper.eq("principal", principal);
         queryWrapper.eq("login_type", LoginType.USERNAME.getValue());
 
         // 查询结果

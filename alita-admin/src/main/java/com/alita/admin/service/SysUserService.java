@@ -1,14 +1,20 @@
 package com.alita.admin.service;
 
 import com.alita.admin.mapper.ISysUserMapper;
+import com.alita.api.admin.ISysUserAuthService;
 import com.alita.api.admin.ISysUserService;
 import com.alita.common.domain.entity.SysUser;
+import com.alita.common.domain.entity.SysUserAuth;
 import com.alita.common.domain.model.HttpPageRequest;
+import com.alita.common.domain.po.AddUserPo;
+import com.alita.common.enums.LoginType;
+import com.alita.common.enums.UserStatus;
 import com.alita.common.exception.core.CrudException;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -23,6 +29,12 @@ public class SysUserService implements ISysUserService {
 
     @Resource
     private ISysUserMapper sysUserMapper;
+
+    @Resource
+    private ISysUserAuthService sysUserAuthService;
+
+    @Resource
+    private PasswordEncoder passwordEncoder;
 
     /**
      * 条件分页查询用户列表
@@ -56,23 +68,53 @@ public class SysUserService implements ISysUserService {
 
 
     /**
-     * 根据用户id获取用户
+     * 根据用户id获取用户基本信息
      * @param id
      * @return {@link SysUser}
      */
     @Override
-    public SysUser getUserById(int id) {
+    public SysUser getUserInfo(int id) {
         SysUser sysUser = sysUserMapper.selectById(id);
         return sysUser;
     }
 
     /**
+     * 新增用户
+     * @param addUserPo
+     * @return boolean
+     */
+    @Override
+    public boolean addUser(AddUserPo addUserPo) {
+        // 判断用户是否存在
+        SysUserAuth userAuth = sysUserAuthService.getUserByprincipal(addUserPo.getPrincipal());
+        if (!Optional.ofNullable(userAuth).isPresent())
+        {
+            SysUser sysUser = new SysUser();
+            sysUser.setNickname(addUserPo.getNickname());
+            addUserInfo(sysUser);
+
+            SysUserAuth sysUserAuth = new SysUserAuth();
+            sysUserAuth.setUserId(sysUser.getId());
+            sysUserAuth.setPrincipal(addUserPo.getPrincipal());
+            sysUserAuth.setCredential(passwordEncoder.encode(addUserPo.getCredential()));
+            sysUserAuth.setLoginType(LoginType.USERNAME);
+
+            sysUserAuthService.saveUserAuth(sysUserAuth);
+        } else {
+
+        }
+
+        return false;
+    }
+
+    /**
      * 保存用户基本信息
+     *
      * @param sysUser
      * @return int
      */
     @Override
-    public boolean saveUser(SysUser sysUser) {
+    public boolean addUserInfo(SysUser sysUser) {
         if (sysUserMapper.insert(sysUser) > 0) {
             return true;
         }
@@ -81,7 +123,7 @@ public class SysUserService implements ISysUserService {
     }
 
     /**
-     * 更新用户信息
+     * 更新用户基本信息
      * @param sysUser
      * @return int
      */
@@ -100,7 +142,7 @@ public class SysUserService implements ISysUserService {
      * @return int
      */
     @Override
-    public boolean deleteUserById(int id) {
+    public boolean deleteUser(int id) {
         if (sysUserMapper.deleteById(id) > 0) {
             return true;
         }

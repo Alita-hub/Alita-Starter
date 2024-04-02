@@ -2,7 +2,7 @@ package com.alita.admin.authentication.controller;
 
 import com.alita.admin.authentication.core.LoginStrategyContext;
 import com.alita.common.domain.model.HttpResponse;
-import com.alita.common.domain.model.Login;
+import com.alita.common.domain.po.LoginPo;
 import com.alita.common.enums.HttpCode;
 import com.alita.common.exception.core.BadRequestException;
 import org.springframework.stereotype.Controller;
@@ -35,7 +35,7 @@ public class SysLoginController {
      */
     @PostMapping("/login")
     @ResponseBody
-    public HttpResponse login(@RequestBody Login login)
+    public HttpResponse login(@RequestBody LoginPo login)
     {
         //用户名校验
         usernameCheckout(login.getUsername());

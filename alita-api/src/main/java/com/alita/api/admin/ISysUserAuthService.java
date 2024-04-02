@@ -11,10 +11,10 @@ public interface ISysUserAuthService {
 
     /**
      * 根据用户名查询账户信息
-     * @param username
+     * @param principal
      * @return {@link SysUserAuth}
      */
-    SysUserAuth getUserByUsername(String username);
+    SysUserAuth getUserByprincipal(String principal);
 
 
     /**

@@ -2,6 +2,7 @@ package com.alita.api.admin;
 
 import com.alita.common.domain.entity.SysUser;
 import com.alita.common.domain.model.HttpPageRequest;
+import com.alita.common.domain.po.AddUserPo;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
 
@@ -22,11 +23,18 @@ public interface ISysUserService {
 
 
     /**
+     * 新增用户
+     * @param addUserPo
+     * @return boolean
+     */
+    boolean addUser(AddUserPo addUserPo);
+
+    /**
      * 根据用户id获取用户
      * @param id
      * @return {@link SysUser}
      */
-    SysUser getUserById(int id);
+    SysUser getUserInfo(int id);
 
 
     /**
@@ -34,7 +42,7 @@ public interface ISysUserService {
      * @param sysUser
      * @return int
      */
-    boolean saveUser(SysUser sysUser);
+    boolean addUserInfo(SysUser sysUser);
 
 
     /**
@@ -50,6 +58,6 @@ public interface ISysUserService {
      * @param id
      * @return int
      */
-    boolean deleteUserById(int id);
+    boolean deleteUser(int id);
 
 }

@@ -21,7 +21,7 @@ import java.util.Optional;
 public class AdminInit implements CommandLineRunner {
 
     @Resource
-    private ISysUserService sysUserProfileService;
+    private ISysUserService sysUserService;
 
     @Resource
     private ISysUserAuthService sysUserAuthService;
@@ -31,14 +31,13 @@ public class AdminInit implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        SysUserAuth admin = sysUserAuthService.getUserByUsername("admin");
+        SysUserAuth admin = sysUserAuthService.getUserByprincipal("admin");
 
         if (!Optional.ofNullable(admin).isPresent())
         {
             SysUser sysUser = new SysUser();
             sysUser.setNickname("admin");
-            sysUser.setStatus(UserStatus.NORMAL);
-            sysUserProfileService.saveUser(sysUser);
+            sysUserService.addUserInfo(sysUser);
 
             SysUserAuth sysUserAuth = new SysUserAuth();
             sysUserAuth.setUserId(sysUser.getId());
@@ -48,7 +47,7 @@ public class AdminInit implements CommandLineRunner {
 
             sysUserAuthService.saveUserAuth(sysUserAuth);
 
-            System.out.println("管理员初始化完成！");
+            System.out.println("管理员初始化完成： admin:admin@123456");
         }
 
     }
