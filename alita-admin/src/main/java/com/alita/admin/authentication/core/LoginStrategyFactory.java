@@ -1,6 +1,6 @@
 package com.alita.admin.authentication.core;
 
-import com.alita.common.exception.core.AppInternalExcepion;
+import com.alita.common.exception.core.AppInternalException;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -29,7 +29,7 @@ public class LoginStrategyFactory {
     public ILoginStrategy getLoginStrategy(String loginType)
     {
         if (!loginStrategyMap.containsKey(loginType)) {
-            throw new AppInternalExcepion("该登录方式还未实现： " + loginType);
+            throw new AppInternalException("该登录方式还未实现： " + loginType);
         }
 
         return loginStrategyMap.get(loginType);

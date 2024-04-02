@@ -29,7 +29,7 @@ public class HttpResponse<T> {
     private T data;
 
     /**
-     * 自定义成功消息
+     * 请求成功，自定义消息
      * @param msg
      * @return {@link HttpResponse}<{@link ?}>
      */
@@ -42,7 +42,7 @@ public class HttpResponse<T> {
     }
 
     /**
-     * 自定义成功消息和数据
+     * 请求成功，自定义消息和数据
      * @param msg
      * @param data
      * @return {@link HttpResponse}<{@link T}>
@@ -51,6 +51,20 @@ public class HttpResponse<T> {
         HttpResponse<T> result = new HttpResponse<>();
         result.setCode(HttpCode.SUCCESS.getCode());
         result.setMessage(msg);
+        result.setData(data);
+
+        return result;
+    }
+
+    /**
+     * 请求成功，自定义数据
+     * @param data
+     * @return {@link HttpResponse}<{@link T}>
+     */
+    public static <T> HttpResponse<T> success(T data) {
+        HttpResponse<T> result = new HttpResponse<>();
+        result.setCode(HttpCode.SUCCESS.getCode());
+        result.setMessage(HttpCode.SUCCESS.getMsg());
         result.setData(data);
 
         return result;
@@ -68,6 +82,7 @@ public class HttpResponse<T> {
 
         return result;
     }
+
 
     /**
      * 自定义服务端报错信息

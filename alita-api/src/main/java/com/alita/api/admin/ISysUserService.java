@@ -34,6 +34,22 @@ public interface ISysUserService {
      * @param sysUser
      * @return int
      */
-    int saveUser(SysUser sysUser);
+    boolean saveUser(SysUser sysUser);
+
+
+    /**
+     * 更新用户信息
+     * @param sysUser
+     * @return int
+     */
+    boolean updateUser(SysUser sysUser);
+
+
+    /**
+     * 根据id删除用户
+     * @param id
+     * @return int
+     */
+    boolean deleteUserById(int id);
 
 }

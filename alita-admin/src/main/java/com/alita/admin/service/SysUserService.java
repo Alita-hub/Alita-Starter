@@ -4,6 +4,7 @@ import com.alita.admin.mapper.ISysUserMapper;
 import com.alita.api.admin.ISysUserService;
 import com.alita.common.domain.entity.SysUser;
 import com.alita.common.domain.model.HttpPageRequest;
+import com.alita.common.exception.core.CrudException;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -71,8 +72,39 @@ public class SysUserService implements ISysUserService {
      * @return int
      */
     @Override
-    public int saveUser(SysUser sysUser) {
-        return sysUserMapper.insert(sysUser);
+    public boolean saveUser(SysUser sysUser) {
+        if (sysUserMapper.insert(sysUser) > 0) {
+            return true;
+        }
+
+        throw new CrudException("用户信息保存失败！");
     }
 
+    /**
+     * 更新用户信息
+     * @param sysUser
+     * @return int
+     */
+    @Override
+    public boolean updateUser(SysUser sysUser) {
+        if (sysUserMapper.updateById(sysUser) > 0) {
+            return true;
+        }
+
+        throw new CrudException("用户信息更新失败！");
+    }
+
+    /**
+     * 根据id删除用户
+     * @param id
+     * @return int
+     */
+    @Override
+    public boolean deleteUserById(int id) {
+        if (sysUserMapper.deleteById(id) > 0) {
+            return true;
+        }
+
+        throw new CrudException("用户删除失败！");
+    }
 }
