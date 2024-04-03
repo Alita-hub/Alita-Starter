@@ -1,11 +1,11 @@
 package com.alita.admin.controller;
 
 import com.alita.api.admin.ISysUserService;
-import com.alita.common.domain.entity.SysUser;
+import com.alita.common.domain.entity.SysUserInfo;
 import com.alita.common.domain.model.HttpPageRequest;
 import com.alita.common.domain.model.HttpPageResponse;
 import com.alita.common.domain.model.HttpResponse;
-import com.alita.common.domain.po.AddUserPo;
+import com.alita.common.domain.vo.SysUserVo;
 import com.alita.common.enums.HttpCode;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.web.bind.annotation.*;
@@ -31,9 +31,9 @@ public class SysUserController {
      * @return {@link HttpResponse}<{@link Page}>
      */
     @PostMapping("/list")
-    public HttpPageResponse list(@RequestBody HttpPageRequest<SysUser> request)
+    public HttpPageResponse list(@RequestBody HttpPageRequest<SysUserInfo> request)
     {
-        Page<SysUser> page = sysUserService.getUserList(request);
+        Page<SysUserInfo> page = sysUserService.getUserList(request);
         return HttpPageResponse.response(page);
     }
 
@@ -44,7 +44,7 @@ public class SysUserController {
      * @return {@link HttpResponse}
      */
     @PostMapping("/add")
-    public HttpResponse add(@RequestBody AddUserPo addUserPo) {
+    public HttpResponse add(@RequestBody SysUserVo addUserPo) {
         sysUserService.addUser(addUserPo);
         return HttpResponse.response(HttpCode.ADD_SUCCESS);
     }
@@ -56,7 +56,7 @@ public class SysUserController {
      */
     @GetMapping("/{userId}")
     public HttpResponse detail(@PathVariable Integer userId) {
-        SysUser sysUser = sysUserService.getUserInfo(userId);
+        SysUserInfo sysUser = sysUserInfoService.getUserInfo(userId);
         return HttpResponse.success(sysUser);
     }
 
@@ -66,9 +66,9 @@ public class SysUserController {
      * @return {@link HttpResponse}
      */
     @PostMapping("/update")
-    public HttpResponse update(@RequestBody SysUser sysUser) {
-        sysUserService.updateUser(sysUser);
-        return HttpResponse.success(HttpCode.UPDATE_SUCCESS);
+    public HttpResponse update(@RequestBody SysUserInfo sysUser) {
+        sysUserService.updateUserInfo(sysUser);
+        return HttpResponse.response(HttpCode.UPDATE_SUCCESS);
     }
 
     /**
@@ -79,7 +79,7 @@ public class SysUserController {
     @GetMapping("/{userId}")
     public HttpResponse delete(@PathVariable Integer userId) {
         sysUserService.deleteUser(userId);
-        return HttpResponse.success(HttpCode.DELETE_SUCCESS);
+        return HttpResponse.response(HttpCode.DELETE_SUCCESS);
     }
 
 }

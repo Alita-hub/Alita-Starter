@@ -1,9 +1,9 @@
 package com.alita.framework.security.service;
 
 import com.alita.api.admin.ISysUserAuthService;
-import com.alita.api.admin.ISysUserService;
+import com.alita.api.admin.ISysUserInfoService;
 import com.alita.common.domain.entity.SysUserAuth;
-import com.alita.common.domain.entity.SysUser;
+import com.alita.common.domain.entity.SysUserInfo;
 import com.alita.common.enums.UserStatus;
 import com.alita.common.exception.authentication.CustomAuthenticationException;
 import com.alita.framework.security.context.AuthenticationContextHolder;
@@ -32,7 +32,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     private ISysUserAuthService userAccountService;
 
     @Resource
-    private ISysUserService userProfileService;
+    private ISysUserInfoService userProfileService;
 
     @Resource
     private PasswordEncoder passwordEncoder;
@@ -49,7 +49,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         }
 
         // 查询用户信息
-        SysUser user = userProfileService.getUserInfo(userAuth.getUserId());
+        SysUserInfo user = userProfileService.getUserInfo(userAuth.getUserId());
 
         if (!Optional.ofNullable(user).isPresent()) {
             throw new CustomAuthenticationException("用户不存在！");

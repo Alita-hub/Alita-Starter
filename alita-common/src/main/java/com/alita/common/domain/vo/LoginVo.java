@@ -1,4 +1,4 @@
-package com.alita.common.domain.po;
+package com.alita.common.domain.vo;
 
 
 /**
@@ -6,7 +6,7 @@ package com.alita.common.domain.po;
  *
  * @author alita
  */
-public class LoginPo {
+public class LoginVo {
 
     private String loginType;
 

@@ -1,4 +1,4 @@
-package com.alita.common.domain.po;
+package com.alita.common.domain.vo;
 
 import org.springframework.web.multipart.MultipartFile;
 
@@ -6,7 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
  * 新增用户请求实体
  * @author alita
  */
-public class AddUserPo {
+public class SysUserVo {
 
     private MultipartFile avatar;
 

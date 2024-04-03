@@ -3,7 +3,7 @@ package com.alita.api.admin;
 import com.alita.common.domain.entity.SysUserAuth;
 
 /**
- * 用户账号接口
+ * 用户认证信息接口
  * @author alita
  * @date 2024/03/08
  */

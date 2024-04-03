@@ -1,7 +1,7 @@
 package com.alita.admin.authentication.service;
 
 import com.alita.admin.authentication.core.ILoginStrategy;
-import com.alita.common.domain.po.LoginPo;
+import com.alita.common.domain.vo.LoginVo;
 import com.alita.common.util.JwtUtil;
 import com.alita.framework.security.context.AuthenticationContextHolder;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -31,7 +31,7 @@ public class UsernameLoginStrategy implements ILoginStrategy {
      * @param login
      */
     @Override
-    public String login(LoginPo login)
+    public String login(LoginVo login)
     {
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(login.getUsername(), login.getPassword());
 

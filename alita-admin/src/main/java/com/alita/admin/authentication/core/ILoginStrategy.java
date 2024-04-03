@@ -1,7 +1,7 @@
 package com.alita.admin.authentication.core;
 
 
-import com.alita.common.domain.po.LoginPo;
+import com.alita.common.domain.vo.LoginVo;
 
 /**
  * 登录策略
@@ -14,6 +14,6 @@ public interface ILoginStrategy {
      * @param login
      * @return boolean
      */
-    String login(LoginPo login);
+    String login(LoginVo login);
 
 }

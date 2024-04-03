@@ -9,12 +9,12 @@ import java.util.Date;
 
 
 /**
- * (SysUserProfile)用户信息实体类
+ * (SysUserProfile)用户基本信息
  *
  * @author alita
  */
-@TableName("sys_user")
-public class SysUser {
+@TableName("sys_user_info")
+public class SysUserInfo {
 
     /**
      * 自增id
@@ -50,7 +50,7 @@ public class SysUser {
     /**
      * 自我介绍
      */
-    private String introduce;
+    private String profile;
 
     /**
      * 用户状态（0=正常，1=停用，2=锁定）
@@ -116,12 +116,12 @@ public class SysUser {
         this.phone = phone;
     }
 
-    public String getIntroduce() {
-        return introduce;
+    public String getProfile() {
+        return profile;
     }
 
-    public void setIntroduce(String introduce) {
-        this.introduce = introduce;
+    public void setProfile(String profile) {
+        this.profile = profile;
     }
 
     public UserStatus getStatus() {

@@ -1,15 +1,14 @@
 package com.alita.api.admin;
 
-import com.alita.common.domain.entity.SysUser;
+import com.alita.common.domain.entity.SysUserInfo;
 import com.alita.common.domain.model.HttpPageRequest;
-import com.alita.common.domain.po.AddUserPo;
+import com.alita.common.domain.vo.SysUserVo;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
-
 /**
- * 用户管理
+ *
  * @author alita
- * @date 2024/03/21
+ * @date 2024/04/03
  */
 public interface ISysUserService {
 
@@ -17,47 +16,32 @@ public interface ISysUserService {
      * 条件分页获取用户列表
      *
      * @param request
-     * @return {@link Page}<{@link SysUser}>
+     * @return {@link Page}<{@link SysUserInfo}>
      */
-    Page<SysUser> getUserList(HttpPageRequest<SysUser> request);
+    Page<SysUserInfo> getUserList(HttpPageRequest<SysUserInfo> request);
 
 
     /**
      * 新增用户
-     * @param addUserPo
+     * @param sysUserVo
      * @return boolean
      */
-    boolean addUser(AddUserPo addUserPo);
-
-    /**
-     * 根据用户id获取用户
-     * @param id
-     * @return {@link SysUser}
-     */
-    SysUser getUserInfo(int id);
+    boolean addUser(SysUserVo sysUserVo);
 
 
     /**
-     * 保存用户基本信息
-     * @param sysUser
-     * @return int
+     * 更新用户
+     * @param sysUserVo
+     * @return boolean
      */
-    boolean addUserInfo(SysUser sysUser);
+    boolean updateUser(SysUserVo sysUserVo);
 
 
     /**
-     * 更新用户信息
-     * @param sysUser
-     * @return int
+     * 删除用户
+     * @param userId
+     * @return boolean
      */
-    boolean updateUser(SysUser sysUser);
-
-
-    /**
-     * 根据id删除用户
-     * @param id
-     * @return int
-     */
-    boolean deleteUser(int id);
+    boolean deleteUser(int userId);
 
 }
