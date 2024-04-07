@@ -5,6 +5,7 @@ import {
   StickyComponent,
   SwapperComponent,
   ToggleComponent,
+  ImageInputComponent,
 } from "@/assets/ts/components";
 import { ThemeModeComponent } from "@/assets/ts/layout";
 import type { App } from "vue";
@@ -16,6 +17,7 @@ import Icon from "@/core/helpers/icon/Icon.vue";
 const initializeComponents = () => {
   ThemeModeComponent.init();
   setTimeout(() => {
+    ImageInputComponent.bootstrap();
     ToggleComponent.bootstrap();
     StickyComponent.bootstrap();
     MenuComponent.bootstrap();
@@ -31,6 +33,7 @@ const initializeComponents = () => {
 const reinitializeComponents = () => {
   ThemeModeComponent.init();
   setTimeout(() => {
+    ImageInputComponent.reinitialization();
     ToggleComponent.reinitialization();
     StickyComponent.reInitialization();
     MenuComponent.reinitialization();

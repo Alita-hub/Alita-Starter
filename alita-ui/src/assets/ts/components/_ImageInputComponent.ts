@@ -83,7 +83,7 @@ class ImageInputComponent {
   // Event Handlers
   private _change = (e: Event) => {
     e.preventDefault();
-
+    console.log(e);
     if (
       this.inputElement !== null &&
       this.inputElement.files &&

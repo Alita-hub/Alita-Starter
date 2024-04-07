@@ -1,4 +1,4 @@
-package com.alita.admin.authentication.service;
+package com.alita.admin.authentication.strategy;
 
 import com.alita.admin.authentication.core.ILoginStrategy;
 import com.alita.common.domain.vo.LoginVo;

@@ -6,7 +6,7 @@ import JwtService from "@/core/services/JwtService";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 
 /**
- * @description service to call HTTP request via Axios
+ * @description strategy to call HTTP request via Axios
  */
 class ApiService {
 
@@ -34,19 +34,7 @@ class ApiService {
       error => {
         if (!error) {
           // network error
-          Swal.fire({
-            text: '网络连接异常',
-            icon: "error",
-            showConfirmButton: true,
-            showCancelButton: false,
-            buttonsStyling: false,
-            //timer: 1000,
-            confirmButtonText: "Ok, got it!",
-            heightAuto: false,
-            customClass: {
-              confirmButton: "btn fw-semibold btn-light-primary",
-            },
-          })
+          this.alertNetError();
         } 
         return Promise.reject(error);
       }
@@ -55,11 +43,15 @@ class ApiService {
     // 响应拦截器，统一拦截Unauthorized
     ApiService.axiosInstance.interceptors.response.use(
       response => {
-        // 任何在 2xx 范围内的状态代码都会触发该函数
         return response;
       },
       error => {
         console.log(error);
+        if (error.code === "ERR_NETWORK") {
+          this.alertNetError();
+          return Promise.reject(error);
+        }
+
         // 任何超出 2xx 范围的状态代码都会触发该功能
         if (error.response.status === HttpStatusCode.Unauthorized) {
           useAuthStore().isAuthenticated = false;
@@ -85,6 +77,22 @@ class ApiService {
       }
     );
 
+  }
+
+  public static alertNetError() {
+    Swal.fire({
+      text: '网络连接异常',
+      icon: "error",
+      showConfirmButton: true,
+      showCancelButton: false,
+      buttonsStyling: false,
+      //timer: 1000,
+      confirmButtonText: "Ok, got it!",
+      heightAuto: false,
+      customClass: {
+        confirmButton: "btn fw-semibold btn-light-primary",
+      },
+    })
   }
 
   /**

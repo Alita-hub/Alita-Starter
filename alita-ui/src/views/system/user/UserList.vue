@@ -29,13 +29,23 @@
           data-customer-table-toolbar="base"
         >
           <!--begin::Filter-->
-          <button type="button" class="btn btn-light-primary me-3" data-menu-trigger="click" data-menu-placement="bottom-end">
+          <button
+            type="button"
+            class="btn btn-light-primary me-3"
+            data-menu-trigger="click"
+            data-menu-placement="bottom-end"
+          >
             <i class="ki-duotone ki-filter fs-2">
               <span class="path1"></span>
-              <span class="path2"></span>
-          </i>Filter</button>
+              <span class="path2"></span> </i
+            >Filter
+          </button>
           <!--begin::Menu 1-->
-          <div class="menu menu-sub menu-sub-dropdown w-300px w-md-325px" data-menu="true" id="alita-toolbar-filter">
+          <div
+            class="menu menu-sub menu-sub-dropdown w-300px w-md-325px"
+            data-menu="true"
+            id="alita-toolbar-filter"
+          >
             <!--begin::Header-->
             <div class="px-7 py-5">
               <div class="fs-4 text-gray-900 fw-bold">Filter Options</div>
@@ -52,7 +62,14 @@
                 <label class="form-label fs-5 fw-semibold mb-3">Month:</label>
                 <!--end::Label-->
                 <!--begin::Input-->
-                <select class="form-select form-select-solid fw-bold" data-select2="true" data-placeholder="Select option" data-allow-clear="true" data-customer-table-filter="month" data-dropdown-parent="#alita-toolbar-filter">
+                <select
+                  class="form-select form-select-solid fw-bold"
+                  data-select2="true"
+                  data-placeholder="Select option"
+                  data-allow-clear="true"
+                  data-customer-table-filter="month"
+                  data-dropdown-parent="#alita-toolbar-filter"
+                >
                   <option></option>
                   <option value="aug">August</option>
                   <option value="sep">September</option>
@@ -66,32 +83,70 @@
               <!--begin::Input group-->
               <div class="mb-10">
                 <!--begin::Label-->
-                <label class="form-label fs-5 fw-semibold mb-3">Payment Type:</label>
+                <label class="form-label fs-5 fw-semibold mb-3"
+                  >Payment Type:</label
+                >
                 <!--end::Label-->
                 <!--begin::Options-->
-                <div class="d-flex flex-column flex-wrap fw-semibold" data-customer-table-filter="payment_type">
+                <div
+                  class="d-flex flex-column flex-wrap fw-semibold"
+                  data-customer-table-filter="payment_type"
+                >
                   <!--begin::Option-->
-                  <label class="form-check form-check-sm form-check-custom form-check-solid mb-3 me-5">
-                    <input class="form-check-input" type="radio" name="payment_type" value="all" checked="checked" />
+                  <label
+                    class="form-check form-check-sm form-check-custom form-check-solid mb-3 me-5"
+                  >
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="payment_type"
+                      value="all"
+                      checked="checked"
+                    />
                     <span class="form-check-label text-gray-600">All</span>
                   </label>
                   <!--end::Option-->
                   <!--begin::Option-->
-                  <label class="form-check form-check-sm form-check-custom form-check-solid mb-3 me-5">
-                    <input class="form-check-input" type="radio" name="payment_type" value="visa" />
+                  <label
+                    class="form-check form-check-sm form-check-custom form-check-solid mb-3 me-5"
+                  >
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="payment_type"
+                      value="visa"
+                    />
                     <span class="form-check-label text-gray-600">Visa</span>
                   </label>
                   <!--end::Option-->
                   <!--begin::Option-->
-                  <label class="form-check form-check-sm form-check-custom form-check-solid mb-3">
-                    <input class="form-check-input" type="radio" name="payment_type" value="mastercard" />
-                    <span class="form-check-label text-gray-600">Mastercard</span>
+                  <label
+                    class="form-check form-check-sm form-check-custom form-check-solid mb-3"
+                  >
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="payment_type"
+                      value="mastercard"
+                    />
+                    <span class="form-check-label text-gray-600"
+                      >Mastercard</span
+                    >
                   </label>
                   <!--end::Option-->
                   <!--begin::Option-->
-                  <label class="form-check form-check-sm form-check-custom form-check-solid">
-                    <input class="form-check-input" type="radio" name="payment_type" value="american_express" />
-                    <span class="form-check-label text-gray-600">American Express</span>
+                  <label
+                    class="form-check form-check-sm form-check-custom form-check-solid"
+                  >
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="payment_type"
+                      value="american_express"
+                    />
+                    <span class="form-check-label text-gray-600"
+                      >American Express</span
+                    >
                   </label>
                   <!--end::Option-->
                 </div>
@@ -100,8 +155,22 @@
               <!--end::Input group-->
               <!--begin::Actions-->
               <div class="d-flex justify-content-end">
-                <button type="reset" class="btn btn-light btn-active-light-primary me-2" data-menu-dismiss="true" data-customer-table-filter="reset">Reset</button>
-                <button type="submit" class="btn btn-primary" data-menu-dismiss="true" data-customer-table-filter="filter">Apply</button>
+                <button
+                  type="reset"
+                  class="btn btn-light btn-active-light-primary me-2"
+                  data-menu-dismiss="true"
+                  data-customer-table-filter="reset"
+                >
+                  Reset
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  data-menu-dismiss="true"
+                  data-customer-table-filter="filter"
+                >
+                  Apply
+                </button>
               </div>
               <!--end::Actions-->
             </div>
@@ -125,10 +194,10 @@
             type="button"
             class="btn btn-primary"
             data-bs-toggle="modal"
-            data-bs-target="#modal_add_customer"
+            data-bs-target="#modal_add_user"
           >
             <Icon icon-name="plus" icon-class="fs-2" />
-            Add Customer
+            新增用户
           </button>
           <!--end::Add customer-->
         </div>
@@ -243,12 +312,15 @@
       </Datatable>
     </div>
   </div>
+
+  <AddUser></AddUser>
 </template>
 
 <script lang="ts">
 import { defineComponent, onBeforeMount, onMounted, ref } from "vue";
 import Datatable from "@/components/datatable/DataTable.vue";
 import { MenuComponent } from "@/assets/ts/components";
+import AddUser from "@/views/system/user/AddUser.vue";
 import type { IUser, IPageRequest } from "@/core/model/system";
 import ApiService from "@/core/services/ApiService";
 
@@ -256,6 +328,7 @@ export default defineComponent({
   name: "user-list",
   components: {
     Datatable,
+    AddUser,
   },
   setup() {
     const tableHeader = ref([
@@ -321,7 +394,6 @@ export default defineComponent({
         tableData.value = response.data.data;
       });
     });
-
 
     const searchItems = () => {};
 

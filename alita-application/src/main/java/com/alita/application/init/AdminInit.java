@@ -20,7 +20,7 @@ import java.util.Optional;
 public class AdminInit implements CommandLineRunner {
 
     @Resource
-    private ISysUserInfoService sysUserService;
+    private ISysUserInfoService sysUserInfoService;
 
     @Resource
     private ISysUserAuthService sysUserAuthService;
@@ -36,7 +36,7 @@ public class AdminInit implements CommandLineRunner {
         {
             SysUserInfo sysUser = new SysUserInfo();
             sysUser.setNickname("admin");
-            sysUserService.addUserInfo(sysUser);
+            sysUserInfoService.addUserInfo(sysUser);
 
             SysUserAuth sysUserAuth = new SysUserAuth();
             sysUserAuth.setUserId(sysUser.getId());

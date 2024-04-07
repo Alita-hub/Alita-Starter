@@ -36,7 +36,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: "/system/user",
         name: "user",
-        component: () => import("@/views/system/User.vue"),
+        component: () => import("@/views/system/user/UserList.vue"),
         meta: {
           pageTitle: "用户管理",
           breadcrumbs: ["系统", "用户"],

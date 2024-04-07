@@ -40,12 +40,12 @@ public class SysUserController {
     /**
      * 新增用户
      *
-     * @param addUserPo
+     * @param sysUserVo
      * @return {@link HttpResponse}
      */
     @PostMapping("/add")
-    public HttpResponse add(@RequestBody SysUserVo addUserPo) {
-        sysUserService.addUser(addUserPo);
+    public HttpResponse add(@RequestBody SysUserVo sysUserVo) {
+        sysUserService.addUser(sysUserVo);
         return HttpResponse.response(HttpCode.ADD_SUCCESS);
     }
 
@@ -54,10 +54,10 @@ public class SysUserController {
      * @param userId
      * @return {@link HttpResponse}
      */
-    @GetMapping("/{userId}")
+    @GetMapping("/detail/{userId}")
     public HttpResponse detail(@PathVariable Integer userId) {
-        SysUserInfo sysUser = sysUserInfoService.getUserInfo(userId);
-        return HttpResponse.success(sysUser);
+        //SysUserInfo sysUser = sysUserInfoService.getUserInfo(userId);
+        return HttpResponse.success("ss");
     }
 
     /**
@@ -67,7 +67,7 @@ public class SysUserController {
      */
     @PostMapping("/update")
     public HttpResponse update(@RequestBody SysUserInfo sysUser) {
-        sysUserService.updateUserInfo(sysUser);
+        //sysUserService.updateUserInfo(sysUser);
         return HttpResponse.response(HttpCode.UPDATE_SUCCESS);
     }
 
@@ -76,7 +76,7 @@ public class SysUserController {
      * @param userId
      * @return {@link HttpResponse}
      */
-    @GetMapping("/{userId}")
+    @GetMapping("/delete/{userId}")
     public HttpResponse delete(@PathVariable Integer userId) {
         sysUserService.deleteUser(userId);
         return HttpResponse.response(HttpCode.DELETE_SUCCESS);

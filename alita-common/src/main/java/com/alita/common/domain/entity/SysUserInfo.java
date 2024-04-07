@@ -48,7 +48,7 @@ public class SysUserInfo {
     private String phone;
 
     /**
-     * 自我介绍
+     * 简介
      */
     private String profile;
 

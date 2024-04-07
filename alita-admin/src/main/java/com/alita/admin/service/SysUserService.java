@@ -93,5 +93,13 @@ public class SysUserService implements ISysUserService {
         return false;
     }
 
+    @Override
+    public boolean updateUser(SysUserVo sysUserVo) {
+        return false;
+    }
 
+    @Override
+    public boolean deleteUser(int userId) {
+        return false;
+    }
 }
