@@ -76,14 +76,14 @@ class ImageInputComponent {
     }
 
     if (this.removeElement) {
-      this.removeElement.addEventListener("click", this._cancel);
+      this.removeElement.addEventListener("click", this._remove);
     }
   }
 
   // Event Handlers
   private _change = (e: Event) => {
     e.preventDefault();
-    console.log(e);
+
     if (
       this.inputElement !== null &&
       this.inputElement.files &&

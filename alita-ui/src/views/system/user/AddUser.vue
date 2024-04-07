@@ -21,77 +21,78 @@
 					<!--end::Modal header-->
 					<!--begin::Modal body-->
 					<div class="modal-body px-5 my-7">
-						<!--begin::Form-->
+
 						<form id="modal_add_user_form" class="form" action="#">
-							<!--begin::Scroll-->
+
 							<div class="d-flex flex-column scroll-y px-5 px-lg-10" id="modal_add_user_scroll" data-scroll="true" data-scroll-activate="true" data-scroll-max-height="auto" data-scroll-dependencies="#modal_add_user_header" data-scroll-wrappers="#modal_add_user_scroll" data-scroll-offset="300px">
-								<!--begin::Input group-->
-								<div class="fv-row mb-7">
-									<!--begin::Label-->
-									<label class="d-block fw-semibold fs-6 mb-5">Avatar</label>
-									<!--end::Label-->
-									<!--begin::Image input-->
-									<div class="image-input image-input-outline" data-image-input="true">
-										<!--begin::Preview existing avatar-->
-										<img class="image-input-wrapper w-125px h-125px" :src="getAssetPath('media/avatars/300-1.jpg')" alt="image" />
-										<!-- <div class="image-input-wrapper w-125px h-125px" style="getAssetPath('media/avatars/300-1.jpg')"></div> -->
-										<!--end::Preview existing avatar-->
-										<!--begin::Label-->
-										<label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
-											<i class="ki-duotone ki-pencil fs-7">
-												<span class="path1"></span>
-												<span class="path2"></span>
-											</i>
-											<!--begin::Inputs-->
-											<input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
-											<input type="hidden" name="avatar_remove" />
-											<!--end::Inputs-->
-										</label>
-										<!--end::Label-->
-										<!--begin::Cancel-->
-										<span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
-											<i class="ki-duotone ki-cross fs-2">
-												<span class="path1"></span>
-												<span class="path2"></span>
-											</i>
-										</span>
-										<!--end::Cancel-->
-										<!--begin::Remove-->
-										<span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
-											<i class="ki-duotone ki-cross fs-2">
-												<span class="path1"></span>
-												<span class="path2"></span>
-											</i>
-										</span>
-										<!--end::Remove-->
+								<div class="row g-9 mb-7">
+
+									<div class="fv-row mb-7 col-md-4">
+										<label class="d-block fw-semibold fs-6 mb-5">头像</label>
+
+										<div class="image-input image-input-outline" data-image-input="true">
+											<div class="image-input-wrapper w-125px h-125px"></div>
+											<label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
+												<i class="ki-duotone ki-pencil fs-7">
+													<span class="path1"></span>
+													<span class="path2"></span>
+												</i>
+												<input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
+												<input type="hidden" name="avatar_remove" />
+											</label>
+
+											<span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+												<i class="ki-duotone ki-cross fs-2">
+													<span class="path1"></span>
+													<span class="path2"></span>
+												</i>
+											</span>
+										</div>
+
+										<div class="form-text">允许上传格式: png, jpg, jpeg.</div>
 									</div>
-									<!--end::Image input-->
-									<!--begin::Hint-->
-									<div class="form-text">Allowed file types: png, jpg, jpeg.</div>
-									<!--end::Hint-->
+									<!--end::Input group-->
+									
+                  <div class="fv-row mb-7 col-md-8">
+                    <div class="fv-row mb-8">
+                      <label class="required fw-semibold fs-6 mb-2">姓名</label>
+                      <input type="text" name="user_name" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="输入姓名" value="" />
+                    </div>
+
+                    <div class="fv-row mb-7">
+                      <label class="required fw-semibold fs-6 mb-2">性别</label>
+
+                      <div class="row ms-sm-0">
+                        <div class="form-check form-check-custom form-check-solid col-md-3">
+                          <input class="form-check-input" name="gender" type="radio" value="1" id="male"/>
+                          <label class="form-check-label" for="male">
+                              男
+                          </label>
+                        </div>
+
+                        <div class="form-check form-check-custom form-check-solid col-md-3">
+                          <input class="form-check-input" name="gender" type="radio" value="0" id="female" />
+                          <label class="form-check-label" for="female">
+                              女
+                          </label>
+                        </div>
+                      </div>           
+                    </div>
+                    
+                  </div>
+                  
 								</div>
-								<!--end::Input group-->
-								<!--begin::Input group-->
+								
 								<div class="fv-row mb-7">
-									<!--begin::Label-->
-									<label class="required fw-semibold fs-6 mb-2">Full Name</label>
-									<!--end::Label-->
-									<!--begin::Input-->
-									<input type="text" name="user_name" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="Full name" value="Emma Smith" />
-									<!--end::Input-->
+									<label class="fw-semibold fs-6 mb-2">邮箱</label>
+									<input type="email" name="email" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="" value="" />
 								</div>
-								<!--end::Input group-->
-								<!--begin::Input group-->
-								<div class="fv-row mb-7">
-									<!--begin::Label-->
-									<label class="required fw-semibold fs-6 mb-2">Email</label>
-									<!--end::Label-->
-									<!--begin::Input-->
-									<input type="email" name="user_email" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="example@domain.com" value="smith@kpmg.com" />
-									<!--end::Input-->
+
+                <div class="fv-row mb-7">
+									<label class="fw-semibold fs-6 mb-2">手机号</label>
+									<input type="phone" name="phone" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="" value="" />
 								</div>
-								<!--end::Input group-->
-								<!--begin::Input group-->
+
 								<div class="mb-5">
 									<!--begin::Label-->
 									<label class="required fw-semibold fs-6 mb-5">Role</label>
