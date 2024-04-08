@@ -25,7 +25,7 @@
 						<form id="modal_add_user_form" class="form" action="#">
 
 							<div class="d-flex flex-column scroll-y px-5 px-lg-10" id="modal_add_user_scroll" data-scroll="true" data-scroll-activate="true" data-scroll-max-height="auto" data-scroll-dependencies="#modal_add_user_header" data-scroll-wrappers="#modal_add_user_scroll" data-scroll-offset="300px">
-								<div class="row g-9 mb-7">
+								<div class="row g-9 ">
 
 									<div class="fv-row mb-7 col-md-4">
 										<label class="d-block fw-semibold fs-6 mb-5">头像</label>
@@ -51,7 +51,6 @@
 
 										<div class="form-text">允许上传格式: png, jpg, jpeg.</div>
 									</div>
-									<!--end::Input group-->
 									
                   <div class="fv-row mb-7 col-md-8">
                     <div class="fv-row mb-8">
@@ -83,6 +82,55 @@
                   
 								</div>
 								
+                <div class='separator separator-dashed my-5'></div>
+
+                <div class="fv-row mb-7">
+									<label class="fw-semibold fs-6 mb-2 required">账号</label>
+									<input type="text" name="principal" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="" value="" />
+								</div>
+
+                <!--begin::Input group-->
+                <div class="mb-10 fv-row" data-password-meter="true">
+                  <!--begin::Wrapper-->
+                  <div class="mb-1">
+                      <!--begin::Label-->
+                      <label class="form-label fw-semibold fs-6 mb-2 required">
+                          密码
+                      </label>
+                      <!--end::Label-->
+
+                      <!--begin::Input wrapper-->
+                      <div class="position-relative mb-3">
+                          <input class="form-control form-control-lg form-control-solid" type="password" placeholder="" name="new_password" autocomplete="off" />
+
+                          <span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-password-meter-control="visibility">
+                              <i class="ki-duotone ki-eye-slash fs-1"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                              <i class="ki-duotone ki-eye d-none fs-1"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                          </span>
+                      </div>
+                      <!--end::Input wrapper-->
+
+                      <!--begin::Meter-->
+                      <div class="d-flex align-items-center mb-3" data-password-meter-control="highlight">
+                          <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+                          <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+                          <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+                          <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px"></div>
+                      </div>
+                      <!--end::Meter-->
+                  </div>
+                  <!--end::Wrapper-->
+
+                  <!--begin::Hint-->
+                  <div class="text-muted">
+                      Use 8 or more characters with a mix of letters, numbers & symbols.
+                  </div>
+                  <!--end::Hint-->
+                </div>
+                <!--end::Input group--->
+
+                <div class='separator separator-dashed my-5'></div>
+
 								<div class="fv-row mb-7">
 									<label class="fw-semibold fs-6 mb-2">邮箱</label>
 									<input type="email" name="email" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="" value="" />
