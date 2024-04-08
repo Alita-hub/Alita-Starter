@@ -10,13 +10,14 @@ export interface EventMeta {
 }
 
 export class EventHandlerUtil {
+  // 静态属性
   static store: {
     [name: string]: {
       [handlerId: string]: EventMeta;
     };
   } = {};
 
-  private static setEventMetasByName(
+  private static setEventMetasByName (
     name: string,
     handlers: {
       [handlerId: string]: EventMeta;

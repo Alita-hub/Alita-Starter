@@ -56,13 +56,6 @@
                 <version>${spring.boot.starter.version}</version>
             </dependency>
 
-            <!--Thymeleaf模板引擎-->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-thymeleaf</artifactId>
-                <version>${spring.boot.starter.version}</version>
-            </dependency>
-
             <!--Spring Security-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
