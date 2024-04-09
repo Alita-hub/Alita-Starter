@@ -22,7 +22,12 @@
 					<!--begin::Modal body-->
 					<div class="modal-body px-5 my-7">
 
-						<form id="modal_add_user_form" class="form" action="#">
+            <Form
+              class="form"
+              id="modal_add_user_form"
+              @submit="onSubmitAddUser"
+              :validation-schema="addUser"
+            >
 
 							<div class="d-flex flex-column scroll-y px-5 px-lg-10" id="modal_add_user_scroll" data-scroll="true" data-scroll-activate="true" data-scroll-max-height="auto" data-scroll-dependencies="#modal_add_user_header" data-scroll-wrappers="#modal_add_user_scroll" data-scroll-offset="300px">
 								<div class="row g-9 ">
@@ -86,7 +91,21 @@
 
                 <div class="fv-row mb-7">
 									<label class="fw-semibold fs-6 mb-2 required">账号</label>
-									<input type="text" name="principal" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="" value="" />
+                  <Field
+                    tabindex="1"
+                    class="form-control form-control-lg form-control-solid"
+                    type="text"
+                    name="principal"
+                    autocomplete="off"
+                  />
+
+                  <div class="fv-plugins-message-container">
+                    <div class="fv-help-block">
+                      <ErrorMessage name="principal" >
+                        <!-- <p>{{ errorMessage.principal }}</p> -->
+                      </ErrorMessage>
+                    </div>
+                  </div>
 								</div>
 
                 <!--begin::Input group-->
@@ -250,7 +269,7 @@
 								</button>
 							</div>
 							<!--end::Actions-->
-						</form>
+						</Form>
 						<!--end::Form-->
 					</div>
 					<!--end::Modal body-->
@@ -263,16 +282,39 @@
 
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
+import { ErrorMessage, Field, Form } from "vee-validate";
 import { defineComponent } from 'vue';
+import * as Yup from "yup";
 
 
 export default defineComponent({
 	name: "add-user",
-	components: {},
+	components: {
+    ErrorMessage,
+    Field,
+    Form
+  },
 	setup() {
 
+    const errorMessage = {
+      principal: "账号为必填项",
+    };
+
+    const addUser = Yup.object().shape({
+      principal: Yup.string().required(),
+      password: Yup.string().min(4).required().label("Password"),
+    });
+
+    const onSubmitAddUser = async (params : any) => {
+      
+    };
+
+
 		return {
-			getAssetPath
+      errorMessage,
+      addUser,
+			getAssetPath,
+      onSubmitAddUser,
 		}
 	}
 })
