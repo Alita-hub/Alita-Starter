@@ -25,7 +25,7 @@ public class SysUserInfo {
     /**
      * 用户名称
      */
-    private String nickname;
+    private String name;
 
     /**
      * 头像地址
@@ -76,12 +76,12 @@ public class SysUserInfo {
         this.id = id;
     }
 
-    public String getNickname() {
-        return nickname;
+    public String getName() {
+        return name;
     }
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getAvatar() {
@@ -149,4 +149,3 @@ public class SysUserInfo {
     }
 
 }
-

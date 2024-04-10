@@ -1,5 +1,6 @@
 package com.alita.common.domain.vo;
 
+import com.alita.common.enums.UserStatus;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
@@ -7,17 +8,40 @@ import org.springframework.web.multipart.MultipartFile;
  * @author alita
  */
 public class SysUserVo {
-
+    
+    /**
+     * 头像
+     */
     private MultipartFile avatar;
 
-    private String nickname;
+    /**
+     * 姓名
+     */
+    private String name;
 
+    /**
+     * 账号
+     */
     private String principal;
 
+    /**
+     * 密码
+     */
     private String credential;
 
+    /**
+     * 用户状态
+     */
+    private UserStatus status;
+
+    /**
+     * 手机号
+     */
     private String phone;
 
+    /**
+     * 邮箱
+     */
     private String email;
 
     public MultipartFile getAvatar() {
@@ -28,12 +52,12 @@ public class SysUserVo {
         this.avatar = avatar;
     }
 
-    public String getNickname() {
-        return nickname;
+    public String getName() {
+        return name;
     }
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPrincipal() {
@@ -50,6 +74,14 @@ public class SysUserVo {
 
     public void setCredential(String credential) {
         this.credential = credential;
+    }
+
+    public UserStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(UserStatus status) {
+        this.status = status;
     }
 
     public String getPhone() {

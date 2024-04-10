@@ -51,8 +51,8 @@ public class SysUserService implements ISysUserService {
         QueryWrapper<SysUserInfo> queryWrapper = Wrappers.query();
 
         if (Optional.ofNullable(sysUser).isPresent()) {
-            if (!StringUtils.isEmpty(sysUser.getNickname())) {
-                queryWrapper.eq("nickname", sysUser.getNickname());
+            if (!StringUtils.isEmpty(sysUser.getName())) {
+                queryWrapper.eq("nickname", sysUser.getName());
             }
             if (Optional.ofNullable(sysUser.getStatus()).isPresent()) {
                 queryWrapper.eq("status", sysUser.getStatus());
@@ -75,7 +75,7 @@ public class SysUserService implements ISysUserService {
         {
             // 保存用户基本信息
             SysUserInfo sysUser = new SysUserInfo();
-            sysUser.setNickname(sysUserVo.getNickname());
+            sysUser.setName(sysUserVo.getName());
             sysUserInfoService.addUserInfo(sysUser);
 
             // 保存用户认证信息

@@ -35,7 +35,7 @@ public class AdminInit implements CommandLineRunner {
         if (!Optional.ofNullable(admin).isPresent())
         {
             SysUserInfo sysUser = new SysUserInfo();
-            sysUser.setNickname("admin");
+            sysUser.setName("admin");
             sysUserInfoService.addUserInfo(sysUser);
 
             SysUserAuth sysUserAuth = new SysUserAuth();
