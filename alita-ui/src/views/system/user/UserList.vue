@@ -258,8 +258,8 @@
         <template v-slot:id="{ row: user }">
           {{ user.id }}
         </template>
-        <template v-slot:nickname="{ row: user }">
-          {{ user.nickname }}
+        <template v-slot:name="{ row: user }">
+          {{ user.name }}
         </template>
         <template v-slot:gender="{ row: user }">
           <a href="#" class="text-gray-600 text-hover-primary mb-1">
@@ -319,7 +319,6 @@
 <script lang="ts">
 import { defineComponent, onBeforeMount, onMounted, ref } from "vue";
 import Datatable from "@/components/datatable/DataTable.vue";
-import { MenuComponent } from "@/assets/ts/components";
 import AddUser from "@/views/system/user/AddUser.vue";
 import type { IUser, IPageRequest } from "@/core/model/system";
 import ApiService from "@/core/services/ApiService";
@@ -340,7 +339,7 @@ export default defineComponent({
       },
       {
         columnName: "用户",
-        columnLabel: "nickname",
+        columnLabel: "name",
         sortEnabled: true,
         columnWidth: 120,
       },

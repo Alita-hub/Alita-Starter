@@ -11,7 +11,7 @@
  Target Server Version : 50731
  File Encoding         : 65001
 
- Date: 10/04/2024 10:16:59
+ Date: 11/04/2024 18:04:55
 */
 
 SET NAMES utf8mb4;
@@ -75,7 +75,6 @@ CREATE TABLE `sys_user_info`  (
   `gender` char(1) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '性别（0=女，1=男）',
   `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '邮箱',
   `phone` varchar(11) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '手机号',
-  `profile` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '简介',
   `status` char(1) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '0' COMMENT '用户状态（0=正常，1=停用，2=锁定）',
   `create_time` datetime(0) NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime(0) NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '更新时间',
@@ -85,6 +84,6 @@ CREATE TABLE `sys_user_info`  (
 -- ----------------------------
 -- Records of sys_user_info
 -- ----------------------------
-INSERT INTO `sys_user_info` VALUES (1, 'admin', NULL, NULL, NULL, NULL, NULL, '0', '2024-02-19 09:24:30', '2024-03-25 11:28:23');
+INSERT INTO `sys_user_info` VALUES (1, 'admin', NULL, NULL, NULL, NULL, '0', '2024-02-19 09:24:30', '2024-03-25 11:28:23');
 
 SET FOREIGN_KEY_CHECKS = 1;

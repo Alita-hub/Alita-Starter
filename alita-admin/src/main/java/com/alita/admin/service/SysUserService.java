@@ -16,6 +16,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.io.File;
 import java.util.Optional;
 
 /**
@@ -87,7 +88,7 @@ public class SysUserService implements ISysUserService {
 
             sysUserAuthService.saveUserAuth(sysUserAuth);
         } else {
-            throw new DataExistedException("用户名已存在！");
+            throw new DataExistedException("登录账号已存在！");
         }
 
         return false;

@@ -48,11 +48,6 @@ public class SysUserInfo {
     private String phone;
 
     /**
-     * 简介
-     */
-    private String profile;
-
-    /**
      * 用户状态（0=正常，1=停用，2=锁定）
      */
     private UserStatus status;
@@ -114,14 +109,6 @@ public class SysUserInfo {
 
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    public String getProfile() {
-        return profile;
-    }
-
-    public void setProfile(String profile) {
-        this.profile = profile;
     }
 
     public UserStatus getStatus() {

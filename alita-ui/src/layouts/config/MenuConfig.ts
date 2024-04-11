@@ -259,10 +259,16 @@ const MenuConfig: Array<MenuItem> = [
       },
     ],
   },
-  {
+  {       
     heading: "apps",
     route: "/apps",
     pages: [
+      {
+        heading: "文件管理",
+        route: "/apps/file-manager",
+        keenthemesIcon: "abstract-26",
+        bootstrapIcon: "bi-printer",
+      },
       {
         sectionTitle: "customers",
         route: "/customers",

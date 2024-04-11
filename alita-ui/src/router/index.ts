@@ -152,6 +152,15 @@ const routes: Array<RouteRecordRaw> = [
         ],
       },
       {
+        path: "/apps/file-manager",
+        name: "file-manager",
+        component: () => import("@/views/apps/file-manager/FileManager.vue"),
+        meta: {
+          pageTitle: "文件管理",
+          breadcrumbs: ["Apps"],
+        },
+      },
+      {
         path: "/apps/customers/getting-started",
         name: "apps-customers-getting-started",
         component: () => import("@/views/apps/customers/GettingStarted.vue"),
