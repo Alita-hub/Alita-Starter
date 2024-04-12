@@ -28,10 +28,10 @@ export interface IFileManagerQueries {
 
 const defaultFileManagerQueires: IFileManagerQueries = {
     fileListQuery: '#alita_file_manager_list',
-    uploadQuery: '[data-alita-filemanager-template="upload"]',
-    renameQuery: '[data-alita-filemanager-template="rename"]',
-    actionQuery: '[data-alita-filemanager-template="action"]',
-    checkboxQuery: '[data-alita-filemanager-template="checkbox"]'
+    uploadQuery: '[data-filemanager-template="upload"]',
+    renameQuery: '[data-filemanager-template="rename"]',
+    actionQuery: '[data-filemanager-template="action"]',
+    checkboxQuery: '[data-filemanager-template="checkbox"]'
   };
 
 export interface IFolderTableOptions {
@@ -107,7 +107,7 @@ const fileTableOptions : IFileTableOptions = {
 
 
 class FileManagerComponent {
-    fileListElement: HTMLElement;
+    fileListElement: HTMLElement | null;
     uploadElement: HTMLElement | null;
     renameElement: HTMLElement | null;
     actionElement: HTMLElement | null;
@@ -121,15 +121,15 @@ class FileManagerComponent {
         this.queries = _queries;
         
         this.fileListElement = document.querySelector("#alita_file_manager_list");
-        this.uploadElement = document.querySelector('[data-alita-filemanager-template="upload"]');
-        this.renameElement = document.querySelector('[data-alita-filemanager-template="rename"]');
-        this.actionElement = document.querySelector('[data-alita-filemanager-template="action"]');
-        this.checkboxElement = document.querySelector('[data-alita-filemanager-template="checkbox"]');
+        this.uploadElement = document.querySelector('[data-filemanager-template="upload"]');
+        this.renameElement = document.querySelector('[data-filemanager-template="rename"]');
+        this.actionElement = document.querySelector('[data-filemanager-template="action"]');
+        this.checkboxElement = document.querySelector('[data-filemanager-template="checkbox"]');
 
-        this.selectedOptions = this.fileListElement.getAttribute("data-alita-filemanager-table") === "folders" ? folderTableOptions : fileTableOptions;
+        this.selectedOptions = this.fileListElement.getAttribute("data-filemanager-table") === "folders" ? folderTableOptions : fileTableOptions;
 
          // 初始化DataTable并设置绘制完成后的回调函数
-        var dataTable = $(document.querySelector('[data-alita-filemanager-table]')).DataTable(this.selectedOptions);
+        var dataTable = this.fileListElement.DataTable(this.selectedOptions);
         dataTable.on("draw", function () {
             // 这里的i, l, s, c, AlitaMenu.createInstances(), m, f, d 应为具体的函数，需替换为真实函数名
             // 例如：refreshControls(), updateLayout(), checkSecurity(), clearCaches(), 等
@@ -155,7 +155,7 @@ private formatTableDates() {
 // 初始化删除行功能
 private initializeDeleteRow () {
     // 选取所有带有删除行标记的元素
-    document.querySelectorAll('[data-alita-filemanager-table-filter="delete_row"]').forEach((deleteButton) => {
+    document.querySelectorAll('[data-filemanager-table-filter="delete_row"]').forEach((deleteButton) => {
         // 为每个删除按钮添加点击事件监听器
         deleteButton.addEventListener("click", function (event) {
             event.preventDefault(); // 阻止按钮默认的表单提交行为
