@@ -436,6 +436,45 @@ class FileManagerComponent {
   };
 
 
+  private setupCopyLinkFeature() {
+    // 选取所有复制链接相关的元素
+    document.querySelectorAll('[data-alita-filemanger-table="copy_link"]').forEach((element) => {
+        const copyButton = element.querySelector("button"),
+            copyIndicator = element.querySelector('[data-alita-filemanger-table="copy_link_generator"]'),
+            copyResultDisplay = element.querySelector('[data-alita-filemanger-table="copy_link_result"]'),
+            inputField = element.querySelector("input");
+
+        // 为每个复制按钮添加点击事件处理器
+        copyButton.addEventListener("click", (event) => {
+            event.preventDefault(); // 阻止默认点击行为
+            copyIndicator.classList.remove("d-none"); // 显示复制中的指示器
+            copyResultDisplay.classList.add("d-none"); // 隐藏复制结果显示
+
+            // 使用setTimeout来模拟复制操作，这里假设复制操作耗时2秒
+            let timerId;
+            clearTimeout(timerId); // 清除之前的定时器（如果有）
+            timerId = setTimeout(() => {
+                copyIndicator.classList.add("d-none"); // 隐藏复制中的指示器
+                copyResultDisplay.classList.remove("d-none"); // 显示复制结果
+                inputField.select(); // 选择输入字段中的文本，便于复制
+            }, 2000); // 设置定时器，2秒后执行
+        });
+    });
+  };
+
+
+  private updateItemsCounter() {
+    // 获取文件管理器中项目总数的显示元素
+    const itemsCounterElement = document.getElementById("alita_file_manager_items_counter");
+    
+    // 假设e是DataTable的实例，使用其rows().count()方法获取当前所有行（项目）的数量
+    const itemCount = dataTableInstance.rows().count(); // dataTableInstance是DataTable实例的变量名
+
+    // 更新显示元素的文本，以反映项目总数
+    itemsCounterElement.innerText = itemCount + " items";
+  };
+
+
 
 
   public static initGlobalHandlers = () => {
