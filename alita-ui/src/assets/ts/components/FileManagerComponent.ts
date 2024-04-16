@@ -150,7 +150,7 @@ class FileManagerComponent {
     });
   }
 
-  private initializeDeleteRowFunctionality() {
+  private static initializeDeleteRowFunctionality() {
     // 选取所有带有删除行标记的元素
     document.querySelectorAll('[data-alita-filemanager-table-filter="delete_row"]').forEach((deleteButton) => {
       // 为每个删除按钮添加点击事件监听器
@@ -202,7 +202,7 @@ class FileManagerComponent {
     });
   };
 
-  private initializeCheckboxAndDeleteHandlers() {
+  private static initializeCheckboxAndDeleteHandlers() {
     // 根据当前表格类型，选择合适的复选框元素
     let checkboxes = document.querySelectorAll('[type="checkbox"]');
     if (document.querySelector('[data-alita-filemanager-table]').getAttribute('data-alita-filemanager-table') === 'folders') {
@@ -274,7 +274,7 @@ class FileManagerComponent {
     });
   };
 
-  private updateToolbarVisibility() {
+  private static updateToolbarVisibility() {
     // 获取工具栏元素
     let baseToolbar = document.querySelector('[data-alita-filemanager-table-toolbar="base"]');
     let selectedToolbar = document.querySelector('[data-alita-filemanager-table-toolbar="selected"]');
@@ -308,7 +308,7 @@ class FileManagerComponent {
     }
   };
 
-  private removeNewFolderRow() {
+  private static removeNewFolderRow() {
     // 查询新建文件夹的行元素
     const newFolderRow = document.querySelector('#alita_file_manager_new_folder_row');
 
@@ -318,18 +318,18 @@ class FileManagerComponent {
     }
   };
 
-  private addRenameEventHandlers() {
+  private static addRenameEventHandlers() {
     // 选取所有用于重命名的按钮
     const renameButtons = document.querySelectorAll('[data-alita-filemanager-table="rename"]');
     
     // 为每个重命名按钮添加点击事件监听器，绑定到函数u
     renameButtons.forEach((button) => {
-        button.addEventListener('click', handleRenameClick);
+        button.addEventListener('click', FileManagerComponent.handleRenameClick);
     });
   };
 
 
-  private handleRenameClick(event) {
+  private static handleRenameClick(event) {
     // 阻止事件的默认行为
     event.preventDefault();
 
@@ -436,7 +436,7 @@ class FileManagerComponent {
   };
 
 
-  private setupCopyLinkFeature() {
+  private static setupCopyLinkFeature() {
     // 选取所有复制链接相关的元素
     document.querySelectorAll('[data-alita-filemanger-table="copy_link"]').forEach((element) => {
         const copyButton = element.querySelector("button"),
@@ -463,7 +463,7 @@ class FileManagerComponent {
   };
 
 
-  private updateItemsCounter() {
+  private static updateItemsCounter() {
     // 获取文件管理器中项目总数的显示元素
     const itemsCounterElement = document.getElementById("alita_file_manager_items_counter");
     
@@ -487,6 +487,10 @@ class FileManagerComponent {
     FileManagerComponent.updateToolbarVisibility();
 
     FileManagerComponent.removeNewFolderRow();
+
+    FileManagerComponent.addRenameEventHandlers();
+
+    FileManagerComponent.setupCopyLinkFeature();
 
   }
 
