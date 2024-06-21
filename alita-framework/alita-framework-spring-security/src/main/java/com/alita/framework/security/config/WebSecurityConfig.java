@@ -1,27 +1,25 @@
 package com.alita.framework.security.config;
 
 import com.alita.framework.security.filter.JwtAuthenticationFilter;
+import com.alita.framework.security.service.UserPasswordDetailsService;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
-import org.springframework.security.authentication.AuthenticationEventPublisher;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.DefaultAuthenticationEventPublisher;
-import org.springframework.security.authentication.ProviderManager;
+import org.springframework.security.authentication.*;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.web.cors.CorsUtils;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -44,6 +42,22 @@ public class WebSecurityConfig {
     @Resource
     private JwtAuthenticationFilter jwtAuthenticationFilter;
 
+    /**
+    ///可以向 ProviderManager 注入多个 AuthenticationProviders。每个 AuthenticationProvider 都执行特定类型的身份验证。
+    ///例如，DaoAuthenticationProvider 支持基于用户名/密码的身份验证，而 JwtAuthenticationProvider 则支持 JWT 令牌身份验证。
+    */
+
+    /**
+     * 校验用户密码
+     */
+    @Resource
+    private UserPasswordDetailsService userPasswordDetailsService;
+
+    /**
+     * 校验手机验证码
+     */
+    /*@Resource
+    private PhoneDetailsService phoneDetailsService;*/
 
     /**
      * 1. Spring Security默认使用ProviderManager和DaoAuthenticationProvider。
@@ -52,20 +66,31 @@ public class WebSecurityConfig {
      * 3. 在认证失败后UsernameNotFoundException异常会被默认转换成BadCredentialsException异常，导致不能捕获到UsernameNotFoundException,
      *    setHideUserNotFoundExceptions(false) 可以解决这个问题
      *
-     * @param userDetailsService
      * @param passwordEncoder
      * @param authenticationEventPublisher
      * @return {@link AuthenticationManager}
      */
     @Bean
-    public AuthenticationManager authenticationManager(UserDetailsService userDetailsService, PasswordEncoder passwordEncoder, AuthenticationEventPublisher authenticationEventPublisher)
+    public AuthenticationManager authenticationManager(PasswordEncoder passwordEncoder, AuthenticationEventPublisher authenticationEventPublisher)
     {
-        DaoAuthenticationProvider daoAuthenticationProvider= new DaoAuthenticationProvider();
-        daoAuthenticationProvider.setUserDetailsService(userDetailsService);
-        daoAuthenticationProvider.setPasswordEncoder(passwordEncoder);
-        daoAuthenticationProvider.setHideUserNotFoundExceptions(false);
+        //支持多种身份认证方式
+        List<AuthenticationProvider> providers = new ArrayList<>();
 
-        ProviderManager providerManager = new ProviderManager(daoAuthenticationProvider);
+        //基于用户名密码的身份验证器
+        DaoAuthenticationProvider usernamepasswordAuthenticationProvider = new DaoAuthenticationProvider();
+        usernamepasswordAuthenticationProvider.setUserDetailsService(userPasswordDetailsService);
+        usernamepasswordAuthenticationProvider.setPasswordEncoder(passwordEncoder);
+        usernamepasswordAuthenticationProvider.setHideUserNotFoundExceptions(false);
+        providers.add(usernamepasswordAuthenticationProvider);
+
+        //基于手机验证码的身份验证器
+        /*DaoAuthenticationProvider phoneAuthenticationProvider = new DaoAuthenticationProvider();
+        phoneAuthenticationProvider.setUserDetailsService(userPasswordDetailsService);
+        phoneAuthenticationProvider.setPasswordEncoder(passwordEncoder);
+        phoneAuthenticationProvider.setHideUserNotFoundExceptions(false);
+        providers.add(phoneAuthenticationProvider);*/
+
+        ProviderManager providerManager = new ProviderManager(providers);
         providerManager.setAuthenticationEventPublisher(authenticationEventPublisher);
 
         return providerManager;

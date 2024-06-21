@@ -52,6 +52,7 @@
                         <span class="path2"></span>
                       </i>
                       <Field
+                        id="fileInput"
                         tabindex="1"
                         type="file"
                         name="avatar"
@@ -295,7 +296,7 @@
 <script lang="ts">
 import { getAssetPath } from "@/core/helpers/assets";
 import { ErrorMessage, Field, Form } from "vee-validate";
-import { defineComponent } from "vue";
+import { defineComponent,onMounted } from "vue";
 import * as Yup from "yup";
 
 
@@ -307,6 +308,22 @@ export default defineComponent({
     Form,
   },
   setup() {
+
+    onMounted(() => {
+      const fileInput = document.getElementById('fileInput');
+    
+      fileInput.addEventListener('change', function() {
+          if (fileInput.files.length > 0) {
+              console.log("文件已上传:");
+              Array.from(fileInput.files).forEach(file => {
+                  console.log(`文件名: ${file.name}, 文件大小: ${file.size} bytes`);
+              });``
+          } else {
+              console.log("所有文件已移除");
+          }
+      });
+    });
+
     // 表单验证
     const addUser = Yup.object().shape({
       avatar: Yup.mixed().test(
@@ -321,9 +338,7 @@ export default defineComponent({
       name: Yup.string().required("姓名为必填项"),
       gender: Yup.string().required("性别为必填项"),
       principal: Yup.string().required("账号为必填项"),
-      password: Yup.string()
-        .required("密码为必填项")
-        .min(4, "密码长度不得小于4位"),
+      password: Yup.string().required("密码为必填项").min(4, "密码长度不得小于4位"),
     });
 
     const onSubmitAddUser = async (params: any) => {};

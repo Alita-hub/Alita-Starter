@@ -45,13 +45,13 @@ public class SysFileController {
      */
     @GetMapping("/download")
     public void download(String fileName, HttpServletResponse response) throws FileNotFoundException {
-        FileInputStream fileInputStream = fileManager.download(fileName);
+        InputStream inputStream = fileManager.download(fileName);
 
         //下载文件的响应类型，这里统一设置成了文件流
         response.setContentType("application/octet-stream;charset=utf-8");
         response.addHeader("Content-Disposition", "attachment;filename=" + fileName);
 
-        try (BufferedInputStream bis = new BufferedInputStream(fileInputStream)) {
+        try (BufferedInputStream bis = new BufferedInputStream(inputStream)) {
             ServletOutputStream outputStream = response.getOutputStream();
             byte[] bytes = new byte[1024];
             int len;

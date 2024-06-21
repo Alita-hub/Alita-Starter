@@ -26,7 +26,7 @@ import java.util.Optional;
  * @author: alita
  */
 @Service
-public class UserDetailsServiceImpl implements UserDetailsService {
+public class UserPasswordDetailsService implements UserDetailsService {
 
     @Resource
     private ISysUserAuthService userAccountService;

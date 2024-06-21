@@ -12,9 +12,7 @@ import java.util.Iterator;
 public enum LoginType implements IEnum<String> {
 
     USERNAME("username", "用户名"),
-    PHONE("phone", "手机验证码"),
-    QQ("qq", "腾讯QQ"),
-    WECHAT("wechat", "微信");
+    PHONE("phone", "手机验证码");
 
     private String value;
     private String desc;

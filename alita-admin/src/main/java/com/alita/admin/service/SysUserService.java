@@ -8,12 +8,14 @@ import com.alita.common.domain.model.HttpPageRequest;
 import com.alita.common.domain.vo.SysUserVo;
 import com.alita.common.enums.LoginType;
 import com.alita.common.exception.data.DataExistedException;
+import com.alita.common.util.file.FileManager;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.Optional;
@@ -36,6 +38,9 @@ public class SysUserService implements ISysUserService {
 
     @Resource
     private PasswordEncoder passwordEncoder;
+
+    @Resource
+    private FileManager fileManager;
 
     /**
      * 条件分页查询用户列表
@@ -68,6 +73,7 @@ public class SysUserService implements ISysUserService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public boolean addUser(SysUserVo sysUserVo) {
         // 判断用户是否存在
         SysUserAuth userAuth = sysUserAuthService.getUserByprincipal(sysUserVo.getPrincipal());
@@ -76,6 +82,10 @@ public class SysUserService implements ISysUserService {
             // 保存用户基本信息
             SysUserInfo sysUser = new SysUserInfo();
             sysUser.setName(sysUserVo.getName());
+            sysUser.setAvatar(fileManager.upload(sysUserVo.getAvatar()));
+            sysUser.setStatus(sysUserVo.getStatus());
+            sysUser.setEmail(sysUserVo.getEmail());
+            sysUser.setPhone(sysUserVo.getPhone());
             sysUserInfoService.addUserInfo(sysUser);
 
             // 保存用户认证信息
