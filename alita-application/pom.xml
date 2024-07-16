@@ -19,4 +19,38 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <!-- 打包Fat jar -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring.boot.starter.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>com.alita.Application</mainClass>
+                    <!--<excludes>
+                        <exclude>
+                            <groupId>org.unwanted</groupId>
+                            <artifactId>unwanted-lib</artifactId>
+                        </exclude>
+                    </excludes>
+                    <includes>
+                        <include>
+                            <groupId>com.example</groupId>
+                            <artifactId>example-resource</artifactId>
+                        </include>
+                    </includes>-->
+                    <executable>true</executable>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
