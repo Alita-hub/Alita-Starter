@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  *
  * @author alita
  */
-public interface ISysUserInfoMapper extends BaseMapper<SysUserInfo> {
+public interface SysUserInfoMapper extends BaseMapper<SysUserInfo> {
 
 }
 

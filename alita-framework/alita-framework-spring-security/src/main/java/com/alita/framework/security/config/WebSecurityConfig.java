@@ -16,6 +16,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationProvider;
+import org.springframework.security.web.authentication.preauth.PreAuthenticatedGrantedAuthoritiesUserDetailsService;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -89,6 +91,11 @@ public class WebSecurityConfig {
         phoneAuthenticationProvider.setPasswordEncoder(passwordEncoder);
         phoneAuthenticationProvider.setHideUserNotFoundExceptions(false);
         providers.add(phoneAuthenticationProvider);*/
+
+        //基于外部认证（SSO）
+        /*PreAuthenticatedAuthenticationProvider preAuthenticatedAuthenticationProvider = new PreAuthenticatedAuthenticationProvider();
+        preAuthenticatedAuthenticationProvider.setPreAuthenticatedUserDetailsService(new PreAuthenticatedGrantedAuthoritiesUserDetailsService());
+        providers.add(preAuthenticatedAuthenticationProvider);*/
 
         ProviderManager providerManager = new ProviderManager(providers);
         providerManager.setAuthenticationEventPublisher(authenticationEventPublisher);

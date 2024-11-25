@@ -1,11 +1,12 @@
 package com.alita.admin.service;
 
-import com.alita.admin.mapper.ISysUserAuthMapper;
+import com.alita.admin.mapper.SysUserAuthMapper;
 import com.alita.api.admin.ISysUserAuthService;
 import com.alita.common.domain.entity.SysUserAuth;
 import com.alita.common.enums.LoginType;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -16,10 +17,10 @@ import javax.annotation.Resource;
  * @date 2024/03/08
  */
 @Service
-public class SysUserAuthService implements ISysUserAuthService {
+public class SysUserAuthService extends ServiceImpl<SysUserAuthMapper, SysUserAuth> implements ISysUserAuthService {
 
     @Resource
-    private ISysUserAuthMapper userAuthMapper;
+    private SysUserAuthMapper userAuthMapper;
 
     /**
      * 根据用户名查询认证信息

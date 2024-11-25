@@ -7,6 +7,7 @@ import com.alita.common.domain.entity.SysUserInfo;
 import com.alita.common.enums.UserStatus;
 import com.alita.common.exception.authentication.CustomAuthenticationException;
 import com.alita.framework.security.context.AuthenticationContextHolder;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.LockedException;
@@ -34,6 +35,7 @@ public class UserPasswordDetailsService implements UserDetailsService {
     @Resource
     private ISysUserInfoService userProfileService;
 
+    @Lazy
     @Resource
     private PasswordEncoder passwordEncoder;
 

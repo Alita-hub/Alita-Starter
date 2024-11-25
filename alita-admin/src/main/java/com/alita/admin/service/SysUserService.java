@@ -1,6 +1,6 @@
 package com.alita.admin.service;
 
-import com.alita.admin.mapper.ISysUserInfoMapper;
+import com.alita.admin.mapper.SysUserInfoMapper;
 import com.alita.api.admin.ISysUserService;
 import com.alita.common.domain.entity.SysUserAuth;
 import com.alita.common.domain.entity.SysUserInfo;
@@ -28,7 +28,7 @@ import java.util.Optional;
 public class SysUserService implements ISysUserService {
 
     @Resource
-    private ISysUserInfoMapper sysUserInfoMapper;
+    private SysUserInfoMapper sysUserInfoMapper;
 
     @Resource
     private SysUserAuthService sysUserAuthService;
@@ -36,7 +36,7 @@ public class SysUserService implements ISysUserService {
     @Resource
     private SysUserInfoService sysUserInfoService;
 
-    @Resource
+    //@Resource
     private PasswordEncoder passwordEncoder;
 
     @Resource
@@ -92,7 +92,7 @@ public class SysUserService implements ISysUserService {
             SysUserAuth sysUserAuth = new SysUserAuth();
             sysUserAuth.setUserId(sysUser.getId());
             sysUserAuth.setPrincipal(sysUserVo.getPrincipal());
-            sysUserAuth.setCredential(passwordEncoder.encode(sysUserVo.getCredential()));
+            //sysUserAuth.setCredential(passwordEncoder.encode(sysUserVo.getCredential()));
             sysUserAuth.setLoginType(LoginType.USERNAME);
 
             sysUserAuthService.saveUserAuth(sysUserAuth);

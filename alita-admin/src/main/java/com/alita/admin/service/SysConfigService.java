@@ -1,6 +1,6 @@
 package com.alita.admin.service;
 
-import com.alita.admin.mapper.ISysConfigMapper;
+import com.alita.admin.mapper.SysConfigMapper;
 import com.alita.api.admin.ISysConfigService;
 import com.alita.common.domain.entity.SysConfig;
 import com.alita.common.domain.model.HttpPageRequest;
@@ -23,7 +23,7 @@ import java.util.Optional;
 public class SysConfigService implements ISysConfigService {
 
     @Resource
-    private ISysConfigMapper sysConfigMapper;
+    private SysConfigMapper sysConfigMapper;
 
     /**
      * 条件分页查询配置列表

@@ -1,9 +1,10 @@
 package com.alita.admin.service;
 
-import com.alita.admin.mapper.ISysUserInfoMapper;
+import com.alita.admin.mapper.SysUserInfoMapper;
 import com.alita.api.admin.ISysUserInfoService;
 import com.alita.common.domain.entity.SysUserInfo;
 import com.alita.common.exception.core.CrudException;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -13,10 +14,10 @@ import javax.annotation.Resource;
  * @author: alita
  */
 @Service
-public class SysUserInfoService implements ISysUserInfoService {
+public class SysUserInfoService extends ServiceImpl<SysUserInfoMapper, SysUserInfo> implements ISysUserInfoService {
 
     @Resource
-    private ISysUserInfoMapper sysUserInfoMapper;
+    private SysUserInfoMapper sysUserInfoMapper;
 
 
     /**

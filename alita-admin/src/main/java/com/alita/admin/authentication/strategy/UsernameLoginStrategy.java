@@ -4,6 +4,7 @@ import com.alita.admin.authentication.core.ILoginStrategy;
 import com.alita.common.domain.vo.LoginVo;
 import com.alita.common.util.JwtUtil;
 import com.alita.framework.security.context.AuthenticationContextHolder;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -20,6 +21,7 @@ import javax.annotation.Resource;
 @Service("username")
 public class UsernameLoginStrategy implements ILoginStrategy {
 
+    @Lazy
     @Resource
     private AuthenticationManager authenticationManager;
 

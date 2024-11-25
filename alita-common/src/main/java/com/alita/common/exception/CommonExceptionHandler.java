@@ -6,9 +6,11 @@ import com.alita.common.exception.core.BadRequestException;
 import com.alita.common.exception.core.CrudException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
  * 全局异常处理
@@ -37,6 +39,7 @@ public class CommonExceptionHandler {
      * @return {@link HttpResponse}
      */
     @ExceptionHandler
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public HttpResponse handleBadRequest(BadRequestException e) {
         log.error(e.getMessage());
         return HttpResponse.badRequest(e.getMessage());

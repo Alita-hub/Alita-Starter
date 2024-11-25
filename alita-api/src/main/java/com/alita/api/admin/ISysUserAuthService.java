@@ -1,13 +1,14 @@
 package com.alita.api.admin;
 
 import com.alita.common.domain.entity.SysUserAuth;
+import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * 用户认证信息接口
  * @author alita
  * @date 2024/03/08
  */
-public interface ISysUserAuthService {
+public interface ISysUserAuthService extends IService<SysUserAuth> {
 
     /**
      * 根据用户名查询账户信息

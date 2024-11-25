@@ -8,7 +8,7 @@ package com.alita.common.domain.vo;
  */
 public class LoginVo {
 
-    private String loginType;
+    private String loginType = "username";
 
     private String username;
 

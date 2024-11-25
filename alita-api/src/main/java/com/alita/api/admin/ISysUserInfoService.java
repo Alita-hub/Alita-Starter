@@ -2,6 +2,7 @@ package com.alita.api.admin;
 
 import com.alita.common.domain.entity.SysUserInfo;
 import com.alita.common.domain.vo.SysUserVo;
+import com.baomidou.mybatisplus.extension.service.IService;
 
 
 /**
@@ -9,7 +10,7 @@ import com.alita.common.domain.vo.SysUserVo;
  * @author alita
  * @date 2024/03/21
  */
-public interface ISysUserInfoService {
+public interface ISysUserInfoService extends IService<SysUserInfo> {
 
     /**
      * 根据用户id获取用户基本信息
