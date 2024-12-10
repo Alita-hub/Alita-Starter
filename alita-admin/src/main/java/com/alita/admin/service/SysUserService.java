@@ -36,7 +36,7 @@ public class SysUserService implements ISysUserService {
     @Resource
     private SysUserInfoService sysUserInfoService;
 
-    //@Resource
+    @Resource
     private PasswordEncoder passwordEncoder;
 
     @Resource
@@ -92,7 +92,7 @@ public class SysUserService implements ISysUserService {
             SysUserAuth sysUserAuth = new SysUserAuth();
             sysUserAuth.setUserId(sysUser.getId());
             sysUserAuth.setPrincipal(sysUserVo.getPrincipal());
-            //sysUserAuth.setCredential(passwordEncoder.encode(sysUserVo.getCredential()));
+            sysUserAuth.setCredential(passwordEncoder.encode(sysUserVo.getCredential()));
             sysUserAuth.setLoginType(LoginType.USERNAME);
 
             sysUserAuthService.saveUserAuth(sysUserAuth);

@@ -25,7 +25,7 @@ public class AdminInit implements CommandLineRunner {
     @Resource
     private ISysUserAuthService sysUserAuthService;
 
-    //@Resource
+    @Resource
     private PasswordEncoder passwordEncoder;
 
     @Override
@@ -41,7 +41,7 @@ public class AdminInit implements CommandLineRunner {
             SysUserAuth sysUserAuth = new SysUserAuth();
             sysUserAuth.setUserId(sysUser.getId());
             sysUserAuth.setPrincipal("admin");
-            //sysUserAuth.setCredential(passwordEncoder.encode("admin@123456"));
+            sysUserAuth.setCredential(passwordEncoder.encode("admin@123456"));
             sysUserAuth.setLoginType(LoginType.USERNAME);
 
             sysUserAuthService.saveUserAuth(sysUserAuth);
