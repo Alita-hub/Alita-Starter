@@ -1,6 +1,6 @@
 package com.alita.api.admin;
 
-import com.alita.common.domain.entity.SysUserAuth;
+import com.alita.common.domain.entity.system.SysUserAuth;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

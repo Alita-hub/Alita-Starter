@@ -2,8 +2,8 @@ package com.alita.framework.security.service;
 
 import com.alita.api.admin.ISysUserAuthService;
 import com.alita.api.admin.ISysUserInfoService;
-import com.alita.common.domain.entity.SysUserAuth;
-import com.alita.common.domain.entity.SysUserInfo;
+import com.alita.common.domain.entity.system.SysUserAuth;
+import com.alita.common.domain.entity.system.SysUserInfo;
 import com.alita.common.enums.UserStatus;
 import com.alita.common.exception.authentication.CustomAuthenticationException;
 import com.alita.framework.security.context.AuthenticationContextHolder;

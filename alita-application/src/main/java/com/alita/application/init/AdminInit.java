@@ -2,8 +2,8 @@ package com.alita.application.init;
 
 import com.alita.api.admin.ISysUserAuthService;
 import com.alita.api.admin.ISysUserInfoService;
-import com.alita.common.domain.entity.SysUserAuth;
-import com.alita.common.domain.entity.SysUserInfo;
+import com.alita.common.domain.entity.system.SysUserAuth;
+import com.alita.common.domain.entity.system.SysUserInfo;
 import com.alita.common.enums.LoginType;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;

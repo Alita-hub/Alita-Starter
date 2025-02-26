@@ -121,7 +121,7 @@
             <!-- 系统管理-api -->
             <dependency>
                 <groupId>com.alita</groupId>
-                <artifactId>alita-admin</artifactId>
+                <artifactId>alita-system</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -150,7 +150,7 @@
     </dependencyManagement>
 
     <modules>
-        <module>alita-admin</module>
+        <module>alita-system</module>
         <module>alita-framework</module>
         <module>alita-business</module>
         <module>alita-common</module>

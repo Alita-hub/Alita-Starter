@@ -1,7 +1,6 @@
 package com.alita.api.admin;
 
-import com.alita.common.domain.entity.SysUserInfo;
-import com.alita.common.domain.vo.SysUserVo;
+import com.alita.common.domain.entity.system.SysUserInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 

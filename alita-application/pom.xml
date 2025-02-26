@@ -15,7 +15,7 @@
         <!--管理模块-->
         <dependency>
             <groupId>com.alita</groupId>
-            <artifactId>alita-admin</artifactId>
+            <artifactId>alita-system</artifactId>
         </dependency>
     </dependencies>
 

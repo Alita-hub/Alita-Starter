@@ -1,6 +1,6 @@
 package com.alita.api.admin;
 
-import com.alita.common.domain.entity.SysConfig;
+import com.alita.common.domain.entity.system.SysConfig;
 import com.alita.common.domain.model.HttpPageRequest;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
